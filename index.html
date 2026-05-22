@@ -3,1959 +3,1162 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شركة التصالح لتحصيل الديون | الرياض – المملكة العربية السعودية</title>
-<meta name="description" content="شركة التصالح لتحصيل الديون – شريكك الأول في تحصيل الديون بالمملكة العربية السعودية منذ 2022. فريق من 180+ محترف، أنظمة حديثة، ومحامون معتمدون.">
+<title>شركة التصالح لتحصيل الديون</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════
-   ROOT & RESET
-═══════════════════════════════════════ */
+/* ── LOGO COLORS: dark=#071827  green=#2cc58b ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 :root{
-  --navy:       #07111f;
-  --navy-mid:   #0e1f35;
-  --navy-light: #162840;
-  --navy-card:  #112033;
-  --gold:       #c8a84b;
-  --gold-light: #e8c96d;
-  --gold-pale:  rgba(200,168,75,.12);
-  --green:      #16cf8f;
-  --green-pale: rgba(22,207,143,.10);
-  --white:      #ffffff;
-  --off-white:  #f2f6fc;
-  --ink:        #0a1628;
-  --text-dim:   rgba(255,255,255,.55);
-  --text-body:  rgba(255,255,255,.80);
-  --border:     rgba(200,168,75,.18);
-  --border-sub: rgba(255,255,255,.08);
-  --radius:     8px;
-  --radius-lg:  16px;
-  --hh:         88px;
-  --ease:       cubic-bezier(.22,.68,0,1.21);
+  --D: #071827;      /* logo dark  */
+  --G: #2cc58b;      /* logo green */
+  --Gd:#1fa06e;      /* green dark */
+  --W: #ffffff;
+  --hh:76px;
+  --ease:cubic-bezier(.22,.68,0,1.2);
 }
-body{
-  font-family:'Tajawal','Cairo',system-ui,sans-serif;
-  font-weight:500;
-  background:var(--navy);
-  color:var(--white);
-  overflow-x:hidden;
-  line-height:1.8;
-}
+body{font-family:'Cairo',sans-serif;color:var(--D);overflow-x:hidden;line-height:1.6}
 a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%;height:auto}
-button{font-family:inherit;cursor:pointer;border:none;outline:none}
-ul{list-style:none}
-input,textarea,select{font-family:inherit}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
 
-/* ═══════════════════════════════════════
-   SCROLLBAR
-═══════════════════════════════════════ */
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--navy)}
-::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+/* ─ scrollbar */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--G);border-radius:3px}
 
-/* ═══════════════════════════════════════
-   LAYOUT HELPERS
-═══════════════════════════════════════ */
-.wrap{width:min(1240px,calc(100% - 48px));margin-inline:auto}
-.wrap-sm{width:min(880px,calc(100% - 48px));margin-inline:auto}
-section{padding-block:clamp(70px,9vw,120px)}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  color:var(--gold);font-weight:800;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;
-  margin-bottom:14px;
-}
-.eyebrow::before{content:"";display:block;width:28px;height:2px;background:var(--gold);border-radius:2px;flex-shrink:0}
-.section-title{
-  font-size:clamp(1.9rem,4vw,3.2rem);
-  font-weight:900;line-height:1.1;
-  color:var(--white);
-  margin-bottom:16px;
-}
-.section-title span{color:var(--gold)}
-.section-lead{color:var(--text-dim);font-size:1.05rem;line-height:1.9;max-width:620px}
-.text-center{text-align:center}
-.text-center .section-lead{margin-inline:auto}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+/* ─ layout */
+.wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
 
-/* ═══════════════════════════════════════
-   BUTTONS
-═══════════════════════════════════════ */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:13px 30px;border-radius:var(--radius);
-  font-weight:800;font-size:.95rem;
-  transition:all .25s var(--ease);
-  white-space:nowrap;
-}
-.btn-gold{background:var(--gold);color:var(--navy)}
-.btn-gold:hover{background:var(--gold-light);transform:translateY(-3px);box-shadow:0 12px 32px rgba(200,168,75,.35)}
-.btn-outline-gold{
-  border:2px solid var(--gold);color:var(--gold);background:transparent;
-}
-.btn-outline-gold:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
-.btn-outline-white{
-  border:1.5px solid rgba(255,255,255,.3);color:var(--white);background:transparent;
-}
-.btn-outline-white:hover{border-color:var(--gold);color:var(--gold)}
-.btn-green{background:var(--green);color:var(--navy)}
-.btn-green:hover{filter:brightness(1.1);transform:translateY(-3px);box-shadow:0 12px 28px rgba(22,207,143,.3)}
+/* ─ reveal */
+.rv{opacity:0;transform:translateY(30px);transition:.55s ease}
+.rv.on{opacity:1;transform:none}
+.rv-l{opacity:0;transform:translateX(-30px);transition:.55s ease}
+.rv-l.on{opacity:1;transform:none}
+.rv-r{opacity:0;transform:translateX(30px);transition:.55s ease}
+.rv-r.on{opacity:1;transform:none}
+[data-d="2"]{transition-delay:.12s}[data-d="3"]{transition-delay:.22s}
+[data-d="4"]{transition-delay:.32s}[data-d="5"]{transition-delay:.42s}
+[data-d="6"]{transition-delay:.52s}[data-d="7"]{transition-delay:.62s}
+[data-d="8"]{transition-delay:.72s}
 
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════
    HEADER
-═══════════════════════════════════════ */
-.site-header{
-  position:fixed;top:0;left:0;right:0;z-index:900;
+══════════════════════════════════ */
+.hdr{
+  position:fixed;top:0;inset-inline:0;z-index:900;
   height:var(--hh);
+  background:rgba(7,24,39,.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(44,197,139,.15);
   display:flex;align-items:center;
-  background:rgba(7,17,31,.72);
-  backdrop-filter:blur(20px) saturate(1.4);
-  border-bottom:1px solid var(--border-sub);
-  transition:background .3s,box-shadow .3s;
+  transition:box-shadow .3s;
 }
-.site-header.scrolled{
-  background:rgba(7,17,31,.96);
-  box-shadow:0 4px 30px rgba(0,0,0,.4);
-}
-.nav-wrap{
-  width:min(1280px,calc(100% - 40px));margin-inline:auto;
-  display:flex;align-items:center;gap:20px;
-}
-.brand{flex-shrink:0;display:flex;align-items:center;gap:12px}
-.brand img{height:50px;width:auto}
-.brand-text{display:flex;flex-direction:column;line-height:1.2}
-.brand-text strong{color:var(--gold);font-size:.88rem;font-weight:900;letter-spacing:.04em}
-.brand-text span{color:var(--text-dim);font-size:.7rem}
-.nav-links{
-  flex:1;display:flex;align-items:center;justify-content:center;
-  gap:4px;flex-wrap:wrap;
-}
+.hdr.s{box-shadow:0 4px 30px rgba(0,0,0,.4)}
+.nav{width:min(1200px,calc(100% - 40px));margin-inline:auto;display:flex;align-items:center;gap:16px}
+.logo{flex-shrink:0;display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo-txt strong{display:block;color:var(--G);font-size:.85rem;font-weight:900}
+.logo-txt span{display:block;color:rgba(255,255,255,.45);font-size:.65rem}
+.nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:2px}
 .nav-links a{
-  padding:8px 14px;color:var(--text-body);font-weight:700;font-size:.88rem;
-  border-radius:6px;transition:all .2s;white-space:nowrap;
+  padding:6px 12px;color:rgba(255,255,255,.65);font-weight:700;font-size:.82rem;
+  border-radius:6px;transition:.2s;
 }
-.nav-links a:hover,.nav-links a.active{color:var(--gold)}
-.header-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.header-phone{
-  display:flex;align-items:center;gap:6px;
-  color:var(--text-dim);font-size:.82rem;font-weight:700;
-  padding:7px 12px;border:1px solid var(--border-sub);border-radius:6px;
-  transition:all .2s;white-space:nowrap;
+.nav-links a:hover,.nav-links a.on{color:var(--G);background:rgba(44,197,139,.1)}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-phone{
+  color:rgba(255,255,255,.55);font-size:.78rem;font-weight:700;
+  padding:6px 12px;border:1px solid rgba(255,255,255,.1);border-radius:6px;transition:.2s;
 }
-.header-phone:hover{color:var(--gold);border-color:var(--border)}
-.menu-toggle{
+.nav-phone:hover{color:var(--G);border-color:var(--G)}
+.btn-cta{
+  padding:9px 20px;background:var(--G);color:var(--D);
+  font-weight:900;font-size:.82rem;border-radius:7px;
+  transition:all .25s var(--ease);
+}
+.btn-cta:hover{background:var(--Gd);transform:translateY(-2px)}
+.ham{
   display:none;flex-direction:column;gap:5px;
-  width:40px;height:40px;align-items:center;justify-content:center;
-  background:var(--gold-pale);border:1px solid var(--border);border-radius:6px;
+  width:38px;height:38px;align-items:center;justify-content:center;
+  background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.2);border-radius:7px;
 }
-.menu-toggle span{width:18px;height:1.5px;background:var(--gold);border-radius:2px;transition:all .3s}
+.ham span{width:16px;height:1.5px;background:var(--G)}
 
-/* ═══════════════════════════════════════
-   MOBILE NAV
-═══════════════════════════════════════ */
-.mobile-nav{
-  display:none;
-  position:fixed;inset:0;z-index:800;
-  background:rgba(7,17,31,.97);
-  backdrop-filter:blur(20px);
-  flex-direction:column;align-items:center;justify-content:center;gap:8px;
+/* mobile nav */
+.mob{
+  display:none;position:fixed;inset:0;z-index:800;
+  background:rgba(7,24,39,.98);
+  flex-direction:column;align-items:center;justify-content:center;gap:6px;
   padding-top:var(--hh);
 }
-.mobile-nav.open{display:flex}
-.mobile-nav a{
-  color:var(--white);font-size:1.3rem;font-weight:800;padding:14px 32px;
-  border-radius:8px;transition:all .2s;text-align:center;
-}
-.mobile-nav a:hover{color:var(--gold);background:var(--gold-pale)}
+.mob.on{display:flex}
+.mob a{color:#fff;font-size:1.25rem;font-weight:800;padding:12px 40px;border-radius:8px;transition:.2s}
+.mob a:hover{color:var(--G);background:rgba(44,197,139,.08)}
 
-/* ═══════════════════════════════════════
-   HERO
-═══════════════════════════════════════ */
+/* ══════════════════════════════════
+   HERO — dark photo + data widget
+══════════════════════════════════ */
 .hero{
-  min-height:100vh;
-  padding-top:var(--hh);
-  display:flex;flex-direction:column;
-  position:relative;overflow:hidden;
-  background:var(--navy);
+  min-height:100vh;padding-top:var(--hh);
+  display:flex;flex-direction:column;position:relative;overflow:hidden;
 }
-.hero-bg{
-  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+.hero-photo{
+  position:absolute;inset:0;
+  background:url('assets/office-hero.jpg') center/cover no-repeat;
+  animation:pan 20s ease-in-out infinite alternate;
 }
-/* Gradient overlays */
-.hero-bg::before{
-  content:"";position:absolute;inset:0;
+@keyframes pan{0%{transform:scale(1.04)}100%{transform:scale(1.10) translate(-1%,-.8%)}}
+.hero-ov{
+  position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 70% 60% at 15% 60%, rgba(22,207,143,.07) 0%, transparent 70%),
-    radial-gradient(ellipse 55% 50% at 85% 20%, rgba(200,168,75,.08) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 80% at 50% 100%, rgba(7,17,31,1) 0%, transparent 70%);
+    linear-gradient(to left, rgba(7,24,39,.1) 0%, rgba(7,24,39,.75) 40%, rgba(7,24,39,.97) 100%),
+    linear-gradient(to top,  rgba(7,24,39,.98) 0%, transparent 45%);
 }
-/* Grid pattern */
-.hero-bg::after{
-  content:"";position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(200,168,75,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(200,168,75,.04) 1px, transparent 1px);
-  background-size:60px 60px;
-  mask-image:radial-gradient(ellipse 80% 70% at 50% 30%, black 30%, transparent 80%);
-}
-/* Animated orbs */
-.orb{
-  position:absolute;border-radius:50%;filter:blur(80px);
-  animation:orbFloat 8s ease-in-out infinite;
-}
-.orb-1{width:500px;height:500px;background:rgba(22,207,143,.06);top:-100px;left:-100px;animation-delay:0s}
-.orb-2{width:400px;height:400px;background:rgba(200,168,75,.06);top:30%;right:-80px;animation-delay:-3s}
-.orb-3{width:300px;height:300px;background:rgba(22,207,143,.04);bottom:10%;left:30%;animation-delay:-5s}
-@keyframes orbFloat{
-  0%,100%{transform:translate(0,0) scale(1)}
-  33%{transform:translate(20px,-30px) scale(1.05)}
-  66%{transform:translate(-15px,20px) scale(.95)}
-}
-.hero-main{
+.hero-body{
   flex:1;display:flex;align-items:center;
-  padding:clamp(60px,8vw,100px) 0 clamp(40px,5vw,60px);
+  padding:clamp(50px,6vw,80px) 0 clamp(30px,4vw,50px);
   position:relative;z-index:1;
 }
-.hero-content{
-  width:min(1240px,calc(100% - 48px));margin-inline:auto;
-  display:grid;grid-template-columns:1fr min(500px,42%);
-  gap:clamp(40px,6vw,80px);align-items:center;
+.hero-grid{
+  width:min(1200px,calc(100% - 40px));margin-inline:auto;
+  display:grid;grid-template-columns:1fr 420px;gap:clamp(32px,5vw,64px);align-items:center;
 }
-.hero-left{}
-.hero-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:6px 16px 6px 10px;
-  background:rgba(22,207,143,.08);
-  border:1px solid rgba(22,207,143,.25);
-  border-radius:30px;
-  color:var(--green);font-weight:800;font-size:.82rem;
-  margin-bottom:28px;
+
+/* hero text */
+.badge-live{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 14px 5px 10px;
+  background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.25);
+  border-radius:30px;color:var(--G);font-weight:800;font-size:.75rem;margin-bottom:22px;
 }
-.hero-tag-dot{
-  width:8px;height:8px;border-radius:50%;background:var(--green);
-  animation:pulse 2s ease-in-out infinite;
-}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--G);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .hero h1{
-  font-size:clamp(2.6rem,6vw,5.8rem);
-  font-weight:900;line-height:1.0;
-  margin-bottom:24px;
-  text-wrap:balance;
+  font-size:clamp(2.6rem,6vw,5.5rem);
+  font-weight:900;line-height:.95;color:#fff;
+  margin-bottom:18px;
 }
-.hero h1 .line-gold{
-  color:var(--gold);display:block;
+.hero h1 em{color:var(--G);font-style:normal;display:block}
+.hero-sub{
+  color:rgba(255,255,255,.6);
+  font-size:clamp(.95rem,1.2vw,1.05rem);
+  line-height:1.8;max-width:480px;margin-bottom:30px;
 }
-.hero-lead{
-  color:var(--text-dim);font-size:clamp(.97rem,1.3vw,1.12rem);
-  line-height:1.95;max-width:560px;margin-bottom:36px;
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.btn-solid{
+  padding:13px 28px;background:var(--G);color:var(--D);
+  font-weight:900;font-size:.92rem;border-radius:8px;
+  transition:all .25s var(--ease);
 }
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
-.hero-stats-row{
+.btn-solid:hover{background:var(--Gd);transform:translateY(-3px);box-shadow:0 10px 28px rgba(44,197,139,.35)}
+.btn-ghost{
+  padding:12px 26px;border:1.5px solid rgba(255,255,255,.3);color:#fff;
+  font-weight:800;font-size:.92rem;border-radius:8px;transition:.25s;
+}
+.btn-ghost:hover{border-color:var(--G);color:var(--G)}
+
+/* hero stats */
+.hero-stats{
   display:flex;gap:0;
-  border:1px solid var(--border-sub);border-radius:12px;
-  overflow:hidden;background:rgba(255,255,255,.03);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;overflow:hidden;
   backdrop-filter:blur(10px);
 }
-.hstat{
+.hs{
   flex:1;padding:20px 16px;text-align:center;
-  border-left:1px solid var(--border-sub);
-  transition:background .2s;
+  border-left:1px solid rgba(255,255,255,.06);
 }
-.hstat:last-child{border-left:none}
-.hstat:hover{background:rgba(200,168,75,.06)}
-.hstat strong{
-  display:block;color:var(--gold);
-  font-size:clamp(1.8rem,2.5vw,2.4rem);font-weight:900;line-height:1;
+.hs:last-child{border-left:none}
+.hs strong{
+  display:block;color:var(--G);
+  font-size:clamp(1.9rem,2.5vw,2.6rem);font-weight:900;line-height:1;
 }
-.hstat p{color:var(--text-dim);font-size:.78rem;margin-top:5px;line-height:1.3}
-/* Hero right */
-.hero-right{display:flex;flex-direction:column;gap:14px;position:relative}
-.hero-card{
-  background:rgba(14,31,53,.7);
-  border:1px solid rgba(200,168,75,.15);
-  border-radius:14px;padding:22px 20px;
-  backdrop-filter:blur(16px);
-  transition:all .3s var(--ease);
-  position:relative;overflow:hidden;
-}
-.hero-card::before{
-  content:"";position:absolute;top:0;right:0;
-  width:3px;height:0;background:var(--gold);
-  border-radius:0 14px 14px 0;
-  transition:height .4s ease;
-}
-.hero-card:hover{
-  border-color:rgba(200,168,75,.4);
-  transform:translateX(-6px);
-  background:rgba(14,31,53,.9);
-}
-.hero-card:hover::before{height:100%}
-.hcard-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
-.hcard-icon{
-  width:42px;height:42px;border-radius:10px;
-  background:var(--gold-pale);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.2rem;flex-shrink:0;
-}
-.hcard-head strong{color:var(--white);font-weight:800;font-size:1rem}
-.hero-card p{color:var(--text-dim);font-size:.85rem;line-height:1.6}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  padding:4px 12px;border-radius:20px;
-  background:rgba(22,207,143,.15);color:var(--green);
-  font-weight:800;font-size:.75rem;margin-top:10px;
-}
-/* Floating number */
-.float-stat{
-  position:absolute;top:-20px;left:-20px;
-  background:var(--gold);color:var(--navy);
-  padding:10px 16px;border-radius:10px;
-  font-weight:900;font-size:1.1rem;
-  box-shadow:0 8px 24px rgba(200,168,75,.4);
-  animation:floatUp 3s ease-in-out infinite;
-}
-@keyframes floatUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hs p{color:rgba(255,255,255,.45);font-size:.72rem;margin-top:5px;font-weight:700}
 
-/* Scroll indicator */
+/* ── DATA WIDGET ── */
+.dw{
+  background:#fff;border-radius:16px;padding:24px 20px;
+  box-shadow:0 24px 60px rgba(0,0,0,.35);
+  border:1px solid rgba(44,197,139,.12);
+}
+.dw-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:16px;margin-bottom:20px;
+  border-bottom:1px solid rgba(44,197,139,.1);
+}
+.dw-top span{font-size:.8rem;font-weight:800;color:var(--D)}
+.dw-live{display:flex;align-items:center;gap:5px;color:var(--G);font-size:.7rem;font-weight:800}
+.dw-live i{width:6px;height:6px;border-radius:50%;background:var(--G);animation:pulse 1.5s infinite}
+
+/* KPIs */
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.kpi{
+  background:#f8fffe;border:1px solid rgba(44,197,139,.1);
+  border-radius:10px;padding:12px 14px;position:relative;overflow:hidden;
+}
+.kpi-l{color:rgba(7,24,39,.45);font-size:.65rem;font-weight:800;letter-spacing:.05em;margin-bottom:3px}
+.kpi-v{font-size:1.6rem;font-weight:900;color:var(--D);line-height:1}
+.kpi-v em{color:var(--G);font-style:normal}
+.kpi-t{font-size:.62rem;color:var(--G);font-weight:800;margin-top:4px}
+
+/* bars */
+.chart-head{font-size:.68rem;font-weight:800;color:rgba(7,24,39,.4);letter-spacing:.06em;margin-bottom:10px}
+.bars{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.br{display:flex;align-items:center;gap:8px}
+.br-n{font-size:.64rem;color:rgba(7,24,39,.45);font-weight:700;width:52px;text-align:right;flex-shrink:0}
+.br-t{flex:1;height:5px;background:#e8faf5;border-radius:3px;overflow:hidden}
+.br-f{height:100%;background:linear-gradient(90deg,var(--G),var(--Gd));border-radius:3px;width:0;transition:width 1.5s var(--ease)}
+.br-p{font-size:.62rem;font-weight:900;color:var(--G);width:26px;flex-shrink:0}
+
+/* rings */
+.rings{display:flex;gap:12px;align-items:center}
+.ring-w{display:flex;flex-direction:column;align-items:center;gap:3px}
+.ring{width:58px;height:58px;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.rg-bg{fill:none;stroke:#d4f5e7;stroke-width:5}
+.rg-fg{fill:none;stroke:var(--G);stroke-width:5;stroke-linecap:round;stroke-dasharray:163;stroke-dashoffset:163;transition:stroke-dashoffset 1.6s var(--ease)}
+.ring-val{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:900;color:var(--D)}
+.ring-cap{font-size:.58rem;color:rgba(7,24,39,.45);font-weight:700;text-align:center;max-width:54px;line-height:1.3}
+.dw-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:12px;border-top:1px solid rgba(44,197,139,.1);
+}
+.dw-foot span{font-size:.62rem;color:rgba(7,24,39,.35)}
+.dw-badge{background:#edfbf5;color:var(--Gd);padding:2px 10px;border-radius:20px;font-size:.62rem;font-weight:800;border:1px solid rgba(44,197,139,.2)}
+
+/* hero scroll */
 .hero-scroll{
   position:relative;z-index:1;
-  display:flex;align-items:center;justify-content:center;
-  gap:12px;padding-bottom:32px;
-  color:var(--text-dim);font-size:.8rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding-bottom:24px;color:rgba(255,255,255,.3);font-size:.72rem;font-weight:700;
 }
-.scroll-line{
-  width:1px;height:40px;background:linear-gradient(to bottom, var(--gold), transparent);
-  animation:scrollLine 2s ease-in-out infinite;
-}
-@keyframes scrollLine{0%,100%{opacity:.4;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.2)}}
+.sl{width:1px;height:32px;background:linear-gradient(to bottom,var(--G),transparent);animation:sl 2s ease-in-out infinite}
+@keyframes sl{0%,100%{opacity:.3}50%{opacity:1}}
 
-/* ═══════════════════════════════════════
-   TICKER / MARQUEE
-═══════════════════════════════════════ */
-.ticker-bar{
-  background:var(--gold);padding:14px 0;
-  overflow:hidden;white-space:nowrap;
+/* ══════════════════════════════════
+   TICKER
+══════════════════════════════════ */
+.ticker{background:var(--G);padding:11px 0;overflow:hidden;white-space:nowrap}
+.tk-inner{display:inline-flex;animation:tk 25s linear infinite}
+.tk-inner span{
+  padding:0 32px;color:var(--D);font-weight:800;font-size:.82rem;
+  border-left:1.5px solid rgba(7,24,39,.15);
+  display:flex;align-items:center;gap:7px;
 }
-.ticker-inner{
-  display:inline-flex;gap:0;
-  animation:ticker 30s linear infinite;
-}
-.ticker-inner span{
-  padding:0 40px;color:var(--navy);font-weight:800;font-size:.9rem;
-  border-left:2px solid rgba(7,17,31,.2);
-}
-.ticker-inner span:first-child{border-left:none}
-@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.tk-inner span::before{content:"◆";font-size:.4rem}
+@keyframes tk{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ═══════════════════════════════════════
-   ABOUT
-═══════════════════════════════════════ */
-.about-section{background:var(--navy-mid)}
-.about-image-wrap{position:relative}
-.about-image-wrap img{
-  width:100%;border-radius:var(--radius-lg);
-  object-fit:cover;height:500px;
-}
-.about-image-badge{
-  position:absolute;bottom:-20px;right:-20px;
-  background:var(--gold);color:var(--navy);
-  padding:20px 24px;border-radius:12px;
-  text-align:center;box-shadow:0 12px 36px rgba(200,168,75,.4);
-}
-.about-image-badge strong{display:block;font-size:2.2rem;font-weight:900;line-height:1}
-.about-image-badge span{font-size:.82rem;font-weight:700}
-.about-right{}
-.about-right .section-lead{margin-bottom:32px}
-.about-features{display:flex;flex-direction:column;gap:16px}
-.afeat{
-  display:flex;align-items:flex-start;gap:16px;
-  padding:18px 20px;
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--border-sub);
-  border-radius:10px;
-  transition:all .25s;
-}
-.afeat:hover{background:var(--gold-pale);border-color:var(--border)}
-.afeat-icon{
-  width:44px;height:44px;flex-shrink:0;
-  background:var(--gold-pale);border:1px solid var(--border);
-  border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;
-}
-.afeat-text strong{display:block;font-weight:800;margin-bottom:2px;font-size:.95rem}
-.afeat-text span{color:var(--text-dim);font-size:.85rem}
+/* ══════════════════════════════════
+   SECTION BASE
+══════════════════════════════════ */
+.sec{padding-block:clamp(70px,9vw,110px)}
+.sec-w{background:#fff}
+.sec-g{background:var(--G)}        /* green bg */
+.sec-d{background:var(--D)}        /* dark bg  */
+.sec-s{background:#f4fcf9}          /* soft green */
 
-/* ═══════════════════════════════════════
-   VISION & MISSION
-═══════════════════════════════════════ */
-.vm-section{
-  background:var(--navy);
-  position:relative;overflow:hidden;
+.tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+  margin-bottom:12px;
 }
-.vm-section::before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,168,75,.04) 0%, transparent 70%);
-}
-.vm-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:var(--radius-lg);overflow:hidden}
-.vm-card{
-  padding:clamp(40px,5vw,64px) clamp(30px,4vw,52px);
-  position:relative;overflow:hidden;
-}
-.vm-card-vision{background:var(--navy-card)}
-.vm-card-mission{background:rgba(22,207,143,.06)}
-.vm-card::before{
-  content:"";position:absolute;
-  width:200px;height:200px;border-radius:50%;
-  filter:blur(60px);pointer-events:none;
-}
-.vm-card-vision::before{background:rgba(200,168,75,.07);top:-60px;left:-40px}
-.vm-card-mission::before{background:rgba(22,207,143,.06);bottom:-60px;right:-40px}
-.vm-num{
-  font-size:5rem;font-weight:900;line-height:1;
-  color:rgba(200,168,75,.1);
-  margin-bottom:20px;
-  font-family:monospace;
-}
-.vm-icon-big{font-size:2.5rem;margin-bottom:20px}
-.vm-card h3{font-size:1.6rem;font-weight:900;margin-bottom:16px;color:var(--gold)}
-.vm-card p{color:var(--text-body);line-height:1.9;font-size:1.02rem}
-.vm-tag{
-  display:inline-block;margin-top:24px;
-  padding:6px 16px;border-radius:20px;
-  font-weight:800;font-size:.8rem;
-}
-.vm-card-vision .vm-tag{background:var(--gold-pale);color:var(--gold);border:1px solid var(--border)}
-.vm-card-mission .vm-tag{background:var(--green-pale);color:var(--green);border:1px solid rgba(22,207,143,.25)}
+.tag::before{content:"";width:22px;height:2px;border-radius:2px;flex-shrink:0}
+.tag-g{color:var(--G)}.tag-g::before{background:var(--G)}
+.tag-w{color:#fff}.tag-w::before{background:#fff}
+.tag-d{color:var(--D)}.tag-d::before{background:var(--D)}
 
-/* ═══════════════════════════════════════
-   SERVICES
-═══════════════════════════════════════ */
-.services-section{background:var(--navy-mid)}
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:2px;border-radius:var(--radius-lg);overflow:hidden;
-  background:var(--border-sub);
+h2.t{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;line-height:1.05;margin-bottom:12px}
+h2.t-w{color:#fff}
+h2.t-d{color:var(--D)}
+h2.t em{font-style:normal}
+h2.t-w em{color:var(--G)}
+h2.t-d em{color:var(--G)}
+p.lead{font-size:1rem;line-height:1.85;max-width:560px}
+p.lead-w{color:rgba(255,255,255,.6)}
+p.lead-d{color:rgba(7,24,39,.5)}
+.tc{text-align:center}.tc .lead{margin-inline:auto}
+
+/* ══════════════════════════════════
+   ABOUT  (white)
+══════════════════════════════════ */
+.about-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.img-w{position:relative}
+.img-w img{width:100%;height:460px;object-fit:cover;border-radius:16px}
+.img-badge{
+  position:absolute;bottom:-16px;right:-16px;
+  background:var(--G);color:var(--D);
+  padding:16px 20px;border-radius:12px;text-align:center;
+  box-shadow:0 10px 32px rgba(44,197,139,.4);
 }
-.svc-card{
-  background:var(--navy-card);
-  padding:36px 28px;
-  display:flex;flex-direction:column;
+.img-badge strong{display:block;font-size:2.2rem;font-weight:900;line-height:1}
+.img-badge span{font-size:.75rem;font-weight:800}
+.a-points{display:flex;flex-direction:column;gap:10px;margin-top:24px}
+.ap{
+  display:flex;align-items:center;gap:12px;
+  padding:14px 16px;background:#f4fcf9;
+  border:1px solid rgba(44,197,139,.12);border-radius:9px;transition:.25s;
+}
+.ap:hover{background:#edfbf5;border-color:rgba(44,197,139,.3);transform:translateX(-4px)}
+.ap-i{
+  width:38px;height:38px;flex-shrink:0;border-radius:8px;
+  background:#edfbf5;display:flex;align-items:center;justify-content:center;font-size:1rem;
+}
+.ap strong{display:block;font-size:.88rem;font-weight:800}
+.ap span{color:rgba(7,24,39,.45);font-size:.76rem}
+
+/* ══════════════════════════════════
+   STATS  (green bg)
+══════════════════════════════════ */
+.stats-g{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.st{
+  text-align:center;padding:clamp(36px,5vw,60px) 24px;
+  border-left:1px solid rgba(7,24,39,.12);
+}
+.st:last-child{border-left:none}
+.st-val{
+  font-size:clamp(3.5rem,7vw,6rem);font-weight:900;
+  color:var(--D);line-height:1;margin-bottom:6px;
+}
+.st-lbl{color:rgba(7,24,39,.6);font-size:.88rem;font-weight:800}
+
+/* ══════════════════════════════════
+   VISION / MISSION  (dark bg)
+══════════════════════════════════ */
+.vm-g{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-radius:16px;overflow:hidden}
+.vm-c{padding:clamp(40px,5vw,64px) clamp(32px,4vw,52px);position:relative;overflow:hidden}
+.vm-v{background:rgba(255,255,255,.04)}
+.vm-m{background:rgba(44,197,139,.06)}
+.vm-num{font-size:5rem;font-weight:900;color:rgba(44,197,139,.08);line-height:1;margin-bottom:14px}
+.vm-ico{font-size:2.2rem;margin-bottom:14px}
+.vm-c h3{font-size:1.6rem;font-weight:900;color:var(--G);margin-bottom:12px}
+.vm-c p{color:rgba(255,255,255,.7);line-height:1.85;font-size:1rem}
+.vm-pill{
+  display:inline-block;margin-top:20px;
+  padding:5px 16px;border-radius:20px;
+  background:rgba(44,197,139,.1);color:var(--G);
+  border:1px solid rgba(44,197,139,.2);font-weight:800;font-size:.74rem;
+}
+
+/* ══════════════════════════════════
+   SERVICES  (soft green)
+══════════════════════════════════ */
+.svc-g{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;border-radius:14px;overflow:hidden;background:rgba(44,197,139,.12);
+}
+.sc{
+  background:#fff;padding:28px 22px;
+  display:flex;flex-direction:column;position:relative;overflow:hidden;
   transition:all .3s var(--ease);
-  position:relative;overflow:hidden;
-  cursor:default;
 }
-.svc-card::before{
-  content:"";position:absolute;bottom:0;left:0;right:0;
-  height:3px;background:var(--gold);
-  transform:scaleX(0);transform-origin:right;
+.sc::after{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:var(--G);transform:scaleX(0);transform-origin:right;
   transition:transform .4s var(--ease);
 }
-.svc-card:hover{background:var(--navy-light);transform:translateY(-6px);z-index:1}
-.svc-card:hover::before{transform:scaleX(1);transform-origin:left}
-.svc-num{
-  font-size:2.8rem;font-weight:900;color:rgba(200,168,75,.15);
-  line-height:1;margin-bottom:16px;font-family:monospace;
-}
-.svc-icon{font-size:2rem;margin-bottom:16px}
-.svc-card h3{font-size:1.05rem;font-weight:900;color:var(--white);margin-bottom:8px;line-height:1.4}
-.svc-card p{color:var(--text-dim);font-size:.85rem;line-height:1.7;flex:1}
-.svc-arrow{
-  display:inline-flex;align-items:center;gap:6px;
-  color:var(--gold);font-size:.8rem;font-weight:800;margin-top:16px;
-  opacity:0;transform:translateX(10px);
-  transition:all .3s;
-}
-.svc-card:hover .svc-arrow{opacity:1;transform:translateX(0)}
+.sc:hover{background:#f4fcf9;transform:translateY(-6px);z-index:1;box-shadow:0 16px 40px rgba(7,24,39,.1)}
+.sc:hover::after{transform:scaleX(1);transform-origin:left}
+.sc-n{font-size:2.4rem;font-weight:900;color:rgba(44,197,139,.12);line-height:1;margin-bottom:12px}
+.sc-i{font-size:1.8rem;margin-bottom:12px}
+.sc h3{font-size:.95rem;font-weight:900;color:var(--D);margin-bottom:6px;line-height:1.4}
+.sc p{color:rgba(7,24,39,.45);font-size:.78rem;line-height:1.65;flex:1}
 
-/* ═══════════════════════════════════════
-   STRATEGY
-═══════════════════════════════════════ */
-.strategy-section{
-  background:var(--navy);
-  position:relative;overflow:hidden;
-}
-.strategy-section::after{
-  content:"";position:absolute;
-  width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle, rgba(200,168,75,.05) 0%, transparent 70%);
-  left:-200px;top:50%;transform:translateY(-50%);
-  pointer-events:none;
-}
-.strat-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.strat-card{
-  padding:40px 32px;
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:var(--radius-lg);
-  position:relative;overflow:hidden;
-  transition:all .3s var(--ease);
-}
-.strat-card:hover{
-  border-color:var(--border);
-  transform:translateY(-8px);
-  box-shadow:0 24px 60px rgba(0,0,0,.3);
-}
-.strat-card::after{
-  content:"";position:absolute;
-  top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--green));
-  transform:scaleX(0);transform-origin:right;
-  transition:transform .5s var(--ease);
-}
-.strat-card:hover::after{transform:scaleX(1);transform-origin:left}
-.strat-num{
-  font-size:3.5rem;font-weight:900;color:rgba(200,168,75,.1);
-  line-height:1;margin-bottom:20px;
-}
-.strat-icon{
-  width:58px;height:58px;border-radius:14px;
-  background:var(--gold-pale);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.6rem;margin-bottom:20px;
-}
-.strat-card h3{font-size:1.2rem;font-weight:900;margin-bottom:12px;color:var(--white)}
-.strat-card p{color:var(--text-dim);font-size:.92rem;line-height:1.8}
+/* ══════════════════════════════════
+   DATA / PROGRESS  (white)
+══════════════════════════════════ */
+.data-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:start}
+.prog-bars{display:flex;flex-direction:column;gap:20px}
+.pb-head{display:flex;justify-content:space-between;margin-bottom:7px}
+.pb-name{font-size:.88rem;font-weight:800;color:var(--D)}
+.pb-pct{font-size:.85rem;font-weight:900;color:var(--G)}
+.pb-track{height:10px;background:#edfbf5;border-radius:5px;overflow:hidden}
+.pb-fill{height:100%;background:linear-gradient(90deg,var(--G),var(--Gd));border-radius:5px;width:0;transition:width 1.6s var(--ease)}
+.pb-desc{color:rgba(7,24,39,.4);font-size:.73rem;margin-top:4px}
 
-/* ═══════════════════════════════════════
-   METHODOLOGY
-═══════════════════════════════════════ */
-.method-section{background:var(--navy-mid)}
-.method-steps{
-  display:grid;grid-template-columns:repeat(5,1fr);
-  gap:0;position:relative;
-}
-.method-steps::before{
-  content:"";position:absolute;
-  top:42px;right:calc(100%/10);
-  width:80%;height:2px;
-  background:linear-gradient(90deg, var(--gold) 0%, rgba(200,168,75,.1) 100%);
-  z-index:0;
-}
-.method-step{
-  display:flex;flex-direction:column;align-items:center;
-  text-align:center;padding:0 16px;
-  position:relative;z-index:1;
-}
-.step-circle{
-  width:84px;height:84px;border-radius:50%;
-  background:var(--navy-card);
-  border:2px solid var(--border-sub);
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;margin-bottom:20px;
-  transition:all .3s var(--ease);
-  font-size:1.4rem;
-}
-.method-step:hover .step-circle{
-  border-color:var(--gold);
-  background:var(--gold-pale);
-  transform:scale(1.1);
-}
-.step-num{
-  font-size:.65rem;font-weight:900;color:var(--gold);
-  letter-spacing:.08em;margin-bottom:2px;
-}
-.method-step h4{font-size:.95rem;font-weight:800;color:var(--white);margin-bottom:6px}
-.method-step p{color:var(--text-dim);font-size:.8rem;line-height:1.6}
-
-/* ═══════════════════════════════════════
-   ADVANTAGES
-═══════════════════════════════════════ */
-.adv-section{
-  background:var(--navy);
-  position:relative;overflow:hidden;
-}
-.adv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.adv-card{
-  padding:32px 24px;
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:var(--radius-lg);
-  transition:all .3s var(--ease);
-  position:relative;overflow:hidden;
-}
-.adv-card::before{
-  content:"";position:absolute;
-  inset:0;opacity:0;
-  background:radial-gradient(circle at 50% 0%, rgba(200,168,75,.08) 0%, transparent 70%);
-  transition:opacity .3s;
-}
-.adv-card:hover{
-  border-color:var(--border);
-  transform:translateY(-6px);
-  box-shadow:0 20px 48px rgba(0,0,0,.3);
-}
-.adv-card:hover::before{opacity:1}
-.adv-icon{
-  width:54px;height:54px;border-radius:12px;
-  background:var(--gold-pale);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.5rem;margin-bottom:18px;
-}
-.adv-card h3{font-size:1rem;font-weight:900;color:var(--white);margin-bottom:8px}
-.adv-card p{color:var(--text-dim);font-size:.85rem;line-height:1.7}
-
-/* ═══════════════════════════════════════
-   TEAM / NUMBERS
-═══════════════════════════════════════ */
-.numbers-section{
-  background:linear-gradient(135deg, var(--navy-card) 0%, var(--navy-light) 100%);
-  border-top:1px solid var(--border-sub);
-  border-bottom:1px solid var(--border-sub);
-  padding-block:clamp(50px,7vw,90px);
-}
-.numbers-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;
-}
-.num-item{
-  text-align:center;padding:32px 20px;
-  border-left:1px solid var(--border-sub);
-  transition:background .2s;
-}
-.num-item:last-child{border-left:none}
-.num-item:hover{background:var(--gold-pale)}
-.num-val{
-  font-size:clamp(2.4rem,4vw,4rem);font-weight:900;
-  color:var(--gold);line-height:1;margin-bottom:8px;
-}
-.num-label{color:var(--text-dim);font-size:.85rem;font-weight:700}
-
-/* ═══════════════════════════════════════
-   PROGRAMS
-═══════════════════════════════════════ */
-.programs-section{background:var(--navy-mid)}
-.programs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.prog-card{
-  padding:36px 30px;
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:var(--radius-lg);
-  text-align:center;
-  transition:all .3s var(--ease);
-}
-.prog-card:hover{
-  border-color:var(--border);
-  transform:translateY(-6px);
-  box-shadow:0 20px 48px rgba(0,0,0,.25);
-}
-.prog-icon{font-size:2.8rem;margin-bottom:16px}
-.prog-card h3{font-size:1.15rem;font-weight:900;color:var(--white);margin-bottom:4px}
-.prog-badge{
-  display:inline-block;margin-bottom:16px;
-  padding:3px 12px;border-radius:20px;
-  background:var(--gold-pale);color:var(--gold);
-  font-weight:800;font-size:.75rem;border:1px solid var(--border);
-}
-.prog-card p{color:var(--text-dim);font-size:.88rem;line-height:1.7}
-
-/* ═══════════════════════════════════════
-   CLIENTS
-═══════════════════════════════════════ */
-.clients-section{
-  background:var(--navy);
-  padding-block:clamp(50px,6vw,80px);
-}
-.clients-track-wrap{overflow:hidden;position:relative}
-.clients-track-wrap::before,
-.clients-track-wrap::after{
-  content:"";position:absolute;top:0;bottom:0;width:100px;z-index:2;pointer-events:none;
-}
-.clients-track-wrap::before{right:0;background:linear-gradient(90deg,transparent,var(--navy))}
-.clients-track-wrap::after{left:0;background:linear-gradient(270deg,transparent,var(--navy))}
-.clients-track{
-  display:flex;gap:32px;
-  animation:scroll 25s linear infinite;
-  width:max-content;
-}
-.clients-track:hover{animation-play-state:paused}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.client-logo{
-  flex-shrink:0;
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:10px;
-  padding:16px 28px;
-  display:flex;align-items:center;justify-content:center;
-  height:72px;min-width:140px;
-  transition:border-color .2s;filter:grayscale(.5) brightness(.9);
-}
-.client-logo:hover{border-color:var(--border);filter:none}
-.client-logo img{max-height:38px;max-width:110px;object-fit:contain}
-
-/* ═══════════════════════════════════════
-   CAREERS
-═══════════════════════════════════════ */
-.careers-section{
-  background:var(--navy-mid);
-  position:relative;overflow:hidden;
-}
-.careers-section::before{
-  content:"";position:absolute;
-  width:500px;height:500px;border-radius:50%;
-  background:radial-gradient(circle, rgba(22,207,143,.05) 0%, transparent 70%);
-  right:-150px;top:50%;transform:translateY(-50%);
-  pointer-events:none;
-}
-.careers-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px)}
-.careers-info h3{font-size:1.4rem;font-weight:900;color:var(--white);margin-bottom:12px}
-.careers-info p{color:var(--text-dim);line-height:1.9;margin-bottom:28px}
-.careers-perks{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
-.perk{
-  display:flex;align-items:center;gap:12px;
-  padding:14px 18px;
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--border-sub);border-radius:10px;
-}
-.perk-icon{width:36px;height:36px;flex-shrink:0;border-radius:8px;background:var(--green-pale);border:1px solid rgba(22,207,143,.2);display:flex;align-items:center;justify-content:center;font-size:1rem}
-.perk span{color:var(--text-body);font-size:.9rem;font-weight:600}
-.careers-form-box{
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:var(--radius-lg);padding:36px 32px;
-}
-.careers-form-box h3{font-size:1.3rem;font-weight:900;color:var(--white);margin-bottom:4px}
-.careers-form-box .form-sub{color:var(--gold);font-size:.82rem;font-weight:700;margin-bottom:24px}
-.form-row{margin-bottom:18px}
-.form-row label{display:block;color:var(--text-dim);font-size:.82rem;font-weight:700;margin-bottom:6px;letter-spacing:.04em}
-.form-control{
-  width:100%;padding:12px 16px;
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--border-sub);
-  border-radius:8px;color:var(--white);
-  font-size:.92rem;font-family:inherit;
-  transition:border-color .2s,background .2s;
-  outline:none;
-}
-.form-control::placeholder{color:rgba(255,255,255,.25)}
-.form-control:focus{border-color:var(--gold);background:rgba(200,168,75,.05)}
-textarea.form-control{resize:vertical;min-height:110px}
-.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-submit-btn{
-  width:100%;padding:15px;
-  background:var(--green);color:var(--navy);
-  font-weight:900;font-size:1rem;border-radius:8px;
-  border:none;cursor:pointer;font-family:inherit;
-  transition:all .25s var(--ease);
-  display:flex;align-items:center;justify-content:center;gap:8px;
-}
-.form-submit-btn:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 10px 28px rgba(22,207,143,.3)}
-.form-note{
-  text-align:center;margin-top:12px;
-  color:var(--text-dim);font-size:.78rem;
-  display:flex;align-items:center;justify-content:center;gap:6px;
-}
-
-/* ═══════════════════════════════════════
-   CONTACT
-═══════════════════════════════════════ */
-.contact-section{
-  background:var(--navy);
-  position:relative;overflow:hidden;
-}
-.contact-section::before{
-  content:"";position:absolute;
-  width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle, rgba(200,168,75,.05) 0%, transparent 70%);
-  left:-200px;bottom:-100px;pointer-events:none;
-}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px)}
-.contact-info-panel{}
-.contact-info-panel .section-lead{margin-bottom:36px}
-.contact-cards{display:flex;flex-direction:column;gap:16px}
-.cinfo-card{
+.big-stats{display:flex;flex-direction:column;gap:14px}
+.bs{
   display:flex;align-items:center;gap:16px;
-  padding:20px 22px;
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:12px;
-  transition:all .25s;
+  padding:20px 22px;background:#f4fcf9;
+  border:1px solid rgba(44,197,139,.15);border-radius:12px;transition:.25s;
 }
-.cinfo-card:hover{border-color:var(--border);transform:translateX(-4px)}
-.cinfo-icon{
-  width:50px;height:50px;flex-shrink:0;border-radius:12px;
-  background:var(--gold-pale);border:1px solid var(--border);
-  display:flex;align-items:center;justify-content:center;font-size:1.3rem;
+.bs:hover{border-color:rgba(44,197,139,.4);transform:translateX(-5px)}
+.bs-ico{
+  width:56px;height:56px;flex-shrink:0;border-radius:12px;
+  background:#edfbf5;display:flex;align-items:center;justify-content:center;font-size:1.5rem;
 }
-.cinfo-text small{display:block;color:var(--text-dim);font-size:.75rem;font-weight:700;margin-bottom:2px;letter-spacing:.06em}
-.cinfo-text strong{display:block;font-size:.95rem;font-weight:800;color:var(--white)}
-.cinfo-text a{color:var(--gold);transition:color .2s}
-.cinfo-text a:hover{color:var(--gold-light)}
-.contact-form-panel{
-  background:var(--navy-card);
-  border:1px solid var(--border-sub);
-  border-radius:var(--radius-lg);padding:36px 32px;
-}
-.contact-form-panel h3{font-size:1.3rem;font-weight:900;margin-bottom:4px}
-.contact-form-panel .form-sub{color:var(--text-dim);font-size:.85rem;margin-bottom:28px}
-.contact-submit-btn{
-  width:100%;padding:15px;
-  background:var(--gold);color:var(--navy);
-  font-weight:900;font-size:1rem;border-radius:8px;
-  border:none;cursor:pointer;font-family:inherit;
-  transition:all .25s var(--ease);
-  display:flex;align-items:center;justify-content:center;gap:8px;
-}
-.contact-submit-btn:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 10px 28px rgba(200,168,75,.35)}
+.bs-num{font-size:1.9rem;font-weight:900;color:var(--D);line-height:1}
+.bs-num em{color:var(--G);font-style:normal}
+.bs-lbl{color:rgba(7,24,39,.5);font-size:.78rem;margin-top:2px}
 
-/* ═══════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════ */
-footer{
-  background:var(--navy-card);
-  border-top:1px solid var(--border-sub);
-  padding-top:clamp(50px,6vw,80px);
+/* ══════════════════════════════════
+   STRATEGY  (dark)
+══════════════════════════════════ */
+.str-g{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:14px;overflow:hidden}
+.str-c{
+  padding:clamp(32px,4vw,52px) clamp(24px,3vw,40px);
+  background:rgba(255,255,255,.04);
+  position:relative;overflow:hidden;transition:background .3s;
 }
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:clamp(32px,4vw,60px);
-  margin-bottom:clamp(40px,5vw,64px);
+.str-c:hover{background:rgba(44,197,139,.06)}
+.str-n{font-size:4rem;font-weight:900;color:rgba(44,197,139,.08);line-height:1;margin-bottom:16px}
+.str-ico{
+  width:52px;height:52px;border-radius:12px;
+  background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.2);
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px;
 }
-.footer-brand img{height:48px;margin-bottom:16px}
-.footer-brand p{color:var(--text-dim);font-size:.9rem;line-height:1.9;max-width:300px;margin-bottom:24px}
-.footer-social{display:flex;gap:10px}
-.social-btn{
-  width:40px;height:40px;border-radius:50%;
-  background:rgba(255,255,255,.05);border:1px solid var(--border-sub);
-  display:flex;align-items:center;justify-content:center;font-size:1rem;
-  transition:all .2s;color:var(--text-dim);
-}
-.social-btn:hover{background:var(--gold-pale);border-color:var(--border);color:var(--gold)}
-.footer-col h4{
-  font-size:.82rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:20px;
-}
-.footer-col ul{display:flex;flex-direction:column;gap:10px}
-.footer-col ul li a{
-  color:var(--text-dim);font-size:.9rem;font-weight:600;
-  transition:color .2s;display:flex;align-items:center;gap:6px;
-}
-.footer-col ul li a:hover{color:var(--white)}
-.footer-col ul li a::before{content:"←";font-size:.7rem;opacity:.4}
-.footer-bottom{
-  border-top:1px solid var(--border-sub);
-  padding:20px 0;
-  display:flex;align-items:center;justify-content:space-between;
-  gap:16px;flex-wrap:wrap;
-}
-.footer-bottom p{color:var(--text-dim);font-size:.8rem}
-.footer-bottom-links{display:flex;gap:20px}
-.footer-bottom-links a{color:var(--text-dim);font-size:.8rem;transition:color .2s}
-.footer-bottom-links a:hover{color:var(--gold)}
+.str-c h3{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:10px}
+.str-c p{color:rgba(255,255,255,.5);font-size:.86rem;line-height:1.8}
 
-/* ═══════════════════════════════════════
-   FLOAT WHATSAPP
-═══════════════════════════════════════ */
-.float-wa{
-  position:fixed;bottom:28px;left:28px;z-index:500;
-  width:56px;height:56px;border-radius:50%;
-  background:#25d366;
+/* ══════════════════════════════════
+   METHODOLOGY  (soft green)
+══════════════════════════════════ */
+.mth-g{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:0;
+  position:relative;
+}
+.mth-g::before{
+  content:"";position:absolute;
+  top:44px;right:10%;width:80%;height:2px;
+  background:linear-gradient(to left,var(--G),rgba(44,197,139,.1));
+}
+.ms{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 10px;position:relative;z-index:1}
+.ms-c{
+  width:88px;height:88px;border-radius:50%;
+  background:#fff;border:2px solid rgba(44,197,139,.2);
   display:flex;align-items:center;justify-content:center;
-  font-size:1.6rem;box-shadow:0 6px 24px rgba(37,211,102,.4);
+  flex-direction:column;margin-bottom:18px;
+  transition:all .3s var(--ease);font-size:1.5rem;
+  box-shadow:0 4px 20px rgba(7,24,39,.07);
+}
+.ms:hover .ms-c{border-color:var(--G);background:#edfbf5;transform:scale(1.1)}
+.ms-n{font-size:.58rem;font-weight:900;color:var(--G);letter-spacing:.08em;margin-bottom:2px}
+.ms h4{font-size:.88rem;font-weight:800;color:var(--D);margin-bottom:4px}
+.ms p{color:rgba(7,24,39,.45);font-size:.74rem;line-height:1.55}
+
+/* ══════════════════════════════════
+   ADVANTAGES  (white)
+══════════════════════════════════ */
+.adv-g{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ac{
+  padding:28px 22px;background:#fff;
+  border:1px solid rgba(44,197,139,.12);border-radius:14px;
   transition:all .3s var(--ease);
-  animation:waPulse 3s ease-in-out infinite;
 }
-.float-wa:hover{transform:scale(1.1);box-shadow:0 10px 32px rgba(37,211,102,.5)}
-@keyframes waPulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)}50%{box-shadow:0 6px 36px rgba(37,211,102,.6)}}
-/* Back to top */
-.back-top{
-  position:fixed;bottom:28px;right:28px;z-index:500;
-  width:44px;height:44px;border-radius:50%;
-  background:var(--gold);color:var(--navy);
+.ac:hover{border-color:var(--G);transform:translateY(-6px);box-shadow:0 18px 44px rgba(7,24,39,.09)}
+.ac:hover .ac-ico{background:var(--G)}
+.ac-ico{
+  width:52px;height:52px;border-radius:12px;
+  background:#edfbf5;
   display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;font-weight:900;
-  box-shadow:0 4px 16px rgba(200,168,75,.35);
-  opacity:0;pointer-events:none;
-  transition:all .3s;
+  font-size:1.4rem;margin-bottom:14px;transition:.3s;
 }
-.back-top.show{opacity:1;pointer-events:all}
-.back-top:hover{transform:translateY(-3px)}
+.ac h3{font-size:.95rem;font-weight:900;color:var(--D);margin-bottom:5px}
+.ac p{color:rgba(7,24,39,.45);font-size:.78rem;line-height:1.65}
 
-/* ═══════════════════════════════════════
-   REVEAL ANIMATIONS
-═══════════════════════════════════════ */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .5s ease,transform .5s ease}
-.reveal.visible{opacity:1;transform:none}
-.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .5s ease,transform .5s ease}
-.reveal-left.visible{opacity:1;transform:none}
-.reveal-right{opacity:0;transform:translateX(32px);transition:opacity .5s ease,transform .5s ease}
-.reveal-right.visible{opacity:1;transform:none}
-[data-delay="1"]{transition-delay:.1s}
-[data-delay="2"]{transition-delay:.2s}
-[data-delay="3"]{transition-delay:.3s}
-[data-delay="4"]{transition-delay:.4s}
-[data-delay="5"]{transition-delay:.5s}
-[data-delay="6"]{transition-delay:.6s}
-[data-delay="7"]{transition-delay:.7s}
-
-/* ═══════════════════════════════════════
-   SECTION DIVIDER
-═══════════════════════════════════════ */
-.divider{
-  height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);
+/* ══════════════════════════════════
+   PROGRAMS  (dark)
+══════════════════════════════════ */
+.prg-g{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:14px;overflow:hidden}
+.pc{
+  padding:clamp(32px,4vw,50px) clamp(24px,3vw,38px);
+  background:rgba(255,255,255,.04);text-align:center;transition:background .3s;
 }
+.pc:hover{background:rgba(44,197,139,.06)}
+.pc-ico{font-size:2.8rem;margin-bottom:14px}
+.pc h3{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:4px}
+.pc-pill{
+  display:inline-block;margin-bottom:12px;
+  padding:3px 12px;border-radius:20px;
+  background:rgba(44,197,139,.1);color:var(--G);
+  font-weight:800;font-size:.7rem;
+}
+.pc p{color:rgba(255,255,255,.5);font-size:.83rem;line-height:1.75}
 
-/* ═══════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════ */
+/* ══════════════════════════════════
+   CLIENTS  (soft green)
+══════════════════════════════════ */
+.cl-wrap{overflow:hidden;position:relative}
+.cl-wrap::before,.cl-wrap::after{
+  content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+}
+.cl-wrap::before{right:0;background:linear-gradient(90deg,transparent,#f4fcf9)}
+.cl-wrap::after{left:0;background:linear-gradient(270deg,transparent,#f4fcf9)}
+.cl-track{display:flex;gap:16px;animation:scroll 22s linear infinite;width:max-content}
+.cl-track:hover{animation-play-state:paused}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.cl-logo{
+  flex-shrink:0;background:#fff;
+  border:1px solid rgba(44,197,139,.12);border-radius:10px;
+  padding:14px 26px;height:66px;min-width:128px;
+  display:flex;align-items:center;justify-content:center;
+  filter:grayscale(.3);transition:.2s;
+}
+.cl-logo:hover{filter:none;border-color:var(--G)}
+.cl-logo img{max-height:34px;max-width:96px;object-fit:contain}
+
+/* ══════════════════════════════════
+   CAREERS  (white)
+══════════════════════════════════ */
+.car-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px)}
+.perks{display:flex;flex-direction:column;gap:9px;margin:18px 0 22px}
+.perk{
+  display:flex;align-items:center;gap:11px;
+  padding:11px 14px;background:#f4fcf9;
+  border:1px solid rgba(44,197,139,.12);border-radius:8px;transition:.2s;
+}
+.perk:hover{background:#edfbf5;border-color:rgba(44,197,139,.3)}
+.pk-i{width:32px;height:32px;flex-shrink:0;border-radius:7px;background:#edfbf5;display:flex;align-items:center;justify-content:center;font-size:.9rem}
+.perk span{font-size:.84rem;font-weight:700;color:rgba(7,24,39,.7)}
+.hr-link{padding:16px 18px;background:#edfbf5;border:1px solid rgba(44,197,139,.2);border-radius:10px}
+.hr-link p{color:rgba(7,24,39,.45);font-size:.76rem;margin-bottom:6px}
+.hr-link a{color:var(--Gd);font-weight:900;font-size:.95rem;display:flex;align-items:center;gap:6px}
+
+/* Form */
+.fbox{
+  background:#fff;border:1px solid rgba(44,197,139,.12);
+  border-radius:16px;padding:30px 26px;
+  box-shadow:0 8px 32px rgba(7,24,39,.07);
+}
+.fbox h3{font-size:1.1rem;font-weight:900;color:var(--D);margin-bottom:2px}
+.fsub{color:var(--G);font-size:.72rem;font-weight:800;margin-bottom:20px;display:block}
+.fr{margin-bottom:14px}
+.fr label{display:block;color:rgba(7,24,39,.5);font-size:.72rem;font-weight:800;margin-bottom:5px;letter-spacing:.04em}
+.fi{
+  width:100%;padding:10px 13px;
+  background:#f8fffe;border:1px solid rgba(44,197,139,.12);
+  border-radius:7px;color:var(--D);font-size:.86rem;
+  font-family:inherit;transition:.2s;outline:none;
+}
+.fi::placeholder{color:rgba(7,24,39,.2)}
+.fi:focus{border-color:var(--G);background:#edfbf5;box-shadow:0 0 0 3px rgba(44,197,139,.08)}
+textarea.fi{resize:vertical;min-height:90px}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sbtn-g{
+  width:100%;padding:13px;
+  background:var(--G);color:var(--D);font-weight:900;font-size:.92rem;
+  border-radius:8px;border:none;cursor:pointer;font-family:inherit;
+  transition:all .25s var(--ease);
+  display:flex;align-items:center;justify-content:center;gap:7px;
+}
+.sbtn-g:hover{background:var(--Gd);transform:translateY(-2px);box-shadow:0 10px 24px rgba(44,197,139,.3)}
+.sbtn-d{
+  width:100%;padding:13px;
+  background:var(--D);color:#fff;font-weight:900;font-size:.92rem;
+  border-radius:8px;border:none;cursor:pointer;font-family:inherit;
+  transition:all .25s var(--ease);
+  display:flex;align-items:center;justify-content:center;gap:7px;
+}
+.sbtn-d:hover{background:#0d2438;transform:translateY(-2px);box-shadow:0 10px 24px rgba(7,24,39,.2)}
+.fnote{text-align:center;margin-top:9px;color:rgba(7,24,39,.35);font-size:.7rem;display:flex;align-items:center;justify-content:center;gap:5px}
+
+/* ══════════════════════════════════
+   CONTACT  (dark)
+══════════════════════════════════ */
+.ct-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px)}
+.ci-cards{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
+.ci{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 18px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);border-radius:10px;transition:.25s;
+}
+.ci:hover{border-color:rgba(44,197,139,.3);background:rgba(44,197,139,.05)}
+.ci-ico{
+  width:44px;height:44px;flex-shrink:0;border-radius:10px;
+  background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.2);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+}
+.ci small{display:block;color:rgba(255,255,255,.35);font-size:.65rem;font-weight:800;letter-spacing:.06em;margin-bottom:2px}
+.ci strong{display:block;font-size:.88rem;font-weight:800;color:#fff}
+.ci a{color:var(--G);transition:.2s}.ci a:hover{color:#fff}
+.ct-note{
+  padding:18px 20px;background:rgba(44,197,139,.06);
+  border:1px solid rgba(44,197,139,.15);border-radius:10px;
+}
+.ct-note p:first-child{color:var(--G);font-weight:800;font-size:.82rem;margin-bottom:5px}
+.ct-note p:last-child{color:rgba(255,255,255,.4);font-size:.8rem;line-height:1.7}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer{background:var(--D);color:#fff;padding-top:clamp(44px,5vw,70px)}
+.ft-g{display:grid;grid-template-columns:2fr 1fr 1fr;gap:clamp(24px,4vw,52px);margin-bottom:clamp(32px,4vw,52px)}
+.ft-logo img{height:42px;margin-bottom:12px}
+.ft-logo p{color:rgba(255,255,255,.4);font-size:.82rem;line-height:1.85;max-width:260px;margin-bottom:16px}
+.ft-soc{display:flex;gap:8px}
+.soc-b{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;font-size:.85rem;
+  color:rgba(255,255,255,.4);transition:.2s;
+}
+.soc-b:hover{background:rgba(44,197,139,.15);border-color:rgba(44,197,139,.3);color:var(--G)}
+.ft-col h4{font-size:.7rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--G);margin-bottom:16px}
+.ft-col ul{display:flex;flex-direction:column;gap:8px}
+.ft-col ul li a{color:rgba(255,255,255,.4);font-size:.82rem;font-weight:600;transition:.2s;display:flex;align-items:center;gap:5px}
+.ft-col ul li a:hover{color:var(--G)}
+.ft-col ul li a::before{content:"›";opacity:.4}
+.ft-btm{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:16px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.ft-btm p{color:rgba(255,255,255,.25);font-size:.74rem}
+.ft-links{display:flex;gap:16px}
+.ft-links a{color:rgba(255,255,255,.25);font-size:.74rem;transition:.2s}
+.ft-links a:hover{color:var(--G)}
+
+/* floats */
+.f-wa{
+  position:fixed;bottom:26px;left:26px;z-index:500;
+  width:52px;height:52px;border-radius:50%;background:#25d366;
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+  box-shadow:0 6px 22px rgba(37,211,102,.4);animation:wpulse 3s infinite;transition:.3s;
+}
+.f-wa:hover{transform:scale(1.12)}
+@keyframes wpulse{0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.35)}50%{box-shadow:0 6px 34px rgba(37,211,102,.6)}}
+.f-top{
+  position:fixed;bottom:26px;right:26px;z-index:500;
+  width:42px;height:42px;border-radius:50%;background:var(--G);color:var(--D);
+  display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;
+  box-shadow:0 4px 14px rgba(44,197,139,.35);opacity:0;pointer-events:none;transition:.3s;
+}
+.f-top.on{opacity:1;pointer-events:all}
+.f-top:hover{transform:translateY(-3px)}
+
+/* responsive */
 @media(max-width:1100px){
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .adv-grid{grid-template-columns:repeat(2,1fr)}
-  .numbers-grid{grid-template-columns:repeat(2,1fr)}
-  .numbers-grid .num-item:nth-child(2){border-left:none}
-  .numbers-grid .num-item:nth-child(3){border-top:1px solid var(--border-sub);border-left:1px solid var(--border-sub)}
-  .method-steps{grid-template-columns:repeat(3,1fr);gap:20px}
-  .method-steps::before{display:none}
-  .method-step{margin-bottom:20px}
+  .hero-grid{grid-template-columns:1fr}.dw{display:none}
+  .svc-g{grid-template-columns:repeat(2,1fr)}
+  .adv-g{grid-template-columns:repeat(2,1fr)}
+  .stats-g{grid-template-columns:repeat(3,1fr)}
+  .mth-g{grid-template-columns:repeat(3,1fr)}.mth-g::before{display:none}
+  .data-g{grid-template-columns:1fr}
 }
 @media(max-width:900px){
-  .grid-2,.hero-content,.careers-grid,.contact-grid,.vm-grid{grid-template-columns:1fr}
-  .strat-cards{grid-template-columns:1fr}
-  .programs-grid{grid-template-columns:1fr 1fr}
-  .footer-grid{grid-template-columns:1fr 1fr}
-  .hero-right{display:none}
-  .hero-stats-row{flex-wrap:wrap}
-  .hstat{flex:0 0 50%;border-top:1px solid var(--border-sub)}
-  .hstat:nth-child(1),.hstat:nth-child(2){border-top:none}
-  .hstat:nth-child(even){border-left:none}
-  .about-image-badge{right:0;bottom:-10px}
-  .vm-grid{border-radius:var(--radius)}
+  .about-g,.vm-g,.str-g,.car-g,.ct-g,.prg-g,.ft-g{grid-template-columns:1fr}
+  .stats-g{grid-template-columns:1fr 1fr}
+  .st:nth-child(2){border-left:none}
+  .st:nth-child(3){border-top:1px solid rgba(7,24,39,.12);border-left:1px solid rgba(7,24,39,.12)}
+  .img-badge{right:0}
 }
 @media(max-width:680px){
-  :root{--hh:70px}
-  .nav-links{display:none}
-  .header-phone{display:none}
-  .menu-toggle{display:flex}
-  .hero h1{font-size:clamp(2.2rem,8vw,3.5rem)}
-  .services-grid{grid-template-columns:1fr}
-  .adv-grid{grid-template-columns:1fr 1fr}
-  .numbers-grid{grid-template-columns:1fr 1fr}
-  .programs-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column;text-align:center}
-  .footer-bottom-links{flex-wrap:wrap;justify-content:center}
-  .method-steps{grid-template-columns:1fr 1fr}
-  .form-row-2{grid-template-columns:1fr}
-  .careers-form-box,.contact-form-panel{padding:24px 20px}
+  :root{--hh:66px}
+  .nav-links,.nav-phone{display:none}
+  .ham{display:flex}
+  .svc-g{grid-template-columns:1fr}
+  .adv-g{grid-template-columns:1fr 1fr}
+  .stats-g{grid-template-columns:1fr}
+  .st{border-left:none!important;border-top:1px solid rgba(7,24,39,.1)}
+  .st:first-child{border-top:none}
+  .mth-g{grid-template-columns:1fr 1fr}
+  .fr2{grid-template-columns:1fr}
+  .ft-g{grid-template-columns:1fr}
+  .ft-btm{flex-direction:column;text-align:center}
+  .ft-links{flex-wrap:wrap;justify-content:center}
 }
-@media(max-width:440px){
-  .adv-grid{grid-template-columns:1fr}
-  .hstat{flex:0 0 100%;border-left:none!important;border-top:1px solid var(--border-sub)}
-  .hstat:first-child{border-top:none}
-}
+@media(max-width:480px){.adv-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- ─── HEADER ─── -->
-<header class="site-header" id="site-header">
-  <nav class="nav-wrap">
-    <a href="#home" class="brand">
-      <img src="assets/altasaluh-logo-wide.png" alt="شركة التصالح" onerror="this.style.display='none'">
-      <div class="brand-text">
-        <strong>التصالح</strong>
-        <span>لتحصيل الديون</span>
-      </div>
+<!-- HEADER -->
+<header class="hdr" id="hdr">
+  <nav class="nav">
+    <a href="#home" class="logo">
+      <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
+      <div class="logo-txt"><strong>التصالح</strong><span>لتحصيل الديون</span></div>
     </a>
     <div class="nav-links">
-      <a href="#home" class="active">الرئيسية</a>
+      <a href="#home" class="on">الرئيسية</a>
       <a href="#about">عن الشركة</a>
-      <a href="#services">خدماتنا</a>
-      <a href="#strategy">استراتيجيتنا</a>
-      <a href="#advantages">مميزاتنا</a>
+      <a href="#services">الخدمات</a>
+      <a href="#strategy">الاستراتيجية</a>
+      <a href="#advantages">المميزات</a>
       <a href="#careers">التوظيف</a>
       <a href="#contact">تواصل معنا</a>
     </div>
-    <div class="header-actions">
-      <a href="tel:0566633692" class="header-phone">📞 0566633692</a>
-      <a href="#contact" class="btn btn-gold" style="padding:9px 20px;font-size:.85rem">ابدأ الآن</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="القائمة">
-        <span></span><span></span><span></span>
-      </button>
+    <div class="nav-right">
+      <a href="tel:0566633692" class="nav-phone">📞 0566633692</a>
+      <a href="#contact" class="btn-cta">ابدأ الآن</a>
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
   </nav>
 </header>
 
-<!-- ─── MOBILE NAV ─── -->
-<nav class="mobile-nav" id="mobileNav">
-  <a href="#home" onclick="closeMobileNav()">الرئيسية</a>
-  <a href="#about" onclick="closeMobileNav()">عن الشركة</a>
-  <a href="#services" onclick="closeMobileNav()">خدماتنا</a>
-  <a href="#strategy" onclick="closeMobileNav()">استراتيجيتنا</a>
-  <a href="#advantages" onclick="closeMobileNav()">مميزاتنا</a>
-  <a href="#careers" onclick="closeMobileNav()">التوظيف</a>
-  <a href="#contact" onclick="closeMobileNav()">تواصل معنا</a>
-  <a href="tel:0566633692" style="color:var(--gold)">📞 0566633692</a>
+<!-- MOBILE NAV -->
+<nav class="mob" id="mob">
+  <a href="#home" onclick="cm()">الرئيسية</a>
+  <a href="#about" onclick="cm()">عن الشركة</a>
+  <a href="#services" onclick="cm()">الخدمات</a>
+  <a href="#strategy" onclick="cm()">الاستراتيجية</a>
+  <a href="#advantages" onclick="cm()">المميزات</a>
+  <a href="#careers" onclick="cm()">التوظيف</a>
+  <a href="#contact" onclick="cm()">تواصل معنا</a>
+  <a href="tel:0566633692" style="color:var(--G);margin-top:10px">📞 0566633692</a>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- ══ HERO ══ -->
 <section class="hero" id="home">
-  <div class="hero-bg">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-  </div>
-  <div class="hero-main">
-    <div class="hero-content">
-      <div class="hero-left">
-        <div class="hero-tag">
-          <span class="hero-tag-dot"></span>
-          شركة سعودية معتمدة — تأسست 2022
-        </div>
-        <h1>
-          شريكك الأول
-          <span class="line-gold">في تحصيل</span>
-          الديون
-        </h1>
-        <p class="hero-lead">
-          نقدم خدمات تحصيل الديون بأعلى معايير الجودة والمهنية في المملكة العربية السعودية. فريق من أكثر من 180 متخصصاً، أنظمة تقنية متطورة، ومحامون معتمدون من وزارة العدل.
-        </p>
+  <div class="hero-photo"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-body">
+    <div class="hero-grid">
+      <div>
+        <div class="badge-live"><span class="live-dot"></span>شركة سعودية معتمدة — 2022</div>
+        <h1>شريكك الأول<em>في تحصيل الديون</em></h1>
+        <p class="hero-sub">فريق من 180+ متخصص، أنظمة متطورة، ومحامون معتمدون من وزارة العدل.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn btn-gold">تواصل معنا الآن</a>
-          <a href="#services" class="btn btn-outline-white">استعرض خدماتنا</a>
+          <a href="#contact" class="btn-solid">تواصل معنا</a>
+          <a href="#services" class="btn-ghost">استعرض الخدمات</a>
         </div>
-        <div class="hero-stats-row">
-          <div class="hstat">
-            <strong data-count="180" data-suffix="+">180+</strong>
-            <p>متخصص تحصيل</p>
-          </div>
-          <div class="hstat">
-            <strong data-count="2022" data-format="plain">2022</strong>
-            <p>عام التأسيس</p>
-          </div>
-          <div class="hstat">
-            <strong data-count="8" data-suffix="+">8+</strong>
-            <p>خدمات تحصيل</p>
-          </div>
-          <div class="hstat">
-            <strong>2030</strong>
-            <p>ملتزمون برؤية المملكة</p>
-          </div>
+        <div class="hero-stats">
+          <div class="hs"><strong data-count="180" data-suffix="+">180+</strong><p>متخصص تحصيل</p></div>
+          <div class="hs"><strong data-count="8">8</strong><p>خدمات متكاملة</p></div>
+          <div class="hs"><strong data-count="3">3</strong><p>أنظمة تقنية</p></div>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="float-stat">180+ موظف</div>
-        <div class="hero-card">
-          <div class="hcard-head">
-            <div class="hcard-icon">🏦</div>
-            <strong>تحصيل جهات التمويل</strong>
-          </div>
-          <p>بنوك، شركات تمويل، مؤسسات ائتمانية</p>
-          <span class="hero-badge">✓ تنفيذ سريع</span>
+
+      <!-- DATA WIDGET -->
+      <div class="dw">
+        <div class="dw-top">
+          <span>📊 لوحة أداء التحصيل</span>
+          <div class="dw-live"><i></i>مباشر</div>
         </div>
-        <div class="hero-card">
-          <div class="hcard-head">
-            <div class="hcard-icon">⚖️</div>
-            <strong>محامون معتمدون</strong>
-          </div>
-          <p>شراكة مع محامين مرخصين من وزارة العدل لرفع القضايا</p>
-          <span class="hero-badge">✓ تغطية قانونية كاملة</span>
+        <div class="kpis">
+          <div class="kpi"><div class="kpi-l">الموظفون</div><div class="kpi-v"><em data-count="180" data-suffix="+">180+</em></div><div class="kpi-t">↑ متخصص نشط</div></div>
+          <div class="kpi"><div class="kpi-l">الخدمات</div><div class="kpi-v"><em data-count="8">8</em></div><div class="kpi-t">↑ تغطية شاملة</div></div>
+          <div class="kpi"><div class="kpi-l">الأنظمة</div><div class="kpi-v"><em data-count="3">3</em></div><div class="kpi-t">↑ متكاملة</div></div>
+          <div class="kpi"><div class="kpi-l">التأسيس</div><div class="kpi-v">2022</div><div class="kpi-t">↑ مرخصة</div></div>
         </div>
-        <div class="hero-card">
-          <div class="hcard-head">
-            <div class="hcard-icon">🔒</div>
-            <strong>سرية تامة وحماية عالية</strong>
-          </div>
-          <p>أنظمة تقنية حديثة تضمن سرية البيانات واستمرارية العمل</p>
-          <span class="hero-badge">✓ معتمد</span>
+        <div class="chart-head">معدل التغطية بالقطاع</div>
+        <div class="bars">
+          <div class="br"><span class="br-n">التمويل</span><div class="br-t"><div class="br-f" data-w="92"></div></div><span class="br-p">92%</span></div>
+          <div class="br"><span class="br-n">العقاري</span><div class="br-t"><div class="br-f" data-w="85"></div></div><span class="br-p">85%</span></div>
+          <div class="br"><span class="br-n">البطاقات</span><div class="br-t"><div class="br-f" data-w="78"></div></div><span class="br-p">78%</span></div>
+          <div class="br"><span class="br-n">الاتصالات</span><div class="br-t"><div class="br-f" data-w="70"></div></div><span class="br-p">70%</span></div>
         </div>
+        <div class="rings">
+          <div class="ring-w"><div class="ring"><svg viewBox="0 0 56 56" width="58" height="58"><circle class="rg-bg" cx="28" cy="28" r="26"/><circle class="rg-fg" cx="28" cy="28" r="26" data-pct="95"/></svg><div class="ring-val">95%</div></div><div class="ring-cap">الالتزام</div></div>
+          <div class="ring-w"><div class="ring"><svg viewBox="0 0 56 56" width="58" height="58"><circle class="rg-bg" cx="28" cy="28" r="26"/><circle class="rg-fg" cx="28" cy="28" r="26" data-pct="88"/></svg><div class="ring-val">88%</div></div><div class="ring-cap">رضا العملاء</div></div>
+          <div class="ring-w"><div class="ring"><svg viewBox="0 0 56 56" width="58" height="58"><circle class="rg-bg" cx="28" cy="28" r="26"/><circle class="rg-fg" cx="28" cy="28" r="26" data-pct="100"/></svg><div class="ring-val">100%</div></div><div class="ring-cap">الجودة</div></div>
+          <div style="flex:1"><p style="color:rgba(7,24,39,.4);font-size:.7rem;line-height:1.7">ملتزمون بأعلى معايير الجودة ورؤية المملكة 2030</p></div>
+        </div>
+        <div class="dw-foot"><span>2026</span><span class="dw-badge">✓ معتمد</span></div>
       </div>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>تصفح للأسفل</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="hero-scroll"><div class="sl"></div><span>للأسفل</span><div class="sl"></div></div>
 </section>
 
-<!-- ─── TICKER ─── -->
-<div class="ticker-bar" aria-hidden="true">
-  <div class="ticker-inner">
-    <span>تحصيل ديون جهات التمويل</span>
-    <span>القروض الشخصية</span>
-    <span>التمويل التأجيري</span>
-    <span>التمويل العقاري</span>
-    <span>البطاقات الائتمانية</span>
-    <span>المنشآت الصغيرة والمتوسطة</span>
-    <span>رفع القضايا والتنفيذ</span>
-    <span>شركات الاتصالات</span>
-    <span>رؤية المملكة 2030</span>
-    <span>تحصيل ديون جهات التمويل</span>
-    <span>القروض الشخصية</span>
-    <span>التمويل التأجيري</span>
-    <span>التمويل العقاري</span>
-    <span>البطاقات الائتمانية</span>
-    <span>المنشآت الصغيرة والمتوسطة</span>
-    <span>رفع القضايا والتنفيذ</span>
-    <span>شركات الاتصالات</span>
-    <span>رؤية المملكة 2030</span>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="tk-inner">
+    <span>تحصيل جهات التمويل</span><span>القروض الشخصية</span><span>التمويل التأجيري</span>
+    <span>التمويل العقاري</span><span>البطاقات الائتمانية</span><span>المنشآت الصغيرة والمتوسطة</span>
+    <span>رفع القضايا والتنفيذ</span><span>ديون الاتصالات</span>
+    <span>تحصيل جهات التمويل</span><span>القروض الشخصية</span><span>التمويل التأجيري</span>
+    <span>التمويل العقاري</span><span>البطاقات الائتمانية</span><span>المنشآت الصغيرة والمتوسطة</span>
+    <span>رفع القضايا والتنفيذ</span><span>ديون الاتصالات</span>
   </div>
 </div>
 
-<!-- ─── ABOUT ─── -->
-<section class="about-section" id="about">
+<!-- ══ ABOUT  (white) ══ -->
+<section class="sec sec-w" id="about">
   <div class="wrap">
-    <div class="grid-2">
-      <div class="about-image-wrap reveal-left">
-        <img src="assets/corporate-building.jpg" alt="شركة التصالح" onerror="this.style.background='var(--navy-card)';this.style.minHeight='400px'">
-        <div class="about-image-badge">
-          <strong>2022</strong>
-          <span>عام التأسيس</span>
-        </div>
+    <div class="about-g">
+      <div class="img-w rv-l">
+        <img src="assets/office-hero.jpg" alt="مكتب التصالح" onerror="this.style.background='#f4fcf9';this.style.minHeight='400px'">
+        <div class="img-badge"><strong>2022</strong><span>عام التأسيس</span></div>
       </div>
-      <div class="about-right">
-        <span class="eyebrow reveal" data-delay="1">من نحن</span>
-        <h2 class="section-title reveal" data-delay="2">شركة <span>التصالح</span><br>لتحصيل الديون</h2>
-        <p class="section-lead reveal" data-delay="3">
-          تأسست شركة التصالح لتحصيل الديون كشركة ذات مسؤولية محدودة عام 2022م. تسعى الشركة منذ تأسيسها إلى تحقيق الريادة في مجال تحصيل الديون في المملكة العربية السعودية من خلال تقديم خدمات مميزة تركز على كفاءة وخبرة كوادرها البشرية.
-        </p>
-        <p class="section-lead reveal" data-delay="3" style="margin-top:12px">
-          تتميز شركة التصالح بقدرتها على تقديم خدمات تحصيل شاملة تشمل الديون المبكرة والمعدومة للأفراد والشركات، مما يعكس ثقة كبرى المؤسسات بجودة خدماتها.
-        </p>
-        <div class="about-features" style="margin-top:28px">
-          <div class="afeat reveal" data-delay="4">
-            <div class="afeat-icon">🎯</div>
-            <div class="afeat-text">
-              <strong>هدفنا</strong>
-              <span>أن نكون الاسم الأول في قطاع تحصيل الديون</span>
-            </div>
-          </div>
-          <div class="afeat reveal" data-delay="5">
-            <div class="afeat-icon">👥</div>
-            <div class="afeat-text">
-              <strong>فريق متخصص</strong>
-              <span>180-200 موظف مؤهل في مجال التحصيل والتمويل</span>
-            </div>
-          </div>
-          <div class="afeat reveal" data-delay="6">
-            <div class="afeat-icon">🇸🇦</div>
-            <div class="afeat-text">
-              <strong>ملتزمون برؤية 2030</strong>
-              <span>شريك استراتيجي في تطوير قطاع التمويل الوطني</span>
-            </div>
-          </div>
+      <div>
+        <span class="tag tag-g rv" data-d="2">من نحن</span>
+        <h2 class="t t-d rv" data-d="3">شركة <em>التصالح</em><br>لتحصيل الديون</h2>
+        <p class="lead lead-d rv" data-d="4">تأسست عام 2022م كشركة ذات مسؤولية محدودة، تسعى لريادة قطاع تحصيل الديون في المملكة بكوادر متخصصة وأنظمة تقنية متطورة.</p>
+        <div class="a-points">
+          <div class="ap rv" data-d="5"><div class="ap-i">🎯</div><div><strong>الهدف</strong><span>الاسم الأول والموثوق في التحصيل</span></div></div>
+          <div class="ap rv" data-d="6"><div class="ap-i">👥</div><div><strong>180–200 موظف</strong><span>مؤهل في التحصيل والتمويل</span></div></div>
+          <div class="ap rv" data-d="7"><div class="ap-i">⚖️</div><div><strong>محامون معتمدون</strong><span>مرخصون من وزارة العدل</span></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── VISION & MISSION ─── -->
-<section class="vm-section" id="vision">
+<!-- ══ STATS  (green bg) ══ -->
+<div class="sec-g" style="padding-block:0">
   <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">توجهنا الاستراتيجي</span>
-      <h2 class="section-title reveal" data-delay="1">الرؤية <span>&</span> الرسالة</h2>
+    <div class="stats-g">
+      <div class="st"><div class="st-val" data-count="180" data-suffix="+">180+</div><div class="st-lbl">موظف متخصص</div></div>
+      <div class="st"><div class="st-val" data-count="8">8</div><div class="st-lbl">خدمات تحصيل</div></div>
+      <div class="st"><div class="st-val" data-count="3">3</div><div class="st-lbl">أنظمة تقنية</div></div>
     </div>
-    <div class="vm-grid reveal">
-      <div class="vm-card vm-card-vision">
-        <div class="vm-num">01</div>
-        <div class="vm-icon-big">🔭</div>
+  </div>
+</div>
+
+<!-- ══ VISION & MISSION  (dark) ══ -->
+<section class="sec sec-d" id="vision">
+  <div class="wrap">
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-g rv">توجهنا</span>
+      <h2 class="t t-w rv" data-d="2">الرؤية <em>&</em> الرسالة</h2>
+    </div>
+    <div class="vm-g rv">
+      <div class="vm-c vm-v">
+        <div class="vm-num">01</div><div class="vm-ico">🔭</div>
         <h3>رؤيتنا</h3>
-        <p>
-          أن نصبح شريكاً أساسياً في مجال تحصيل الديون لجهات التمويل محلياً ودولياً، ونكون الاسم الأول الموثوق في هذا القطاع.
-        </p>
-        <span class="vm-tag">الريادة والتميز</span>
+        <p>أن نصبح الشريك الأساسي الأول لجهات التمويل في تحصيل الديون محلياً ودولياً.</p>
+        <span class="vm-pill">الريادة</span>
       </div>
-      <div class="vm-card vm-card-mission">
-        <div class="vm-num">02</div>
-        <div class="vm-icon-big">📋</div>
+      <div class="vm-c vm-m">
+        <div class="vm-num">02</div><div class="vm-ico">📋</div>
         <h3>رسالتنا</h3>
-        <p>
-          تقديم خدمات تحصيل الديون بتطبيق كافة معايير الجودة للمحافظة على العلاقة بين جهات التمويل وعملائها مع الالتزام بمواكبة رؤية المملكة 2030.
-        </p>
-        <span class="vm-tag">الجودة والالتزام</span>
+        <p>تقديم خدمات تحصيل بأعلى معايير الجودة مع الحفاظ على علاقة جهات التمويل بعملائها.</p>
+        <span class="vm-pill">الجودة</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── SERVICES ─── -->
-<section class="services-section" id="services">
+<!-- ══ SERVICES  (soft green) ══ -->
+<section class="sec sec-s" id="services">
   <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">ما نقدمه</span>
-      <h2 class="section-title reveal" data-delay="1">خدماتنا <span>المتكاملة</span></h2>
-      <p class="section-lead reveal" data-delay="2">نقدم منظومة متكاملة من خدمات تحصيل الديون تغطي مختلف أنواع المديونيات وأعمارها</p>
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-d rv">ما نقدمه</span>
+      <h2 class="t t-d rv" data-d="2">خدماتنا <em>المتكاملة</em></h2>
     </div>
-    <div class="services-grid">
-      <div class="svc-card reveal" data-delay="1">
-        <div class="svc-num">01</div>
-        <div class="svc-icon">🏦</div>
-        <h3>تحصيل ديون جهات التمويل والخدمية</h3>
-        <p>تحصيل ديون البنوك وشركات التمويل والجهات الخدمية بكفاءة عالية</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="2">
-        <div class="svc-num">02</div>
-        <div class="svc-icon">👤</div>
-        <h3>القروض الشخصية</h3>
-        <p>تحصيل القروض الشخصية بمختلف أعمار الديون وأنواع المديونيات</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="3">
-        <div class="svc-num">03</div>
-        <div class="svc-icon">🏗️</div>
-        <h3>تحصيل التمويل التأجيري</h3>
-        <p>إدارة وتحصيل ملفات التمويل التأجيري بأعلى معدلات الاسترداد</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="4">
-        <div class="svc-num">04</div>
-        <div class="svc-icon">🏠</div>
-        <h3>تحصيل التمويل العقاري</h3>
-        <p>خبرة متخصصة في تحصيل ملفات التمويل العقاري بجميع أنواعه</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="1">
-        <div class="svc-num">05</div>
-        <div class="svc-icon">💳</div>
-        <h3>تحصيل البطاقات الائتمانية</h3>
-        <p>تحصيل مستحقات بطاقات الائتمان بأساليب احترافية ومعتمدة</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="2">
-        <div class="svc-num">06</div>
-        <div class="svc-icon">🏢</div>
-        <h3>المنشآت الصغيرة والمتوسطة</h3>
-        <p>حلول تحصيل مخصصة لشركات المنشآت الصغيرة والمتوسطة</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="3">
-        <div class="svc-num">07</div>
-        <div class="svc-icon">⚖️</div>
-        <h3>رفع القضايا والتنفيذ</h3>
-        <p>رفع القضايا أمام محاكم التنفيذ والمحاكم العامة عبر محامين معتمدين</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
-      <div class="svc-card reveal" data-delay="4">
-        <div class="svc-num">08</div>
-        <div class="svc-icon">📡</div>
-        <h3>ديون شركات الاتصالات</h3>
-        <p>تحصيل ديون شركات الاتصالات بمختلف أنواعها وأعمارها</p>
-        <span class="svc-arrow">اكتشف المزيد ←</span>
-      </div>
+    <div class="svc-g">
+      <div class="sc rv" data-d="1"><div class="sc-n">01</div><div class="sc-i">🏦</div><h3>تحصيل جهات التمويل</h3><p>بنوك، شركات تمويل، وجهات خدمية</p></div>
+      <div class="sc rv" data-d="2"><div class="sc-n">02</div><div class="sc-i">👤</div><h3>القروض الشخصية</h3><p>بمختلف أعمار الديون وأنواع المديونيات</p></div>
+      <div class="sc rv" data-d="3"><div class="sc-n">03</div><div class="sc-i">🏗️</div><h3>التمويل التأجيري</h3><p>بأعلى معدلات الاسترداد</p></div>
+      <div class="sc rv" data-d="4"><div class="sc-n">04</div><div class="sc-i">🏠</div><h3>التمويل العقاري</h3><p>جميع أنواع التمويل العقاري</p></div>
+      <div class="sc rv" data-d="1"><div class="sc-n">05</div><div class="sc-i">💳</div><h3>البطاقات الائتمانية</h3><p>بأساليب احترافية معتمدة</p></div>
+      <div class="sc rv" data-d="2"><div class="sc-n">06</div><div class="sc-i">🏢</div><h3>المنشآت ص و م</h3><p>حلول مخصصة للشركات الصغيرة والمتوسطة</p></div>
+      <div class="sc rv" data-d="3"><div class="sc-n">07</div><div class="sc-i">⚖️</div><h3>القضايا والتنفيذ</h3><p>محاكم التنفيذ والمحاكم العامة</p></div>
+      <div class="sc rv" data-d="4"><div class="sc-n">08</div><div class="sc-i">📡</div><h3>ديون الاتصالات</h3><p>جميع شركات الاتصالات</p></div>
     </div>
   </div>
 </section>
 
-<!-- ─── STRATEGY ─── -->
-<section class="strategy-section" id="strategy">
+<!-- ══ DATA PROGRESS  (white) ══ -->
+<section class="sec sec-w" id="data">
   <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">خارطة الطريق</span>
-      <h2 class="section-title reveal" data-delay="1">استراتيجية <span>الشركة</span></h2>
-      <p class="section-lead reveal" data-delay="2">مستلهمة من رؤية المملكة 2030، نسعى لتحقيق الريادة عبر ثلاثة محاور استراتيجية رئيسية</p>
-    </div>
-    <div class="strat-cards">
-      <div class="strat-card reveal" data-delay="1">
-        <div class="strat-num">01</div>
-        <div class="strat-icon">📈</div>
-        <h3>توسيع قاعدة العملاء وتطوير الأعمال</h3>
-        <p>نركز على توسيع قاعدة العملاء مع تقديم خدمات عالية الجودة وسريعة التنفيذ، بهدف أن نكون الخيار الأساسي للبنوك وجهات التمويل مع الحفاظ على العلاقات الاستراتيجية مع الشركاء الحاليين.</p>
-      </div>
-      <div class="strat-card reveal" data-delay="2">
-        <div class="strat-num">02</div>
-        <div class="strat-icon">👥</div>
-        <h3>المحافظة على رأس المال البشري</h3>
-        <p>نولي أهمية قصوى للموارد البشرية عبر استقطاب أفضل الكفاءات وتعزيز مهارات الموظفين من خلال برامج تدريب مستمرة تشمل المهارات العملية والتواصل وتوفير بيئة عمل ملائمة.</p>
-      </div>
-      <div class="strat-card reveal" data-delay="3">
-        <div class="strat-num">03</div>
-        <div class="strat-icon">💻</div>
-        <h3>تطوير البنية التحتية التقنية</h3>
-        <p>نستثمر في بناء بنية تحتية تقنية متطورة تدعم الكفاءة والفاعلية. نعتمد على أنظمة حديثة لإدارة عمليات التحصيل وأنظمة داخلية لمتابعة الطلبات والإجراءات بين الإدارات.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── METHODOLOGY ─── -->
-<section class="method-section" id="methodology">
-  <div class="wrap">
-    <div class="text-center" style="margin-bottom:60px">
-      <span class="eyebrow reveal">كيف نعمل</span>
-      <h2 class="section-title reveal" data-delay="1">منهجية <span>التحصيل</span></h2>
-      <p class="section-lead reveal" data-delay="2">نعتمد على منهجية واضحة ومدروسة تمر بعدة مراحل أساسية تضمن رفع كفاءة العمل وتحقيق أفضل النتائج</p>
-    </div>
-    <div class="method-steps">
-      <div class="method-step reveal" data-delay="1">
-        <div class="step-circle">
-          <span class="step-num">STEP 01</span>
-          📁
-        </div>
-        <h4>دراسة المحفظة</h4>
-        <p>دراسة المحفظة وتحليلها وتصنيفها حسب مستوى المخاطر</p>
-      </div>
-      <div class="method-step reveal" data-delay="2">
-        <div class="step-circle">
-          <span class="step-num">STEP 02</span>
-          📋
-        </div>
-        <h4>إعداد خطة التحصيل</h4>
-        <p>إعداد خطة تحصيل مناسبة وفق طبيعة كل محفظة</p>
-      </div>
-      <div class="method-step reveal" data-delay="3">
-        <div class="step-circle">
-          <span class="step-num">STEP 03</span>
-          📞
-        </div>
-        <h4>تنفيذ الخطة</h4>
-        <p>تنفيذ خطة التحصيل عبر أساليب تواصل معتمدة لدى الجهات التمويلية</p>
-      </div>
-      <div class="method-step reveal" data-delay="4">
-        <div class="step-circle">
-          <span class="step-num">STEP 04</span>
-          🖥️
-        </div>
-        <h4>إدارة البيانات</h4>
-        <p>إتاحة إدخال وإدارة البيانات عبر برامج وأنظمة خاصة بالشركة</p>
-      </div>
-      <div class="method-step reveal" data-delay="5">
-        <div class="step-circle">
-          <span class="step-num">STEP 05</span>
-          📊
-        </div>
-        <h4>التقارير والمتابعة</h4>
-        <p>متابعة الأداء وإعداد تقارير دورية مرفوعة للجهات التمويلية</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── ADVANTAGES ─── -->
-<section class="adv-section" id="advantages">
-  <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">لماذا تختارنا</span>
-      <h2 class="section-title reveal" data-delay="1">مميزات <span>الخدمة الفنية</span></h2>
-      <p class="section-lead reveal" data-delay="2">نتميز بمجموعة من الخصائص التي تجعلنا الشريك الأمثل لمؤسستكم</p>
-    </div>
-    <div class="adv-grid">
-      <div class="adv-card reveal" data-delay="1">
-        <div class="adv-icon">👔</div>
-        <h3>كوادر متخصصة</h3>
-        <p>فرق عمل ذات خبرة في مجال التمويل والتحصيل معرّضة لمختلف سيناريوهات العمل</p>
-      </div>
-      <div class="adv-card reveal" data-delay="2">
-        <div class="adv-icon">🏆</div>
-        <h3>خبرة طويلة</h3>
-        <p>سنوات من الخبرة في تحصيل الديون للغير تعزز من جودة خدماتنا ونتائجنا</p>
-      </div>
-      <div class="adv-card reveal" data-delay="3">
-        <div class="adv-icon">⚙️</div>
-        <h3>أنظمة متقدمة</h3>
-        <p>تقنيات حديثة بحماية عالية تضمن الاستمرارية والكفاءة في تنفيذ العمليات</p>
-      </div>
-      <div class="adv-card reveal" data-delay="4">
-        <div class="adv-icon">🏢</div>
-        <h3>مقرات مجهزة</h3>
-        <p>بيئة عمل مدعومة بموارد تضمن النجاح وتوفير أفضل مستوى للأداء</p>
-      </div>
-      <div class="adv-card reveal" data-delay="1">
-        <div class="adv-icon">🔒</div>
-        <h3>جودة وسرية</h3>
-        <p>التزام بحفظ المستندات وسرية المعلومات وفق أعلى معايير الحماية</p>
-      </div>
-      <div class="adv-card reveal" data-delay="2">
-        <div class="adv-icon">🎯</div>
-        <h3>إدارة متخصصة</h3>
-        <p>التزام بمعايير جودة العمل وتوجيهات الجهات المختصة لضمان أفضل النتائج</p>
-      </div>
-      <div class="adv-card reveal" data-delay="3">
-        <div class="adv-icon">⚖️</div>
-        <h3>محامون معتمدون</h3>
-        <p>شراكة مع محامين مرخصين من وزارة العدل لدعم عمليات التحصيل القانونية</p>
-      </div>
-      <div class="adv-card reveal" data-delay="4">
-        <div class="adv-icon">🌐</div>
-        <h3>جاهزية العمل عن بُعد</h3>
-        <p>أنظمة مؤهلة لضمان استمرارية الأعمال بفاعلية عالية في أي ظرف</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── NUMBERS ─── -->
-<div class="numbers-section" id="numbers">
-  <div class="wrap">
-    <div class="numbers-grid">
-      <div class="num-item">
-        <div class="num-val" data-count="180" data-suffix="+">180+</div>
-        <div class="num-label">موظف متخصص</div>
-      </div>
-      <div class="num-item">
-        <div class="num-val" data-count="8">8</div>
-        <div class="num-label">خدمات تحصيل متكاملة</div>
-      </div>
-      <div class="num-item">
-        <div class="num-val" data-count="3">3</div>
-        <div class="num-label">أنظمة تقنية متخصصة</div>
-      </div>
-      <div class="num-item">
-        <div class="num-val" data-count="100" data-suffix="٪">100٪</div>
-        <div class="num-label">التزام بمعايير الجودة</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ─── PROGRAMS ─── -->
-<section class="programs-section" id="programs">
-  <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">بنيتنا التقنية</span>
-      <h2 class="section-title reveal" data-delay="1">برامج <span>الشركة</span></h2>
-      <p class="section-lead reveal" data-delay="2">نعتمد على منظومة متكاملة من الأنظمة والبرامج التقنية لضمان كفاءة العمل</p>
-    </div>
-    <div class="programs-grid">
-      <div class="prog-card reveal" data-delay="1">
-        <div class="prog-icon">📊</div>
-        <h3>برنامج التحصيل</h3>
-        <span class="prog-badge">CX — حصل</span>
-        <p>نظام متكامل لإدارة عمليات التحصيل وتتبع المحافظ وتحليل الأداء بدقة عالية</p>
-      </div>
-      <div class="prog-card reveal" data-delay="2">
-        <div class="prog-icon">☁️</div>
-        <h3>نظام تخزين الإجراءات</h3>
-        <span class="prog-badge">Adobe Cloud الداخلي</span>
-        <p>نظام سحابي آمن لحفظ وإدارة وأرشفة جميع وثائق وإجراءات التحصيل</p>
-      </div>
-      <div class="prog-card reveal" data-delay="3">
-        <div class="prog-icon">📞</div>
-        <h3>برنامج الاتصال</h3>
-        <span class="prog-badge">الجودة — 3</span>
-        <p>منصة اتصال متطورة تضمن التواصل الاحترافي مع العملاء وتسجيل وتتبع المكالمات</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── WORK PRINCIPLES ─── -->
-<section style="background:var(--navy);padding-block:clamp(60px,8vw,100px)">
-  <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">ما يميز عملنا</span>
-      <h2 class="section-title reveal" data-delay="1">أسس <span>العمل</span></h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px" class="principles-grid">
-      <div class="adv-card reveal" data-delay="1">
-        <div class="adv-icon">✅</div>
-        <h3>الالتزام والمسؤولية</h3>
-        <p>التقيد بالأنظمة والتعليمات المعتمدة في جميع إدارات الشركة وتحقيق النتائج المطلوبة دون الإخلال بالعلاقة التعاقدية</p>
-      </div>
-      <div class="adv-card reveal" data-delay="2">
-        <div class="adv-icon">🎯</div>
-        <h3>الدقة</h3>
-        <p>إدارة الملفات المالية استناداً إلى بيانات واضحة وتحليل متكامل يضمن سلامة القرارات</p>
-      </div>
-      <div class="adv-card reveal" data-delay="3">
-        <div class="adv-icon">📈</div>
-        <h3>المتابعة والتحليل</h3>
-        <p>العمل المستمر على رفع كفاءة الأداء وتطوير أساليب العمل بما يحقق أفضل النتائج</p>
-      </div>
-      <div class="adv-card reveal" data-delay="4">
-        <div class="adv-icon">🔗</div>
-        <h3>التكامل</h3>
-        <p>تعزيز التنسيق الفعّال بين الفرق التشغيلية والإدارية بما يضمن انسجام الأداء</p>
-      </div>
-      <div class="adv-card reveal" data-delay="5">
-        <div class="adv-icon">🚀</div>
-        <h3>التطوير</h3>
-        <p>الاستفادة من الأدوات والتقنيات الحديثة المعتمدة لتعزيز كفاءة العمل</p>
-      </div>
-      <div class="adv-card reveal" data-delay="6">
-        <div class="adv-icon">🤝</div>
-        <h3>الشراكة الاستراتيجية</h3>
-        <p>بناء علاقات استراتيجية مع جميع الشركاء وتعزيز رضاهم عبر تقديم خدمات متميزة</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CLIENTS ─── -->
-<section class="clients-section">
-  <div class="wrap">
-    <div class="text-center" style="margin-bottom:36px">
-      <span class="eyebrow reveal">شركاؤنا</span>
-      <h2 class="section-title reveal" data-delay="1">عملاؤنا <span>وشركاؤنا</span></h2>
-    </div>
-  </div>
-  <div class="clients-track-wrap">
-    <div class="clients-track">
-      <div class="client-logo"><img src="assets/client-rn-holding.png" alt="RN Holding" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>RN Holding</span>'"></div>
-      <div class="client-logo"><img src="assets/client-rawabi-medical.png" alt="الرواب الطبية" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>الرواب الطبية</span>'"></div>
-      <div class="client-logo"><img src="assets/client-rawabi-industrial.png" alt="الرواب الصناعية" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>الرواب الصناعية</span>'"></div>
-      <div class="client-logo"><img src="assets/client-riyadh-lane.png" alt="Riyadh Lane" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Riyadh Lane</span>'"></div>
-      <div class="client-logo"><img src="assets/client-skyexpo.png" alt="Sky Expo" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Sky Expo</span>'"></div>
-      <div class="client-logo"><img src="assets/client-chocolate-world.png" alt="Chocolate World" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Chocolate World</span>'"></div>
-      <div class="client-logo"><img src="assets/client-auto9.png" alt="Auto 9" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Auto 9</span>'"></div>
-      <!-- Duplicate for infinite scroll -->
-      <div class="client-logo"><img src="assets/client-rn-holding.png" alt="RN Holding" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>RN Holding</span>'"></div>
-      <div class="client-logo"><img src="assets/client-rawabi-medical.png" alt="الرواب الطبية" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>الرواب الطبية</span>'"></div>
-      <div class="client-logo"><img src="assets/client-rawabi-industrial.png" alt="الرواب الصناعية" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>الرواب الصناعية</span>'"></div>
-      <div class="client-logo"><img src="assets/client-riyadh-lane.png" alt="Riyadh Lane" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Riyadh Lane</span>'"></div>
-      <div class="client-logo"><img src="assets/client-skyexpo.png" alt="Sky Expo" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Sky Expo</span>'"></div>
-      <div class="client-logo"><img src="assets/client-chocolate-world.png" alt="Chocolate World" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Chocolate World</span>'"></div>
-      <div class="client-logo"><img src="assets/client-auto9.png" alt="Auto 9" onerror="this.parentElement.innerHTML='<span style=\'color:var(--text-dim);font-size:.85rem;font-weight:700\'>Auto 9</span>'"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── CAREERS ─── -->
-<section class="careers-section" id="careers">
-  <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">انضم إلى فريقنا</span>
-      <h2 class="section-title reveal" data-delay="1">فرص <span>التوظيف</span></h2>
-      <p class="section-lead reveal" data-delay="2">نبحث دائماً عن الكفاءات الوطنية المتميزة للانضمام إلى فريقنا المتنامي</p>
-    </div>
-    <div class="careers-grid">
-      <div class="careers-info reveal-left">
-        <h3>لماذا تعمل معنا؟</h3>
-        <p>
-          تعمل الشركة على تنفيذ خطة توسعية مدروسة لاستكمال بناء الفريق ليصل إلى 180–200 موظف، ويتم تأهيلهم من خلال برامج تدريبية مكثفة تضمن جاهزيتهم قبل مباشرة العمل.
-        </p>
-        <div class="careers-perks">
-          <div class="perk">
-            <div class="perk-icon">🎓</div>
-            <span>برامج تدريبية مكثفة قبل مباشرة العمل</span>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">📈</div>
-            <span>مسارات وظيفية واضحة وفرص ترقٍّ حقيقية</span>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">🏠</div>
-            <span>بيئة عمل ملائمة وزفر محترم</span>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">💰</div>
-            <span>حوافز أداء تعزز الإنتاجية والتميز</span>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">🇸🇦</div>
-            <span>بيئة داعمة للتوطين والكوادر السعودية</span>
-          </div>
-          <div class="perk">
-            <div class="perk-icon">🌐</div>
-            <span>جاهزية العمل عن بُعد وبيئة عمل مرنة</span>
-          </div>
-        </div>
-        <div style="padding:24px;background:var(--navy-card);border:1px solid var(--border-sub);border-radius:12px;margin-top:8px">
-          <p style="color:var(--text-dim);font-size:.88rem;margin-bottom:12px">لأي استفسار حول التوظيف تواصل مباشرة عبر:</p>
-          <a href="mailto:hr@altasaluh.com.sa" style="color:var(--green);font-weight:800;font-size:1rem;display:flex;align-items:center;gap:8px">
-            📧 hr@altasaluh.com.sa
-          </a>
+    <div class="data-g">
+      <div>
+        <span class="tag tag-g rv">بالأرقام</span>
+        <h2 class="t t-d rv" data-d="2">أداؤنا <em>بالبيانات</em></h2>
+        <p class="lead lead-d rv" data-d="3" style="margin-bottom:28px">مؤشرات واضحة تعكس التزامنا بالجودة</p>
+        <div class="prog-bars">
+          <div class="rv" data-d="3"><div class="pb-head"><span class="pb-name">الالتزام بالجودة</span><span class="pb-pct">95%</span></div><div class="pb-track"><div class="pb-fill" data-w="95"></div></div></div>
+          <div class="rv" data-d="4"><div class="pb-head"><span class="pb-name">رضا الشركاء</span><span class="pb-pct">92%</span></div><div class="pb-track"><div class="pb-fill" data-w="92"></div></div></div>
+          <div class="rv" data-d="5"><div class="pb-head"><span class="pb-name">التوطين</span><span class="pb-pct">88%</span></div><div class="pb-track"><div class="pb-fill" data-w="88"></div></div></div>
+          <div class="rv" data-d="6"><div class="pb-head"><span class="pb-name">سرعة التنفيذ</span><span class="pb-pct">90%</span></div><div class="pb-track"><div class="pb-fill" data-w="90"></div></div></div>
         </div>
       </div>
-      <div class="reveal-right">
-        <div class="careers-form-box">
-          <h3>قدّم طلبك الآن</h3>
-          <p class="form-sub">📧 سيُرسل طلبك إلى: hr@altasaluh.com.sa</p>
-          <form id="careersForm" onsubmit="submitCareers(event)">
-            <div class="form-row-2">
-              <div class="form-row">
-                <label>الاسم الكامل *</label>
-                <input type="text" class="form-control" id="c-name" placeholder="محمد عبدالله" required>
-              </div>
-              <div class="form-row">
-                <label>رقم الجوال *</label>
-                <input type="tel" class="form-control" id="c-phone" placeholder="05xxxxxxxx" required>
-              </div>
+      <div class="big-stats">
+        <div class="bs rv" data-d="2"><div class="bs-ico">👨‍💼</div><div><div class="bs-num"><em data-count="180" data-suffix="+">180+</em></div><div class="bs-lbl">موظف تحصيل مؤهل</div></div></div>
+        <div class="bs rv" data-d="3"><div class="bs-ico">⚙️</div><div><div class="bs-num"><em data-count="3">3</em> أنظمة</div><div class="bs-lbl">تقنية متكاملة</div></div></div>
+        <div class="bs rv" data-d="4"><div class="bs-ico">📋</div><div><div class="bs-num"><em data-count="8">8</em> خدمات</div><div class="bs-lbl">تحصيل شاملة</div></div></div>
+        <div class="bs rv" data-d="5"><div class="bs-ico">⚖️</div><div><div class="bs-num">محامون <em>معتمدون</em></div><div class="bs-lbl">وزارة العدل السعودية</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STRATEGY  (dark) ══ -->
+<section class="sec sec-d" id="strategy">
+  <div class="wrap">
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-g rv">خارطة الطريق</span>
+      <h2 class="t t-w rv" data-d="2">استراتيجيتنا <em>الثلاثية</em></h2>
+    </div>
+    <div class="str-g rv">
+      <div class="str-c"><div class="str-n">01</div><div class="str-ico">📈</div><h3>توسيع قاعدة العملاء</h3><p>الخيار الأساسي للبنوك وجهات التمويل بخدمات عالية الجودة وسريعة التنفيذ.</p></div>
+      <div class="str-c"><div class="str-n">02</div><div class="str-ico">👥</div><h3>رأس المال البشري</h3><p>استقطاب أفضل الكفاءات وتطويرها ببرامج تدريب مستمرة ومتخصصة.</p></div>
+      <div class="str-c"><div class="str-n">03</div><div class="str-ico">💻</div><h3>البنية التقنية</h3><p>أنظمة حديثة لإدارة التحصيل تدعم الكفاءة وتعزز تجربة الشركاء.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ METHODOLOGY  (soft green) ══ -->
+<section class="sec sec-s" id="methodology">
+  <div class="wrap">
+    <div class="tc" style="margin-bottom:56px">
+      <span class="tag tag-d rv">كيف نعمل</span>
+      <h2 class="t t-d rv" data-d="2">منهجية <em>التحصيل</em></h2>
+    </div>
+    <div class="mth-g">
+      <div class="ms rv" data-d="1"><div class="ms-c"><span class="ms-n">01</span>📁</div><h4>دراسة المحفظة</h4><p>تحليل وتصنيف حسب المخاطر</p></div>
+      <div class="ms rv" data-d="2"><div class="ms-c"><span class="ms-n">02</span>📋</div><h4>خطة التحصيل</h4><p>خطة مناسبة لكل محفظة</p></div>
+      <div class="ms rv" data-d="3"><div class="ms-c"><span class="ms-n">03</span>📞</div><h4>التنفيذ</h4><p>تواصل عبر أساليب معتمدة</p></div>
+      <div class="ms rv" data-d="4"><div class="ms-c"><span class="ms-n">04</span>🖥️</div><h4>إدارة البيانات</h4><p>أنظمة خاصة بالشركة</p></div>
+      <div class="ms rv" data-d="5"><div class="ms-c"><span class="ms-n">05</span>📊</div><h4>التقارير</h4><p>تقارير دورية للجهات التمويلية</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ADVANTAGES  (white) ══ -->
+<section class="sec sec-w" id="advantages">
+  <div class="wrap">
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-g rv">لماذا التصالح</span>
+      <h2 class="t t-d rv" data-d="2">مميزاتنا <em>التنافسية</em></h2>
+    </div>
+    <div class="adv-g">
+      <div class="ac rv" data-d="1"><div class="ac-ico">👔</div><h3>كوادر متخصصة</h3><p>فرق ذات خبرة في التمويل والتحصيل</p></div>
+      <div class="ac rv" data-d="2"><div class="ac-ico">🏆</div><h3>خبرة مثبتة</h3><p>سنوات من تحصيل الديون للغير</p></div>
+      <div class="ac rv" data-d="3"><div class="ac-ico">⚙️</div><h3>أنظمة متقدمة</h3><p>تقنيات حديثة بحماية عالية</p></div>
+      <div class="ac rv" data-d="4"><div class="ac-ico">🏢</div><h3>مقرات مجهزة</h3><p>بيئة عمل متكاملة</p></div>
+      <div class="ac rv" data-d="1"><div class="ac-ico">🔒</div><h3>سرية تامة</h3><p>حماية المعلومات بأعلى المعايير</p></div>
+      <div class="ac rv" data-d="2"><div class="ac-ico">🎯</div><h3>إدارة متخصصة</h3><p>التزام بمعايير الجهات المختصة</p></div>
+      <div class="ac rv" data-d="3"><div class="ac-ico">⚖️</div><h3>محامون معتمدون</h3><p>مرخصون من وزارة العدل</p></div>
+      <div class="ac rv" data-d="4"><div class="ac-ico">🌐</div><h3>عمل عن بُعد</h3><p>استمرارية في أي ظرف</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROGRAMS  (dark) ══ -->
+<section class="sec sec-d" id="programs">
+  <div class="wrap">
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-g rv">البنية التقنية</span>
+      <h2 class="t t-w rv" data-d="2">برامج <em>الشركة</em></h2>
+    </div>
+    <div class="prg-g rv">
+      <div class="pc"><div class="pc-ico">📊</div><h3>برنامج التحصيل</h3><div class="pc-pill">CX — حصل</div><p>إدارة المحافظ وتتبع الأداء بدقة عالية</p></div>
+      <div class="pc"><div class="pc-ico">☁️</div><h3>تخزين الإجراءات</h3><div class="pc-pill">Adobe Cloud</div><p>أرشفة وحفظ آمن لجميع الوثائق</p></div>
+      <div class="pc"><div class="pc-ico">📞</div><h3>برنامج الاتصال</h3><div class="pc-pill">الجودة — 3</div><p>تواصل احترافي وتسجيل المكالمات</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLIENTS  (soft green) ══ -->
+<section class="sec sec-s" style="padding-block:clamp(48px,6vw,72px)">
+  <div class="wrap tc" style="margin-bottom:32px">
+    <span class="tag tag-d rv">شركاؤنا</span>
+    <h2 class="t t-d rv" data-d="2">عملاؤنا <em>وشركاؤنا</em></h2>
+  </div>
+  <div class="cl-wrap">
+    <div class="cl-track">
+      <div class="cl-logo"><img src="assets/client-rn-holding.png" alt="RN Holding" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>RN Holding</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-rawabi-medical.png" alt="الرواب الطبية" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>الرواب الطبية</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-rawabi-industrial.png" alt="الرواب الصناعية" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>الرواب الصناعية</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-riyadh-lane.png" alt="Riyadh Lane" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Riyadh Lane</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-skyexpo.png" alt="Sky Expo" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Sky Expo</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-chocolate-world.png" alt="Chocolate World" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Chocolate World</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-auto9.png" alt="Auto 9" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Auto 9</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-rn-holding.png" alt="RN Holding" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>RN Holding</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-rawabi-medical.png" alt="الرواب الطبية" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>الرواب الطبية</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-rawabi-industrial.png" alt="الرواب الصناعية" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>الرواب الصناعية</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-riyadh-lane.png" alt="Riyadh Lane" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Riyadh Lane</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-skyexpo.png" alt="Sky Expo" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Sky Expo</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-chocolate-world.png" alt="Chocolate World" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Chocolate World</b>'"></div>
+      <div class="cl-logo"><img src="assets/client-auto9.png" alt="Auto 9" onerror="this.parentElement.innerHTML='<b style=\'color:rgba(7,24,39,.4);font-size:.78rem\'>Auto 9</b>'"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CAREERS  (white) ══ -->
+<section class="sec sec-w" id="careers">
+  <div class="wrap">
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-g rv">انضم إلينا</span>
+      <h2 class="t t-d rv" data-d="2">فرص <em>التوظيف</em></h2>
+    </div>
+    <div class="car-g">
+      <div class="rv-l">
+        <p class="lead lead-d" style="margin-bottom:4px">نستكمل بناء فريقنا ليصل 180–200 موظف بتدريب مكثف قبل مباشرة العمل.</p>
+        <div class="perks">
+          <div class="perk"><div class="pk-i">🎓</div><span>تدريب مكثف قبل العمل</span></div>
+          <div class="perk"><div class="pk-i">📈</div><span>مسار وظيفي واضح</span></div>
+          <div class="perk"><div class="pk-i">💰</div><span>حوافز أداء مجزية</span></div>
+          <div class="perk"><div class="pk-i">🇸🇦</div><span>بيئة داعمة للتوطين</span></div>
+          <div class="perk"><div class="pk-i">🌐</div><span>جاهزية العمل عن بُعد</span></div>
+        </div>
+        <div class="hr-link"><p>للاستفسار المباشر:</p><a href="mailto:hr@altasaluh.com.sa">📧 hr@altasaluh.com.sa</a></div>
+      </div>
+      <div class="rv-r">
+        <div class="fbox">
+          <h3>قدّم طلبك</h3><span class="fsub">يُرسَل إلى: hr@altasaluh.com.sa</span>
+          <form id="cForm" onsubmit="sCareers(event)">
+            <div class="fr2">
+              <div class="fr"><label>الاسم *</label><input type="text" class="fi" id="cn" placeholder="الاسم الكامل" required></div>
+              <div class="fr"><label>الجوال *</label><input type="tel" class="fi" id="cp" placeholder="05xxxxxxxx" required></div>
             </div>
-            <div class="form-row">
-              <label>البريد الإلكتروني *</label>
-              <input type="email" class="form-control" id="c-email" placeholder="example@email.com" required>
+            <div class="fr"><label>البريد *</label><input type="email" class="fi" id="ce" placeholder="email@example.com" required></div>
+            <div class="fr"><label>الوظيفة</label><select class="fi" id="cj"><option value="">اختر...</option><option>أخصائي تحصيل</option><option>مشرف تحصيل</option><option>مدير محفظة</option><option>مستشار قانوني</option><option>محاسب</option><option>أخصائي IT</option><option>أخرى</option></select></div>
+            <div class="fr2">
+              <div class="fr"><label>المؤهل</label><select class="fi" id="cq"><option value="">اختر...</option><option>بكالوريوس</option><option>ماجستير</option><option>دبلوم</option><option>ثانوية</option></select></div>
+              <div class="fr"><label>الخبرة</label><select class="fi" id="cx"><option value="">اختر...</option><option>حديث التخرج</option><option>1–3 سنوات</option><option>3–5 سنوات</option><option>+5 سنوات</option></select></div>
             </div>
-            <div class="form-row">
-              <label>المسمى الوظيفي المطلوب</label>
-              <select class="form-control" id="c-position">
-                <option value="">اختر الوظيفة...</option>
-                <option>أخصائي تحصيل</option>
-                <option>مشرف تحصيل</option>
-                <option>مدير محفظة</option>
-                <option>مستشار قانوني</option>
-                <option>محاسب</option>
-                <option>أخصائي موارد بشرية</option>
-                <option>أخصائي تقنية معلومات</option>
-                <option>أخرى</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>المؤهل العلمي</label>
-              <select class="form-control" id="c-edu">
-                <option value="">اختر المؤهل...</option>
-                <option>دكتوراه</option>
-                <option>ماجستير</option>
-                <option>بكالوريوس</option>
-                <option>دبلوم</option>
-                <option>ثانوية عامة</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>سنوات الخبرة</label>
-              <select class="form-control" id="c-exp">
-                <option value="">اختر الخبرة...</option>
-                <option>حديث التخرج</option>
-                <option>أقل من سنة</option>
-                <option>1-3 سنوات</option>
-                <option>3-5 سنوات</option>
-                <option>5-10 سنوات</option>
-                <option>أكثر من 10 سنوات</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>رسالة تعريفية (اختياري)</label>
-              <textarea class="form-control" id="c-msg" rows="4" placeholder="اكتب نبذة عن خبراتك ومهاراتك..."></textarea>
-            </div>
-            <button type="submit" class="form-submit-btn">
-              <span>إرسال طلب التوظيف</span> ✈️
-            </button>
+            <div class="fr"><label>رسالة تعريفية</label><textarea class="fi" id="cm" rows="3" placeholder="نبذة مختصرة..."></textarea></div>
+            <button type="submit" class="sbtn-g">إرسال الطلب ✈️</button>
           </form>
-          <p class="form-note">🔒 بياناتك محمية وستُعامَل بسرية تامة</p>
+          <p class="fnote">🔒 بياناتك بسرية تامة</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
-<section class="contact-section" id="contact">
+<!-- ══ CONTACT  (dark) ══ -->
+<section class="sec sec-d" id="contact">
   <div class="wrap">
-    <div class="text-center" style="margin-bottom:48px">
-      <span class="eyebrow reveal">نحن هنا</span>
-      <h2 class="section-title reveal" data-delay="1">تواصل <span>معنا</span></h2>
-      <p class="section-lead reveal" data-delay="2">هل لديك استفسار أو تريد الاستفادة من خدماتنا؟ فريقنا جاهز لمساعدتك</p>
+    <div class="tc" style="margin-bottom:44px">
+      <span class="tag tag-g rv">نحن هنا</span>
+      <h2 class="t t-w rv" data-d="2">تواصل <em>معنا</em></h2>
     </div>
-    <div class="contact-grid">
-      <div class="contact-info-panel reveal-left">
-        <div class="contact-cards">
-          <div class="cinfo-card">
-            <div class="cinfo-icon">📧</div>
-            <div class="cinfo-text">
-              <small>البريد الرسمي</small>
-              <strong><a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a></strong>
-            </div>
-          </div>
-          <div class="cinfo-card">
-            <div class="cinfo-icon">👔</div>
-            <div class="cinfo-text">
-              <small>بريد الموارد البشرية</small>
-              <strong><a href="mailto:hr@altasaluh.com.sa">hr@altasaluh.com.sa</a></strong>
-            </div>
-          </div>
-          <div class="cinfo-card">
-            <div class="cinfo-icon">📞</div>
-            <div class="cinfo-text">
-              <small>رقم الجوال</small>
-              <strong><a href="tel:0566633692">0566633692</a></strong>
-            </div>
-          </div>
-          <div class="cinfo-card">
-            <div class="cinfo-icon">🇸🇦</div>
-            <div class="cinfo-text">
-              <small>الموقع</small>
-              <strong>المملكة العربية السعودية — الرياض</strong>
-            </div>
-          </div>
-          <div class="cinfo-card">
-            <div class="cinfo-icon">🕐</div>
-            <div class="cinfo-text">
-              <small>ساعات العمل</small>
-              <strong>الأحد – الخميس | 8:00 ص – 5:00 م</strong>
-            </div>
-          </div>
+    <div class="ct-g">
+      <div class="rv-l">
+        <div class="ci-cards">
+          <div class="ci"><div class="ci-ico">📧</div><div><small>البريد الرسمي</small><strong><a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a></strong></div></div>
+          <div class="ci"><div class="ci-ico">👔</div><div><small>الموارد البشرية</small><strong><a href="mailto:hr@altasaluh.com.sa">hr@altasaluh.com.sa</a></strong></div></div>
+          <div class="ci"><div class="ci-ico">📞</div><div><small>الجوال</small><strong><a href="tel:0566633692">0566633692</a></strong></div></div>
+          <div class="ci"><div class="ci-ico">🇸🇦</div><div><small>الموقع</small><strong>الرياض – المملكة العربية السعودية</strong></div></div>
+          <div class="ci"><div class="ci-ico">🕐</div><div><small>أوقات العمل</small><strong>الأحد – الخميس | 8ص – 5م</strong></div></div>
         </div>
-        <div style="margin-top:28px;padding:28px;background:var(--navy-card);border:1px solid var(--border-sub);border-radius:12px">
-          <p style="color:var(--gold);font-weight:800;margin-bottom:10px;font-size:.9rem">⚡ استجابة سريعة</p>
-          <p style="color:var(--text-dim);font-size:.88rem;line-height:1.8">نلتزم بالرد على جميع الاستفسارات خلال يوم عمل واحد. للأمور العاجلة، يُرجى التواصل عبر الهاتف مباشرة.</p>
-        </div>
+        <div class="ct-note"><p>⚡ استجابة سريعة</p><p>نرد على جميع الاستفسارات خلال يوم عمل واحد.</p></div>
       </div>
-      <div class="reveal-right">
-        <div class="contact-form-panel">
-          <h3>أرسل لنا رسالة</h3>
-          <p class="form-sub">📧 سيُرسل استفساركم إلى: info@altasaluh.com.sa</p>
-          <form id="contactForm" onsubmit="submitContact(event)">
-            <div class="form-row-2">
-              <div class="form-row">
-                <label>الاسم *</label>
-                <input type="text" class="form-control" id="ct-name" placeholder="الاسم الكامل" required>
-              </div>
-              <div class="form-row">
-                <label>الجوال *</label>
-                <input type="tel" class="form-control" id="ct-phone" placeholder="05xxxxxxxx" required>
-              </div>
+      <div class="rv-r">
+        <div class="fbox">
+          <h3>أرسل رسالة</h3><span class="fsub">يُرسَل إلى: info@altasaluh.com.sa</span>
+          <form id="ctForm" onsubmit="sContact(event)">
+            <div class="fr2">
+              <div class="fr"><label>الاسم *</label><input type="text" class="fi" id="tn" placeholder="الاسم" required></div>
+              <div class="fr"><label>الجوال *</label><input type="tel" class="fi" id="tp" placeholder="05xxxxxxxx" required></div>
             </div>
-            <div class="form-row">
-              <label>البريد الإلكتروني *</label>
-              <input type="email" class="form-control" id="ct-email" placeholder="example@email.com" required>
-            </div>
-            <div class="form-row">
-              <label>الجهة / الشركة</label>
-              <input type="text" class="form-control" id="ct-company" placeholder="اسم الجهة أو الشركة">
-            </div>
-            <div class="form-row">
-              <label>موضوع الرسالة *</label>
-              <select class="form-control" id="ct-subject" required>
-                <option value="">اختر الموضوع...</option>
-                <option>الاستفسار عن الخدمات</option>
-                <option>طلب عرض سعر</option>
-                <option>التعاون والشراكة</option>
-                <option>شكوى أو ملاحظة</option>
-                <option>أخرى</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label>الرسالة *</label>
-              <textarea class="form-control" id="ct-msg" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-            </div>
-            <button type="submit" class="contact-submit-btn">
-              <span>إرسال الرسالة</span> ✈️
-            </button>
+            <div class="fr"><label>البريد *</label><input type="email" class="fi" id="te" placeholder="email@example.com" required></div>
+            <div class="fr"><label>الجهة</label><input type="text" class="fi" id="tc" placeholder="اسم الجهة"></div>
+            <div class="fr"><label>الموضوع *</label><select class="fi" id="ts" required><option value="">اختر...</option><option>استفسار عن الخدمات</option><option>طلب عرض سعر</option><option>التعاون والشراكة</option><option>شكوى</option><option>أخرى</option></select></div>
+            <div class="fr"><label>الرسالة *</label><textarea class="fi" id="tm" rows="4" placeholder="اكتب رسالتك..." required></textarea></div>
+            <button type="submit" class="sbtn-d">إرسال ✈️</button>
           </form>
-          <p class="form-note">🔒 بياناتك محمية ومحفوظة بسرية تامة</p>
+          <p class="fnote">🔒 بياناتك بسرية تامة</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
+    <div class="ft-g">
+      <div class="ft-logo">
         <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
-        <p>شركة التصالح لتحصيل الديون — شركة ذات مسؤولية محدودة، تأسست عام 2022م في المملكة العربية السعودية. نسعى لأن نكون الاسم الأول والموثوق في قطاع تحصيل الديون.</p>
-        <div class="footer-social">
-          <a href="#" class="social-btn" title="تويتر">𝕏</a>
-          <a href="#" class="social-btn" title="لينكد إن">in</a>
-          <a href="#" class="social-btn" title="واتساب">📱</a>
+        <p>شركة التصالح لتحصيل الديون — شركة ذات مسؤولية محدودة، تأسست 2022م، المملكة العربية السعودية.</p>
+        <div class="ft-soc">
+          <a href="#" class="soc-b">𝕏</a>
+          <a href="#" class="soc-b">in</a>
+          <a href="https://wa.me/966566633692" class="soc-b">💬</a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>روابط سريعة</h4>
+      <div class="ft-col">
+        <h4>روابط</h4>
         <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#about">عن الشركة</a></li>
-          <li><a href="#services">خدماتنا</a></li>
-          <li><a href="#strategy">استراتيجيتنا</a></li>
-          <li><a href="#advantages">مميزاتنا</a></li>
-          <li><a href="#careers">التوظيف</a></li>
+          <li><a href="#home">الرئيسية</a></li><li><a href="#about">عن الشركة</a></li>
+          <li><a href="#services">الخدمات</a></li><li><a href="#strategy">الاستراتيجية</a></li>
+          <li><a href="#advantages">المميزات</a></li><li><a href="#careers">التوظيف</a></li>
           <li><a href="#contact">تواصل معنا</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>تواصل معنا</h4>
+      <div class="ft-col">
+        <h4>تواصل</h4>
         <ul>
           <li><a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a></li>
           <li><a href="mailto:hr@altasaluh.com.sa">hr@altasaluh.com.sa</a></li>
           <li><a href="tel:0566633692">0566633692</a></li>
-          <li><a href="#contact">الرياض – المملكة العربية السعودية</a></li>
+          <li><a href="#contact">الرياض – السعودية</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="ft-btm">
       <p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
-      <div class="footer-bottom-links">
-        <a href="#">سياسة الخصوصية</a>
-        <a href="#">الشروط والأحكام</a>
-      </div>
+      <div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط</a></div>
     </div>
   </div>
 </footer>
 
-<!-- ─── FLOATING BUTTONS ─── -->
-<a href="https://wa.me/966566633692" class="float-wa" target="_blank" rel="noopener" title="واتساب">💬</a>
-<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="العودة للأعلى">↑</button>
+<a href="https://wa.me/966566633692" class="f-wa" target="_blank" rel="noopener">💬</a>
+<button class="f-top" id="fTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-<!-- ─── SCRIPTS ─── -->
 <script>
-// ── Header scroll
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 60);
-  document.getElementById('backTop').classList.toggle('show', window.scrollY > 400);
-}, {passive:true});
+// Header
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>{
+  hdr.classList.toggle('s',scrollY>50);
+  document.getElementById('fTop').classList.toggle('on',scrollY>400);
+},{passive:true});
 
-// ── Mobile nav
-const menuToggle = document.getElementById('menuToggle');
-const mobileNav = document.getElementById('mobileNav');
-let mobileOpen = false;
-menuToggle.addEventListener('click', () => {
-  mobileOpen = !mobileOpen;
-  mobileNav.classList.toggle('open', mobileOpen);
-  document.body.style.overflow = mobileOpen ? 'hidden' : '';
-});
-function closeMobileNav() {
-  mobileOpen = false;
-  mobileNav.classList.remove('open');
-  document.body.style.overflow = '';
+// Mobile nav
+let mo=false;
+document.getElementById('ham').onclick=()=>{mo=!mo;document.getElementById('mob').classList.toggle('on',mo);document.body.style.overflow=mo?'hidden':''};
+function cm(){mo=false;document.getElementById('mob').classList.remove('on');document.body.style.overflow=''}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();const hh=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hh'));window.scrollTo({top:t.getBoundingClientRect().top+scrollY-hh,behavior:'smooth'});}
+}));
+
+// Active nav
+const navAs=document.querySelectorAll('.nav-links a');
+new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting)navAs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+}),{threshold:.25,rootMargin:'-76px 0px -60% 0px'}).observe(...document.querySelectorAll('section[id]'));
+
+// Reveal
+const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){e.target.classList.add('on');rvObs.unobserve(e.target);}
+}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
+
+// Counters
+function aC(el){
+  const v=parseInt(el.dataset.count),s=el.dataset.suffix||'',d=1800,t0=performance.now();
+  (function f(now){const p=Math.min((now-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(v*e)+s;if(p<1)requestAnimationFrame(f);else el.textContent=v+s;})(t0);
 }
+const cObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){aC(e.target);cObs.unobserve(e.target);}}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
 
-// ── Active nav link on scroll
-const sections = document.querySelectorAll('section[id], div[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-const observer_nav = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navLinks.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
-      });
-    }
-  });
-}, {threshold:.3, rootMargin:'-80px 0px -60% 0px'});
-sections.forEach(s => observer_nav.observe(s));
+// Bars
+const bObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';bObs.unobserve(e.target);}}),{threshold:.5});
+document.querySelectorAll('.br-f,.pb-fill').forEach(el=>bObs.observe(el));
 
-// ── Reveal animations
-const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-const observer_reveal = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer_reveal.unobserve(e.target);
-    }
-  });
-}, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
-revealEls.forEach(el => observer_reveal.observe(el));
+// Rings
+const circ=2*Math.PI*26;
+document.querySelectorAll('.rg-fg').forEach(el=>{el.style.strokeDasharray=circ;el.style.strokeDashoffset=circ;});
+const rObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const p=parseInt(e.target.dataset.pct);e.target.style.strokeDashoffset=circ-(circ*p/100);rObs.unobserve(e.target);}}),{threshold:.5});
+document.querySelectorAll('.rg-fg').forEach(el=>rObs.observe(el));
 
-// ── Counter animation
-function animateCounter(el) {
-  const target = parseInt(el.dataset.count);
-  const suffix = el.dataset.suffix || '';
-  const isPlain = el.dataset.format === 'plain';
-  const duration = 1800;
-  const start = performance.now();
-  const startVal = 0;
-  (function step(now) {
-    const p = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - p, 3);
-    const val = Math.round(startVal + (target - startVal) * eased);
-    el.textContent = isPlain ? String(val) : val.toLocaleString('en-US') + suffix;
-    if (p < 1) requestAnimationFrame(step);
-    else el.textContent = isPlain ? String(target) : target.toLocaleString('en-US') + suffix;
-  })(start);
-}
-const counters = document.querySelectorAll('[data-count]');
-const observer_count = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      animateCounter(e.target);
-      observer_count.unobserve(e.target);
-    }
-  });
-}, {threshold:.5});
-counters.forEach(c => observer_count.observe(c));
-
-// ── Careers form (mailto: hr@altasaluh.com.sa)
-function submitCareers(e) {
-  e.preventDefault();
-  const name = document.getElementById('c-name').value;
-  const phone = document.getElementById('c-phone').value;
-  const email = document.getElementById('c-email').value;
-  const position = document.getElementById('c-position').value;
-  const edu = document.getElementById('c-edu').value;
-  const exp = document.getElementById('c-exp').value;
-  const msg = document.getElementById('c-msg').value;
-  const body = `طلب توظيف جديد من موقع شركة التصالح
-══════════════════════════
-
-الاسم الكامل: ${name}
-رقم الجوال: ${phone}
-البريد الإلكتروني: ${email}
-المسمى الوظيفي: ${position || 'لم يحدد'}
-المؤهل العلمي: ${edu || 'لم يحدد'}
-سنوات الخبرة: ${exp || 'لم يحدد'}
-
-الرسالة التعريفية:
-${msg || 'لا توجد رسالة'}
-
-══════════════════════════
-تاريخ الطلب: ${new Date().toLocaleDateString('ar-SA')}`;
-  const subject = `طلب توظيف – ${name} – ${position || 'غير محدد'}`;
-  window.location.href = `mailto:hr@altasaluh.com.sa?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  document.getElementById('careersForm').reset();
-  showNotification('✅ جاري فتح تطبيق البريد الإلكتروني لإرسال طلبك إلى hr@altasaluh.com.sa', 'green');
-}
-
-// ── Contact form (mailto: info@altasaluh.com.sa)
-function submitContact(e) {
-  e.preventDefault();
-  const name = document.getElementById('ct-name').value;
-  const phone = document.getElementById('ct-phone').value;
-  const email = document.getElementById('ct-email').value;
-  const company = document.getElementById('ct-company').value;
-  const subject = document.getElementById('ct-subject').value;
-  const msg = document.getElementById('ct-msg').value;
-  const body = `رسالة جديدة من موقع شركة التصالح
-══════════════════════════
-
-الاسم: ${name}
-الجوال: ${phone}
-البريد الإلكتروني: ${email}
-الجهة / الشركة: ${company || 'لم يذكر'}
-الموضوع: ${subject}
-
-الرسالة:
-${msg}
-
-══════════════════════════
-تاريخ الإرسال: ${new Date().toLocaleDateString('ar-SA')}`;
-  const emailSubject = `استفسار: ${subject} – ${name}`;
-  window.location.href = `mailto:info@altasaluh.com.sa?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(body)}`;
-  document.getElementById('contactForm').reset();
-  showNotification('✅ جاري فتح تطبيق البريد الإلكتروني لإرسال رسالتك إلى info@altasaluh.com.sa', 'gold');
-}
-
-// ── Notification toast
-function showNotification(msg, type) {
-  const el = document.createElement('div');
-  el.textContent = msg;
-  Object.assign(el.style, {
-    position:'fixed', bottom:'32px', left:'50%', transform:'translateX(-50%)',
-    background: type === 'green' ? '#16cf8f' : '#c8a84b',
-    color: '#07111f', padding:'16px 28px', borderRadius:'10px',
-    fontWeight:'800', fontSize:'.9rem', zIndex:'9999',
-    boxShadow:'0 8px 32px rgba(0,0,0,.3)',
-    maxWidth:'90vw', textAlign:'center', lineHeight:'1.5',
-    animation:'fadeInUp .3s ease'
-  });
+// Forms
+function g(id){return document.getElementById(id)?.value||''}
+function toast(msg,c){
+  const el=document.createElement('div');el.textContent=msg;
+  Object.assign(el.style,{position:'fixed',bottom:'32px',left:'50%',transform:'translateX(-50%)',
+    background:c,color:c===g('--G')?'#071827':'#fff',padding:'13px 24px',borderRadius:'10px',
+    fontWeight:'800',fontSize:'.85rem',zIndex:'9999',boxShadow:'0 8px 28px rgba(0,0,0,.2)',
+    maxWidth:'90vw',textAlign:'center',transition:'opacity .3s',opacity:'0'});
   document.body.appendChild(el);
-  setTimeout(() => el.remove(), 5000);
+  setTimeout(()=>el.style.opacity='1',10);
+  setTimeout(()=>{el.style.opacity='0';setTimeout(()=>el.remove(),300);},4500);
 }
 
-// ── Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - (parseInt(getComputedStyle(document.documentElement).getPropertyValue('--hh')) || 88);
-      window.scrollTo({top, behavior:'smooth'});
-    }
-  });
-});
-
-// ── Responsive: collapse principles grid
-function adjustGrid() {
-  const pg = document.querySelector('.principles-grid');
-  if (pg) pg.style.gridTemplateColumns = window.innerWidth < 680 ? '1fr' : window.innerWidth < 900 ? '1fr 1fr' : 'repeat(3,1fr)';
+function sCareers(e){
+  e.preventDefault();
+  const body=`طلب توظيف\n${'─'.repeat(30)}\nالاسم: ${g('cn')}\nالجوال: ${g('cp')}\nالبريد: ${g('ce')}\nالوظيفة: ${g('cj')||'—'}\nالمؤهل: ${g('cq')||'—'}\nالخبرة: ${g('cx')||'—'}\nرسالة:\n${g('cm')||'—'}\n${'─'.repeat(30)}\n${new Date().toLocaleDateString('ar-SA')}`;
+  location.href=`mailto:hr@altasaluh.com.sa?subject=${encodeURIComponent('طلب توظيف – '+g('cn'))}&body=${encodeURIComponent(body)}`;
+  document.getElementById('cForm').reset();
+  toast('✅ جاري فتح البريد → hr@altasaluh.com.sa','#2cc58b');
 }
-window.addEventListener('resize', adjustGrid);
-adjustGrid();
+function sContact(e){
+  e.preventDefault();
+  const body=`رسالة جديدة\n${'─'.repeat(30)}\nالاسم: ${g('tn')}\nالجوال: ${g('tp')}\nالبريد: ${g('te')}\nالجهة: ${g('tc')||'—'}\nالموضوع: ${g('ts')}\nالرسالة:\n${g('tm')}\n${'─'.repeat(30)}\n${new Date().toLocaleDateString('ar-SA')}`;
+  location.href=`mailto:info@altasaluh.com.sa?subject=${encodeURIComponent('استفسار: '+g('ts')+' – '+g('tn'))}&body=${encodeURIComponent(body)}`;
+  document.getElementById('ctForm').reset();
+  toast('✅ جاري فتح البريد → info@altasaluh.com.sa','#071827');
+}
 </script>
-
-<!-- Fade-in animation for toast -->
-<style>
-@keyframes fadeInUp{from{opacity:0;transform:translate(-50%,20px)}to{opacity:1;transform:translate(-50%,0)}}
-</style>
-
 </body>
 </html>
