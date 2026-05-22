@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الضوابط والسياسات شركة التصالح</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html"><img src="assets/altasaluh-logo-wide-dark.png" alt="ALTASALUH شركة التصالح"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Menu"><span></span><span></span></button>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="navHome">الرئيسية</a>
+      <a href="about.html" data-i18n="navAbout">من نحن</a>
+      <a href="services.html" data-i18n="navServices">الخدمات</a>
+      <a href="projects.html" data-i18n="navPortfolio">الأعمال</a>
+      <div class="nav-dropdown"><a href="policies.html" class="active" data-i18n="navPolicies">الضوابط والسياسات</a><div class="nav-submenu"><a href="policies.html#protection" data-i18n="docProtectionTitle">مبادئ وقواعد حماية عملاء المؤسسات المالية</a><a href="policies.html#collection" data-i18n="docCollectionTitle">ضوابط وإجراءات التحصيل للعملاء الأفراد</a><a href="policies.html#profile" data-i18n="docProfileTitle">الملف التعريفي لشركة التصالح 2026</a></div></div>
+      <a href="contact.html" data-i18n="navContact">تواصل معنا</a>
+    </nav>
+    <div class="header-actions"><a href="mailto:Info@altasaluh.com.sa">Info@altasaluh.com.sa</a></div>
+    <button class="lang-toggle" type="button" data-lang-toggle>English</button>
+  </div>
+</header>
+
+<main>
+  <section class="docs-page">
+    <div class="container">
+      <div class="docs-head reveal">
+        <span class="eyebrow" data-i18n="docsEyebrow">الضوابط والسياسات</span>
+        <h1 class="section-title" data-i18n="docsTitle">مبادئ حماية عملاء المؤسسات المالية</h1>
+        <p class="section-lead" data-i18n="docsLead">مكتبة مستندات مرجعية تعرض مبادئ الحماية وضوابط التحصيل وملف الشركة التعريفي بصيغة PDF.</p>
+        <div class="docs-rule"></div>
+      </div>
+
+      <div class="docs-grid docs-picker">
+        <article class="doc-card reveal" data-doc-card="profile">
+          <span data-i18n="docTypeProfile">ملف تعريفي</span>
+          <h3 data-i18n="docProfileTitle">الملف التعريفي لشركة التصالح 2026</h3>
+          <p data-i18n="docProfileText">نبذة منظمة عن الشركة ونطاق عملها ومنهجية التشغيل.</p>
+          <div class="doc-links">
+            <a href="#profile" data-doc-link="profile" data-i18n="docOpen">فتح</a>
+            <a href="assets/docs/company-profile-2026.pdf" download data-i18n="docDownload">تحميل</a>
+          </div>
+        </article>
+        <article class="doc-card reveal" data-doc-card="collection">
+          <span data-i18n="docTypeControls">ضوابط تحصيل</span>
+          <h3 data-i18n="docCollectionTitle">ضوابط وإجراءات التحصيل للعملاء الأفراد</h3>
+          <p data-i18n="docCollectionText">مرجع يوضح الضوابط والإجراءات المرتبطة بعمليات التحصيل للأفراد.</p>
+          <div class="doc-links">
+            <a href="#collection" data-doc-link="collection" data-i18n="docOpen">فتح</a>
+            <a href="assets/docs/collection-rules-individuals.pdf" download data-i18n="docDownload">تحميل</a>
+          </div>
+        </article>
+        <article class="doc-card reveal active" data-doc-card="protection">
+          <span data-i18n="docTypeProtection">حماية العملاء</span>
+          <h3 data-i18n="docProtectionTitle">مبادئ وقواعد حماية عملاء المؤسسات المالية</h3>
+          <p data-i18n="docProtectionText">مستند مرجعي لمبادئ التعامل مع عملاء المؤسسات المالية وحماية حقوقهم.</p>
+          <div class="doc-links">
+            <a href="#protection" data-doc-link="protection" data-i18n="docOpen">فتح</a>
+            <a href="assets/docs/financial-customers-protection.pdf" download data-i18n="docDownload">تحميل</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="doc-actions reveal">
+        <a class="doc-action primary" data-doc-open href="assets/docs/financial-customers-protection.pdf" target="_blank" rel="noopener" data-i18n="docOpenMain">فتح المستند</a>
+        <a class="doc-action" data-doc-download href="assets/docs/financial-customers-protection.pdf" download data-i18n="docDownloadMain">تحميل المستند</a>
+      </div>
+
+      <div class="pdf-shell reveal">
+        <iframe data-doc-frame title="مبادئ وقواعد حماية عملاء المؤسسات المالية" src="assets/docs/financial-customers-protection.pdf#toolbar=1&navpanes=1&view=FitH"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer site-footer-modern">
+  <div class="container footer-modern-wrap">
+    <div class="footer-modern-main">
+      <div class="footer-modern-contact">
+        <h3>معلومات الاتصال بشركة التصالح</h3>
+        <a href="https://maps.app.goo.gl/PhqbB52cm8NFUEdf9" target="_blank" rel="noopener"><span>⌖</span><bdi>الرياض الدور الرابع مكتب 406 - المملكة العربية السعودية</bdi></a>
+        <a href="mailto:Info@altasaluh.com.sa"><span>✉</span><bdi>Info@altasaluh.com.sa</bdi></a>
+        <a href="tel:0115138328"><span>☎</span><bdi>011 513 8328</bdi></a>
+        <a href="https://wa.me/966115138328" target="_blank" rel="noopener"><span>◉</span><bdi>011 513 8328</bdi></a>
+        <div class="footer-modern-social">
+          <a href="https://www.linkedin.com/company/altasaluh" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/altasaluh" target="_blank" rel="noopener" aria-label="X">x</a>
+        </div>
+      </div>
+      <div class="footer-modern-center">
+        <a class="footer-modern-logo" href="index.html"><img src="assets/altasaluh-logo-wide-dark.png" alt="ALTASALUH شركة التصالح"></a>
+        <nav class="footer-modern-nav" aria-label="روابط أسفل الصفحة">
+          <a href="index.html" data-i18n="navHome">الرئيسية</a>
+          <a href="about.html" data-i18n="navAbout">من نحن</a>
+          <a href="services.html" data-i18n="navServices">الخدمات</a>
+          <a href="projects.html" data-i18n="navPortfolio">الأعمال</a>
+          <a href="policies.html" data-i18n="navPolicies">الضوابط والسياسات</a>
+          <a href="contact.html" data-i18n="navContact">تواصل معنا</a>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-modern-bottom"><p>حقوق النشر © 2026 شركة التصالح لتحصيل الديون. السجل التجاري: 7030006535. جميع الحقوق محفوظة.</p></div>
+  </div>
+</footer>
+<div class="floating-actions"><a class="floating-whatsapp" href="https://wa.me/966115138328" target="_blank" rel="noopener">واتساب</a><a class="floating-call" href="tel:0115138328">اتصال</a></div>
+<script src="script.js"></script>
+</body>
+</html>

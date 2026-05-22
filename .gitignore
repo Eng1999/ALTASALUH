@@ -1,0 +1,25 @@
+# Archives
+*.zip
+*.tar.gz
+altasaluh-deploy/
+altasaluh-deploy 2/
+
+# Large stock images (licensed)
+shutterstock_*.jpg
+shutterstock_*.eps
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log
+
+# Old template reference
+confins-business-finance-consulting-elementor-2023-11-27-05-05-13-utc/
+
+# Sensitive
+.env
