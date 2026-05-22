@@ -478,20 +478,43 @@ p.lead-d{color:rgba(7,24,39,.5)}
 .pc p{color:rgba(255,255,255,.5);font-size:.83rem;line-height:1.75}
 
 /* ══════════════════════════════════
-   CLIENTS  (white bg, large logos)
+   PARTNERS GRID
 ══════════════════════════════════ */
-.cl-wrap{overflow:hidden;position:relative;padding-block:8px}
-.cl-wrap::before,.cl-wrap::after{
-  content:"";position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none;
+.partners-grid{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(16px,3vw,32px);
+  padding:8px 0;
 }
-.cl-wrap::before{right:0;background:linear-gradient(90deg,transparent,#fff)}
-.cl-wrap::after{left:0;background:linear-gradient(270deg,transparent,#fff)}
-.cl-track{display:flex;align-items:center;gap:56px;animation:scroll 28s linear infinite;width:max-content}
-.cl-track:hover{animation-play-state:paused}
-@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.cl-logo{flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s;opacity:.75}
-.cl-logo:hover{opacity:1;transform:scale(1.06)}
-.cl-logo img{height:72px;max-width:200px;object-fit:contain;display:block}
+.pl{
+  flex:0 0 auto;
+  width:clamp(140px,18vw,200px);height:110px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 2px 16px rgba(7,24,39,.06);
+  padding:18px 22px;
+  position:relative;
+  overflow:hidden;
+  opacity:0;transform:translateY(32px) scale(.94);
+  transition:opacity .5s var(--ease),transform .5s var(--ease),
+              box-shadow .3s,border-color .3s;
+  border:1.5px solid rgba(44,197,139,.1);
+  cursor:default;
+}
+.pl::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(44,197,139,.07),transparent 60%);
+  opacity:0;transition:opacity .3s;border-radius:inherit;
+}
+.pl:hover{
+  transform:translateY(-6px) scale(1.04) !important;
+  box-shadow:0 16px 48px rgba(44,197,139,.18),0 4px 16px rgba(7,24,39,.08);
+  border-color:rgba(44,197,139,.35);
+}
+.pl:hover::after{opacity:1}
+.pl.in{opacity:1;transform:translateY(0) scale(1)}
+.pl img{max-height:62px;max-width:100%;object-fit:contain;display:block;transition:filter .3s}
+.pl:hover img{filter:drop-shadow(0 4px 12px rgba(44,197,139,.3))}
 
 /* ══════════════════════════════════
    CAREERS  (white)
@@ -927,34 +950,24 @@ footer{background:var(--D);color:#fff;padding-top:clamp(44px,5vw,70px)}
   </div>
 </section>
 
-<!-- ══ CLIENTS  (white) ══ -->
-<section class="sec sec-w" style="padding-block:clamp(52px,6vw,80px)">
-  <div class="wrap tc" style="margin-bottom:40px">
+<!-- ══ PARTNERS GRID ══ -->
+<section class="sec sec-s" id="partners" style="padding-block:clamp(56px,7vw,90px)">
+  <div class="wrap tc" style="margin-bottom:48px">
     <span class="tag tag-g rv">ثقة متبادلة</span>
     <h2 class="t t-d rv" data-d="2">شركاؤنا <em>وعملاؤنا</em></h2>
+    <p class="lead lead-d rv" style="max-width:480px;margin:0 auto" data-d="3">نفخر بشراكات استراتيجية تمتد عبر قطاعات متعددة</p>
   </div>
-  <div class="cl-wrap">
-    <div class="cl-track">
-      <!-- SET 1 -->
-      <div class="cl-logo"><img src="assets/partner-rn-holding.png" alt="RN Holding"></div>
-      <div class="cl-logo"><img src="assets/partner-saudi-digital-house.png" alt="Saudi Digital House"></div>
-      <div class="cl-logo"><img src="assets/partner-gulfian-food.png" alt="Gulfian Food Services"></div>
-      <div class="cl-logo"><img src="assets/partner-chocolate-world.png" alt="Chocolate World"></div>
-      <div class="cl-logo"><img src="assets/partner-rawabi-medical.png" alt="Rawabi Medical"></div>
-      <div class="cl-logo"><img src="assets/partner-bawabi.png" alt="Bawabi Chemicals"></div>
-      <div class="cl-logo"><img src="assets/partner-asrar.png" alt="أسرار"></div>
-      <div class="cl-logo"><img src="assets/partner-riyadh-lane.png" alt="Riyadh Lane"></div>
-      <div class="cl-logo"><img src="assets/partner-auto9.png" alt="Auto 9"></div>
-      <!-- SET 2 (duplicate for seamless loop) -->
-      <div class="cl-logo"><img src="assets/partner-rn-holding.png" alt="RN Holding"></div>
-      <div class="cl-logo"><img src="assets/partner-saudi-digital-house.png" alt="Saudi Digital House"></div>
-      <div class="cl-logo"><img src="assets/partner-gulfian-food.png" alt="Gulfian Food Services"></div>
-      <div class="cl-logo"><img src="assets/partner-chocolate-world.png" alt="Chocolate World"></div>
-      <div class="cl-logo"><img src="assets/partner-rawabi-medical.png" alt="Rawabi Medical"></div>
-      <div class="cl-logo"><img src="assets/partner-bawabi.png" alt="Bawabi Chemicals"></div>
-      <div class="cl-logo"><img src="assets/partner-asrar.png" alt="أسرار"></div>
-      <div class="cl-logo"><img src="assets/partner-riyadh-lane.png" alt="Riyadh Lane"></div>
-      <div class="cl-logo"><img src="assets/partner-auto9.png" alt="Auto 9"></div>
+  <div class="wrap">
+    <div class="partners-grid" id="partnersGrid">
+      <div class="pl" style="--i:0"><img src="assets/partner-rn-holding.png" alt="RN Holding"></div>
+      <div class="pl" style="--i:1"><img src="assets/partner-saudi-digital-house.png" alt="Saudi Digital House"></div>
+      <div class="pl" style="--i:2"><img src="assets/partner-gulfian-food.png" alt="Gulfian Food Services"></div>
+      <div class="pl" style="--i:3"><img src="assets/partner-chocolate-world.png" alt="Chocolate World"></div>
+      <div class="pl" style="--i:4"><img src="assets/partner-rawabi-medical.png" alt="Rawabi Medical"></div>
+      <div class="pl" style="--i:5"><img src="assets/partner-bawabi.png" alt="Bawabi Chemicals"></div>
+      <div class="pl" style="--i:6"><img src="assets/partner-asrar.png" alt="أسرار"></div>
+      <div class="pl" style="--i:7"><img src="assets/partner-riyadh-lane.png" alt="Riyadh Lane"></div>
+      <div class="pl" style="--i:8"><img src="assets/partner-auto9.png" alt="Auto 9"></div>
     </div>
   </div>
 </section>
@@ -1131,6 +1144,17 @@ const circ=2*Math.PI*26;
 document.querySelectorAll('.rg-fg').forEach(el=>{el.style.strokeDasharray=circ;el.style.strokeDashoffset=circ;});
 const rObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const p=parseInt(e.target.dataset.pct);e.target.style.strokeDashoffset=circ-(circ*p/100);rObs.unobserve(e.target);}}),{threshold:.5});
 document.querySelectorAll('.rg-fg').forEach(el=>rObs.observe(el));
+
+// Partners staggered entrance
+const plObs=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting){
+    const cards=e.target.querySelectorAll('.pl');
+    cards.forEach((c,i)=>{setTimeout(()=>c.classList.add('in'),i*90);});
+    plObs.unobserve(e.target);
+  }
+}),{threshold:.1});
+const pg=document.getElementById('partnersGrid');
+if(pg)plObs.observe(pg);
 
 // Forms
 function g(id){return document.getElementById(id)?.value||''}
