@@ -154,30 +154,17 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
   min-height:220px;
   background:radial-gradient(circle,rgba(44,197,139,.13) 0%,rgba(44,197,139,.03) 65%,transparent 100%);
-  border:1.5px solid rgba(44,197,139,.32);
   border-radius:50%;
-  padding:30px 24px;
-  box-shadow:0 0 60px rgba(44,197,139,.12),inset 0 0 40px rgba(44,197,139,.04);
+  padding:10px;
   transition:.4s;
   position:relative;
   aspect-ratio:1;
 }
-.hub-center::before{
-  content:'';position:absolute;inset:-12px;border-radius:50%;
-  border:1px dashed rgba(44,197,139,.18);
-  animation:hub-spin 28s linear infinite;
-  pointer-events:none;
-}
-.hub-center::after{
-  content:'';position:absolute;inset:-24px;border-radius:50%;
-  border:1px dashed rgba(44,197,139,.08);
-  animation:hub-spin 44s linear infinite reverse;
-  pointer-events:none;
-}
+.hub-center::before,.hub-center::after{display:none}
 @keyframes hub-spin{to{transform:rotate(360deg)}}
-.hub-center:hover{box-shadow:0 0 90px rgba(44,197,139,.22);border-color:rgba(44,197,139,.55)}
-.hub-center img{height:78px;width:auto;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 4px 18px rgba(44,197,139,.3));transition:.4s}
-.hub-center:hover img{transform:scale(1.06);filter:drop-shadow(0 6px 24px rgba(44,197,139,.45))}
+.hub-center:hover{box-shadow:0 0 90px rgba(44,197,139,.15)}
+.hub-center img{width:88%;height:auto;object-fit:contain;position:relative;z-index:1;filter:drop-shadow(0 4px 18px rgba(44,197,139,.3));transition:.4s}
+.hub-center:hover img{transform:scale(1.04);filter:drop-shadow(0 6px 24px rgba(44,197,139,.45))}
 .hub-lbl{position:relative;z-index:1;font-size:.72rem;font-weight:800;color:rgba(7,24,39,.45);text-align:center;letter-spacing:.04em}
 @media(max-width:900px){.hub-grid{grid-template-columns:repeat(2,1fr)}.hub-center{aspect-ratio:auto;border-radius:16px;min-height:160px}.hub-center::before,.hub-center::after{display:none}}
 @media(max-width:480px){.hub-grid{grid-template-columns:1fr}.hub-center{min-height:130px;padding:20px}.hub-center img{height:58px}}
@@ -378,7 +365,7 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <div class="pb-track"><div class="pb-fill" data-w="76"></div></div>
           </div>
           <div class="rv" data-d="6">
-            <div class="pb-head"><span class="pb-name">فريق قانوني متخصص</span><span class="pb-pct">+50 محامٍ</span></div>
+            <div class="pb-head"><span class="pb-name">فريق قانوني متخصص</span></div>
             <div class="pb-track"><div class="pb-fill" data-w="88"></div></div>
           </div>
           <div class="rv" data-d="7">
@@ -393,8 +380,7 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
           <div style="font-size:.88rem;font-weight:800;color:rgba(7,24,39,.6);margin-top:6px">معدل التحصيل الإجمالي</div>
         </div>
         <div class="rv rv-r" data-d="3" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:22px 24px;text-align:center">
-          <div style="font-size:2.4rem;font-weight:900;color:var(--D);line-height:1">+50 <span style="color:var(--G);font-size:1.4rem">محامٍ</span></div>
-          <div style="font-size:.82rem;font-weight:800;color:rgba(7,24,39,.5);margin-top:5px">فريق قانوني متخصص</div>
+          <div style="font-size:1.15rem;font-weight:900;color:var(--D);line-height:1.4">فريق قانوني متخصص</div>
         </div>
         <div class="rv rv-r" data-d="4" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:22px 24px;text-align:center">
           <div style="font-size:2.4rem;font-weight:900;color:var(--D);line-height:1">+180 <span style="color:var(--G);font-size:1.4rem">موظف</span></div>
