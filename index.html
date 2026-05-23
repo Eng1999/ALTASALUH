@@ -57,10 +57,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 }
 .hdr.s{box-shadow:0 4px 30px rgba(0,0,0,.4)}
 .nav{width:min(1200px,calc(100% - 40px));margin-inline:auto;display:flex;align-items:center;gap:16px}
-.logo{flex-shrink:0;display:flex;align-items:center;gap:10px}
-.logo img{height:42px}
-.logo-txt strong{display:block;color:var(--G);font-size:.85rem;font-weight:900}
-.logo-txt span{display:block;color:rgba(255,255,255,.45);font-size:.65rem}
+.logo{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.logo img{height:38px;width:auto;object-fit:contain}
+.logo-name{color:#fff;font-size:.7rem;font-weight:900;letter-spacing:.04em;white-space:nowrap;line-height:1}
 .nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:2px}
 .nav-links a{
   padding:6px 12px;color:rgba(255,255,255,.65);font-weight:700;font-size:.82rem;
@@ -741,6 +740,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   <nav class="nav">
     <a href="#home" class="logo">
       <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
+      <span class="logo-name">شركة التصالح</span>
     </a>
     <div class="nav-links">
       <a href="#home" class="on">الرئيسية</a>
