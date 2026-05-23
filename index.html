@@ -597,15 +597,20 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   margin-bottom:12px;
   filter:brightness(1.05);
   transform-origin:center bottom;
-  animation:flag-wave 3.5s ease-in-out infinite;
+  animation:flag-flutter 1.4s ease-in-out infinite;
 }
-@keyframes flag-wave{
-  0%,100%{transform:skewX(0deg) scaleX(1)}
-  15%    {transform:skewX(-5deg) scaleX(0.96)}
-  30%    {transform:skewX(0deg) scaleX(1)}
-  50%    {transform:skewX(4deg) scaleX(0.97)}
-  70%    {transform:skewX(-3deg) scaleX(0.98)}
-  85%    {transform:skewX(2deg) scaleX(0.99)}
+@keyframes flag-flutter{
+  0%   {transform:perspective(500px) rotateY(0deg)   skewX(0deg)}
+  10%  {transform:perspective(500px) rotateY(12deg)  skewX(-2deg)}
+  20%  {transform:perspective(500px) rotateY(-8deg)  skewX(1.5deg)}
+  30%  {transform:perspective(500px) rotateY(14deg)  skewX(-2.5deg)}
+  40%  {transform:perspective(500px) rotateY(-6deg)  skewX(1deg)}
+  50%  {transform:perspective(500px) rotateY(10deg)  skewX(-2deg)}
+  60%  {transform:perspective(500px) rotateY(-10deg) skewX(2deg)}
+  70%  {transform:perspective(500px) rotateY(8deg)   skewX(-1.5deg)}
+  80%  {transform:perspective(500px) rotateY(-5deg)  skewX(1deg)}
+  90%  {transform:perspective(500px) rotateY(6deg)   skewX(-1deg)}
+  100% {transform:perspective(500px) rotateY(0deg)   skewX(0deg)}
 }
 .ft-logo-name{
   color:#fff;font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:900;margin-bottom:4px;
