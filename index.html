@@ -461,6 +461,31 @@ p.lead-d{color:rgba(7,24,39,.5)}
 /* ══════════════════════════════════
    PROGRAMS  (dark)
 ══════════════════════════════════ */
+/* ══ SAMA BANNER ══ */
+.sama-banner{display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center}
+.sama-line{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--G),transparent)}
+.sama-badge{
+  display:inline-block;padding:6px 18px;
+  border:1px solid rgba(44,197,139,.35);border-radius:30px;
+  color:var(--G);font-size:.75rem;font-weight:900;letter-spacing:.1em;
+  background:rgba(44,197,139,.07);margin-bottom:10px;
+}
+.sama-title{
+  font-size:clamp(1.7rem,3.5vw,2.8rem);font-weight:900;color:#fff;
+  line-height:1.2;margin-bottom:16px;max-width:700px;margin-inline:auto;
+}
+.sama-title em{color:var(--G);font-style:normal}
+.sama-sub{
+  color:rgba(255,255,255,.5);font-size:clamp(.88rem,1.1vw,.98rem);
+  line-height:1.9;max-width:640px;margin-inline:auto;margin-bottom:24px;
+}
+.sama-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.sama-tags span{
+  padding:7px 18px;border-radius:6px;
+  background:rgba(44,197,139,.08);border:1px solid rgba(44,197,139,.18);
+  color:rgba(255,255,255,.6);font-size:.78rem;font-weight:700;
+}
+
 .prg-g{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border-radius:14px;overflow:hidden}
 .pc{
   padding:clamp(32px,4vw,50px) clamp(24px,3vw,38px);
@@ -964,17 +989,23 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   </div>
 </section>
 
-<!-- ══ PROGRAMS  (dark) ══ -->
-<section class="sec sec-d" id="programs">
+<!-- ══ SAMA COMPLIANCE BANNER  (dark) ══ -->
+<section class="sec sec-d" id="programs" style="padding-block:clamp(52px,6vw,80px)">
   <div class="wrap">
-    <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-g rv">البنية التقنية</span>
-      <h2 class="t t-w rv" data-d="2">برامج <em>الشركة</em></h2>
-    </div>
-    <div class="prg-g rv">
-      <div class="pc"><h3>برنامج التحصيل</h3><div class="pc-pill">CX — حصل</div><p>إدارة المحافظ وتتبع الأداء بدقة عالية</p></div>
-      <div class="pc"><h3>تخزين الإجراءات</h3><div class="pc-pill">Adobe Cloud</div><p>أرشفة وحفظ آمن لجميع الوثائق</p></div>
-      <div class="pc"><h3>برنامج الاتصال</h3><div class="pc-pill">الجودة — 3</div><p>تواصل احترافي وتسجيل المكالمات</p></div>
+    <div class="sama-banner rv">
+      <div class="sama-line"></div>
+      <div class="sama-body">
+        <div class="sama-badge">البنك المركزي السعودي — SAMA</div>
+        <h2 class="sama-title">أنظمة قوية <em>معتمدة على معايير البنك المركزي</em></h2>
+        <p class="sama-sub">تعمل الشركة بأنظمة تحصيل متكاملة مُصممة وفق الأطر التنظيمية والمعايير التشغيلية الصادرة عن البنك المركزي السعودي، مما يضمن أعلى مستويات الامتثال وحماية بيانات العملاء.</p>
+        <div class="sama-tags">
+          <span>الامتثال التنظيمي</span>
+          <span>حماية البيانات</span>
+          <span>جودة التشغيل</span>
+          <span>إدارة المخاطر</span>
+        </div>
+      </div>
+      <div class="sama-line"></div>
     </div>
   </div>
 </section>
