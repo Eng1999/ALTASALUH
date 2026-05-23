@@ -73,46 +73,31 @@ p.lead{font-size:1rem;line-height:1.85;max-width:560px}
 p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
 .tc{text-align:center}.tc .lead{margin-inline:auto}
 
-/* ══ SERVICE CARDS (8 cards dark) ══ */
-.svc-new-g{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
+/* ══ SERVICE CARDS ══ */
+.svc-new-g{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .svc-card{
-  background:#071827;
-  border-radius:16px;
-  border-top:3px solid var(--G);
-  padding:28px;
-  display:flex;flex-direction:column;gap:14px;
-  transition:transform .3s var(--ease), box-shadow .3s;
+  background:#071827;border-radius:16px;border-top:3px solid var(--G);
+  padding:28px;display:flex;flex-direction:column;gap:14px;
+  opacity:0;transform:translateY(44px) rotateX(6deg);
+  transition:transform .3s var(--ease),box-shadow .3s;
 }
-.svc-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 32px rgba(44,197,139,.2);
+.svc-card.sc-in{animation:sc-enter .65s var(--ease) forwards}
+@keyframes sc-enter{
+  0%  {opacity:0;transform:translateY(44px) rotateX(6deg) scale(.96)}
+  60% {opacity:1;transform:translateY(-6px) rotateX(0) scale(1.01)}
+  100%{opacity:1;transform:translateY(0) rotateX(0) scale(1)}
 }
+.svc-card:hover{transform:translateY(-4px) !important;box-shadow:0 12px 32px rgba(44,197,139,.2)}
 .svc-card-ico{
   width:56px;height:56px;border-radius:50%;
   background:rgba(44,197,139,.12);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:.4s var(--ease);
 }
+.svc-card:hover .svc-card-ico{background:rgba(44,197,139,.25);transform:scale(1.12) rotate(-8deg)}
 .svc-card-ico svg{width:28px;height:28px;color:var(--G);stroke:var(--G)}
 .svc-card h3{font-size:.95rem;font-weight:900;color:#fff;line-height:1.4}
 .svc-card p{color:rgba(255,255,255,.55);font-size:.8rem;line-height:1.7;flex:1}
-
-/* ══ WHY ALTASALUH STATS ══ */
-.why-g{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.why-box{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(44,197,139,.15);
-  border-radius:14px;
-  padding:28px 20px;text-align:center;
-  transition:.3s;
-}
-.why-box:hover{border-color:var(--G);background:rgba(44,197,139,.06)}
-.why-val{font-size:2.4rem;font-weight:900;color:var(--G);line-height:1;margin-bottom:6px}
-.why-lbl{color:rgba(255,255,255,.6);font-size:.85rem;font-weight:700}
 
 /* ══ PROGRESS BARS ══ */
 .prog-sec-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);align-items:center}
@@ -146,8 +131,18 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
 
 /* ══ ADVANTAGES ══ */
 .adv-g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.ac{padding:28px 22px;background:#fff;border:1px solid rgba(44,197,139,.12);border-radius:14px;transition:all .3s var(--ease);}
-.ac:hover{border-color:var(--G);transform:translateY(-6px);box-shadow:0 18px 44px rgba(7,24,39,.09)}
+.ac{
+  padding:28px 22px;background:#fff;border:1px solid rgba(44,197,139,.12);border-radius:14px;
+  opacity:0;transform:scale(.88) translateY(22px);
+}
+.ac.ac-in{animation:ac-enter .55s var(--ease) forwards}
+@keyframes ac-enter{
+  0%  {opacity:0;transform:scale(.88) translateY(22px)}
+  65% {transform:scale(1.03) translateY(-3px)}
+  100%{opacity:1;transform:scale(1) translateY(0)}
+}
+.ac{transition:border-color .3s,box-shadow .3s}
+.ac:hover{border-color:var(--G);transform:translateY(-6px) !important;box-shadow:0 18px 44px rgba(7,24,39,.09)}
 .ac-ico{width:48px;height:48px;border-radius:11px;background:#edfbf5;border:1px solid rgba(44,197,139,.18);display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:.3s;color:var(--G);}
 .ac:hover .ac-ico{background:var(--G);color:#fff;border-color:var(--G)}
 .ac-ico svg{width:22px;height:22px}
@@ -208,6 +203,7 @@ body.js-ready .pl{opacity:0;transform:translateY(32px) scale(.94)}
       <a href="contact.html">تواصل معنا</a>
     </div>
     <div class="nav-right">
+      <img src="assets/vision2030.svg" alt="رؤية 2030" style="height:48px;width:auto;object-fit:contain;flex-shrink:0;display:block">
       <a href="contact.html" class="btn-cta">ابدأ الآن</a>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
@@ -340,74 +336,59 @@ body.js-ready .pl{opacity:0;transform:translateY(32px) scale(.94)}
   </div>
 </section>
 
-<!-- ══ لماذا التصالح؟ ══ -->
-<section class="sec sec-d">
-  <div class="wrap">
-    <div class="tc" style="margin-bottom:48px">
-      <span class="tag tag-g rv">بالأرقام</span>
-      <h2 class="t t-w rv" data-d="2">لماذا <em>التصالح؟</em></h2>
-      <p class="lead lead-w rv tc" data-d="3" style="max-width:500px">أرقام حقيقية تعكس التزامنا بالتميز في قطاع تحصيل الديون</p>
-    </div>
-    <div class="why-g">
-      <div class="why-box rv" data-d="1">
-        <div class="why-val">94.6%</div>
-        <div class="why-lbl">معدل التحصيل</div>
-      </div>
-      <div class="why-box rv" data-d="2">
-        <div class="why-val">+180</div>
-        <div class="why-lbl">موظف متخصص</div>
-      </div>
-      <div class="why-box rv" data-d="3">
-        <div class="why-val">8</div>
-        <div class="why-lbl">خدمات متكاملة</div>
-      </div>
-      <div class="why-box rv" data-d="4">
-        <div class="why-val">2022</div>
-        <div class="why-lbl">عام التأسيس</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ أداؤنا بالأرقام ══ -->
 <section class="sec sec-w">
   <div class="wrap">
+    <div class="tc" style="margin-bottom:52px">
+      <span class="tag tag-g rv">بالأرقام</span>
+      <h2 class="t t-d rv" data-d="2">لماذا <em>التصالح؟</em></h2>
+      <p class="lead lead-d rv tc" data-d="3" style="max-width:520px">أرقام حقيقية تعكس التزامنا بالتميز في قطاع تحصيل الديون</p>
+    </div>
     <div class="prog-sec-g">
       <div>
-        <span class="tag tag-g rv">الأداء</span>
-        <h2 class="t t-d rv" data-d="2">أداؤنا <em>بالأرقام</em></h2>
-        <p class="lead lead-d rv" data-d="3" style="margin-bottom:32px">مؤشرات تعكس مستوى التخصص والكفاءة في كل قطاع نخدمه</p>
         <div class="prog-bars">
-          <div class="rv" data-d="3">
+          <div class="rv" data-d="2">
             <div class="pb-head"><span class="pb-name">البطاقات الائتمانية</span><span class="pb-pct">94%</span></div>
             <div class="pb-track"><div class="pb-fill" data-w="94"></div></div>
           </div>
-          <div class="rv" data-d="4">
+          <div class="rv" data-d="3">
             <div class="pb-head"><span class="pb-name">التمويل الشخصي</span><span class="pb-pct">82%</span></div>
             <div class="pb-track"><div class="pb-fill" data-w="82"></div></div>
           </div>
-          <div class="rv" data-d="5">
+          <div class="rv" data-d="4">
             <div class="pb-head"><span class="pb-name">التقسيط الرقمي</span><span class="pb-pct">91%</span></div>
             <div class="pb-track"><div class="pb-fill" data-w="91"></div></div>
           </div>
-          <div class="rv" data-d="6">
+          <div class="rv" data-d="5">
             <div class="pb-head"><span class="pb-name">التمويل العقاري</span><span class="pb-pct">76%</span></div>
             <div class="pb-track"><div class="pb-fill" data-w="76"></div></div>
           </div>
+          <div class="rv" data-d="6">
+            <div class="pb-head"><span class="pb-name">فريق قانوني متخصص</span><span class="pb-pct">+50 محامٍ</span></div>
+            <div class="pb-track"><div class="pb-fill" data-w="88"></div></div>
+          </div>
+          <div class="rv" data-d="7">
+            <div class="pb-head"><span class="pb-name">الموظفون المتخصصون</span><span class="pb-pct">+180 موظف</span></div>
+            <div class="pb-track"><div class="pb-fill" data-w="95"></div></div>
+          </div>
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;justify-content:center;gap:20px;padding-top:20px">
-        <div class="rv rv-r" data-d="2" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:28px 24px;text-align:center">
-          <div style="font-size:3rem;font-weight:900;color:var(--G);line-height:1">94.6%</div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:16px">
+        <div class="rv rv-r" data-d="2" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:26px 24px;text-align:center">
+          <div style="font-size:2.8rem;font-weight:900;color:var(--G);line-height:1">94.6%</div>
           <div style="font-size:.88rem;font-weight:800;color:rgba(7,24,39,.6);margin-top:6px">معدل التحصيل الإجمالي</div>
         </div>
-        <div class="rv rv-r" data-d="3" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:24px;text-align:center">
-          <div style="font-size:1.8rem;font-weight:900;color:var(--D);line-height:1">الالتزام <span style="color:var(--G)">بالجودة</span></div>
-          <div style="font-size:.8rem;color:rgba(7,24,39,.45);margin-top:6px">في كل مرحلة من مراحل التحصيل</div>
+        <div class="rv rv-r" data-d="3" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:22px 24px;text-align:center">
+          <div style="font-size:2.4rem;font-weight:900;color:var(--D);line-height:1">+50 <span style="color:var(--G);font-size:1.4rem">محامٍ</span></div>
+          <div style="font-size:.82rem;font-weight:800;color:rgba(7,24,39,.5);margin-top:5px">فريق قانوني متخصص</div>
         </div>
-        <div class="rv rv-r" data-d="4" style="background:#071827;border-radius:14px;padding:24px;text-align:center">
-          <div style="font-size:1rem;font-weight:800;color:rgba(255,255,255,.7)">تواصل مع فريق التحصيل</div>
-          <a href="contact.html" style="display:inline-block;margin-top:14px;padding:10px 24px;background:var(--G);color:var(--D);font-weight:900;border-radius:8px;font-size:.9rem;transition:.25s">ابدأ الآن ←</a>
+        <div class="rv rv-r" data-d="4" style="background:#f4fcf9;border:1px solid rgba(44,197,139,.18);border-radius:14px;padding:22px 24px;text-align:center">
+          <div style="font-size:2.4rem;font-weight:900;color:var(--D);line-height:1">+180 <span style="color:var(--G);font-size:1.4rem">موظف</span></div>
+          <div style="font-size:.82rem;font-weight:800;color:rgba(7,24,39,.5);margin-top:5px">كوادر متخصصة في التحصيل</div>
+        </div>
+        <div class="rv rv-r" data-d="5" style="background:#071827;border-radius:14px;padding:22px;text-align:center">
+          <div style="font-size:.95rem;font-weight:800;color:rgba(255,255,255,.7)">تواصل مع فريق التحصيل</div>
+          <a href="contact.html" style="display:inline-block;margin-top:12px;padding:10px 24px;background:var(--G);color:var(--D);font-weight:900;border-radius:8px;font-size:.9rem;transition:.25s">ابدأ الآن ←</a>
         </div>
       </div>
     </div>
@@ -528,6 +509,13 @@ const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInterse
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
 const bObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';bObs.unobserve(e.target);}}),{threshold:.4});
 document.querySelectorAll('.pb-fill').forEach(el=>bObs.observe(el));
+// Service cards stagger animation
+const scObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.svc-card').forEach((c,i)=>{setTimeout(()=>c.classList.add('sc-in'),i*80);});scObs.unobserve(e.target);}}),{threshold:.08});
+const sg=document.querySelector('.svc-new-g');if(sg)scObs.observe(sg);
+// Advantage cards stagger animation
+const acObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.ac').forEach((c,i)=>{setTimeout(()=>c.classList.add('ac-in'),i*70);});acObs.unobserve(e.target);}}),{threshold:.06});
+const ag=document.querySelector('.adv-g');if(ag)acObs.observe(ag);
+// Partners
 const plObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){const cards=e.target.querySelectorAll('.pl');cards.forEach((c,i)=>{setTimeout(()=>c.classList.add('in'),i*90);});plObs.unobserve(e.target);}}),{threshold:.1});
 const pg=document.getElementById('partnersGrid');if(pg)plObs.observe(pg);
 let curLang=localStorage.getItem('lang')||'ar';

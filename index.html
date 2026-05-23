@@ -58,11 +58,11 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 }
 .hdr.s{box-shadow:0 4px 30px rgba(0,0,0,.4)}
 .nav{width:min(1200px,calc(100% - 40px));margin-inline:auto;display:flex;align-items:center;gap:16px}
-.logo{flex-shrink:0;display:flex;align-items:center;gap:0}
+.logo{flex-shrink:0;display:flex;align-items:center}
 .logo img{height:62px;width:auto;object-fit:contain;filter:brightness(1.1)}
 .logo-tagline{display:none}
 .logo-name{display:none}
-.vision-nav-logo{height:46px;width:auto;object-fit:contain;flex-shrink:0;opacity:.92;margin-inline-start:14px}
+.vision-nav-logo{height:52px;width:auto;object-fit:contain;flex-shrink:0;opacity:.95;display:block}
 .nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:2px}
 .nav-links a{
   padding:6px 12px;color:rgba(255,255,255,.65);font-weight:700;font-size:.82rem;
@@ -920,7 +920,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     <a href="index.html" class="logo">
       <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
     </a>
-    <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
     <div class="nav-links">
       <a href="index.html" class="on" data-i18n="nav-home">الرئيسية</a>
       <a href="about.html" data-i18n="nav-about">عن الشركة</a>
@@ -932,6 +931,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <a href="contact.html" data-i18n="nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
+      <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
