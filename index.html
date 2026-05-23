@@ -12,11 +12,12 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 :root{
-  --D: #071827;      /* logo dark  */
-  --G: #2cc58b;      /* logo green */
-  --Gd:#1fa06e;      /* green dark */
+  --D: #071827;
+  --G: #2cc58b;
+  --Gd:#1fa06e;
   --W: #ffffff;
   --hh:80px;
+  --sh:34px;
   --ease:cubic-bezier(.22,.68,0,1.2);
 }
 body{font-family:'Cairo',sans-serif;color:var(--D);overflow-x:hidden;line-height:1.6}
@@ -47,7 +48,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
    HEADER
 ══════════════════════════════════ */
 .hdr{
-  position:fixed;top:0;inset-inline:0;z-index:900;
+  position:fixed;top:var(--sh);inset-inline:0;z-index:900;
   height:var(--hh);
   background:rgba(7,24,39,.95);
   backdrop-filter:blur(16px);
@@ -57,10 +58,11 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 }
 .hdr.s{box-shadow:0 4px 30px rgba(0,0,0,.4)}
 .nav{width:min(1200px,calc(100% - 40px));margin-inline:auto;display:flex;align-items:center;gap:16px}
-.logo{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
-.logo img{height:52px;width:auto;object-fit:contain;filter:brightness(1.05)}
-.logo-tagline{font-size:.65rem;font-weight:700;color:rgba(255,255,255,.45);white-space:nowrap;letter-spacing:.01em}
+.logo{flex-shrink:0;display:flex;align-items:center;gap:0}
+.logo img{height:62px;width:auto;object-fit:contain;filter:brightness(1.1)}
+.logo-tagline{display:none}
 .logo-name{display:none}
+.vision-nav-logo{height:46px;width:auto;object-fit:contain;flex-shrink:0;opacity:.92;margin-inline-start:14px}
 .nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:2px}
 .nav-links a{
   padding:6px 12px;color:rgba(255,255,255,.65);font-weight:700;font-size:.82rem;
@@ -91,7 +93,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
   display:none;position:fixed;inset:0;z-index:800;
   background:rgba(7,24,39,.98);
   flex-direction:column;align-items:center;justify-content:center;gap:6px;
-  padding-top:var(--hh);
+  padding-top:calc(var(--sh) + var(--hh));
 }
 .mob.on{display:flex}
 .mob a{color:#fff;font-size:1.25rem;font-weight:800;padding:12px 40px;border-radius:8px;transition:.2s}
@@ -138,7 +140,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 .hero-g{
   flex:1;display:grid;grid-template-columns:1fr 480px;align-items:center;gap:48px;
   position:relative;z-index:3;
-  padding:calc(var(--hh) + 70px) 60px 70px;
+  padding:calc(var(--sh) + var(--hh) + 70px) 60px 70px;
   width:min(1280px,100%);margin-inline:auto;
 }
 @keyframes hero-in{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
@@ -806,8 +808,10 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 /* ── SAMA TOP BAR ── */
 .sama-top{
-  background:var(--D);border-bottom:1px solid rgba(44,197,139,.15);
-  padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.45);
+  position:fixed;top:0;inset-inline:0;z-index:901;
+  background:rgba(7,24,39,.25);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(44,197,139,.08);
+  padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.55);
 }
 .sama-top .wrap{
   display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
@@ -907,13 +911,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8z"/></svg>
       خاضعة لإشراف البنك المركزي السعودي (ساما)
     </div>
-    <div class="sama-top-links">
-      <a href="#" data-i18n="link-privacy">إشعار الخصوصية</a>
-      <span class="sama-top-sep">|</span>
-      <a href="#" data-i18n="link-protect">مبادئ حماية عملاء المؤسسات المالية</a>
-      <span class="sama-top-sep">|</span>
-      <a href="tel:0115138328">0115138328</a>
-    </div>
   </div>
 </div>
 
@@ -922,8 +919,8 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   <nav class="nav">
     <a href="index.html" class="logo">
       <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
-      <span class="logo-tagline">التصالح.. غايته التصالح</span>
     </a>
+    <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
     <div class="nav-links">
       <a href="index.html" class="on" data-i18n="nav-home">الرئيسية</a>
       <a href="about.html" data-i18n="nav-about">عن الشركة</a>
@@ -935,7 +932,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <a href="contact.html" data-i18n="nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
-      <a href="contact.html" class="btn-cta" data-i18n="nav-cta">ابدأ الآن</a>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
@@ -1020,17 +1016,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="tk-inner">
-    <span data-i18n="tk1">تحصيل جهات التمويل</span><span data-i18n="tk2">القروض الشخصية</span><span data-i18n="tk3">التمويل التأجيري</span>
-    <span data-i18n="tk4">التمويل العقاري</span><span data-i18n="tk5">البطاقات الائتمانية</span><span data-i18n="tk6">المنشآت الصغيرة والمتوسطة</span>
-    <span data-i18n="tk7">رفع القضايا والتنفيذ</span><span data-i18n="tk8">ديون الاتصالات</span>
-    <span data-i18n="tk1">تحصيل جهات التمويل</span><span data-i18n="tk2">القروض الشخصية</span><span data-i18n="tk3">التمويل التأجيري</span>
-    <span data-i18n="tk4">التمويل العقاري</span><span data-i18n="tk5">البطاقات الائتمانية</span><span data-i18n="tk6">المنشآت الصغيرة والمتوسطة</span>
-    <span data-i18n="tk7">رفع القضايا والتنفيذ</span><span data-i18n="tk8">ديون الاتصالات</span>
-  </div>
-</div>
 
 <!-- ══ CHAIRMAN MESSAGE  (white) ══ -->
 <section class="sec sec-w" id="chairman">
@@ -1072,7 +1057,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
         <h4>معلومات التواصل</h4>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>المكتب 406 — الدور الرابع، الرياض</span>
+          <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a>
         </div>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -1106,12 +1091,15 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       </nav>
       <!-- RIGHT: Logo -->
       <div class="ft-brand">
-        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:200px;width:auto;object-fit:contain;animation:flag-flutter 1.4s ease-in-out infinite" onerror="this.style.display='none'">
+        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:200px;width:auto;object-fit:contain" onerror="this.style.display='none'">
         <p class="ft-tagline">التصالح.. غايته التصالح</p>
       </div>
     </div>
     <div class="ft-btm">
-      <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+      <div>
+        <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px">رقم السجل التجاري: 1010XXXXXX</p>
+      </div>
       <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
     </div>
   </div>
