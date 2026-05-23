@@ -535,12 +535,13 @@ p.lead-d{color:rgba(7,24,39,.5)}
   padding:18px 22px;
   position:relative;
   overflow:hidden;
-  opacity:0;transform:translateY(32px) scale(.94);
+  opacity:1;transform:translateY(0) scale(1);
   transition:opacity .5s var(--ease),transform .5s var(--ease),
               box-shadow .3s,border-color .3s;
   border:1.5px solid rgba(44,197,139,.1);
   cursor:default;
 }
+body.js-ready .pl{opacity:0;transform:translateY(32px) scale(.94)}
 .pl::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(135deg,rgba(44,197,139,.07),transparent 60%);
