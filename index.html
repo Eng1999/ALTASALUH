@@ -894,26 +894,10 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 .comp-card strong{display:block;font-size:.85rem;font-weight:800;margin-bottom:2px}
 .comp-card span{font-size:.7rem;color:rgba(255,255,255,.35);line-height:1.5}
 
-/* ── SAMA FOOTER BAND ── */
-.ft-sama{
-  border-top:1px solid rgba(255,255,255,.07);
-  padding:18px 0;
-  background:rgba(0,0,0,.15);
-}
-.ft-sama .wrap{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:16px;flex-wrap:wrap;
-}
-.ft-sama-reg{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
-.ft-sama-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.3);font-size:.68rem;font-weight:700}
-.ft-sama-item strong{color:rgba(255,255,255,.5);font-weight:900}
-.ft-sama-item::before{content:"·";color:rgba(255,255,255,.15);margin-left:0}
-
 @media(max-width:900px){.chair-g{grid-template-columns:1fr}}
 @media(max-width:680px){
   .sama-top .wrap{justify-content:center;text-align:center}
   .sama-top-links{justify-content:center}
-  .ft-sama .wrap{justify-content:center;text-align:center}
 }
 </style>
 </head>
@@ -1493,20 +1477,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     <div class="ft-btm">
       <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
       <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
-    </div>
-  </div>
-  <!-- SAMA Regulatory Band -->
-  <div class="ft-sama">
-    <div class="wrap">
-      <div class="ft-sama-reg">
-        <div class="ft-sama-item"><strong data-i18n="sama-type">شركة ذات مسؤولية محدودة</strong></div>
-        <div class="ft-sama-item"><span data-i18n="sama-cr-lbl">السجل التجاري:</span>&nbsp;<strong>1010278307</strong></div>
-        <div class="ft-sama-item"><span data-i18n="sama-lic-lbl">تحت إشراف:</span>&nbsp;<strong data-i18n="sama-lic-val">البنك المركزي السعودي (ساما)</strong></div>
-      </div>
-      <div class="ft-sama-item" style="color:rgba(255,255,255,.25);font-size:.64rem">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M8 1l1.6 3.2 3.5.5-2.5 2.5.6 3.5L8 9.2l-3.2 1.5.6-3.5L2.9 4.7l3.5-.5z"/></svg>
-        &nbsp;<span data-i18n="sama-note">ملتزمون بأحكام نظام مراقبة شركات التمويل</span>
-      </div>
     </div>
   </div>
 </footer>
