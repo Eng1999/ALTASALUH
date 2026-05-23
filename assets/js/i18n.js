@@ -1,0 +1,283 @@
+/* ── ALTASALUH SHARED i18n ── */
+const I18N={
+ar:{
+/* NAV */
+'nav-home':'الرئيسية','nav-about':'عن الشركة','nav-services':'الخدمات',
+'nav-strategy':'الاستراتيجية','nav-partners':'شركاؤنا','nav-careers':'انضم إلينا','nav-contact':'تواصل معنا','nav-cta':'ابدأ الآن',
+/* FOOTER SHARED */
+'ft-info-title':'معلومات الإتصال',
+'ft-addr':'المكتب 406 — الدور الرابع، الرياض',
+'ft-copy':'© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.',
+'ft-reg':'رقم السجل التجاري: 7030006535',
+'ft-privacy':'الخصوصية','ft-terms':'الشروط والأحكام',
+'ft-tagline':'التصالح.. غايته التصالح',
+'ft-nav-home':'الرئيسية','ft-nav-about':'عن الشركة','ft-nav-services':'الخدمات',
+'ft-nav-strategy':'الاستراتيجية','ft-nav-partners':'شركاؤنا','ft-nav-careers':'انضم إلينا','ft-nav-contact':'تواصل معنا',
+/* INDEX */
+'hero-badge':'شريك التمويل في المملكة • منذ 2022',
+'hero-h1a':'نحو تحصيل أكثر كفاءة...','hero-h1b':'واستقرار ائتماني مستدام',
+'hero-sub1':'التصالح.. هدفه التصالح','hero-sub2':'',
+'hero-btn1':'ابدأ التعاون ←','hero-btn2':'تعرف علينا',
+'dw-title':'أداء التحصيل','dw-period':'معدل التحصيل • 30 يوم',
+'dw-lbl1':'البطاقات الائتمانية','dw-lbl2':'التمويل الشخصي','dw-lbl3':'التقسيط الرقمي','dw-lbl4':'التمويل العقاري',
+'ch-tag':'كلمة الإدارة','ch-h2':'رسالة <em>القيادة</em>',
+'ch-q':'نؤمن في شركة التصالح بأن تحصيل الديون مسؤولية مهنية قائمة على الثقة والاحترام المتبادل. نسعى يومياً إلى بناء شراكات حقيقية مع جهات التمويل، مع الحفاظ على كرامة المدين وحقوق الدائن في آنٍ واحد. رؤيتنا واضحة: أن نكون الخيار الأول والموثوق في قطاع تحصيل الديون بالمملكة العربية السعودية، مستلهمين توجيهات رؤية 2030 في بناء اقتصاد متين ومستدام.',
+'ch-name':'إدارة شركة التصالح','ch-title':'لتحصيل الديون',
+'ch-badge-t':'الالتزام · الدقة · المسؤولية','ch-badge-s':'قيمنا التشغيلية الأساسية',
+/* ABOUT */
+'ab-tag':'من نحن','ab-h2':'من <em>نحن</em>','ab-year':'عام التأسيس',
+'ab-body':'تأسست شركة التصالح لتحصيل الديون كشركة ذات مسؤولية محدودة في عام 2022م. وتسعى الشركة منذ تأسيسها إلى تحقيق الريادة في مجال تحصيل الديون في المملكة العربية السعودية من خلال تقديم خدمات متميزة ترتكز على خبرة وكفاءة كوادرها البشرية. وتطمح بأن تصبح الاسم الأول في قطاع تحصيل الديون. تتميز شركة التصالح بقدرتها على تقديم خدمات تحصيل شاملة، تشمل الديون المبكرة والمعدومة للأفراد والشركات. مما يعكس ثقة المؤسسات الكبرى بجودة خدماتها. تستند شركة التصالح إلى خطة استراتيجية واضحة لزيادة قاعدة عملائها، بهدف ترسيخ مكانتها كخيار أول وموثوق في مجال تحصيل الديون.',
+'vm-tag':'توجهنا','vm-h2':'الرؤية <em>&amp;</em> الرسالة',
+'vision-title':'رؤيتنا','vision-body':'أن نصبح شريكاً أساسياً في مجال تحصيل الديون لجهات التمويل محلياً ودولياً.','vision-pill':'الريادة',
+'mission-title':'رسالتنا','mission-body':'تقديم خدمات تحصيل الديون بتطبيق كافة معايير الجودة للمحافظة على العلاقة بين جهات التمويل وعملائها، مع الالتزام بمواكبة رؤية المملكة 2030.','mission-pill':'الجودة',
+'val-tag':'ما يميزنا','val-h2':'قيمنا <em>الأساسية</em>',
+'val1-t':'الثقة','val1-b':'بناء علاقات مهنية قائمة على الشفافية والمصداقية',
+'val2-t':'الاحترافية','val2-b':'أعلى معايير الأداء في كل تعامل',
+'val3-t':'الالتزام','val3-b':'الوفاء بالعهود تجاه عملائنا وشركائنا',
+'ft-quick':'روابط سريعة',
+/* SERVICES */
+'sv-tag':'ما نقدمه','sv-h2':'خدماتنا <em>المتكاملة</em>',
+'sv-lead':'8 خدمات متخصصة في تحصيل الديون بأعلى معدلات الكفاءة والاحترافية',
+'sv1-t':'تحصيل ديون جهات التمويل والخدمية','sv1-b':'تحصيل شامل لديون البنوك وشركات التمويل والخدمات، يشمل مختلف أنواع الديون المبكرة والمتأخرة.',
+'sv2-t':'القروض الشخصية','sv2-b':'تحصيل القروض الشخصية بمختلف أعمار الديون وفق معايير مهنية تحافظ على العلاقة مع العميل.',
+'sv3-t':'التمويل التأجيري','sv3-b':'تحصيل متخصص في ديون التمويل التأجيري للمركبات والمعدات مع إدارة دقيقة لمحافظ الديون.',
+'sv4-t':'التمويل العقاري','sv4-b':'تحصيل التمويل العقاري بأعلى معدلات الاسترداد مع الحفاظ على علاقات مستدامة مع المقترضين.',
+'sv5-t':'البطاقات الائتمانية','sv5-b':'تحصيل متخصص لديون البطاقات الائتمانية بمعدلات استرداد مرتفعة وأساليب تواصل احترافية.',
+'sv6-t':'المنشآت المتوسطة والصغيرة','sv6-b':'خدمات تحصيل مصممة خصيصاً لاحتياجات المنشآت الصغيرة والمتوسطة مع مرونة في التعامل.',
+'sv7-t':'رفع القضايا القانونية','sv7-b':'رفع القضايا أمام محاكم التنفيذ والمحاكم التجارية مع متابعة مستمرة لضمان أعلى معدلات الاسترداد.',
+'sv8-t':'ديون شركات الاتصالات','sv8-b':'تحصيل ديون شركات الاتصالات بمختلف أنواعها وفق أساليب متخصصة وأنظمة متطورة.',
+'why-tag':'بالأرقام','why-h2':'لماذا <em>التصالح؟</em>',
+'why-lead':'أرقام حقيقية تعكس التزامنا بالتميز في قطاع تحصيل الديون',
+'why-cc':'البطاقات الائتمانية','why-pf':'التمويل الشخصي','why-di':'التقسيط الرقمي','why-re':'التمويل العقاري',
+'why-legal-l':'فريق قانوني متخصص','why-legal-v':'+50 محامٍ',
+'why-staff-l':'الموظفون المتخصصون','why-staff-v':'+180 موظف',
+'why-overall':'معدل التحصيل الإجمالي','why-legal2':'فريق قانوني متخصص','why-staff2':'كوادر متخصصة في التحصيل',
+'why-cta':'ابدأ الآن ←',
+'adv-tag':'لماذا التصالح','adv-h2':'مميزاتنا <em>التنافسية</em>',
+'adv1-t':'كوادر متخصصة','adv1-b':'فرق ذات خبرة في التمويل والتحصيل',
+'adv2-t':'خبرة مثبتة','adv2-b':'سنوات من تحصيل الديون للغير',
+'adv3-t':'أنظمة متقدمة','adv3-b':'تقنيات حديثة بحماية عالية',
+'adv4-t':'مقرات مجهزة','adv4-b':'بيئة عمل متكاملة',
+'adv5-t':'سرية تامة','adv5-b':'حماية المعلومات بأعلى المعايير',
+'adv6-t':'إدارة متخصصة','adv6-b':'التزام بمعايير الجهات المختصة',
+'adv7-t':'فريق قانوني','adv7-b':'محامون ومستشارون قانونيون',
+'adv8-t':'عمل عن بُعد','adv8-b':'استمرارية في أي ظرف',
+/* CONTACT */
+'ct-tag':'نحن هنا لمساعدتك','ct-h2':'تواصل <em>معنا</em>',
+'ct-lead':'نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا أو رغبة في الشراكة. فريقنا جاهز لدعمكم.',
+'ctf-h2':'تواصل معنا وابدأ <em>رحلتك معنا</em>',
+'ctf-lead':'نسعد دائماً بالتواصل معكم، فريقنا جاهز لدعمكم.',
+'tab-co':'الشركات','tab-in':'الأفراد',
+'ctype-label':'نوع التواصل',
+'ctype-inquiry':'استفسار','ctype-request':'طلب','ctype-complaint':'شكوى',
+'co-name-l':'اسم الشركة *','co-name-p':'اسم الشركة',
+'co-cr-l':'رقم السجل التجاري *','co-cr-p':'رقم السجل التجاري',
+'co-email-l':'البريد الإلكتروني *','co-email-p':'البريد الإلكتروني',
+'co-phone-l':'رقم الجوال *','co-phone-p':'رقم الجوال',
+'co-msg-l':'الملاحظة *','co-msg-p':'نص الملاحظة',
+'in-name-l':'الاسم الكامل *','in-name-p':'الاسم الكامل',
+'in-nat-l':'رقم الهوية الوطنية *','in-nat-p':'رقم الهوية',
+'in-email-l':'البريد الإلكتروني *','in-email-p':'البريد الإلكتروني',
+'in-phone-l':'رقم الجوال *','in-phone-p':'رقم الجوال',
+'in-msg-l':'الملاحظة *','in-msg-p':'نص الملاحظة',
+'ct-privacy':'بتعبئتك لهذا النموذج، فإنك تُقر بقراءة إشعار الخصوصية والموافقة على سياسة معالجة البيانات.',
+'ct-submit':'إرسال',
+/* CAREERS */
+'ca-tag':'فرص العمل','ca-h2':'انضم إلى فريق <em>التصالح</em>',
+'ca-lead':'بيئة عمل احترافية، تطوير مستمر، ومسارات مهنية واضحة في شركة رائدة في قطاع التحصيل.',
+'ca1-t':'بيئة عمل احترافية','ca1-s':'مع فريق من المتخصصين في قطاع التحصيل',
+'ca1-b':'انضم لفريق يضم أكثر من 180 موظفاً متخصصاً في بيئة تحفّز الإبداع والأداء المتميز.',
+'ca2-t':'تدريب وتطوير مستمر','ca2-s':'برامج تأهيل وتدريب متخصصة',
+'ca2-b':'برامج تدريبية شاملة تغطي المهارات العملية والقانونية وأنظمة التحصيل الحديثة.',
+'ca3-t':'فرص نمو حقيقية','ca3-s':'مسارات مهنية واضحة ومحفزة',
+'ca3-b':'مسارات وظيفية محددة مع حوافز أداء تنافسية وفرص للترقي والتطور المهني.',
+'ca-form-h3':'قدّم طلبك الآن','ca-form-note':'سيتم التواصل معك خلال 3 أيام عمل',
+'ca-name-l':'الاسم الكامل *','ca-name-p':'الاسم الكامل',
+'ca-email-l':'البريد الإلكتروني *',
+'ca-phone-l':'رقم الجوال *',
+'ca-pos-l':'الوظيفة المطلوبة','ca-pos-p':'اختر الوظيفة...',
+'ca-pos1':'محصّل ديون','ca-pos2':'مستشار قانوني','ca-pos3':'مشرف فريق','ca-pos4':'محلل بيانات','ca-pos5':'إداري',
+'ca-qual-l':'المؤهل الدراسي','ca-qual-p':'بكالوريوس / ماجستير / دبلوم...',
+'ca-letter-l':'رسالة التقديم','ca-letter-p':'أخبرنا عن نفسك وسبب رغبتك في الانضمام إلى فريق التصالح...',
+'ca-submit':'تقديم الطلب','ca-security':'بياناتك محفوظة بسرية تامة',
+/* PARTNERS */
+'pt-tag':'ثقة متبادلة','pt-h1':'شركاؤنا في <em>النجاح</em>',
+'pt-lead':'نفخر بثقة المؤسسات الرائدة في المملكة العربية السعودية التي اختارت التصالح شريكاً موثوقاً في إدارة محافظها المالية',
+'pt-clients-tag':'عملاؤنا وشركاؤنا','pt-clients-h2':'جهات تثق بنا',
+'pt-cta-h2':'كن <em>شريكنا</em>','pt-cta-p':'انضم إلى قائمة شركائنا المتميزين واستفد من خدمات التحصيل الاحترافية التي تُحقق نتائج ملموسة.','pt-cta-btn':'تواصل معنا الآن ←',
+/* STRATEGY */
+'str-tag':'استراتيجيتنا','str-h1':'استراتيجية شركة <em>التصالح</em>',
+'str-lead':'منذ تأسيسها، تسعى شركة التصالح لتحقيق الريادة في مجال تحصيل الديون، مستلهمةً رؤية المملكة 2030 من خلال استقطاب كفاءات وطنية متميزة وخبرات متخصصة في قطاع التحصيل بمختلف أنواعها.',
+'str-p1-t':'تطوير الأعمال وتوسيع قاعدة العملاء',
+'str-p1-b':'مع النمو المتزايد في المحافظ التمويلية للبنوك وشركات التمويل، تركز الشركة على توسيع قاعدة عملائها، مع تقديم خدمات عالية الجودة وسريعة التنفيذ. تهدف الشركة لأن تكون الخيار الأساسي للبنوك وجهات التمويل، مع الحفاظ على العلاقات الاستراتيجية مع الشركاء الحاليين.',
+'str-p1-lbl':'توسيع السوق والنمو المستدام',
+'str-p2-t':'المحافظة على رأس المال البشري',
+'str-p2-b':'تولي الشركة أهمية قصوى للموارد البشرية عبر استقطاب أفضل الكفاءات وتعزيز التوطين. تستثمر في تطوير مهارات الموظفين من خلال برامج تدريب مستمرة تشمل المهارات العملية والتواصل، مع توفير بيئة عمل ملائمة وحوافز تعزز الأداء.',
+'str-p2-lbl':'+180 موظف متخصص',
+'str-p3-t':'تطوير البنية التحتية التقنية',
+'str-p3-b':'تستثمر الشركة في بناء بنية تحتية تقنية متطورة تدعم الكفاءة والفاعلية لمواكبة تطلعاتها وطموحات شركائها. تعتمد الشركة على أنظمة حديثة لإدارة عمليات التحصيل وأنظمة داخلية لتتبع الطلبات والإجراءات بين الإدارات.',
+'str-p3-lbl':'أنظمة تقنية متطورة',
+'meth-tag':'كيف نعمل','meth-h2':'منهجية <em>التحصيل</em>',
+'meth1-t':'دراسة المحفظة','meth1-b':'تحليل وتصنيف حسب المخاطر',
+'meth2-t':'خطة التحصيل','meth2-b':'خطة مناسبة لكل محفظة',
+'meth3-t':'التنفيذ','meth3-b':'تواصل باحترافية عالية',
+'meth4-t':'إدارة البيانات','meth4-b':'أنظمة خاصة بالشركة',
+'meth5-t':'التقارير','meth5-b':'تقارير دورية للجهات التمويلية',
+},
+en:{
+/* NAV */
+'nav-home':'Home','nav-about':'About Us','nav-services':'Services',
+'nav-strategy':'Strategy','nav-partners':'Partners','nav-careers':'Join Us','nav-contact':'Contact Us','nav-cta':'Get Started',
+/* FOOTER SHARED */
+'ft-info-title':'Contact Information',
+'ft-addr':'Office 406 — Fourth Floor, Riyadh',
+'ft-copy':'© 2025 Altasaluh Debt Collection Co. All rights reserved.',
+'ft-reg':'Commercial Registration: 7030006535',
+'ft-privacy':'Privacy','ft-terms':'Terms & Conditions',
+'ft-tagline':'Altasaluh.. Its Goal Is Resolution',
+'ft-nav-home':'Home','ft-nav-about':'About Us','ft-nav-services':'Services',
+'ft-nav-strategy':'Strategy','ft-nav-partners':'Partners','ft-nav-careers':'Join Us','ft-nav-contact':'Contact Us',
+/* INDEX */
+'hero-badge':'Financing Partner in the Kingdom • Since 2022',
+'hero-h1a':'Towards More Efficient Collection...','hero-h1b':'And Sustainable Credit Stability',
+'hero-sub1':'Altasaluh.. Its Goal Is Resolution','hero-sub2':'',
+'hero-btn1':'Start Cooperation →','hero-btn2':'Learn About Us',
+'dw-title':'Collection Performance','dw-period':'Collection Rate • 30 Days',
+'dw-lbl1':'Credit Cards','dw-lbl2':'Personal Financing','dw-lbl3':'Digital Installments','dw-lbl4':'Real Estate Finance',
+'ch-tag':'Management Message','ch-h2':'A Message from <em>Leadership</em>',
+'ch-q':'At Altasaluh, we believe that debt collection is a professional responsibility built on mutual trust and respect. We strive daily to build genuine partnerships with financial institutions while preserving the dignity of the debtor and the rights of the creditor simultaneously. Our vision is clear: to be the first and most trusted choice in the debt collection sector in Saudi Arabia, inspired by Vision 2030 in building a solid and sustainable economy.',
+'ch-name':'Altasaluh Management','ch-title':'Debt Collection Company',
+'ch-badge-t':'Commitment · Accuracy · Responsibility','ch-badge-s':'Our Core Operational Values',
+/* ABOUT */
+'ab-tag':'About Us','ab-h2':'Who <em>Are We</em>','ab-year':'Year of Establishment',
+'ab-body':'Altasaluh Debt Collection Company was established as a limited liability company in 2022. Since its founding, the company has sought to achieve leadership in debt collection in Saudi Arabia by providing distinguished services built on the expertise and competency of its human resources. It aspires to become the leading name in the debt collection sector. Altasaluh excels in providing comprehensive collection services covering early and written-off debts for individuals and corporations, reflecting the trust of major institutions in the quality of its services.',
+'vm-tag':'Our Direction','vm-h2':'Vision <em>&amp;</em> Mission',
+'vision-title':'Our Vision','vision-body':'To become a key partner in debt collection for financing entities locally and internationally.','vision-pill':'Leadership',
+'mission-title':'Our Mission','mission-body':'To provide debt collection services applying all quality standards to preserve the relationship between financing entities and their clients, while adhering to Vision 2030.','mission-pill':'Quality',
+'val-tag':'What Sets Us Apart','val-h2':'Our <em>Core</em> Values',
+'val1-t':'Trust','val1-b':'Building professional relationships based on transparency and credibility',
+'val2-t':'Professionalism','val2-b':'Highest performance standards in every interaction',
+'val3-t':'Commitment','val3-b':'Fulfilling our commitments to clients and partners',
+'ft-quick':'Quick Links',
+/* SERVICES */
+'sv-tag':'What We Offer','sv-h2':'Our <em>Integrated</em> Services',
+'sv-lead':'8 specialized debt collection services with the highest rates of efficiency and professionalism',
+'sv1-t':'Finance & Service Entity Debt Collection','sv1-b':'Comprehensive collection of bank and financing company debts including various types of early and overdue debts.',
+'sv2-t':'Personal Loans','sv2-b':'Collection of personal loans across various debt ages using professional methods that maintain client relationships.',
+'sv3-t':'Lease Financing','sv3-b':'Specialized collection of vehicle and equipment lease financing debts with precise portfolio management.',
+'sv4-t':'Real Estate Financing','sv4-b':'Real estate financing collection with highest recovery rates while maintaining sustainable relationships with borrowers.',
+'sv5-t':'Credit Cards','sv5-b':'Specialized collection of credit card debts with high recovery rates and professional communication methods.',
+'sv6-t':'SME Businesses','sv6-b':'Collection services designed specifically for small and medium enterprises with flexible handling approaches.',
+'sv7-t':'Legal Case Filing','sv7-b':'Filing cases in enforcement and commercial courts with continuous follow-up to ensure highest recovery rates.',
+'sv8-t':'Telecom Company Debts','sv8-b':'Collection of telecom company debts of all types using specialized methods and advanced systems.',
+'why-tag':'By Numbers','why-h2':'Why <em>Altasaluh?</em>',
+'why-lead':'Real numbers reflecting our commitment to excellence in debt collection.',
+'why-cc':'Credit Cards','why-pf':'Personal Financing','why-di':'Digital Installments','why-re':'Real Estate Finance',
+'why-legal-l':'Specialized Legal Team','why-legal-v':'+50 Lawyers',
+'why-staff-l':'Specialized Employees','why-staff-v':'+180 Employees',
+'why-overall':'Overall Collection Rate','why-legal2':'Specialized Legal Team','why-staff2':'Specialized Collection Staff',
+'why-cta':'Start Now →',
+'adv-tag':'Why Altasaluh','adv-h2':'Our <em>Competitive</em> Advantages',
+'adv1-t':'Specialized Staff','adv1-b':'Teams experienced in finance and collection',
+'adv2-t':'Proven Experience','adv2-b':'Years of collecting debts on behalf of others',
+'adv3-t':'Advanced Systems','adv3-b':'Modern technologies with high-level protection',
+'adv4-t':'Equipped Offices','adv4-b':'Integrated work environment',
+'adv5-t':'Complete Confidentiality','adv5-b':'Information protection at the highest standards',
+'adv6-t':'Specialized Management','adv6-b':'Compliance with the standards of competent authorities',
+'adv7-t':'Legal Team','adv7-b':'Lawyers and legal consultants',
+'adv8-t':'Remote Work','adv8-b':'Continuity under any circumstances',
+/* CONTACT */
+'ct-tag':'We\'re Here to Help','ct-h2':'Contact <em>Us</em>',
+'ct-lead':'We\'re always happy to hear from you, whether for inquiries about our services or partnership opportunities. Our team is ready to support you.',
+'ctf-h2':'Contact Us and Begin <em>Your Journey With Us</em>',
+'ctf-lead':'We\'re always happy to hear from you. Our team is ready to support you.',
+'tab-co':'Companies','tab-in':'Individuals',
+'ctype-label':'Contact Type',
+'ctype-inquiry':'Inquiry','ctype-request':'Request','ctype-complaint':'Complaint',
+'co-name-l':'Company Name *','co-name-p':'Company Name',
+'co-cr-l':'Commercial Registration No. *','co-cr-p':'Commercial Registration No.',
+'co-email-l':'Email *','co-email-p':'Email',
+'co-phone-l':'Mobile Number *','co-phone-p':'Mobile Number',
+'co-msg-l':'Note *','co-msg-p':'Note text',
+'in-name-l':'Full Name *','in-name-p':'Full Name',
+'in-nat-l':'National ID No. *','in-nat-p':'National ID',
+'in-email-l':'Email *','in-email-p':'Email',
+'in-phone-l':'Mobile Number *','in-phone-p':'Mobile Number',
+'in-msg-l':'Note *','in-msg-p':'Note text',
+'ct-privacy':'By filling out this form, you acknowledge reading the Privacy Notice and agree to the data processing policy.',
+'ct-submit':'Send',
+/* CAREERS */
+'ca-tag':'Job Opportunities','ca-h2':'Join <em>Altasaluh</em> Team',
+'ca-lead':'Professional work environment, continuous development, and clear career paths at a leading debt collection company.',
+'ca1-t':'Professional Work Environment','ca1-s':'With a team of collection sector specialists',
+'ca1-b':'Join a team of over 180 specialized employees in an environment that fosters creativity and outstanding performance.',
+'ca2-t':'Continuous Training & Development','ca2-s':'Specialized qualification and training programs',
+'ca2-b':'Comprehensive training programs covering practical, legal skills and modern collection systems.',
+'ca3-t':'Real Growth Opportunities','ca3-s':'Clear and motivating career paths',
+'ca3-b':'Defined career paths with competitive performance incentives and opportunities for advancement.',
+'ca-form-h3':'Submit Your Application','ca-form-note':'We will contact you within 3 business days',
+'ca-name-l':'Full Name *','ca-name-p':'Full Name',
+'ca-email-l':'Email *',
+'ca-phone-l':'Mobile Number *',
+'ca-pos-l':'Desired Position','ca-pos-p':'Choose a position...',
+'ca-pos1':'Debt Collector','ca-pos2':'Legal Consultant','ca-pos3':'Team Supervisor','ca-pos4':'Data Analyst','ca-pos5':'Administrative',
+'ca-qual-l':'Educational Qualification','ca-qual-p':'Bachelor / Master / Diploma...',
+'ca-letter-l':'Cover Letter','ca-letter-p':'Tell us about yourself and why you want to join the Altasaluh team...',
+'ca-submit':'Submit Application','ca-security':'Your data is protected with complete confidentiality',
+/* PARTNERS */
+'pt-tag':'Mutual Trust','pt-h1':'Our <em>Success</em> Partners',
+'pt-lead':'We are proud of the trust of leading institutions in Saudi Arabia who chose Altasaluh as a trusted partner in debt collection.',
+'pt-clients-tag':'Our Clients & Partners','pt-clients-h2':'Trusted by These Entities',
+'pt-cta-h2':'Be <em>Our Partner</em>','pt-cta-p':'Join our distinguished partners list and benefit from professional collection services that deliver tangible results.','pt-cta-btn':'Contact Us Now →',
+/* STRATEGY */
+'str-tag':'Our Strategy','str-h1':'<em>Altasaluh</em> Company Strategy',
+'str-lead':'Since its establishment, Altasaluh has sought to achieve leadership in debt collection through three main strategic pillars.',
+'str-p1-t':'Business Development & Customer Base Expansion',
+'str-p1-b':'With the increasing growth in banks and financing companies\' portfolios, the company focuses on developing its client base by providing comprehensive collection services.',
+'str-p1-lbl':'Market Expansion & Sustainable Growth',
+'str-p2-t':'Preserving Human Capital',
+'str-p2-b':'The company places utmost importance on human resources through specialized training programs and a motivating work environment that ensures job stability.',
+'str-p2-lbl':'+180 Specialized Employees',
+'str-p3-t':'Developing Technical Infrastructure',
+'str-p3-b':'The company invests in building advanced technical infrastructure including debt management systems and integrated databases.',
+'str-p3-lbl':'Advanced Technical Systems',
+'meth-tag':'How We Work','meth-h2':'Collection <em>Methodology</em>',
+'meth1-t':'Portfolio Study','meth1-b':'Analysis and risk classification',
+'meth2-t':'Collection Plan','meth2-b':'Suitable plan for each portfolio',
+'meth3-t':'Execution','meth3-b':'High-level professional communication',
+'meth4-t':'Data Management','meth4-b':'Company-specific systems',
+'meth5-t':'Reports','meth5-b':'Periodic reports for financing entities',
+}
+};
+
+const PAGE_TITLES={
+'ar':{'index':'شركة التصالح لتحصيل الديون','about':'عن الشركة | التصالح','services':'الخدمات | التصالح','contact':'تواصل معنا | التصالح','careers':'انضم إلينا | التصالح','partners':'شركاؤنا | التصالح','strategy':'الاستراتيجية | التصالح'},
+'en':{'index':'Altasaluh Debt Collection','about':'About Us | Altasaluh','services':'Services | Altasaluh','contact':'Contact Us | Altasaluh','careers':'Careers | Altasaluh','partners':'Partners | Altasaluh','strategy':'Strategy | Altasaluh'}
+};
+
+function applyLang(lang){
+  const t=I18N[lang], isAr=lang==='ar';
+  document.documentElement.lang=isAr?'ar':'en';
+  document.documentElement.dir=isAr?'rtl':'ltr';
+  /* page title */
+  const pg=location.pathname.split('/').pop().replace('.html','').replace('','')||'index';
+  const pgKey=pg||'index';
+  if(PAGE_TITLES[lang][pgKey]) document.title=PAGE_TITLES[lang][pgKey];
+  /* lang buttons */
+  document.querySelectorAll('.lang-btn').forEach(b=>b.textContent=isAr?'EN':'AR');
+  /* text content */
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(t[k]!==undefined)el.textContent=t[k];});
+  /* innerHTML */
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.dataset.i18nHtml;if(t[k]!==undefined)el.innerHTML=t[k];});
+  /* placeholders */
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const k=el.dataset.i18nPh;if(t[k]!==undefined)el.placeholder=t[k];});
+  localStorage.setItem('alt_lang',lang);
+}
+
+function toggleLang(){
+  const cur=localStorage.getItem('alt_lang')||'ar';
+  applyLang(cur==='ar'?'en':'ar');
+}
+
+/* auto-apply saved language */
+(function(){const s=localStorage.getItem('alt_lang');if(s&&s!=='ar')applyLang(s);})();

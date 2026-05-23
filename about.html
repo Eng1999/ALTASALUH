@@ -176,17 +176,17 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     </a>
     <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
     <div class="nav-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html" class="on">عن الشركة</a>
-      <a href="services.html">الخدمات</a>
-      <a href="strategy.html">الاستراتيجية</a>
-      <a href="partners.html">شركاؤنا</a>
-      
-      <a href="careers.html">انضم إلينا</a>
-      <a href="contact.html">تواصل معنا</a>
+      <a href="index.html" data-i18n="nav-home">الرئيسية</a>
+      <a href="about.html" class="on" data-i18n="nav-about">عن الشركة</a>
+      <a href="services.html" data-i18n="nav-services">الخدمات</a>
+      <a href="strategy.html" data-i18n="nav-strategy">الاستراتيجية</a>
+      <a href="partners.html" data-i18n="nav-partners">شركاؤنا</a>
+
+      <a href="careers.html" data-i18n="nav-careers">انضم إلينا</a>
+      <a href="contact.html" data-i18n="nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
-      <a href="contact.html" class="btn-cta">ابدأ الآن</a>
+      <a href="contact.html" class="btn-cta" data-i18n="nav-cta">ابدأ الآن</a>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
@@ -195,14 +195,14 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 <!-- MOBILE NAV -->
 <nav class="mob" id="mob">
-  <a href="index.html" onclick="cm()">الرئيسية</a>
-  <a href="about.html" onclick="cm()">عن الشركة</a>
-  <a href="services.html" onclick="cm()">الخدمات</a>
-  <a href="strategy.html" onclick="cm()">الاستراتيجية</a>
-  <a href="partners.html" onclick="cm()">شركاؤنا</a>
-  
-  <a href="careers.html" onclick="cm()">انضم إلينا</a>
-  <a href="contact.html" onclick="cm()">تواصل معنا</a>
+  <a href="index.html" onclick="cm()" data-i18n="nav-home">الرئيسية</a>
+  <a href="about.html" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
+  <a href="services.html" onclick="cm()" data-i18n="nav-services">الخدمات</a>
+  <a href="strategy.html" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
+  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a>
+
+  <a href="careers.html" onclick="cm()" data-i18n="nav-careers">انضم إلينا</a>
+  <a href="contact.html" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
   <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
 </nav>
 
@@ -212,12 +212,12 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     <div class="about-g">
       <div class="img-w rv-l">
         <img src="assets/office-hero.jpg" alt="مكتب التصالح" onerror="this.style.background='#f4fcf9';this.style.minHeight='400px'">
-        <div class="img-badge"><strong>2022</strong><span>عام التأسيس</span></div>
+        <div class="img-badge"><strong>2022</strong><span data-i18n="ab-year">عام التأسيس</span></div>
       </div>
       <div>
-        <span class="tag tag-g rv" data-d="2">من نحن</span>
-        <h2 class="t t-d rv" data-d="3">من <em>نحن</em></h2>
-        <p class="lead lead-d rv" data-d="4" style="max-width:100%">تأسست شركة التصالح لتحصيل الديون كشركة ذات مسؤولية محدودة في عام 2022م. وتسعى الشركة منذ تأسيسها إلى تحقيق الريادة في مجال تحصيل الديون في المملكة العربية السعودية من خلال تقديم خدمات متميزة ترتكز على خبرة وكفاءة كوادرها البشرية. وتطمح بأن تصبح الاسم الأول في قطاع تحصيل الديون. تتميز شركة التصالح بقدرتها على تقديم خدمات تحصيل شاملة، تشمل الديون المبكرة والمعدومة للأفراد والشركات. مما يعكس ثقة المؤسسات الكبرى بجودة خدماتها. تستند شركة التصالح إلى خطة استراتيجية واضحة لزيادة قاعدة عملائها، بهدف ترسيخ مكانتها كخيار أول وموثوق في مجال تحصيل الديون.</p>
+        <span class="tag tag-g rv" data-d="2" data-i18n="ab-tag">من نحن</span>
+        <h2 class="t t-d rv" data-d="3" data-i18n-html="ab-h2">من <em>نحن</em></h2>
+        <p class="lead lead-d rv" data-d="4" style="max-width:100%" data-i18n="ab-body">تأسست شركة التصالح لتحصيل الديون كشركة ذات مسؤولية محدودة في عام 2022م. وتسعى الشركة منذ تأسيسها إلى تحقيق الريادة في مجال تحصيل الديون في المملكة العربية السعودية من خلال تقديم خدمات متميزة ترتكز على خبرة وكفاءة كوادرها البشرية. وتطمح بأن تصبح الاسم الأول في قطاع تحصيل الديون. تتميز شركة التصالح بقدرتها على تقديم خدمات تحصيل شاملة، تشمل الديون المبكرة والمعدومة للأفراد والشركات. مما يعكس ثقة المؤسسات الكبرى بجودة خدماتها. تستند شركة التصالح إلى خطة استراتيجية واضحة لزيادة قاعدة عملائها، بهدف ترسيخ مكانتها كخيار أول وموثوق في مجال تحصيل الديون.</p>
       </div>
     </div>
   </div>
@@ -228,21 +228,21 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-d" id="vision">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-g rv">توجهنا</span>
-      <h2 class="t t-w rv" data-d="2">الرؤية <em>&amp;</em> الرسالة</h2>
+      <span class="tag tag-g rv" data-i18n="vm-tag">توجهنا</span>
+      <h2 class="t t-w rv" data-d="2" data-i18n-html="vm-h2">الرؤية <em>&amp;</em> الرسالة</h2>
     </div>
     <div class="vm-g rv">
       <div class="vm-c vm-v">
         <div class="vm-num">01</div>
-        <h3>رؤيتنا</h3>
-        <p>أن نصبح شريكاً أساسياً في مجال تحصيل الديون لجهات التمويل محلياً ودولياً.</p>
-        <span class="vm-pill">الريادة</span>
+        <h3 data-i18n="vision-title">رؤيتنا</h3>
+        <p data-i18n="vision-body">أن نصبح شريكاً أساسياً في مجال تحصيل الديون لجهات التمويل محلياً ودولياً.</p>
+        <span class="vm-pill" data-i18n="vision-pill">الريادة</span>
       </div>
       <div class="vm-c vm-m">
         <div class="vm-num">02</div>
-        <h3>رسالتنا</h3>
-        <p>تقديم خدمات تحصيل الديون بتطبيق كافة معايير الجودة للمحافظة على العلاقة بين جهات التمويل وعملائها، مع الالتزام بمواكبة رؤية المملكة 2030.</p>
-        <span class="vm-pill">الجودة</span>
+        <h3 data-i18n="mission-title">رسالتنا</h3>
+        <p data-i18n="mission-body">تقديم خدمات تحصيل الديون بتطبيق كافة معايير الجودة للمحافظة على العلاقة بين جهات التمويل وعملائها، مع الالتزام بمواكبة رؤية المملكة 2030.</p>
+        <span class="vm-pill" data-i18n="mission-pill">الجودة</span>
       </div>
     </div>
   </div>
@@ -252,24 +252,24 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-s">
   <div class="wrap">
     <div class="tc" style="margin-bottom:8px">
-      <span class="tag tag-d rv">ما يميزنا</span>
-      <h2 class="t t-d rv" data-d="2">قيمنا <em>الأساسية</em></h2>
+      <span class="tag tag-d rv" data-i18n="val-tag">ما يميزنا</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="val-h2">قيمنا <em>الأساسية</em></h2>
     </div>
     <div class="values-g">
       <div class="val-c rv" data-d="1">
         <div class="val-ico">🤝</div>
-        <h3>الثقة</h3>
-        <p>بناء علاقات مهنية قائمة على الشفافية والمصداقية</p>
+        <h3 data-i18n="val1-t">الثقة</h3>
+        <p data-i18n="val1-b">بناء علاقات مهنية قائمة على الشفافية والمصداقية</p>
       </div>
       <div class="val-c rv" data-d="2">
         <div class="val-ico">⭐</div>
-        <h3>الاحترافية</h3>
-        <p>أعلى معايير الأداء في كل تعامل</p>
+        <h3 data-i18n="val2-t">الاحترافية</h3>
+        <p data-i18n="val2-b">أعلى معايير الأداء في كل تعامل</p>
       </div>
       <div class="val-c rv" data-d="3">
         <div class="val-ico">✅</div>
-        <h3>الالتزام</h3>
-        <p>الوفاء بالعهود تجاه عملائنا وشركائنا</p>
+        <h3 data-i18n="val3-t">الالتزام</h3>
+        <p data-i18n="val3-b">الوفاء بالعهود تجاه عملائنا وشركائنا</p>
       </div>
     </div>
   </div>
@@ -283,7 +283,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <div class="ft-info">
         <div class="ft-info-row">
           <div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><small>العنوان</small><a href="https://share.google/jDdn497Rne9O7LCII" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a></div>
+          <div><small>العنوان</small><a href="https://share.google/jDdn497Rne9O7LCII" target="_blank" rel="noopener" data-i18n="ft-addr" data-i18n="ft-addr">المكتب 406 — الدور الرابع، الرياض</a></div>
         </div>
         <div class="ft-info-row">
           <div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -300,20 +300,20 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       </div>
       <!-- Vertical Nav -->
       <div class="ft-nav-v">
-        <h4>روابط سريعة</h4>
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن الشركة</a>
-        <a href="services.html">الخدمات</a>
-        <a href="strategy.html">الاستراتيجية</a>
-        <a href="partners.html">شركاؤنا</a>
-        
-        <a href="careers.html">انضم إلينا</a>
-        <a href="contact.html">تواصل معنا</a>
+        <h4 data-i18n="ft-quick">روابط سريعة</h4>
+        <a href="index.html" data-i18n="ft-nav-home">الرئيسية</a>
+        <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
+        <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
+        <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
+        <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a>
+
+        <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
+        <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
       </div>
       <!-- Brand -->
       <div class="ft-brand">
         <img src="assets/altasaluh-logo-stack.png" alt="التصالح" onerror="this.style.display='none'">
-        <p class="ft-tagline">التصالح.. غايته التصالح</p>
+        <p class="ft-tagline" data-i18n="ft-tagline">التصالح.. غايته التصالح</p>
         <div class="ft-soc">
           <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
           <a href="#" class="soc-b" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -324,9 +324,9 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       </div>
     </div>
     <div class="ft-btm">
-      <p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
-        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px">رقم السجل التجاري: 7030006535</p>
-      <div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط والأحكام</a></div>
+      <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px" data-i18n="ft-reg">رقم السجل التجاري: 7030006535</p>
+      <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
     </div>
   </div>
 </footer>
@@ -353,5 +353,6 @@ let curLang=localStorage.getItem('lang')||'ar';
 function toggleLang(){curLang=curLang==='ar'?'en':'ar';localStorage.setItem('lang',curLang);document.getElementById('langBtn').textContent=curLang==='ar'?'EN':'AR';document.documentElement.lang=curLang;document.documentElement.dir=curLang==='ar'?'rtl':'ltr';}
 if(curLang!=='ar'){document.getElementById('langBtn').textContent='AR';document.documentElement.lang='en';document.documentElement.dir='ltr';}
 </script>
+<script src="assets/js/i18n.js"></script>
 </body>
 </html>

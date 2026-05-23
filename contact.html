@@ -133,17 +133,17 @@ textarea.fi{resize:vertical;min-height:100px}
     </a>
     <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
     <div class="nav-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">عن الشركة</a>
-      <a href="services.html">الخدمات</a>
-      <a href="strategy.html">الاستراتيجية</a>
-      <a href="partners.html">شركاؤنا</a>
+      <a href="index.html" data-i18n="ft-nav-home">الرئيسية</a>
+      <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
+      <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
+      <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
+      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a>
       
-      <a href="careers.html">انضم إلينا</a>
-      <a href="contact.html" class="on">تواصل معنا</a>
+      <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
+      <a href="contact.html" class="on" data-i18n="ft-nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
-      <a href="contact.html" class="btn-cta">ابدأ الآن</a>
+      <a href="contact.html" class="btn-cta" data-i18n="nav-cta">ابدأ الآن</a>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
@@ -151,14 +151,14 @@ textarea.fi{resize:vertical;min-height:100px}
 </header>
 
 <nav class="mob" id="mob">
-  <a href="index.html" onclick="cm()">الرئيسية</a>
-  <a href="about.html" onclick="cm()">عن الشركة</a>
-  <a href="services.html" onclick="cm()">الخدمات</a>
-  <a href="strategy.html" onclick="cm()">الاستراتيجية</a>
-  <a href="partners.html" onclick="cm()">شركاؤنا</a>
-  
-  <a href="careers.html" onclick="cm()">انضم إلينا</a>
-  <a href="contact.html" onclick="cm()">تواصل معنا</a>
+  <a href="index.html" onclick="cm()" data-i18n="nav-home">الرئيسية</a>
+  <a href="about.html" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
+  <a href="services.html" onclick="cm()" data-i18n="nav-services">الخدمات</a>
+  <a href="strategy.html" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
+  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a>
+
+  <a href="careers.html" onclick="cm()" data-i18n="nav-careers">انضم إلينا</a>
+  <a href="contact.html" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
   <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
 </nav>
 
@@ -166,9 +166,9 @@ textarea.fi{resize:vertical;min-height:100px}
 <section class="sec sec-d" id="contact" style="padding-top:calc(var(--hh) + clamp(50px,7vw,90px));padding-bottom:clamp(40px,5vw,70px)">
   <div class="wrap">
     <div class="tc rv" style="margin-bottom:40px">
-      <span class="tag tag-g">نحن هنا لمساعدتك</span>
-      <h2 class="t t-w" style="margin-bottom:10px">تواصل <em>معنا</em></h2>
-      <p style="color:rgba(255,255,255,.5);font-size:.95rem;line-height:1.8;max-width:520px;margin:0 auto">نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا أو رغبة في الشراكة. فريقنا جاهز لدعمكم.</p>
+      <span class="tag tag-g" data-i18n="ct-tag">نحن هنا لمساعدتك</span>
+      <h2 class="t t-w" style="margin-bottom:10px" data-i18n-html="ct-h2">تواصل <em>معنا</em></h2>
+      <p data-i18n="ct-lead" style="color:rgba(255,255,255,.5);font-size:.95rem;line-height:1.8;max-width:520px;margin:0 auto">نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا أو رغبة في الشراكة. فريقنا جاهز لدعمكم.</p>
     </div>
   </div>
 </section>
@@ -177,47 +177,47 @@ textarea.fi{resize:vertical;min-height:100px}
 <section class="sec sec-s" style="padding-block:clamp(60px,8vw,100px)">
   <div class="wrap">
     <div class="ct-full-form rv">
-      <h2 class="t t-d" style="text-align:center;margin-bottom:8px">تواصل معنا وابدأ <em>رحلتك معنا</em></h2>
+      <h2 class="t t-d" style="text-align:center;margin-bottom:8px" data-i18n-html="ctf-h2">تواصل معنا وابدأ <em>رحلتك معنا</em></h2>
       <p style="text-align:center;color:rgba(7,24,39,.5);margin-bottom:32px;font-size:.9rem;line-height:1.7">نسعد دائماً بالتواصل معكم، فريق مرسوم جاهز لتلبية احتياجاتكم بأعلى مستويات الكفاءة والجودة.</p>
 
       <!-- Tabs -->
       <div class="ctabs" style="margin-bottom:24px">
-        <button class="ctab" data-type="in" onclick="swTab('in')">الأفراد</button>
-        <button class="ctab on" data-type="co" onclick="swTab('co')">الشركات</button>
+        <button class="ctab" data-type="in" onclick="swTab('in')" data-i18n="tab-in">الأفراد</button>
+        <button class="ctab on" data-type="co" onclick="swTab('co')" data-i18n="tab-co">الشركات</button>
       </div>
 
       <!-- Contact type -->
       <div class="fr">
         <label>نوع التواصل</label>
         <div class="ctype-g">
-          <label class="ctype-btn on"><input type="radio" name="ctype" value="استفسار" checked>استفسار</label>
-          <label class="ctype-btn"><input type="radio" name="ctype" value="طلب">طلب</label>
-          <label class="ctype-btn"><input type="radio" name="ctype" value="شكوى">شكوى</label>
+          <label class="ctype-btn on"><input type="radio" name="ctype" value="استفسار" checked><span data-i18n="ctype-inquiry">استفسار</span></label>
+          <label class="ctype-btn"><input type="radio" name="ctype" value="طلب"><span data-i18n="ctype-request">طلب</span></label>
+          <label class="ctype-btn"><input type="radio" name="ctype" value="شكوى"><span data-i18n="ctype-complaint">شكوى</span></label>
         </div>
       </div>
 
       <!-- Company fields -->
       <div id="coF" style="margin-top:4px">
-        <div class="fr"><label>اسم الشركة *</label><input type="text" class="fi" id="coName" placeholder="اسم الشركة"></div>
-        <div class="fr"><label>رقم السجل التجاري *</label><input type="text" class="fi" id="coCR" placeholder="رقم السجل التجاري"></div>
+        <div class="fr"><label data-i18n="co-name-l">اسم الشركة *</label><input type="text" class="fi" id="coName" placeholder="اسم الشركة"></div>
+        <div class="fr"><label data-i18n="co-cr-l">رقم السجل التجاري *</label><input type="text" class="fi" id="coCR" placeholder="رقم السجل التجاري"></div>
         <div class="fr2">
-          <div class="fr"><label>البريد الإلكتروني *</label><input type="email" class="fi" id="coEmail" placeholder="البريد الإلكتروني"></div>
-          <div class="fr"><label>رقم الجوال *</label><input type="tel" class="fi" id="coPhone" placeholder="رقم الجوال"></div>
+          <div class="fr"><label data-i18n="co-email-l">البريد الإلكتروني *</label><input type="email" class="fi" id="coEmail" placeholder="البريد الإلكتروني"></div>
+          <div class="fr"><label data-i18n="co-phone-l">رقم الجوال *</label><input type="tel" class="fi" id="coPhone" placeholder="رقم الجوال"></div>
         </div>
-        <div class="fr"><label>الملاحظة *</label><textarea class="fi" id="coMsg" rows="4" placeholder="نص الملاحظة"></textarea></div>
+        <div class="fr"><label data-i18n="co-msg-l">الملاحظة *</label><textarea class="fi" id="coMsg" rows="4" placeholder="نص الملاحظة"></textarea></div>
       </div>
 
       <!-- Individual fields -->
       <div id="inF" style="display:none;margin-top:4px">
         <div class="fr2">
-          <div class="fr"><label>الاسم الكامل *</label><input type="text" class="fi" id="inName" placeholder="الاسم الكامل"></div>
-          <div class="fr"><label>رقم الهوية الوطنية *</label><input type="text" class="fi" id="inNat" placeholder="رقم الهوية"></div>
+          <div class="fr"><label data-i18n="in-name-l">الاسم الكامل *</label><input type="text" class="fi" id="inName" placeholder="الاسم الكامل"></div>
+          <div class="fr"><label data-i18n="in-nat-l">رقم الهوية الوطنية *</label><input type="text" class="fi" id="inNat" placeholder="رقم الهوية"></div>
         </div>
         <div class="fr2">
-          <div class="fr"><label>البريد الإلكتروني *</label><input type="email" class="fi" id="inEmail" placeholder="البريد الإلكتروني"></div>
-          <div class="fr"><label>رقم الجوال *</label><input type="tel" class="fi" id="inPhone" placeholder="رقم الجوال"></div>
+          <div class="fr"><label data-i18n="in-email-l">البريد الإلكتروني *</label><input type="email" class="fi" id="inEmail" placeholder="البريد الإلكتروني"></div>
+          <div class="fr"><label data-i18n="in-phone-l">رقم الجوال *</label><input type="tel" class="fi" id="inPhone" placeholder="رقم الجوال"></div>
         </div>
-        <div class="fr"><label>الملاحظة *</label><textarea class="fi" id="inMsg" rows="4" placeholder="نص الملاحظة"></textarea></div>
+        <div class="fr"><label data-i18n="in-msg-l">الملاحظة *</label><textarea class="fi" id="inMsg" rows="4" placeholder="نص الملاحظة"></textarea></div>
       </div>
 
       <!-- Privacy -->
@@ -228,7 +228,7 @@ textarea.fi{resize:vertical;min-height:100px}
         </label>
       </div>
 
-      <button type="button" class="sbtn-g" onclick="sNewContact()">
+      <button type="button" class="sbtn-g" data-i18n="ct-submit" onclick="sNewContact()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         إرسال
       </button>
@@ -241,10 +241,10 @@ textarea.fi{resize:vertical;min-height:100px}
   <div class="wrap">
     <div class="ft-new-g">
       <div class="ft-info">
-        <h4>معلومات الإتصال</h4>
+        <h4 data-i18n="ft-info-title">معلومات الإتصال</h4>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a>
+          <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener" data-i18n="ft-addr">المكتب 406 — الدور الرابع، الرياض</a>
         </div>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -273,23 +273,23 @@ textarea.fi{resize:vertical;min-height:100px}
         </div>
       </div>
       <nav class="ft-nav-v">
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن الشركة</a>
-        <a href="services.html">الخدمات</a>
-        <a href="strategy.html">الاستراتيجية</a>
-        <a href="partners.html">شركاؤنا</a>
-        <a href="careers.html">انضم إلينا</a>
-        <a href="contact.html">تواصل معنا</a>
+        <a href="index.html" data-i18n="ft-nav-home">الرئيسية</a>
+        <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
+        <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
+        <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
+        <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a>
+        <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
+        <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
       </nav>
       <div class="ft-brand">
         <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:200px;width:auto;object-fit:contain;" onerror="this.style.display='none'">
-        <p class="ft-tagline">التصالح.. غايته التصالح</p>
+        <p class="ft-tagline" data-i18n="ft-tagline">التصالح.. غايته التصالح</p>
       </div>
     </div>
     <div class="ft-btm">
-      <p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
-        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px">رقم السجل التجاري: 7030006535</p>
-      <div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط والأحكام</a></div>
+      <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px" data-i18n="ft-reg">رقم السجل التجاري: 7030006535</p>
+      <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
     </div>
   </div>
 </footer>
@@ -332,5 +332,6 @@ let curLang=localStorage.getItem('lang')||'ar';
 function toggleLang(){curLang=curLang==='ar'?'en':'ar';localStorage.setItem('lang',curLang);document.getElementById('langBtn').textContent=curLang==='ar'?'EN':'AR';document.documentElement.lang=curLang;document.documentElement.dir=curLang==='ar'?'rtl':'ltr';}
 if(curLang!=='ar'){document.getElementById('langBtn').textContent='AR';document.documentElement.lang='en';document.documentElement.dir='ltr';}
 </script>
+<script src="assets/js/i18n.js"></script>
 </body>
 </html>

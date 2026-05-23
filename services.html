@@ -208,17 +208,17 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
     </a>
     <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
     <div class="nav-links">
-      <a href="index.html">الرئيسية</a>
-      <a href="about.html">عن الشركة</a>
-      <a href="services.html" class="on">الخدمات</a>
-      <a href="strategy.html">الاستراتيجية</a>
-      <a href="partners.html">شركاؤنا</a>
+      <a href="index.html" data-i18n="ft-nav-home">الرئيسية</a>
+      <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
+      <a href="services.html" class="on" data-i18n="nav-services">الخدمات</a>
+      <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
+      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a>
       
-      <a href="careers.html">انضم إلينا</a>
-      <a href="contact.html">تواصل معنا</a>
+      <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
+      <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
-      <a href="contact.html" class="btn-cta">ابدأ الآن</a>
+      <a href="contact.html" class="btn-cta" data-i18n="nav-cta">ابدأ الآن</a>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
@@ -226,14 +226,14 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
 </header>
 
 <nav class="mob" id="mob">
-  <a href="index.html" onclick="cm()">الرئيسية</a>
-  <a href="about.html" onclick="cm()">عن الشركة</a>
-  <a href="services.html" onclick="cm()">الخدمات</a>
-  <a href="strategy.html" onclick="cm()">الاستراتيجية</a>
-  <a href="partners.html" onclick="cm()">شركاؤنا</a>
-  
-  <a href="careers.html" onclick="cm()">انضم إلينا</a>
-  <a href="contact.html" onclick="cm()">تواصل معنا</a>
+  <a href="index.html" onclick="cm()" data-i18n="nav-home">الرئيسية</a>
+  <a href="about.html" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
+  <a href="services.html" onclick="cm()" data-i18n="nav-services">الخدمات</a>
+  <a href="strategy.html" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
+  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a>
+
+  <a href="careers.html" onclick="cm()" data-i18n="nav-careers">انضم إلينا</a>
+  <a href="contact.html" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
   <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
 </nav>
 
@@ -241,9 +241,9 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
 <section class="sec sec-s" id="services" style="padding-top:calc(var(--hh) + clamp(70px,9vw,110px))">
   <div class="wrap">
     <div class="tc" style="margin-bottom:52px">
-      <span class="tag tag-d rv">ما نقدمه</span>
-      <h2 class="t t-d rv" data-d="2">خدماتنا <em>المتكاملة</em></h2>
-      <p class="lead lead-d rv tc" data-d="3">8 خدمات متخصصة في تحصيل الديون بأعلى معدلات الكفاءة والاحترافية</p>
+      <span class="tag tag-d rv" data-i18n="sv-tag">ما نقدمه</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="sv-h2">خدماتنا <em>المتكاملة</em></h2>
+      <p class="lead lead-d rv tc" data-d="3" data-i18n="sv-lead">8 خدمات متخصصة في تحصيل الديون بأعلى معدلات الكفاءة والاحترافية</p>
     </div>
     <div class="svc-new-g">
 
@@ -255,8 +255,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <circle cx="12" cy="15" r="2"/><line x1="12" y1="17" x2="12" y2="19"/>
           </svg>
         </div>
-        <h3>تحصيل ديون جهات التمويل والخدمية</h3>
-        <p>تحصيل شامل لديون البنوك وشركات التمويل والجهات الخدمية بكفاءة عالية.</p>
+        <h3 data-i18n="sv1-t">تحصيل ديون جهات التمويل والخدمية</h3>
+        <p data-i18n="sv1-b">تحصيل شامل لديون البنوك وشركات التمويل والجهات الخدمية بكفاءة عالية.</p>
       </div>
 
       <!-- Card 2 -->
@@ -268,8 +268,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <path d="M6 12h.01M18 12h.01"/>
           </svg>
         </div>
-        <h3>القروض الشخصية</h3>
-        <p>تحصيل القروض الشخصية بمختلف أعمار الديون وأنواع المديونيات.</p>
+        <h3 data-i18n="sv2-t">القروض الشخصية</h3>
+        <p data-i18n="sv2-b">تحصيل القروض الشخصية بمختلف أعمار الديون وأنواع المديونيات.</p>
       </div>
 
       <!-- Card 3 -->
@@ -281,8 +281,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
           </svg>
         </div>
-        <h3>التمويل التأجيري</h3>
-        <p>تحصيل متخصص في ديون التمويل التأجيري للمركبات والمعدات.</p>
+        <h3 data-i18n="sv3-t">التمويل التأجيري</h3>
+        <p data-i18n="sv3-b">تحصيل متخصص في ديون التمويل التأجيري للمركبات والمعدات.</p>
       </div>
 
       <!-- Card 4 -->
@@ -293,8 +293,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
         </div>
-        <h3>التمويل العقاري</h3>
-        <p>تحصيل التمويل العقاري بأعلى معدلات الاسترداد وأقل وقت.</p>
+        <h3 data-i18n="sv4-t">التمويل العقاري</h3>
+        <p data-i18n="sv4-b">تحصيل التمويل العقاري بأعلى معدلات الاسترداد وأقل وقت.</p>
       </div>
 
       <!-- Card 5 -->
@@ -305,8 +305,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <line x1="1" y1="10" x2="23" y2="10"/>
           </svg>
         </div>
-        <h3>البطاقات الائتمانية</h3>
-        <p>تحصيل متخصص لديون البطاقات الائتمانية بمختلف أنواعها ومستوياتها.</p>
+        <h3 data-i18n="sv5-t">البطاقات الائتمانية</h3>
+        <p data-i18n="sv5-b">تحصيل متخصص لديون البطاقات الائتمانية بمختلف أنواعها ومستوياتها.</p>
       </div>
 
       <!-- Card 6 -->
@@ -318,8 +318,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <line x1="12" y1="3" x2="12" y2="9"/>
           </svg>
         </div>
-        <h3>المنشآت المتوسطة والصغيرة</h3>
-        <p>خدمات تحصيل مصممة خصيصاً لاحتياجات المنشآت المتوسطة والصغيرة.</p>
+        <h3 data-i18n="sv6-t">المنشآت المتوسطة والصغيرة</h3>
+        <p data-i18n="sv6-b">خدمات تحصيل مصممة خصيصاً لاحتياجات المنشآت المتوسطة والصغيرة.</p>
       </div>
 
       <!-- Card 7 -->
@@ -330,8 +330,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <path d="M9 12l2 2 4-4"/>
           </svg>
         </div>
-        <h3>رفع القضايا القانونية</h3>
-        <p>رفع القضايا أمام محاكم التنفيذ والمحاكم العامة مع فريق قانوني متخصص.</p>
+        <h3 data-i18n="sv7-t">رفع القضايا القانونية</h3>
+        <p data-i18n="sv7-b">رفع القضايا أمام محاكم التنفيذ والمحاكم العامة مع فريق قانوني متخصص.</p>
       </div>
 
       <!-- Card 8 -->
@@ -342,8 +342,8 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
             <line x1="12" y1="18" x2="12.01" y2="18"/>
           </svg>
         </div>
-        <h3>ديون شركات الاتصالات</h3>
-        <p>تحصيل ديون شركات الاتصالات بمختلف أنواعها وفئاتها.</p>
+        <h3 data-i18n="sv8-t">ديون شركات الاتصالات</h3>
+        <p data-i18n="sv8-b">تحصيل ديون شركات الاتصالات بمختلف أنواعها وفئاتها.</p>
       </div>
 
     </div>
@@ -354,9 +354,9 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
 <section class="sec sec-w">
   <div class="wrap">
     <div class="tc" style="margin-bottom:52px">
-      <span class="tag tag-g rv">بالأرقام</span>
-      <h2 class="t t-d rv" data-d="2">لماذا <em>التصالح؟</em></h2>
-      <p class="lead lead-d rv tc" data-d="3" style="max-width:520px">أرقام حقيقية تعكس التزامنا بالتميز في قطاع تحصيل الديون</p>
+      <span class="tag tag-g rv" data-i18n="why-tag">بالأرقام</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="why-h2">لماذا <em>التصالح؟</em></h2>
+      <p class="lead lead-d rv tc" data-d="3" style="max-width:520px" data-i18n="why-lead">أرقام حقيقية تعكس التزامنا بالتميز في قطاع تحصيل الديون</p>
     </div>
     <div class="prog-sec-g">
       <div>
@@ -402,7 +402,7 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
         </div>
         <div class="rv rv-r" data-d="5" style="background:#071827;border-radius:14px;padding:22px;text-align:center">
           <div style="font-size:.95rem;font-weight:800;color:rgba(255,255,255,.7)">تواصل مع فريق التحصيل</div>
-          <a href="contact.html" style="display:inline-block;margin-top:12px;padding:10px 24px;background:var(--G);color:var(--D);font-weight:900;border-radius:8px;font-size:.9rem;transition:.25s">ابدأ الآن ←</a>
+          <a href="contact.html" style="display:inline-block;margin-top:12px;padding:10px 24px;background:var(--G);color:var(--D);font-weight:900;border-radius:8px;font-size:.9rem;transition:.25s" data-i18n="why-cta">ابدأ الآن ←</a>
         </div>
       </div>
     </div>
@@ -413,24 +413,24 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
 <section class="sec sec-w" id="advantages">
   <div class="wrap">
     <div class="tc" style="margin-bottom:48px">
-      <span class="tag tag-g rv">لماذا التصالح</span>
-      <h2 class="t t-d rv" data-d="2">مميزاتنا <em>التنافسية</em></h2>
+      <span class="tag tag-g rv" data-i18n="adv-tag">لماذا التصالح</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="adv-h2">مميزاتنا <em>التنافسية</em></h2>
     </div>
     <div class="hub-grid">
       <!-- Row 1 -->
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>كوادر متخصصة</h3><p>فرق ذات خبرة في التمويل والتحصيل</p></div>
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>خبرة مثبتة</h3><p>سنوات من تحصيل الديون للغير</p></div>
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>أنظمة متقدمة</h3><p>تقنيات حديثة بحماية عالية</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i18n="adv1-t">كوادر متخصصة</h3><p data-i18n="adv1-b">فرق ذات خبرة في التمويل والتحصيل</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3 data-i18n="adv2-t">خبرة مثبتة</h3><p data-i18n="adv2-b">سنوات من تحصيل الديون للغير</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3 data-i18n="adv3-t">أنظمة متقدمة</h3><p data-i18n="adv3-b">تقنيات حديثة بحماية عالية</p></div>
       <!-- Row 2: adv | HUB CENTER | adv -->
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>مقرات مجهزة</h3><p>بيئة عمل متكاملة</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3 data-i18n="adv4-t">مقرات مجهزة</h3><p data-i18n="adv4-b">بيئة عمل متكاملة</p></div>
       <div class="hub-center">
         <img src="assets/altasaluh-icon.png" alt="التصالح">
       </div>
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>سرية تامة</h3><p>حماية المعلومات بأعلى المعايير</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3 data-i18n="adv5-t">سرية تامة</h3><p data-i18n="adv5-b">حماية المعلومات بأعلى المعايير</p></div>
       <!-- Row 3 -->
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>إدارة متخصصة</h3><p>التزام بمعايير الجهات المختصة</p></div>
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>فريق قانوني</h3><p>محامون ومستشارون قانونيون</p></div>
-      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>عمل عن بُعد</h3><p>استمرارية في أي ظرف</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 data-i18n="adv6-t">إدارة متخصصة</h3><p data-i18n="adv6-b">التزام بمعايير الجهات المختصة</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3 data-i18n="adv7-t">فريق قانوني</h3><p data-i18n="adv7-b">محامون ومستشارون قانونيون</p></div>
+      <div class="ac"><div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3 data-i18n="adv8-t">عمل عن بُعد</h3><p data-i18n="adv8-b">استمرارية في أي ظرف</p></div>
     </div>
   </div>
 </section>
@@ -441,10 +441,10 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
     <div class="ft-new-g">
       <!-- LEFT: Contact Info -->
       <div class="ft-info">
-        <h4>معلومات الإتصال</h4>
+        <h4 data-i18n="ft-info-title">معلومات الإتصال</h4>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a>
+          <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener" data-i18n="ft-addr">المكتب 406 — الدور الرابع، الرياض</a>
         </div>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -474,24 +474,24 @@ p.lead-d{color:rgba(7,24,39,.5)}p.lead-w{color:rgba(255,255,255,.6)}
       </div>
       <!-- CENTER: Nav Links -->
       <nav class="ft-nav-v">
-        <a href="index.html">الرئيسية</a>
-        <a href="about.html">عن الشركة</a>
-        <a href="services.html">الخدمات</a>
-        <a href="strategy.html">الاستراتيجية</a>
-        <a href="partners.html">شركاؤنا</a>
-        <a href="careers.html">انضم إلينا</a>
-        <a href="contact.html">تواصل معنا</a>
+        <a href="index.html" data-i18n="ft-nav-home">الرئيسية</a>
+        <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
+        <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
+        <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
+        <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a>
+        <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
+        <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
       </nav>
       <!-- RIGHT: Logo -->
       <div class="ft-brand">
         <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:200px;width:auto;object-fit:contain;" onerror="this.style.display='none'">
-        <p class="ft-tagline">التصالح.. غايته التصالح</p>
+        <p class="ft-tagline" data-i18n="ft-tagline">التصالح.. غايته التصالح</p>
       </div>
     </div>
     <div class="ft-btm">
-      <p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
-        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px">رقم السجل التجاري: 7030006535</p>
-      <div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط والأحكام</a></div>
+      <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px" data-i18n="ft-reg">رقم السجل التجاري: 7030006535</p>
+      <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
     </div>
   </div>
 </footer>
@@ -522,5 +522,6 @@ let curLang=localStorage.getItem('lang')||'ar';
 function toggleLang(){curLang=curLang==='ar'?'en':'ar';localStorage.setItem('lang',curLang);document.getElementById('langBtn').textContent=curLang==='ar'?'EN':'AR';document.documentElement.lang=curLang;document.documentElement.dir=curLang==='ar'?'rtl':'ltr';}
 if(curLang!=='ar'){document.getElementById('langBtn').textContent='AR';document.documentElement.lang='en';document.documentElement.dir='ltr';}
 </script>
+<script src="assets/js/i18n.js"></script>
 </body>
 </html>
