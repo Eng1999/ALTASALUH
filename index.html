@@ -104,9 +104,17 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
   display:flex;flex-direction:column;position:relative;overflow:hidden;
   background:#061a1a;
 }
+.hero-vid{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:0;
+}
+.hero-vid-ov{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(to bottom,rgba(6,26,26,.7) 0%,rgba(6,26,26,.55) 50%,rgba(6,26,26,.8) 100%);
+}
 .hero-logo-bg{
   position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  pointer-events:none;overflow:hidden;
+  pointer-events:none;overflow:hidden;z-index:2;
 }
 .hero-logo-bg img{
   width:75vw;max-width:900px;height:auto;
@@ -119,7 +127,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
   to  {transform:scale(1.06) translateY(-18px)}
 }
 .hero-glow{
-  position:absolute;inset:0;pointer-events:none;
+  position:absolute;inset:0;pointer-events:none;z-index:2;
   background:
     radial-gradient(ellipse 70% 90% at 55% 50%, rgba(44,197,139,.13) 0%, transparent 65%),
     radial-gradient(ellipse 45% 55% at 10% 85%, rgba(44,197,139,.07) 0%, transparent 60%);
@@ -128,7 +136,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 /* ── HERO GRID ── */
 .hero-g{
   flex:1;display:grid;grid-template-columns:1fr 480px;align-items:center;gap:48px;
-  position:relative;z-index:1;
+  position:relative;z-index:3;
   padding:calc(var(--hh) + 70px) 60px 70px;
   width:min(1280px,100%);margin-inline:auto;
 }
@@ -926,6 +934,10 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
+  <video class="hero-vid" autoplay muted loop playsinline>
+    <source src="assets/hero-bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-vid-ov"></div>
   <div class="hero-logo-bg"><img src="assets/altasaluh-logo-stack.png" alt=""></div>
   <div class="hero-glow"></div>
   <div class="hero-g">
