@@ -828,9 +828,126 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   .ft-links{flex-wrap:wrap;justify-content:center}
 }
 @media(max-width:480px){.adv-g{grid-template-columns:1fr}}
+
+/* ── SAMA TOP BAR ── */
+.sama-top{
+  background:var(--D);border-bottom:1px solid rgba(44,197,139,.15);
+  padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.45);
+}
+.sama-top .wrap{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.sama-top-badge{
+  display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.55);font-weight:700;
+}
+.sama-top-badge svg{color:var(--G);flex-shrink:0}
+.sama-top-links{display:flex;align-items:center;gap:16px}
+.sama-top-links a{
+  color:rgba(255,255,255,.35);font-size:.68rem;font-weight:700;
+  transition:.2s;text-decoration:none;
+}
+.sama-top-links a:hover{color:var(--G)}
+.sama-top-sep{color:rgba(255,255,255,.15)}
+
+/* ── CHAIRMAN MSG ── */
+.chair-g{
+  display:grid;grid-template-columns:1fr 340px;gap:clamp(32px,5vw,72px);align-items:center;
+}
+.chair-img{
+  position:relative;border-radius:16px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(7,24,39,.12);
+}
+.chair-img img{width:100%;height:380px;object-fit:cover;display:block}
+.chair-badge{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:20px 22px;
+  background:linear-gradient(to top,rgba(7,24,39,.92),transparent);
+  color:#fff;
+}
+.chair-badge strong{display:block;font-size:1rem;font-weight:900;margin-bottom:2px}
+.chair-badge span{font-size:.75rem;color:rgba(255,255,255,.6);font-weight:700}
+.chair-quote{
+  position:relative;padding-right:20px;
+}
+.chair-quote::before{
+  content:"";position:absolute;right:0;top:0;bottom:0;
+  width:3px;background:var(--G);border-radius:3px;
+}
+.chair-quote blockquote{
+  font-size:clamp(.95rem,1.2vw,1.08rem);line-height:2;
+  color:rgba(7,24,39,.65);font-style:normal;margin-bottom:24px;
+}
+.chair-sig{display:flex;align-items:center;gap:14px;margin-top:20px}
+.chair-sig-line{flex:1;height:1px;background:rgba(44,197,139,.2)}
+.chair-sig strong{font-size:.9rem;font-weight:900;color:var(--D)}
+.chair-sig span{display:block;font-size:.72rem;color:rgba(7,24,39,.4);font-weight:700;margin-top:2px}
+
+/* ── COMPLIANCE LINKS ── */
+.comp-strip{
+  background:var(--D);
+  border-top:1px solid rgba(44,197,139,.12);
+  padding:clamp(28px,4vw,44px) 0;
+}
+.comp-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:stretch}
+.comp-card{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 22px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;flex:1;min-width:220px;max-width:320px;
+  transition:.25s;text-decoration:none;color:rgba(255,255,255,.65);
+}
+.comp-card:hover{border-color:rgba(44,197,139,.3);background:rgba(44,197,139,.05);color:#fff}
+.comp-card-ico{
+  width:42px;height:42px;flex-shrink:0;border-radius:9px;
+  background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.2);
+  display:flex;align-items:center;justify-content:center;color:var(--G);
+}
+.comp-card-ico svg{width:18px;height:18px}
+.comp-card strong{display:block;font-size:.85rem;font-weight:800;margin-bottom:2px}
+.comp-card span{font-size:.7rem;color:rgba(255,255,255,.35);line-height:1.5}
+
+/* ── SAMA FOOTER BAND ── */
+.ft-sama{
+  border-top:1px solid rgba(255,255,255,.07);
+  padding:18px 0;
+  background:rgba(0,0,0,.15);
+}
+.ft-sama .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;
+}
+.ft-sama-reg{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
+.ft-sama-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.3);font-size:.68rem;font-weight:700}
+.ft-sama-item strong{color:rgba(255,255,255,.5);font-weight:900}
+.ft-sama-item::before{content:"·";color:rgba(255,255,255,.15);margin-left:0}
+
+@media(max-width:900px){.chair-g{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .sama-top .wrap{justify-content:center;text-align:center}
+  .sama-top-links{justify-content:center}
+  .ft-sama .wrap{justify-content:center;text-align:center}
+}
 </style>
 </head>
 <body>
+
+<!-- SAMA TOP BAR -->
+<div class="sama-top">
+  <div class="wrap">
+    <div class="sama-top-badge">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" width="15" height="15"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8z"/></svg>
+      خاضعة لإشراف البنك المركزي السعودي (ساما)
+    </div>
+    <div class="sama-top-links">
+      <a href="#" data-i18n="link-privacy">إشعار الخصوصية</a>
+      <span class="sama-top-sep">|</span>
+      <a href="#" data-i18n="link-protect">مبادئ حماية عملاء المؤسسات المالية</a>
+      <span class="sama-top-sep">|</span>
+      <a href="tel:0115138328">0115138328</a>
+    </div>
+  </div>
+</div>
 
 <!-- HEADER -->
 <header class="hdr" id="hdr">
@@ -967,6 +1084,37 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     </div>
   </div>
 </div>
+
+<!-- ══ CHAIRMAN MESSAGE  (white) ══ -->
+<section class="sec sec-w" id="chairman">
+  <div class="wrap">
+    <div class="chair-g">
+      <div>
+        <span class="tag tag-g rv" data-i18n="ch-tag">كلمة الإدارة</span>
+        <h2 class="t t-d rv" data-d="2" data-i18n-html="ch-h2">رسالة <em>القيادة</em></h2>
+        <div class="chair-quote rv" data-d="3">
+          <blockquote data-i18n="ch-q">
+            نؤمن في شركة التصالح بأن تحصيل الديون مسؤولية مهنية قائمة على الثقة والاحترام المتبادل. نسعى يومياً إلى بناء شراكات حقيقية مع جهات التمويل، مع الحفاظ على كرامة المدين وحقوق الدائن في آنٍ واحد. رؤيتنا واضحة: أن نكون الخيار الأول والموثوق في قطاع تحصيل الديون بالمملكة العربية السعودية، مستلهمين توجيهات رؤية 2030 في بناء اقتصاد متين ومستدام.
+          </blockquote>
+          <div class="chair-sig">
+            <div class="chair-sig-line"></div>
+            <div>
+              <strong data-i18n="ch-name">إدارة شركة التصالح</strong>
+              <span data-i18n="ch-title">لتحصيل الديون</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chair-img rv-r">
+        <img src="assets/office-hero.jpg" alt="مكتب التصالح" onerror="this.style.background='linear-gradient(135deg,#edfbf5,#f4fcf9)'">
+        <div class="chair-badge">
+          <strong data-i18n="ch-badge-t">الالتزام · الدقة · المسؤولية</strong>
+          <span data-i18n="ch-badge-s">قيمنا التشغيلية الأساسية</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ══ VISION & MISSION  (dark) ══ -->
 <section class="sec sec-d" id="vision">
@@ -1245,6 +1393,50 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   </div>
 </section>
 
+<!-- ══ COMPLIANCE LINKS (dark) ══ -->
+<div class="comp-strip">
+  <div class="wrap">
+    <div class="comp-grid">
+      <a href="#" class="comp-card rv" data-d="1">
+        <div class="comp-card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div>
+          <strong data-i18n="comp1-t">إشعار الخصوصية</strong>
+          <span data-i18n="comp1-s">سياسة حماية البيانات الشخصية</span>
+        </div>
+      </a>
+      <a href="#" class="comp-card rv" data-d="2">
+        <div class="comp-card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <strong data-i18n="comp2-t">مبادئ حماية العملاء</strong>
+          <span data-i18n="comp2-s">مبادئ حماية عملاء المؤسسات المالية</span>
+        </div>
+      </a>
+      <a href="tel:0115138328" class="comp-card rv" data-d="3">
+        <div class="comp-card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <strong data-i18n="comp3-t">خط التصالح</strong>
+          <span>0115138328</span>
+        </div>
+      </a>
+      <a href="mailto:info@altasaluh.com.sa" class="comp-card rv" data-d="4">
+        <div class="comp-card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <strong data-i18n="comp4-t">البريد الرسمي</strong>
+          <span>info@altasaluh.com.sa</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -1318,6 +1510,20 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     <div class="ft-btm">
       <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
       <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
+    </div>
+  </div>
+  <!-- SAMA Regulatory Band -->
+  <div class="ft-sama">
+    <div class="wrap">
+      <div class="ft-sama-reg">
+        <div class="ft-sama-item"><strong data-i18n="sama-type">شركة ذات مسؤولية محدودة</strong></div>
+        <div class="ft-sama-item"><span data-i18n="sama-cr-lbl">السجل التجاري:</span>&nbsp;<strong>1010278307</strong></div>
+        <div class="ft-sama-item"><span data-i18n="sama-lic-lbl">تحت إشراف:</span>&nbsp;<strong data-i18n="sama-lic-val">البنك المركزي السعودي (ساما)</strong></div>
+      </div>
+      <div class="ft-sama-item" style="color:rgba(255,255,255,.25);font-size:.64rem">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="12" height="12"><path d="M8 1l1.6 3.2 3.5.5-2.5 2.5.6 3.5L8 9.2l-3.2 1.5.6-3.5L2.9 4.7l3.5-.5z"/></svg>
+        &nbsp;<span data-i18n="sama-note">ملتزمون بأحكام نظام مراقبة شركات التمويل</span>
+      </div>
     </div>
   </div>
 </footer>
@@ -1515,6 +1721,17 @@ const I18N = {
     'ft-email-lbl':'البريد الإلكتروني','ft-phone-lbl':'الجوال',
     'ft-copy':'© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.',
     'ft-privacy':'الخصوصية','ft-terms':'الشروط والأحكام',
+    'link-privacy':'إشعار الخصوصية','link-protect':'مبادئ حماية عملاء المؤسسات المالية',
+    'ch-tag':'كلمة الإدارة','ch-h2':'رسالة <em>القيادة</em>',
+    'ch-q':'نؤمن في شركة التصالح بأن تحصيل الديون مسؤولية مهنية قائمة على الثقة والاحترام المتبادل. نسعى يومياً إلى بناء شراكات حقيقية مع جهات التمويل، مع الحفاظ على كرامة المدين وحقوق الدائن في آنٍ واحد. رؤيتنا واضحة: أن نكون الخيار الأول والموثوق في قطاع تحصيل الديون بالمملكة العربية السعودية، مستلهمين توجيهات رؤية 2030 في بناء اقتصاد متين ومستدام.',
+    'ch-name':'إدارة شركة التصالح','ch-title':'لتحصيل الديون',
+    'ch-badge-t':'الالتزام · الدقة · المسؤولية','ch-badge-s':'قيمنا التشغيلية الأساسية',
+    'comp1-t':'إشعار الخصوصية','comp1-s':'سياسة حماية البيانات الشخصية',
+    'comp2-t':'مبادئ حماية العملاء','comp2-s':'مبادئ حماية عملاء المؤسسات المالية',
+    'comp3-t':'خط التصالح','comp4-t':'البريد الرسمي',
+    'sama-type':'شركة ذات مسؤولية محدودة','sama-cr-lbl':'السجل التجاري:',
+    'sama-lic-lbl':'تحت إشراف:','sama-lic-val':'البنك المركزي السعودي (ساما)',
+    'sama-note':'ملتزمون بأحكام نظام مراقبة شركات التمويل',
   },
   en:{
     'nav-home':'Home','nav-about':'About Us','nav-services':'Services',
@@ -1593,6 +1810,17 @@ const I18N = {
     'ft-email-lbl':'EMAIL','ft-phone-lbl':'MOBILE',
     'ft-copy':'© 2025 Altasaluh Debt Collection Co. All rights reserved.',
     'ft-privacy':'Privacy','ft-terms':'Terms & Conditions',
+    'link-privacy':'Privacy Notice','link-protect':'Financial Institution Customer Protection Principles',
+    'ch-tag':'Management Message','ch-h2':'A Message from <em>Leadership</em>',
+    'ch-q':'At Altasaluh, we believe that debt collection is a professional responsibility built on mutual trust and respect. We strive daily to build genuine partnerships with financial institutions while preserving the dignity of the debtor and the rights of the creditor simultaneously. Our vision is clear: to be the first and most trusted choice in the debt collection sector in Saudi Arabia, inspired by Vision 2030\'s directives in building a robust and sustainable economy.',
+    'ch-name':'Altasaluh Management','ch-title':'Debt Collection Company',
+    'ch-badge-t':'Commitment · Accuracy · Responsibility','ch-badge-s':'Our Core Operational Values',
+    'comp1-t':'Privacy Notice','comp1-s':'Personal Data Protection Policy',
+    'comp2-t':'Customer Protection Principles','comp2-s':'Financial Institution Customer Protection Principles',
+    'comp3-t':'Altasaluh Hotline','comp4-t':'Official Email',
+    'sama-type':'Limited Liability Company','sama-cr-lbl':'Commercial Registration:',
+    'sama-lic-lbl':'Under Supervision of:','sama-lic-val':'Saudi Central Bank (SAMA)',
+    'sama-note':'Committed to the provisions of the Finance Companies Control Law',
   }
 };
 
