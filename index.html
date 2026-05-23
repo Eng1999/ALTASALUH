@@ -705,6 +705,56 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 .ft-links a{color:rgba(255,255,255,.2);font-size:.74rem;transition:.2s}
 .ft-links a:hover{color:var(--G)}
 
+/* ══ SURVEY FORM ══ */
+.surv-wrap{
+  max-width:680px;margin-inline:auto;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;padding:clamp(24px,4vw,40px);
+  margin-top:40px;
+}
+.surv-tabs{display:flex;gap:12px;margin-bottom:28px}
+.surv-tab{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 20px;border-radius:12px;
+  border:1.5px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);color:rgba(255,255,255,.45);
+  font-family:inherit;font-size:.92rem;font-weight:800;cursor:pointer;transition:.25s;
+}
+.surv-tab.active{border-color:var(--G);background:rgba(44,197,139,.1);color:#fff}
+.surv-tab svg{transition:.25s}
+.surv-tab.active svg{stroke:var(--G)}
+.surv-lbl{display:block;color:rgba(255,255,255,.4);font-size:.72rem;font-weight:800;letter-spacing:.08em;margin-bottom:12px}
+.surv-types{margin-bottom:24px}
+.surv-radios{display:flex;gap:10px}
+.surv-r{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 16px;border-radius:10px;
+  border:1.5px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.03);color:rgba(255,255,255,.4);
+  font-size:.85rem;font-weight:800;cursor:pointer;transition:.2s;
+}
+.surv-r input{display:none}
+.surv-r.active,.surv-r:has(input:checked){border-color:var(--G);background:rgba(44,197,139,.1);color:#fff}
+.surv-r::before{
+  content:"";width:10px;height:10px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.3);flex-shrink:0;transition:.2s;
+}
+.surv-r.active::before,.surv-r:has(input:checked)::before{border-color:var(--G);background:var(--G)}
+.surv-form .fr{margin-bottom:16px}
+.surv-form .fr label{display:block;color:rgba(255,255,255,.5);font-size:.72rem;font-weight:800;margin-bottom:6px;letter-spacing:.04em}
+.surv-form .fi{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff}
+.surv-form .fi::placeholder{color:rgba(255,255,255,.2)}
+.surv-form .fi:focus{border-color:var(--G);background:rgba(44,197,139,.06);box-shadow:0 0 0 3px rgba(44,197,139,.1)}
+.surv-check{
+  display:flex;align-items:flex-start;gap:12px;margin-bottom:20px;
+  color:rgba(255,255,255,.35);font-size:.76rem;line-height:1.65;cursor:pointer;
+}
+.surv-check input{
+  width:18px;height:18px;flex-shrink:0;margin-top:2px;cursor:pointer;
+  accent-color:var(--G);
+}
+
 /* floats */
 .f-wa{
   position:fixed;bottom:26px;left:26px;z-index:500;
@@ -1110,28 +1160,64 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <!-- ══ CONTACT  (dark) ══ -->
 <section class="sec sec-d" id="contact">
   <div class="wrap">
-    <div class="tc" style="margin-bottom:44px">
+    <div class="tc" style="margin-bottom:16px">
       <span class="tag tag-g rv">نحن هنا</span>
-      <h2 class="t t-w rv" data-d="2">تواصل <em>معنا</em></h2>
+      <h2 class="t t-w rv" data-d="2">تواصل معنا <em>وابدأ رحلتك معنا</em></h2>
+      <p class="lead rv" data-d="3" style="color:rgba(255,255,255,.5);max-width:580px;margin:0 auto">نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا، أو رغبة في الشراكة، أو أي ملاحظات. فريقنا جاهز لدعمكم بمرونة ودقة عالية.</p>
     </div>
-    <div style="max-width:680px;margin-inline:auto">
-      <div class="rv">
-        <div class="fbox">
-          <h3>أرسل رسالة</h3>
-          <form id="ctForm" onsubmit="sContact(event)">
-            <div class="fr2">
-              <div class="fr"><label>الاسم *</label><input type="text" class="fi" id="tn" placeholder="الاسم" required></div>
-              <div class="fr"><label>الجوال *</label><input type="tel" class="fi" id="tp" placeholder="05xxxxxxxx" required></div>
-            </div>
-            <div class="fr"><label>البريد *</label><input type="email" class="fi" id="te" placeholder="email@example.com" required></div>
-            <div class="fr"><label>الجهة</label><input type="text" class="fi" id="tc" placeholder="اسم الجهة"></div>
-            <div class="fr"><label>الموضوع *</label><select class="fi" id="ts" required><option value="">اختر...</option><option>استفسار عن الخدمات</option><option>طلب عرض سعر</option><option>التعاون والشراكة</option><option>شكوى</option><option>أخرى</option></select></div>
-            <div class="fr"><label>الرسالة *</label><textarea class="fi" id="tm" rows="4" placeholder="اكتب رسالتك..." required></textarea></div>
-            <button type="submit" class="sbtn-d">إرسال</button>
-          </form>
-          <p class="fnote">بياناتك بسرية تامة</p>
+
+    <div class="surv-wrap rv" data-d="2">
+
+      <!-- نوع المستخدم -->
+      <div class="surv-tabs">
+        <button class="surv-tab active" onclick="switchTab('company',this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          الشركات
+        </button>
+        <button class="surv-tab" onclick="switchTab('individual',this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="22" height="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          الأفراد
+        </button>
+      </div>
+
+      <!-- نوع التواصل -->
+      <div class="surv-types">
+        <span class="surv-lbl">نوع التواصل</span>
+        <div class="surv-radios">
+          <label class="surv-r active"><input type="radio" name="ctype" value="استفسار" checked onchange="setCtype(this)"><span>استفسار</span></label>
+          <label class="surv-r"><input type="radio" name="ctype" value="طلب" onchange="setCtype(this)"><span>طلب</span></label>
+          <label class="surv-r"><input type="radio" name="ctype" value="شكوى" onchange="setCtype(this)"><span>شكوى</span></label>
         </div>
       </div>
+
+      <!-- النموذج -->
+      <form id="ctForm" onsubmit="sContact(event)" class="surv-form">
+
+        <!-- حقول الشركة -->
+        <div id="companyFields">
+          <div class="fr"><label>اسم الشركة *</label><input type="text" class="fi" id="c_name" placeholder="اسم الشركة" required></div>
+          <div class="fr"><label>رقم السجل التجاري *</label><input type="text" class="fi" id="c_cr" placeholder="رقم السجل التجاري" required></div>
+        </div>
+
+        <!-- حقول الفرد -->
+        <div id="individualFields" style="display:none">
+          <div class="fr"><label>الاسم الكامل *</label><input type="text" class="fi" id="i_name" placeholder="الاسم الكامل" required></div>
+        </div>
+
+        <!-- حقول مشتركة -->
+        <div class="fr"><label>البريد الإلكتروني *</label><input type="email" class="fi" id="ct_email" placeholder="البريد الإلكتروني" required></div>
+        <div class="fr"><label>رقم الجوال *</label><input type="tel" class="fi" id="ct_phone" placeholder="رقم الجوال" required></div>
+        <div class="fr"><label>الملاحظة *</label><textarea class="fi" id="ct_note" rows="4" placeholder="نص الملاحظة" required></textarea></div>
+
+        <!-- موافقة -->
+        <label class="surv-check">
+          <input type="checkbox" id="ct_agree" required>
+          <span>بتعبئتك لهذا النموذج، فإنك تُقر بقراءة إشعار الخصوصية. كما تؤكد أن البيانات المدخلة هي بيانات دقيقة وصحيحة، وأنك تتحمل المسؤولية الكاملة عن صحتها.</span>
+        </label>
+
+        <button type="submit" class="sbtn-g" style="margin-top:8px">إرسال</button>
+      </form>
+
     </div>
   </div>
 </section>
@@ -1294,12 +1380,33 @@ function sCareers(e){
   document.getElementById('cForm').reset();
   toast('جاري فتح البريد → hr@altasaluh.com.sa','#2cc58b');
 }
+// Survey form
+let survTab='company', survType='استفسار';
+function switchTab(tab,btn){
+  survTab=tab;
+  document.querySelectorAll('.surv-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('companyFields').style.display=tab==='company'?'':'none';
+  document.getElementById('individualFields').style.display=tab==='individual'?'':'none';
+  // toggle required
+  document.getElementById('c_name').required=tab==='company';
+  document.getElementById('c_cr').required=tab==='company';
+  document.getElementById('i_name').required=tab==='individual';
+}
+function setCtype(inp){
+  survType=inp.value;
+  document.querySelectorAll('.surv-r').forEach(r=>r.classList.remove('active'));
+  inp.closest('.surv-r').classList.add('active');
+}
 function sContact(e){
   e.preventDefault();
-  const body=`رسالة جديدة\n${'─'.repeat(30)}\nالاسم: ${g('tn')}\nالجوال: ${g('tp')}\nالبريد: ${g('te')}\nالجهة: ${g('tc')||'—'}\nالموضوع: ${g('ts')}\nالرسالة:\n${g('tm')}\n${'─'.repeat(30)}\n${new Date().toLocaleDateString('ar-SA')}`;
-  location.href=`mailto:info@altasaluh.com.sa?subject=${encodeURIComponent('استفسار: '+g('ts')+' – '+g('tn'))}&body=${encodeURIComponent(body)}`;
+  const isCompany=survTab==='company';
+  const name=isCompany?g('c_name'):g('i_name');
+  const cr=isCompany?`\nرقم السجل: ${g('c_cr')}`:'';
+  const body=`نوع المرسل: ${isCompany?'شركة':'فرد'}${cr}\nالاسم: ${name}\nنوع التواصل: ${survType}\nالبريد: ${g('ct_email')}\nالجوال: ${g('ct_phone')}\nالملاحظة:\n${g('ct_note')}\n${'─'.repeat(30)}\n${new Date().toLocaleDateString('ar-SA')}`;
+  location.href=`mailto:info@altasaluh.com.sa?subject=${encodeURIComponent(survType+' – '+name)}&body=${encodeURIComponent(body)}`;
   document.getElementById('ctForm').reset();
-  toast('جاري فتح البريد → info@altasaluh.com.sa','#071827');
+  toast('جاري فتح البريد → info@altasaluh.com.sa','#2cc58b');
 }
 </script>
 </body>
