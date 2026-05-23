@@ -336,12 +336,36 @@ const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInterse
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
 function g(id){return document.getElementById(id)?.value||''}
 function toast(msg){const el=document.createElement('div');el.textContent=msg;Object.assign(el.style,{position:'fixed',bottom:'32px',left:'50%',transform:'translateX(-50%)',background:'#2cc58b',color:'#071827',padding:'13px 24px',borderRadius:'10px',fontWeight:'800',fontSize:'.85rem',zIndex:'9999',boxShadow:'0 8px 28px rgba(0,0,0,.2)',maxWidth:'90vw',textAlign:'center',transition:'opacity .3s',opacity:'0'});document.body.appendChild(el);setTimeout(()=>el.style.opacity='1',10);setTimeout(()=>{el.style.opacity='0';setTimeout(()=>el.remove(),300);},4500);}
-function sCareers(e){
+async function sCareers(e){
   e.preventDefault();
-  const body=`طلب توظيف\n${'─'.repeat(30)}\nالاسم: ${g('cn')}\nالجوال: ${g('cp')}\nالبريد: ${g('ce')}\nالوظيفة: ${g('cj')||'—'}\nالمؤهل: ${g('cq')||'—'}\nرسالة التقديم:\n${g('cmsg')||'—'}\n${'─'.repeat(30)}\n${new Date().toLocaleDateString('ar-SA')}`;
-  location.href=`mailto:hr@altasaluh.com.sa?subject=${encodeURIComponent('طلب توظيف – '+g('cn'))}&body=${encodeURIComponent(body)}`;
-  document.getElementById('cForm').reset();
-  toast('جاري فتح البريد → hr@altasaluh.com.sa');
+  const btn=e.submitter||document.querySelector('#cForm button[type=submit]');
+  const origHTML=btn.innerHTML;
+  btn.disabled=true;btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="12" cy="12" r="10"/></svg> جاري الإرسال...';
+  const data={
+    _subject:'طلب توظيف – '+g('cn'),
+    _template:'table',
+    _captcha:'false',
+    'الاسم':g('cn'),
+    'البريد الإلكتروني':g('ce'),
+    'رقم الجوال':g('cp'),
+    'الوظيفة المطلوبة':g('cj')||'—',
+    'المؤهل الدراسي':g('cq')||'—',
+    'رسالة التقديم':g('cmsg')||'—',
+    'التاريخ':new Date().toLocaleDateString('ar-SA')
+  };
+  try{
+    const res=await fetch('https://formsubmit.co/ajax/hr@altasaluh.com.sa',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(data)
+    });
+    const json=await res.json();
+    if(json.success==='true'||json.success===true){
+      document.getElementById('cForm').reset();
+      toast('✓ تم إرسال طلبك بنجاح، سنتواصل معك قريباً');
+    }else{toast('حدث خطأ، يرجى المحاولة لاحقاً');}
+  }catch{toast('تعذّر الاتصال، يرجى التحقق من الإنترنت');}
+  finally{btn.disabled=false;btn.innerHTML=origHTML;}
 }
 let curLang=localStorage.getItem('lang')||'ar';
 function toggleLang(){curLang=curLang==='ar'?'en':'ar';localStorage.setItem('lang',curLang);document.getElementById('langBtn').textContent=curLang==='ar'?'EN':'AR';document.documentElement.lang=curLang;document.documentElement.dir=curLang==='ar'?'rtl':'ltr';}
