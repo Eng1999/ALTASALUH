@@ -773,6 +773,23 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 .f-top.on{opacity:1;pointer-events:all}
 .f-top:hover{transform:translateY(-3px)}
 
+
+/* ── LANGUAGE TOGGLE ── */
+.lang-btn{
+  padding:6px 13px;border:1.5px solid rgba(255,255,255,.22);
+  border-radius:7px;color:rgba(255,255,255,.65);font-size:.78rem;font-weight:900;
+  cursor:pointer;background:rgba(255,255,255,.04);transition:.2s;
+  letter-spacing:.07em;font-family:inherit;flex-shrink:0;
+}
+.lang-btn:hover{border-color:var(--G);color:var(--G);background:rgba(44,197,139,.08)}
+/* ── VISION 2030 ── */
+.v2030-strip{
+  margin-top:22px;display:flex;align-items:center;justify-content:center;
+  gap:10px;opacity:.82;width:100%;
+}
+.v2030-strip img{height:58px;width:auto;filter:brightness(1.05) drop-shadow(0 2px 8px rgba(0,0,0,.25))}
+.v2030-lbl{color:rgba(255,255,255,.3);font-size:.62rem;font-weight:700;letter-spacing:.06em}
+
 /* responsive */
 @media(max-width:1100px){
   .hero-grid{grid-template-columns:1fr}.dw{display:none}
@@ -817,17 +834,18 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <span class="logo-name">شركة التصالح</span>
     </a>
     <div class="nav-links">
-      <a href="#home" class="on">الرئيسية</a>
-      <a href="#about">عن الشركة</a>
-      <a href="#services">الخدمات</a>
-      <a href="#strategy">الاستراتيجية</a>
-      <a href="#advantages">المميزات</a>
-      <a href="#careers">التوظيف</a>
-      <a href="#contact">تواصل معنا</a>
+      <a href="#home" class="on" data-i18n="nav-home">الرئيسية</a>
+      <a href="#about" data-i18n="nav-about">عن الشركة</a>
+      <a href="#services" data-i18n="nav-services">الخدمات</a>
+      <a href="#strategy" data-i18n="nav-strategy">الاستراتيجية</a>
+      <a href="#advantages" data-i18n="nav-advantages">المميزات</a>
+      <a href="#careers" data-i18n="nav-careers">التوظيف</a>
+      <a href="#contact" data-i18n="nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
       <a href="tel:0115138328" class="nav-phone">0115138328</a>
-      <a href="#contact" class="btn-cta">ابدأ الآن</a>
+      <a href="#contact" class="btn-cta" data-i18n="nav-cta">ابدأ الآن</a>
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -835,13 +853,13 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 <!-- MOBILE NAV -->
 <nav class="mob" id="mob">
-  <a href="#home" onclick="cm()">الرئيسية</a>
-  <a href="#about" onclick="cm()">عن الشركة</a>
-  <a href="#services" onclick="cm()">الخدمات</a>
-  <a href="#strategy" onclick="cm()">الاستراتيجية</a>
-  <a href="#advantages" onclick="cm()">المميزات</a>
-  <a href="#careers" onclick="cm()">التوظيف</a>
-  <a href="#contact" onclick="cm()">تواصل معنا</a>
+  <a href="#home" onclick="cm()" data-i18n="nav-home">الرئيسية</a>
+  <a href="#about" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
+  <a href="#services" onclick="cm()" data-i18n="nav-services">الخدمات</a>
+  <a href="#strategy" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
+  <a href="#advantages" onclick="cm()" data-i18n="nav-advantages">المميزات</a>
+  <a href="#careers" onclick="cm()" data-i18n="nav-careers">التوظيف</a>
+  <a href="#contact" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
   <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
 </nav>
 
@@ -852,19 +870,19 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   <div class="hero-body">
     <div class="hero-grid">
       <div>
-        <h1>شريكك الأول<em>في تحصيل الديون</em></h1>
-        <p class="hero-sub">فريق من 180+ متخصص وأنظمة تقنية متطورة.</p>
+        <h1 data-i18n-html="hero-h1">شريكك الأول<em>في تحصيل الديون</em></h1>
+        <p class="hero-sub" data-i18n="hero-sub">فريق من 180+ متخصص وأنظمة تقنية متطورة.</p>
         <div class="hero-btns">
-          <a href="#contact" class="btn-solid">تواصل معنا</a>
-          <a href="#services" class="btn-ghost">استعرض الخدمات</a>
+          <a href="#contact" class="btn-solid" data-i18n="hero-btn1">تواصل معنا</a>
+          <a href="#services" class="btn-ghost" data-i18n="hero-btn2">استعرض الخدمات</a>
         </div>
         <div class="hero-kw">
-          <div class="kw"><em>تحصيل</em> فعّال</div>
-          <div class="kw"><em>حلول</em> قانونية</div>
-          <div class="kw">استرداد <em>حقوقك</em></div>
-          <div class="kw">حماية <em>محفظتك</em></div>
-          <div class="kw">فريق <em>متخصص</em></div>
-          <div class="kw">امتثال <em>تنظيمي</em></div>
+          <div class="kw" data-i18n-html="kw1"><em>تحصيل</em> فعّال</div>
+          <div class="kw" data-i18n-html="kw2"><em>حلول</em> قانونية</div>
+          <div class="kw" data-i18n-html="kw3">استرداد <em>حقوقك</em></div>
+          <div class="kw" data-i18n-html="kw4">حماية <em>محفظتك</em></div>
+          <div class="kw" data-i18n-html="kw5">فريق <em>متخصص</em></div>
+          <div class="kw" data-i18n-html="kw6">امتثال <em>تنظيمي</em></div>
         </div>
       </div>
 
@@ -903,12 +921,12 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <!-- TICKER -->
 <div class="ticker">
   <div class="tk-inner">
-    <span>تحصيل جهات التمويل</span><span>القروض الشخصية</span><span>التمويل التأجيري</span>
-    <span>التمويل العقاري</span><span>البطاقات الائتمانية</span><span>المنشآت الصغيرة والمتوسطة</span>
-    <span>رفع القضايا والتنفيذ</span><span>ديون الاتصالات</span>
-    <span>تحصيل جهات التمويل</span><span>القروض الشخصية</span><span>التمويل التأجيري</span>
-    <span>التمويل العقاري</span><span>البطاقات الائتمانية</span><span>المنشآت الصغيرة والمتوسطة</span>
-    <span>رفع القضايا والتنفيذ</span><span>ديون الاتصالات</span>
+    <span data-i18n="tk1">تحصيل جهات التمويل</span><span data-i18n="tk2">القروض الشخصية</span><span data-i18n="tk3">التمويل التأجيري</span>
+    <span data-i18n="tk4">التمويل العقاري</span><span data-i18n="tk5">البطاقات الائتمانية</span><span data-i18n="tk6">المنشآت الصغيرة والمتوسطة</span>
+    <span data-i18n="tk7">رفع القضايا والتنفيذ</span><span data-i18n="tk8">ديون الاتصالات</span>
+    <span data-i18n="tk1">تحصيل جهات التمويل</span><span data-i18n="tk2">القروض الشخصية</span><span data-i18n="tk3">التمويل التأجيري</span>
+    <span data-i18n="tk4">التمويل العقاري</span><span data-i18n="tk5">البطاقات الائتمانية</span><span data-i18n="tk6">المنشآت الصغيرة والمتوسطة</span>
+    <span data-i18n="tk7">رفع القضايا والتنفيذ</span><span data-i18n="tk8">ديون الاتصالات</span>
   </div>
 </div>
 
@@ -918,16 +936,16 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     <div class="about-g">
       <div class="img-w rv-l">
         <img src="assets/office-hero.jpg" alt="مكتب التصالح" onerror="this.style.background='#f4fcf9';this.style.minHeight='400px'">
-        <div class="img-badge"><strong>2022</strong><span>عام التأسيس</span></div>
+        <div class="img-badge"><strong>2022</strong><span data-i18n="about-estab">عام التأسيس</span></div>
       </div>
       <div>
-        <span class="tag tag-g rv" data-d="2">من نحن</span>
-        <h2 class="t t-d rv" data-d="3">من <em>نحن</em></h2>
-        <p class="lead lead-d rv" data-d="4">تأسست عام 2022م كشركة ذات مسؤولية محدودة، تسعى لريادة قطاع تحصيل الديون في المملكة بكوادر متخصصة وأنظمة تقنية متطورة.</p>
+        <span class="tag tag-g rv" data-d="2" data-i18n="about-tag">من نحن</span>
+        <h2 class="t t-d rv" data-d="3" data-i18n-html="about-h2">من <em>نحن</em></h2>
+        <p class="lead lead-d rv" data-d="4" data-i18n="about-lead">تأسست عام 2022م كشركة ذات مسؤولية محدودة، تسعى لريادة قطاع تحصيل الديون في المملكة بكوادر متخصصة وأنظمة تقنية متطورة.</p>
         <div class="a-points">
-          <div class="ap rv" data-d="5"><div><strong>الهدف</strong><span>الاسم الأول والموثوق في التحصيل</span></div></div>
-          <div class="ap rv" data-d="6"><div><strong>180–200 موظف</strong><span>مؤهل في التحصيل والتمويل</span></div></div>
-          <div class="ap rv" data-d="7"><div><strong>فريق قانوني</strong><span>محامون ومستشارون قانونيون</span></div></div>
+          <div class="ap rv" data-d="5"><div><strong data-i18n="ap1-t">الهدف</strong><span data-i18n="ap1-s">الاسم الأول والموثوق في التحصيل</span></div></div>
+          <div class="ap rv" data-d="6"><div><strong data-i18n="ap2-t">180–200 موظف</strong><span data-i18n="ap2-s">مؤهل في التحصيل والتمويل</span></div></div>
+          <div class="ap rv" data-d="7"><div><strong data-i18n="ap3-t">فريق قانوني</strong><span data-i18n="ap3-s">محامون ومستشارون قانونيون</span></div></div>
         </div>
       </div>
     </div>
@@ -938,9 +956,9 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <div class="sec-g" style="padding-block:0">
   <div class="wrap">
     <div class="stats-g">
-      <div class="st"><div class="st-val" data-count="180" data-suffix="+">180+</div><div class="st-lbl">موظف متخصص</div></div>
-      <div class="st"><div class="st-val" data-count="8">8</div><div class="st-lbl">خدمات تحصيل</div></div>
-      <div class="st"><div class="st-val" data-count="3">3</div><div class="st-lbl">أنظمة تقنية</div></div>
+      <div class="st"><div class="st-val" data-count="180" data-suffix="+">180+</div><div class="st-lbl" data-i18n="st1">موظف متخصص</div></div>
+      <div class="st"><div class="st-val" data-count="8">8</div><div class="st-lbl" data-i18n="st2">خدمات تحصيل</div></div>
+      <div class="st"><div class="st-val" data-count="3">3</div><div class="st-lbl" data-i18n="st3">أنظمة تقنية</div></div>
     </div>
   </div>
 </div>
@@ -949,21 +967,21 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-d" id="vision">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-g rv">توجهنا</span>
-      <h2 class="t t-w rv" data-d="2">الرؤية <em>&</em> الرسالة</h2>
+      <span class="tag tag-g rv" data-i18n="vm-tag">توجهنا</span>
+      <h2 class="t t-w rv" data-d="2" data-i18n-html="vm-h2">الرؤية <em>&</em> الرسالة</h2>
     </div>
     <div class="vm-g rv">
       <div class="vm-c vm-v">
         <div class="vm-num">01</div>
-        <h3>رؤيتنا</h3>
-        <p>أن نصبح الشريك الأساسي الأول لجهات التمويل في تحصيل الديون محلياً ودولياً.</p>
-        <span class="vm-pill">الريادة</span>
+        <h3 data-i18n="vm-v-h">رؤيتنا</h3>
+        <p data-i18n="vm-v-p">أن نصبح الشريك الأساسي الأول لجهات التمويل في تحصيل الديون محلياً ودولياً.</p>
+        <span class="vm-pill" data-i18n="vm-v-pill">الريادة</span>
       </div>
       <div class="vm-c vm-m">
         <div class="vm-num">02</div>
-        <h3>رسالتنا</h3>
-        <p>تقديم خدمات تحصيل بأعلى معايير الجودة مع الحفاظ على علاقة جهات التمويل بعملائها.</p>
-        <span class="vm-pill">الجودة</span>
+        <h3 data-i18n="vm-m-h">رسالتنا</h3>
+        <p data-i18n="vm-m-p">تقديم خدمات تحصيل بأعلى معايير الجودة مع الحفاظ على علاقة جهات التمويل بعملائها.</p>
+        <span class="vm-pill" data-i18n="vm-m-pill">الجودة</span>
       </div>
     </div>
   </div>
@@ -973,18 +991,18 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-s" id="services">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-d rv">ما نقدمه</span>
-      <h2 class="t t-d rv" data-d="2">خدماتنا <em>المتكاملة</em></h2>
+      <span class="tag tag-d rv" data-i18n="svc-tag">ما نقدمه</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="svc-h2">خدماتنا <em>المتكاملة</em></h2>
     </div>
     <div class="svc-g">
-      <div class="sc rv" data-d="1"><div class="sc-n">01</div><h3>تحصيل جهات التمويل</h3><p>بنوك، شركات تمويل، وجهات خدمية</p></div>
-      <div class="sc rv" data-d="2"><div class="sc-n">02</div><h3>القروض الشخصية</h3><p>بمختلف أعمار الديون وأنواع المديونيات</p></div>
-      <div class="sc rv" data-d="3"><div class="sc-n">03</div><h3>التمويل التأجيري</h3><p>بأعلى معدلات الاسترداد</p></div>
-      <div class="sc rv" data-d="4"><div class="sc-n">04</div><h3>التمويل العقاري</h3><p>جميع أنواع التمويل العقاري</p></div>
-      <div class="sc rv" data-d="1"><div class="sc-n">05</div><h3>البطاقات الائتمانية</h3><p>بأساليب احترافية</p></div>
-      <div class="sc rv" data-d="2"><div class="sc-n">06</div><h3>المنشآت ص و م</h3><p>حلول مخصصة للشركات الصغيرة والمتوسطة</p></div>
-      <div class="sc rv" data-d="3"><div class="sc-n">07</div><h3>القضايا والتنفيذ</h3><p>محاكم التنفيذ والمحاكم العامة</p></div>
-      <div class="sc rv" data-d="4"><div class="sc-n">08</div><h3>ديون الاتصالات</h3><p>جميع شركات الاتصالات</p></div>
+      <div class="sc rv" data-d="1"><div class="sc-n">01</div><h3 data-i18n="sc1-h">تحصيل جهات التمويل</h3><p data-i18n="sc1-p">بنوك، شركات تمويل، وجهات خدمية</p></div>
+      <div class="sc rv" data-d="2"><div class="sc-n">02</div><h3 data-i18n="sc2-h">القروض الشخصية</h3><p data-i18n="sc2-p">بمختلف أعمار الديون وأنواع المديونيات</p></div>
+      <div class="sc rv" data-d="3"><div class="sc-n">03</div><h3 data-i18n="sc3-h">التمويل التأجيري</h3><p data-i18n="sc3-p">بأعلى معدلات الاسترداد</p></div>
+      <div class="sc rv" data-d="4"><div class="sc-n">04</div><h3 data-i18n="sc4-h">التمويل العقاري</h3><p data-i18n="sc4-p">جميع أنواع التمويل العقاري</p></div>
+      <div class="sc rv" data-d="1"><div class="sc-n">05</div><h3 data-i18n="sc5-h">البطاقات الائتمانية</h3><p data-i18n="sc5-p">بأساليب احترافية</p></div>
+      <div class="sc rv" data-d="2"><div class="sc-n">06</div><h3 data-i18n="sc6-h">المنشآت ص و م</h3><p data-i18n="sc6-p">حلول مخصصة للشركات الصغيرة والمتوسطة</p></div>
+      <div class="sc rv" data-d="3"><div class="sc-n">07</div><h3 data-i18n="sc7-h">القضايا والتنفيذ</h3><p data-i18n="sc7-p">محاكم التنفيذ والمحاكم العامة</p></div>
+      <div class="sc rv" data-d="4"><div class="sc-n">08</div><h3 data-i18n="sc8-h">ديون الاتصالات</h3><p data-i18n="sc8-p">جميع شركات الاتصالات</p></div>
     </div>
   </div>
 </section>
@@ -994,21 +1012,21 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   <div class="wrap">
     <div class="data-g">
       <div>
-        <span class="tag tag-g rv">بالأرقام</span>
-        <h2 class="t t-d rv" data-d="2">أداؤنا <em>بالبيانات</em></h2>
-        <p class="lead lead-d rv" data-d="3" style="margin-bottom:28px">مؤشرات واضحة تعكس التزامنا بالجودة</p>
+        <span class="tag tag-g rv" data-i18n="data-tag">بالأرقام</span>
+        <h2 class="t t-d rv" data-d="2" data-i18n-html="data-h2">أداؤنا <em>بالبيانات</em></h2>
+        <p class="lead lead-d rv" data-d="3" style="margin-bottom:28px" data-i18n="data-lead">مؤشرات واضحة تعكس التزامنا بالجودة</p>
         <div class="prog-bars">
-          <div class="rv" data-d="3"><div class="pb-head"><span class="pb-name">الالتزام بالجودة</span><span class="pb-pct">95%</span></div><div class="pb-track"><div class="pb-fill" data-w="95"></div></div></div>
-          <div class="rv" data-d="4"><div class="pb-head"><span class="pb-name">رضا الشركاء</span><span class="pb-pct">92%</span></div><div class="pb-track"><div class="pb-fill" data-w="92"></div></div></div>
-          <div class="rv" data-d="5"><div class="pb-head"><span class="pb-name">التوطين</span><span class="pb-pct">88%</span></div><div class="pb-track"><div class="pb-fill" data-w="88"></div></div></div>
-          <div class="rv" data-d="6"><div class="pb-head"><span class="pb-name">سرعة التنفيذ</span><span class="pb-pct">90%</span></div><div class="pb-track"><div class="pb-fill" data-w="90"></div></div></div>
+          <div class="rv" data-d="3"><div class="pb-head"><span class="pb-name" data-i18n="pb1">الالتزام بالجودة</span><span class="pb-pct">95%</span></div><div class="pb-track"><div class="pb-fill" data-w="95"></div></div></div>
+          <div class="rv" data-d="4"><div class="pb-head"><span class="pb-name" data-i18n="pb2">رضا الشركاء</span><span class="pb-pct">92%</span></div><div class="pb-track"><div class="pb-fill" data-w="92"></div></div></div>
+          <div class="rv" data-d="5"><div class="pb-head"><span class="pb-name" data-i18n="pb3">التوطين</span><span class="pb-pct">88%</span></div><div class="pb-track"><div class="pb-fill" data-w="88"></div></div></div>
+          <div class="rv" data-d="6"><div class="pb-head"><span class="pb-name" data-i18n="pb4">سرعة التنفيذ</span><span class="pb-pct">90%</span></div><div class="pb-track"><div class="pb-fill" data-w="90"></div></div></div>
         </div>
       </div>
       <div class="big-stats">
-        <div class="bs rv" data-d="2"><div><div class="bs-num"><em>صفر</em> تساهل</div><div class="bs-lbl">في حماية حقوق العملاء</div></div></div>
-        <div class="bs rv" data-d="3"><div><div class="bs-num">أسرع <em>استجابة</em></div><div class="bs-lbl">لكل محفظة ديون</div></div></div>
-        <div class="bs rv" data-d="4"><div><div class="bs-num">تغطية <em>شاملة</em></div><div class="bs-lbl">لجميع أنواع الديون</div></div></div>
-        <div class="bs rv" data-d="5"><div><div class="bs-num">سرية <em>تامة</em></div><div class="bs-lbl">لبيانات الشركاء والمدينين</div></div></div>
+        <div class="bs rv" data-d="2"><div><div class="bs-num" data-i18n-html="bs1-n"><em>صفر</em> تساهل</div><div class="bs-lbl" data-i18n="bs1-l">في حماية حقوق العملاء</div></div></div>
+        <div class="bs rv" data-d="3"><div><div class="bs-num" data-i18n-html="bs2-n">أسرع <em>استجابة</em></div><div class="bs-lbl" data-i18n="bs2-l">لكل محفظة ديون</div></div></div>
+        <div class="bs rv" data-d="4"><div><div class="bs-num" data-i18n-html="bs3-n">تغطية <em>شاملة</em></div><div class="bs-lbl" data-i18n="bs3-l">لجميع أنواع الديون</div></div></div>
+        <div class="bs rv" data-d="5"><div><div class="bs-num" data-i18n-html="bs4-n">سرية <em>تامة</em></div><div class="bs-lbl" data-i18n="bs4-l">لبيانات الشركاء والمدينين</div></div></div>
       </div>
     </div>
   </div>
@@ -1018,13 +1036,13 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-d" id="strategy">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-g rv">خارطة الطريق</span>
-      <h2 class="t t-w rv" data-d="2">استراتيجيتنا <em>الثلاثية</em></h2>
+      <span class="tag tag-g rv" data-i18n="str-tag">خارطة الطريق</span>
+      <h2 class="t t-w rv" data-d="2" data-i18n-html="str-h2">استراتيجيتنا <em>الثلاثية</em></h2>
     </div>
     <div class="str-g rv">
-      <div class="str-c"><div class="str-n">01</div><h3>توسيع قاعدة العملاء</h3><p>الخيار الأساسي للبنوك وجهات التمويل بخدمات عالية الجودة وسريعة التنفيذ.</p></div>
-      <div class="str-c"><div class="str-n">02</div><h3>رأس المال البشري</h3><p>استقطاب أفضل الكفاءات وتطويرها ببرامج تدريب مستمرة ومتخصصة.</p></div>
-      <div class="str-c"><div class="str-n">03</div><h3>البنية التقنية</h3><p>أنظمة حديثة لإدارة التحصيل تدعم الكفاءة وتعزز تجربة الشركاء.</p></div>
+      <div class="str-c"><div class="str-n">01</div><h3 data-i18n="str1-h">توسيع قاعدة العملاء</h3><p data-i18n="str1-p">الخيار الأساسي للبنوك وجهات التمويل بخدمات عالية الجودة وسريعة التنفيذ.</p></div>
+      <div class="str-c"><div class="str-n">02</div><h3 data-i18n="str2-h">رأس المال البشري</h3><p data-i18n="str2-p">استقطاب أفضل الكفاءات وتطويرها ببرامج تدريب مستمرة ومتخصصة.</p></div>
+      <div class="str-c"><div class="str-n">03</div><h3 data-i18n="str3-h">البنية التقنية</h3><p data-i18n="str3-p">أنظمة حديثة لإدارة التحصيل تدعم الكفاءة وتعزز تجربة الشركاء.</p></div>
     </div>
   </div>
 </section>
@@ -1033,15 +1051,15 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-s" id="methodology">
   <div class="wrap">
     <div class="tc" style="margin-bottom:56px">
-      <span class="tag tag-d rv">كيف نعمل</span>
-      <h2 class="t t-d rv" data-d="2">منهجية <em>التحصيل</em></h2>
+      <span class="tag tag-d rv" data-i18n="mth-tag">كيف نعمل</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="mth-h2">منهجية <em>التحصيل</em></h2>
     </div>
     <div class="mth-g">
-      <div class="ms rv" data-d="1"><div class="ms-c"><span class="ms-n">01</span></div><h4>دراسة المحفظة</h4><p>تحليل وتصنيف حسب المخاطر</p></div>
-      <div class="ms rv" data-d="2"><div class="ms-c"><span class="ms-n">02</span></div><h4>خطة التحصيل</h4><p>خطة مناسبة لكل محفظة</p></div>
-      <div class="ms rv" data-d="3"><div class="ms-c"><span class="ms-n">03</span></div><h4>التنفيذ</h4><p>تواصل باحترافية</p></div>
-      <div class="ms rv" data-d="4"><div class="ms-c"><span class="ms-n">04</span></div><h4>إدارة البيانات</h4><p>أنظمة خاصة بالشركة</p></div>
-      <div class="ms rv" data-d="5"><div class="ms-c"><span class="ms-n">05</span></div><h4>التقارير</h4><p>تقارير دورية للجهات التمويلية</p></div>
+      <div class="ms rv" data-d="1"><div class="ms-c"><span class="ms-n">01</span></div><h4 data-i18n="mth1-h">دراسة المحفظة</h4><p data-i18n="mth1-p">تحليل وتصنيف حسب المخاطر</p></div>
+      <div class="ms rv" data-d="2"><div class="ms-c"><span class="ms-n">02</span></div><h4 data-i18n="mth2-h">خطة التحصيل</h4><p data-i18n="mth2-p">خطة مناسبة لكل محفظة</p></div>
+      <div class="ms rv" data-d="3"><div class="ms-c"><span class="ms-n">03</span></div><h4 data-i18n="mth3-h">التنفيذ</h4><p data-i18n="mth3-p">تواصل باحترافية</p></div>
+      <div class="ms rv" data-d="4"><div class="ms-c"><span class="ms-n">04</span></div><h4 data-i18n="mth4-h">إدارة البيانات</h4><p data-i18n="mth4-p">أنظمة خاصة بالشركة</p></div>
+      <div class="ms rv" data-d="5"><div class="ms-c"><span class="ms-n">05</span></div><h4 data-i18n="mth5-h">التقارير</h4><p data-i18n="mth5-p">تقارير دورية للجهات التمويلية</p></div>
     </div>
   </div>
 </section>
@@ -1050,45 +1068,45 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-w" id="advantages">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-g rv">لماذا التصالح</span>
-      <h2 class="t t-d rv" data-d="2">مميزاتنا <em>التنافسية</em></h2>
+      <span class="tag tag-g rv" data-i18n="adv-tag">لماذا التصالح</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="adv-h2">مميزاتنا <em>التنافسية</em></h2>
     </div>
     <div class="adv-g">
       <div class="ac rv" data-d="1">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>كوادر متخصصة</h3><p>فرق ذات خبرة في التمويل والتحصيل</p>
+        <h3 data-i18n="adv1-h">كوادر متخصصة</h3><p data-i18n="adv1-p">فرق ذات خبرة في التمويل والتحصيل</p>
       </div>
       <div class="ac rv" data-d="2">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <h3>خبرة مثبتة</h3><p>سنوات من تحصيل الديون للغير</p>
+        <h3 data-i18n="adv2-h">خبرة مثبتة</h3><p data-i18n="adv2-p">سنوات من تحصيل الديون للغير</p>
       </div>
       <div class="ac rv" data-d="3">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <h3>أنظمة متقدمة</h3><p>تقنيات حديثة بحماية عالية</p>
+        <h3 data-i18n="adv3-h">أنظمة متقدمة</h3><p data-i18n="adv3-p">تقنيات حديثة بحماية عالية</p>
       </div>
       <div class="ac rv" data-d="4">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>مقرات مجهزة</h3><p>بيئة عمل متكاملة</p>
+        <h3 data-i18n="adv4-h">مقرات مجهزة</h3><p data-i18n="adv4-p">بيئة عمل متكاملة</p>
       </div>
       <div class="ac rv" data-d="1">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h3>سرية تامة</h3><p>حماية المعلومات بأعلى المعايير</p>
+        <h3 data-i18n="adv5-h">سرية تامة</h3><p data-i18n="adv5-p">حماية المعلومات بأعلى المعايير</p>
       </div>
       <div class="ac rv" data-d="2">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>إدارة متخصصة</h3><p>التزام بمعايير الجهات المختصة</p>
+        <h3 data-i18n="adv6-h">إدارة متخصصة</h3><p data-i18n="adv6-p">التزام بمعايير الجهات المختصة</p>
       </div>
       <div class="ac rv" data-d="3">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
-        <h3>فريق قانوني</h3><p>محامون ومستشارون قانونيون</p>
+        <h3 data-i18n="adv7-h">فريق قانوني</h3><p data-i18n="adv7-p">محامون ومستشارون قانونيون</p>
       </div>
       <div class="ac rv" data-d="4">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3>عمل عن بُعد</h3><p>استمرارية في أي ظرف</p>
+        <h3 data-i18n="adv8-h">عمل عن بُعد</h3><p data-i18n="adv8-p">استمرارية في أي ظرف</p>
       </div>
       <div class="ac rv" data-d="1">
         <div class="ac-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg></div>
-        <h3>أنظمة تقنية</h3><p>خاضعة لمعايير الهيئات التنظيمية المختصة</p>
+        <h3 data-i18n="adv9-h">أنظمة تقنية</h3><p data-i18n="adv9-p">خاضعة لمعايير الهيئات التنظيمية المختصة</p>
       </div>
     </div>
   </div>
@@ -1097,9 +1115,9 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <!-- ══ PARTNERS GRID ══ -->
 <section class="sec sec-s" id="partners" style="padding-block:clamp(56px,7vw,90px)">
   <div class="wrap tc" style="margin-bottom:48px">
-    <span class="tag tag-g rv">ثقة متبادلة</span>
-    <h2 class="t t-d rv" data-d="2">شركاؤنا <em>وعملاؤنا</em></h2>
-    <p class="lead lead-d rv" style="max-width:480px;margin:0 auto" data-d="3">نفخر بشراكات استراتيجية تمتد عبر قطاعات متعددة</p>
+    <span class="tag tag-g rv" data-i18n="prt-tag">ثقة متبادلة</span>
+    <h2 class="t t-d rv" data-d="2" data-i18n-html="prt-h2">شركاؤنا <em>وعملاؤنا</em></h2>
+    <p class="lead lead-d rv" style="max-width:480px;margin:0 auto" data-d="3" data-i18n="prt-lead">نفخر بشراكات استراتيجية تمتد عبر قطاعات متعددة</p>
   </div>
   <div class="wrap">
     <div class="partners-grid" id="partnersGrid">
@@ -1120,22 +1138,22 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-w" id="careers">
   <div class="wrap">
     <div class="tc" style="margin-bottom:44px">
-      <span class="tag tag-g rv">انضم إلينا</span>
-      <h2 class="t t-d rv" data-d="2">فرص <em>التوظيف</em></h2>
+      <span class="tag tag-g rv" data-i18n="car-tag">انضم إلينا</span>
+      <h2 class="t t-d rv" data-d="2" data-i18n-html="car-h2">فرص <em>التوظيف</em></h2>
     </div>
     <div class="car-g">
       <div class="rv-l">
         <div class="perks">
-          <div class="perk"><div class="pk-i"></div><span>تدريب مكثف قبل العمل</span></div>
-          <div class="perk"><div class="pk-i"></div><span>مسار وظيفي واضح</span></div>
-          <div class="perk"><div class="pk-i"></div><span>حوافز أداء مجزية</span></div>
-          <div class="perk"><div class="pk-i"></div><span>بيئة داعمة للتوطين</span></div>
-          <div class="perk"><div class="pk-i"></div><span>جاهزية العمل عن بُعد</span></div>
+          <div class="perk"><div class="pk-i"></div><span data-i18n="pk1">تدريب مكثف قبل العمل</span></div>
+          <div class="perk"><div class="pk-i"></div><span data-i18n="pk2">مسار وظيفي واضح</span></div>
+          <div class="perk"><div class="pk-i"></div><span data-i18n="pk3">حوافز أداء مجزية</span></div>
+          <div class="perk"><div class="pk-i"></div><span data-i18n="pk4">بيئة داعمة للتوطين</span></div>
+          <div class="perk"><div class="pk-i"></div><span data-i18n="pk5">جاهزية العمل عن بُعد</span></div>
         </div>
       </div>
       <div class="rv-r">
         <div class="fbox">
-          <h3>قدّم طلبك</h3>
+          <h3 data-i18n="car-form-h">قدّم طلبك</h3>
           <form id="cForm" onsubmit="sCareers(event)">
             <div class="fr2">
               <div class="fr"><label>الاسم *</label><input type="text" class="fi" id="cn" placeholder="الاسم الكامل" required></div>
@@ -1148,9 +1166,9 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
               <div class="fr"><label>الخبرة</label><select class="fi" id="cx"><option value="">اختر...</option><option>حديث التخرج</option><option>1–3 سنوات</option><option>3–5 سنوات</option><option>+5 سنوات</option></select></div>
             </div>
             <div class="fr"><label>رسالة تعريفية</label><textarea class="fi" id="cm" rows="3" placeholder="نبذة مختصرة..."></textarea></div>
-            <button type="submit" class="sbtn-g">إرسال الطلب</button>
+            <button type="submit" class="sbtn-g" data-i18n="car-submit">إرسال الطلب</button>
           </form>
-          <p class="fnote">بياناتك بسرية تامة</p>
+          <p class="fnote" data-i18n="car-note">بياناتك بسرية تامة</p>
         </div>
       </div>
     </div>
@@ -1161,9 +1179,9 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="sec sec-d" id="contact">
   <div class="wrap">
     <div class="tc" style="margin-bottom:16px">
-      <span class="tag tag-g rv">نحن هنا</span>
-      <h2 class="t t-w rv" data-d="2">تواصل معنا <em>وابدأ رحلتك معنا</em></h2>
-      <p class="lead rv" data-d="3" style="color:rgba(255,255,255,.5);max-width:580px;margin:0 auto">نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا، أو رغبة في الشراكة، أو أي ملاحظات. فريقنا جاهز لدعمكم بمرونة ودقة عالية.</p>
+      <span class="tag tag-g rv" data-i18n="ct-tag">نحن هنا</span>
+      <h2 class="t t-w rv" data-d="2" data-i18n-html="ct-h2">تواصل معنا <em>وابدأ رحلتك معنا</em></h2>
+      <p class="lead rv" data-d="3" style="color:rgba(255,255,255,.5);max-width:580px;margin:0 auto" data-i18n="ct-lead">نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا، أو رغبة في الشراكة، أو أي ملاحظات. فريقنا جاهز لدعمكم بمرونة ودقة عالية.</p>
     </div>
 
     <div class="surv-wrap rv" data-d="2">
@@ -1172,21 +1190,21 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <div class="surv-tabs">
         <button class="surv-tab active" onclick="switchTab('company',this)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="22" height="22"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          الشركات
+          <span data-i18n="ct-tab1">الشركات</span>
         </button>
         <button class="surv-tab" onclick="switchTab('individual',this)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="22" height="22"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-          الأفراد
+          <span data-i18n="ct-tab2">الأفراد</span>
         </button>
       </div>
 
       <!-- نوع التواصل -->
       <div class="surv-types">
-        <span class="surv-lbl">نوع التواصل</span>
+        <span class="surv-lbl" data-i18n="ct-type-lbl">نوع التواصل</span>
         <div class="surv-radios">
-          <label class="surv-r active"><input type="radio" name="ctype" value="استفسار" checked onchange="setCtype(this)"><span>استفسار</span></label>
-          <label class="surv-r"><input type="radio" name="ctype" value="طلب" onchange="setCtype(this)"><span>طلب</span></label>
-          <label class="surv-r"><input type="radio" name="ctype" value="شكوى" onchange="setCtype(this)"><span>شكوى</span></label>
+          <label class="surv-r active"><input type="radio" name="ctype" value="استفسار" checked onchange="setCtype(this)"><span data-i18n="ct-r1">استفسار</span></label>
+          <label class="surv-r"><input type="radio" name="ctype" value="طلب" onchange="setCtype(this)"><span data-i18n="ct-r2">طلب</span></label>
+          <label class="surv-r"><input type="radio" name="ctype" value="شكوى" onchange="setCtype(this)"><span data-i18n="ct-r3">شكوى</span></label>
         </div>
       </div>
 
@@ -1215,7 +1233,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
           <span>بتعبئتك لهذا النموذج، فإنك تُقر بقراءة إشعار الخصوصية. كما تؤكد أن البيانات المدخلة هي بيانات دقيقة وصحيحة، وأنك تتحمل المسؤولية الكاملة عن صحتها.</span>
         </label>
 
-        <button type="submit" class="sbtn-g" style="margin-top:8px">إرسال</button>
+        <button type="submit" class="sbtn-g" style="margin-top:8px" data-i18n="ct-submit">إرسال</button>
       </form>
 
     </div>
@@ -1229,14 +1247,14 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
       <!-- معلومات التواصل -->
       <div class="ft-contact">
-        <h4>معلومات التواصل</h4>
+        <h4 data-i18n="ft-h4">معلومات التواصل</h4>
         <div class="ft-ci">
           <div class="fci">
             <div class="fci-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div class="fci-text">
-              <small>العنوان</small>
+              <small data-i18n="ft-addr-lbl">العنوان</small>
               <a href="https://share.google/jDdn497Rne9O7LCII" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a>
             </div>
           </div>
@@ -1245,7 +1263,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div class="fci-text">
-              <small>البريد الإلكتروني</small>
+              <small data-i18n="ft-email-lbl">البريد الإلكتروني</small>
               <a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a>
             </div>
           </div>
@@ -1254,7 +1272,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div class="fci-text">
-              <small>الجوال</small>
+              <small data-i18n="ft-phone-lbl">الجوال</small>
               <a href="tel:0115138328">0115138328</a>
             </div>
           </div>
@@ -1285,12 +1303,16 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
           </a>
         </div>
+        <!-- Vision 2030 -->
+        <div class="v2030-strip">
+          <img src="assets/vision2030.svg" alt="رؤية المملكة 2030" onerror="this.style.display='none'">
+        </div>
       </div>
 
     </div>
     <div class="ft-btm">
-      <p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
-      <div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط والأحكام</a></div>
+      <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+      <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
     </div>
   </div>
 </footer>
@@ -1408,6 +1430,196 @@ function sContact(e){
   document.getElementById('ctForm').reset();
   toast('جاري فتح البريد → info@altasaluh.com.sa','#2cc58b');
 }
+
+// ══════════════ LANGUAGE SWITCHER ══════════════
+const I18N = {
+  ar:{
+    'nav-home':'الرئيسية','nav-about':'عن الشركة','nav-services':'الخدمات',
+    'nav-strategy':'الاستراتيجية','nav-advantages':'المميزات','nav-careers':'التوظيف',
+    'nav-contact':'تواصل معنا','nav-cta':'ابدأ الآن',
+    'hero-h1':'شريكك الأول<em>في تحصيل الديون</em>',
+    'hero-sub':'فريق من 180+ متخصص وأنظمة تقنية متطورة.',
+    'hero-btn1':'تواصل معنا','hero-btn2':'استعرض الخدمات',
+    'kw1':'<em>تحصيل</em> فعّال','kw2':'<em>حلول</em> قانونية',
+    'kw3':'استرداد <em>حقوقك</em>','kw4':'حماية <em>محفظتك</em>',
+    'kw5':'فريق <em>متخصص</em>','kw6':'امتثال <em>تنظيمي</em>',
+    'tk1':'تحصيل جهات التمويل','tk2':'القروض الشخصية','tk3':'التمويل التأجيري',
+    'tk4':'التمويل العقاري','tk5':'البطاقات الائتمانية','tk6':'المنشآت الصغيرة والمتوسطة',
+    'tk7':'رفع القضايا والتنفيذ','tk8':'ديون الاتصالات',
+    'about-tag':'من نحن','about-h2':'من <em>نحن</em>',
+    'about-lead':'تأسست عام 2022م كشركة ذات مسؤولية محدودة، تسعى لريادة قطاع تحصيل الديون في المملكة بكوادر متخصصة وأنظمة تقنية متطورة.',
+    'ap1-t':'الهدف','ap1-s':'الاسم الأول والموثوق في التحصيل',
+    'ap2-t':'180–200 موظف','ap2-s':'مؤهل في التحصيل والتمويل',
+    'ap3-t':'فريق قانوني','ap3-s':'محامون ومستشارون قانونيون',
+    'about-estab':'عام التأسيس',
+    'st1':'موظف متخصص','st2':'خدمات تحصيل','st3':'أنظمة تقنية',
+    'vm-tag':'توجهنا','vm-h2':'الرؤية <em>&</em> الرسالة',
+    'vm-v-h':'رؤيتنا','vm-v-p':'أن نصبح الشريك الأساسي الأول لجهات التمويل في تحصيل الديون محلياً ودولياً.',
+    'vm-v-pill':'الريادة','vm-m-h':'رسالتنا',
+    'vm-m-p':'تقديم خدمات تحصيل بأعلى معايير الجودة مع الحفاظ على علاقة جهات التمويل بعملائها.',
+    'vm-m-pill':'الجودة',
+    'svc-tag':'ما نقدمه','svc-h2':'خدماتنا <em>المتكاملة</em>',
+    'sc1-h':'تحصيل جهات التمويل','sc1-p':'بنوك، شركات تمويل، وجهات خدمية',
+    'sc2-h':'القروض الشخصية','sc2-p':'بمختلف أعمار الديون وأنواع المديونيات',
+    'sc3-h':'التمويل التأجيري','sc3-p':'بأعلى معدلات الاسترداد',
+    'sc4-h':'التمويل العقاري','sc4-p':'جميع أنواع التمويل العقاري',
+    'sc5-h':'البطاقات الائتمانية','sc5-p':'بأساليب احترافية',
+    'sc6-h':'المنشآت ص و م','sc6-p':'حلول مخصصة للشركات الصغيرة والمتوسطة',
+    'sc7-h':'القضايا والتنفيذ','sc7-p':'محاكم التنفيذ والمحاكم العامة',
+    'sc8-h':'ديون الاتصالات','sc8-p':'جميع شركات الاتصالات',
+    'data-tag':'بالأرقام','data-h2':'أداؤنا <em>بالبيانات</em>',
+    'data-lead':'مؤشرات واضحة تعكس التزامنا بالجودة',
+    'pb1':'الالتزام بالجودة','pb2':'رضا الشركاء','pb3':'التوطين','pb4':'سرعة التنفيذ',
+    'bs1-n':'<em>صفر</em> تساهل','bs1-l':'في حماية حقوق العملاء',
+    'bs2-n':'أسرع <em>استجابة</em>','bs2-l':'لكل محفظة ديون',
+    'bs3-n':'تغطية <em>شاملة</em>','bs3-l':'لجميع أنواع الديون',
+    'bs4-n':'سرية <em>تامة</em>','bs4-l':'لبيانات الشركاء والمدينين',
+    'str-tag':'خارطة الطريق','str-h2':'استراتيجيتنا <em>الثلاثية</em>',
+    'str1-h':'توسيع قاعدة العملاء','str1-p':'الخيار الأساسي للبنوك وجهات التمويل بخدمات عالية الجودة وسريعة التنفيذ.',
+    'str2-h':'رأس المال البشري','str2-p':'استقطاب أفضل الكفاءات وتطويرها ببرامج تدريب مستمرة ومتخصصة.',
+    'str3-h':'البنية التقنية','str3-p':'أنظمة حديثة لإدارة التحصيل تدعم الكفاءة وتعزز تجربة الشركاء.',
+    'mth-tag':'كيف نعمل','mth-h2':'منهجية <em>التحصيل</em>',
+    'mth1-h':'دراسة المحفظة','mth1-p':'تحليل وتصنيف حسب المخاطر',
+    'mth2-h':'خطة التحصيل','mth2-p':'خطة مناسبة لكل محفظة',
+    'mth3-h':'التنفيذ','mth3-p':'تواصل باحترافية',
+    'mth4-h':'إدارة البيانات','mth4-p':'أنظمة خاصة بالشركة',
+    'mth5-h':'التقارير','mth5-p':'تقارير دورية للجهات التمويلية',
+    'adv-tag':'لماذا التصالح','adv-h2':'مميزاتنا <em>التنافسية</em>',
+    'adv1-h':'كوادر متخصصة','adv1-p':'فرق ذات خبرة في التمويل والتحصيل',
+    'adv2-h':'خبرة مثبتة','adv2-p':'سنوات من تحصيل الديون للغير',
+    'adv3-h':'أنظمة متقدمة','adv3-p':'تقنيات حديثة بحماية عالية',
+    'adv4-h':'مقرات مجهزة','adv4-p':'بيئة عمل متكاملة',
+    'adv5-h':'سرية تامة','adv5-p':'حماية المعلومات بأعلى المعايير',
+    'adv6-h':'إدارة متخصصة','adv6-p':'التزام بمعايير الجهات المختصة',
+    'adv7-h':'فريق قانوني','adv7-p':'محامون ومستشارون قانونيون',
+    'adv8-h':'عمل عن بُعد','adv8-p':'استمرارية في أي ظرف',
+    'adv9-h':'أنظمة تقنية','adv9-p':'خاضعة لمعايير الهيئات التنظيمية المختصة',
+    'prt-tag':'ثقة متبادلة','prt-h2':'شركاؤنا <em>وعملاؤنا</em>',
+    'prt-lead':'نفخر بشراكات استراتيجية تمتد عبر قطاعات متعددة',
+    'car-tag':'انضم إلينا','car-h2':'فرص <em>التوظيف</em>',
+    'pk1':'تدريب مكثف قبل العمل','pk2':'مسار وظيفي واضح','pk3':'حوافز أداء مجزية',
+    'pk4':'بيئة داعمة للتوطين','pk5':'جاهزية العمل عن بُعد',
+    'car-form-h':'قدّم طلبك','car-submit':'إرسال الطلب','car-note':'بياناتك بسرية تامة',
+    'ct-tag':'نحن هنا','ct-h2':'تواصل معنا <em>وابدأ رحلتك معنا</em>',
+    'ct-lead':'نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا، أو رغبة في الشراكة، أو أي ملاحظات. فريقنا جاهز لدعمكم بمرونة ودقة عالية.',
+    'ct-tab1':'الشركات','ct-tab2':'الأفراد',
+    'ct-type-lbl':'نوع التواصل',
+    'ct-r1':'استفسار','ct-r2':'طلب','ct-r3':'شكوى',
+    'ct-submit':'إرسال',
+    'ft-h4':'معلومات التواصل','ft-addr-lbl':'العنوان',
+    'ft-email-lbl':'البريد الإلكتروني','ft-phone-lbl':'الجوال',
+    'ft-copy':'© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.',
+    'ft-privacy':'الخصوصية','ft-terms':'الشروط والأحكام',
+  },
+  en:{
+    'nav-home':'Home','nav-about':'About Us','nav-services':'Services',
+    'nav-strategy':'Strategy','nav-advantages':'Advantages','nav-careers':'Careers',
+    'nav-contact':'Contact Us','nav-cta':'Get Started',
+    'hero-h1':'Your First Partner<em>in Debt Collection</em>',
+    'hero-sub':'A team of 180+ specialists with advanced technology systems.',
+    'hero-btn1':'Contact Us','hero-btn2':'Explore Services',
+    'kw1':'<em>Effective</em> Collection','kw2':'<em>Legal</em> Solutions',
+    'kw3':'Recover <em>Your Rights</em>','kw4':'Protect <em>Your Portfolio</em>',
+    'kw5':'<em>Specialized</em> Team','kw6':'<em>Regulatory</em> Compliance',
+    'tk1':'Finance Institutions Collection','tk2':'Personal Loans','tk3':'Leasing Finance',
+    'tk4':'Real Estate Finance','tk5':'Credit Cards','tk6':'SME Businesses',
+    'tk7':'Litigation & Enforcement','tk8':'Telecom Debts',
+    'about-tag':'Who We Are','about-h2':'Who <em>We Are</em>',
+    'about-lead':'Founded in 2022 as a limited liability company, striving to lead the debt collection sector in Saudi Arabia with specialized teams and advanced technology systems.',
+    'ap1-t':'Objective','ap1-s':'The first and most trusted name in collection',
+    'ap2-t':'180–200 Employees','ap2-s':'Qualified in collection and finance',
+    'ap3-t':'Legal Team','ap3-s':'Lawyers and legal consultants',
+    'about-estab':'Year of Est.',
+    'st1':'Specialist Employees','st2':'Collection Services','st3':'Technology Systems',
+    'vm-tag':'Our Direction','vm-h2':'Vision <em>&</em> Mission',
+    'vm-v-h':'Our Vision','vm-v-p':'To become the primary strategic partner for financial institutions in debt collection locally and internationally.',
+    'vm-v-pill':'Leadership','vm-m-h':'Our Mission',
+    'vm-m-p':'Providing collection services with the highest quality standards while preserving the relationship between financial institutions and their customers.',
+    'vm-m-pill':'Quality',
+    'svc-tag':'What We Offer','svc-h2':'Our <em>Integrated Services</em>',
+    'sc1-h':'Finance Institutions Collection','sc1-p':'Banks, finance companies, and service entities',
+    'sc2-h':'Personal Loans','sc2-p':'Various debt ages and types of liabilities',
+    'sc3-h':'Leasing Finance','sc3-p':'With the highest recovery rates',
+    'sc4-h':'Real Estate Finance','sc4-p':'All types of real estate financing',
+    'sc5-h':'Credit Cards','sc5-p':'With professional methods',
+    'sc6-h':'SME Businesses','sc6-p':'Customized solutions for small and medium enterprises',
+    'sc7-h':'Litigation & Enforcement','sc7-p':'Execution courts and general courts',
+    'sc8-h':'Telecom Debts','sc8-p':'All telecom companies',
+    'data-tag':'By the Numbers','data-h2':'Our <em>Performance Data</em>',
+    'data-lead':'Clear indicators reflecting our commitment to quality',
+    'pb1':'Quality Commitment','pb2':'Partners Satisfaction','pb3':'Localization','pb4':'Execution Speed',
+    'bs1-n':'<em>Zero</em> Tolerance','bs1-l':'In protecting clients&#39; rights',
+    'bs2-n':'Fastest <em>Response</em>','bs2-l':'For every debt portfolio',
+    'bs3-n':'Comprehensive <em>Coverage</em>','bs3-l':'For all types of debts',
+    'bs4-n':'Complete <em>Confidentiality</em>','bs4-l':'For partner and debtor data',
+    'str-tag':'Our Roadmap','str-h2':'Our <em>Three-Pillar Strategy</em>',
+    'str1-h':'Expanding Client Base','str1-p':'The primary choice for banks and financial institutions with high-quality, fast-execution services.',
+    'str2-h':'Human Capital','str2-p':'Attracting the best talents and developing them with specialized continuous training programs.',
+    'str3-h':'Technical Infrastructure','str3-p':'Modern collection management systems that support efficiency and enhance partner experience.',
+    'mth-tag':'How We Work','mth-h2':'Collection <em>Methodology</em>',
+    'mth1-h':'Portfolio Study','mth1-p':'Analysis and classification by risk',
+    'mth2-h':'Collection Plan','mth2-p':'A tailored plan for each portfolio',
+    'mth3-h':'Execution','mth3-p':'Professional communication',
+    'mth4-h':'Data Management','mth4-p':'Company-proprietary systems',
+    'mth5-h':'Reports','mth5-p':'Periodic reports for financial institutions',
+    'adv-tag':'Why Altasaluh','adv-h2':'Our <em>Competitive Advantages</em>',
+    'adv1-h':'Specialized Staff','adv1-p':'Teams experienced in finance and collection',
+    'adv2-h':'Proven Expertise','adv2-p':'Years of third-party debt collection',
+    'adv3-h':'Advanced Systems','adv3-p':'Modern technologies with high security',
+    'adv4-h':'Equipped Premises','adv4-p':'Integrated work environment',
+    'adv5-h':'Total Confidentiality','adv5-p':'Information protection to the highest standards',
+    'adv6-h':'Specialized Management','adv6-p':'Commitment to regulatory body standards',
+    'adv7-h':'Legal Team','adv7-p':'Lawyers and legal consultants',
+    'adv8-h':'Remote Work','adv8-p':'Continuity in any circumstance',
+    'adv9-h':'Technical Systems','adv9-p':'Subject to regulatory authority standards',
+    'prt-tag':'Mutual Trust','prt-h2':'Our <em>Partners & Clients</em>',
+    'prt-lead':'We take pride in strategic partnerships spanning multiple sectors',
+    'car-tag':'Join Us','car-h2':'Career <em>Opportunities</em>',
+    'pk1':'Intensive pre-employment training','pk2':'Clear career path','pk3':'Rewarding performance incentives',
+    'pk4':'Supportive localization environment','pk5':'Remote work readiness',
+    'car-form-h':'Apply Now','car-submit':'Submit Application','car-note':'Your data is strictly confidential',
+    'ct-tag':'We're Here','ct-h2':'Contact Us <em>& Start Your Journey</em>',
+    'ct-lead':'We always welcome communication with you, whether inquiries about our services, partnership requests, or any feedback. Our team is ready to support you with flexibility and high precision.',
+    'ct-tab1':'Companies','ct-tab2':'Individuals',
+    'ct-type-lbl':'Contact Type',
+    'ct-r1':'Inquiry','ct-r2':'Request','ct-r3':'Complaint',
+    'ct-submit':'Send',
+    'ft-h4':'Contact Information','ft-addr-lbl':'ADDRESS',
+    'ft-email-lbl':'EMAIL','ft-phone-lbl':'MOBILE',
+    'ft-copy':'© 2025 Altasaluh Debt Collection Co. All rights reserved.',
+    'ft-privacy':'Privacy','ft-terms':'Terms & Conditions',
+  }
+};
+
+let curLang = localStorage.getItem('lang') || 'ar';
+
+function applyLang(lang) {
+  const t = I18N[lang];
+  const isAr = lang === 'ar';
+  document.documentElement.lang = isAr ? 'ar' : 'en';
+  document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+  document.title = isAr ? 'شركة التصالح لتحصيل الديون' : 'Altasaluh Debt Collection Company';
+  const btn = document.getElementById('langBtn');
+  if (btn) btn.textContent = isAr ? 'EN' : 'AR';
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  localStorage.setItem('lang', lang);
+}
+
+function toggleLang() {
+  curLang = curLang === 'ar' ? 'en' : 'ar';
+  applyLang(curLang);
+}
+
+// Init on load
+if (curLang !== 'ar') applyLang(curLang);
+
 </script>
 </body>
 </html>

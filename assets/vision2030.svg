@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 120" width="280" height="120">
+  <defs>
+    <style>
+      .v-gold{fill:#C4972F;}
+      .v-dark{fill:#1a1a1a;}
+      .v-txt{font-family:Arial,sans-serif;}
+    </style>
+  </defs>
+  <!-- Emblem circle with dots -->
+  <g transform="translate(38,60)">
+    <!-- Center -->
+    <circle cx="0" cy="0" r="4" fill="#C4972F"/>
+    <!-- Surrounding dots - colored -->
+    <circle cx="0" cy="-18" r="3.5" fill="#C4972F"/>
+    <circle cx="12.7" cy="-12.7" r="3.5" fill="#7CB342"/>
+    <circle cx="18" cy="0" r="3.5" fill="#29B6F6"/>
+    <circle cx="12.7" cy="12.7" r="3.5" fill="#EF5350"/>
+    <circle cx="0" cy="18" r="3.5" fill="#AB47BC"/>
+    <circle cx="-12.7" cy="12.7" r="3.5" fill="#FF7043"/>
+    <circle cx="-18" cy="0" r="3.5" fill="#26A69A"/>
+    <circle cx="-12.7" cy="-12.7" r="3.5" fill="#FFA726"/>
+    <!-- Outer dots -->
+    <circle cx="0" cy="-30" r="2.5" fill="#C4972F" opacity=".6"/>
+    <circle cx="21.2" cy="-21.2" r="2.5" fill="#7CB342" opacity=".6"/>
+    <circle cx="30" cy="0" r="2.5" fill="#29B6F6" opacity=".6"/>
+    <circle cx="21.2" cy="21.2" r="2.5" fill="#EF5350" opacity=".6"/>
+    <circle cx="0" cy="30" r="2.5" fill="#AB47BC" opacity=".6"/>
+    <circle cx="-21.2" cy="21.2" r="2.5" fill="#FF7043" opacity=".6"/>
+    <circle cx="-30" cy="0" r="2.5" fill="#26A69A" opacity=".6"/>
+    <circle cx="-21.2" cy="-21.2" r="2.5" fill="#FFA726" opacity=".6"/>
+  </g>
+  <!-- Text right side -->
+  <text x="82" y="28" class="v-txt v-gold" font-size="9" font-weight="bold" letter-spacing="1">VISION رؤية</text>
+  <text x="82" y="68" class="v-txt v-dark" font-size="36" font-weight="900">2030</text>
+  <text x="82" y="84" class="v-txt v-dark" font-size="6.5" letter-spacing=".5">المملكة العربية السعودية</text>
+  <text x="82" y="96" class="v-txt v-dark" font-size="6" letter-spacing=".5">KINGDOM OF SAUDI ARABIA</text>
+</svg>
