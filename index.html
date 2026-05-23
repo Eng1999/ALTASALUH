@@ -62,7 +62,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 .logo img{height:62px;width:auto;object-fit:contain;filter:brightness(1.1)}
 .logo-tagline{display:none}
 .logo-name{display:none}
-.vision-nav-logo{height:52px;width:auto;object-fit:contain;flex-shrink:0;opacity:.95;display:block}
+.vision-nav-logo{height:62px;width:auto;object-fit:contain;flex-shrink:0;opacity:.95;display:block}
 .nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:2px}
 .nav-links a{
   padding:6px 12px;color:rgba(255,255,255,.65);font-weight:700;font-size:.82rem;
@@ -613,8 +613,8 @@ textarea.fi{resize:vertical;min-height:90px}
 .ft-info-row{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:.9rem;color:rgba(255,255,255,.7)}
 .ft-info-row svg{width:16px;height:16px;color:var(--G);flex-shrink:0}
 .ft-info-row a{color:rgba(255,255,255,.7);transition:.2s}.ft-info-row a:hover{color:var(--G)}
-.ft-nav-v{display:flex;flex-direction:column;gap:8px;align-items:center}
-.ft-nav-v a{color:rgba(255,255,255,.6);font-size:.88rem;font-weight:700;transition:.2s;padding:4px 0}.ft-nav-v a:hover{color:var(--G)}
+.ft-nav-v{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;align-items:start}
+.ft-nav-v a{color:rgba(255,255,255,.6);font-size:.88rem;font-weight:700;transition:.2s;padding:4px 0;display:flex;align-items:center;gap:5px}.ft-nav-v a::before{content:"◂";color:var(--G);font-size:.6rem;opacity:0;transition:.2s}.ft-nav-v a:hover{color:var(--G)}.ft-nav-v a:hover::before{opacity:1}
 .ft-brand{display:flex;flex-direction:column;align-items:center;gap:8px}
 .ft-tagline{font-size:.85rem;font-weight:700;color:rgba(255,255,255,.5);text-align:center}
 footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
@@ -809,7 +809,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 /* ── SAMA TOP BAR ── */
 .sama-top{
   position:fixed;top:0;inset-inline:0;z-index:901;
-  background:rgba(7,24,39,.25);backdrop-filter:blur(8px);
+  background:transparent;
   border-bottom:1px solid rgba(44,197,139,.08);
   padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.55);
 }
@@ -1054,7 +1054,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
     <div class="ft-new-g">
       <!-- LEFT: Contact Info -->
       <div class="ft-info">
-        <h4>معلومات التواصل</h4>
+        <h4>معلومات الإتصال</h4>
         <div class="ft-info-row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a>
@@ -1073,6 +1073,12 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
           </a>
           <a href="#" class="soc-b" title="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="soc-b" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="var(--D)" d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="var(--D)" stroke-width="1.5"/></svg>
+          </a>
+          <a href="#" class="soc-b" title="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b" title="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
