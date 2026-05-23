@@ -58,7 +58,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 .hdr.s{box-shadow:0 4px 30px rgba(0,0,0,.4)}
 .nav{width:min(1200px,calc(100% - 40px));margin-inline:auto;display:flex;align-items:center;gap:16px}
 .logo{flex-shrink:0;display:flex;align-items:center}
-.logo img{height:58px;width:auto;object-fit:contain;filter:brightness(1.1)}
+.logo img{height:54px;width:auto;object-fit:contain;filter:brightness(1.05)}
 .logo-name{display:none}
 .nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:2px}
 .nav-links a{
@@ -97,55 +97,57 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 .mob a:hover{color:var(--G);background:rgba(44,197,139,.08)}
 
 /* ══════════════════════════════════
-   HERO — dark photo + data widget
+   HERO — dark teal gradient + data widget
 ══════════════════════════════════ */
 .hero{
   min-height:100vh;
   display:flex;flex-direction:column;position:relative;overflow:hidden;
+  background:#061a1a;
 }
-.hero-photo{
-  position:absolute;inset:0;
-  background:url('assets/office-hero.jpg') center/cover no-repeat;
-  animation:pan 20s ease-in-out infinite alternate;
-}
-@keyframes pan{0%{transform:scale(1.04)}100%{transform:scale(1.10) translate(-1%,-.8%)}}
-.hero-ov{
-  position:absolute;inset:0;
+.hero-glow{
+  position:absolute;inset:0;pointer-events:none;
   background:
-    linear-gradient(to bottom, rgba(7,24,39,.55) 0%, rgba(7,24,39,.4) 50%, rgba(7,24,39,.7) 100%);
+    radial-gradient(ellipse 70% 90% at 55% 50%, rgba(44,197,139,.13) 0%, transparent 65%),
+    radial-gradient(ellipse 45% 55% at 10% 85%, rgba(44,197,139,.07) 0%, transparent 60%);
 }
 
-/* ── HERO CENTER LAYOUT ── */
-.hero-center{
-  flex:1;display:flex;align-items:center;justify-content:center;
+/* ── HERO GRID ── */
+.hero-g{
+  flex:1;display:grid;grid-template-columns:1fr 480px;align-items:center;gap:48px;
   position:relative;z-index:1;
-  padding:calc(var(--hh) + 60px) 20px 60px;
-  text-align:center;
+  padding:calc(var(--hh) + 70px) 60px 70px;
+  width:min(1280px,100%);margin-inline:auto;
 }
-.hero-center-inner{
-  max-width:900px;
-  animation:hero-in 1.2s cubic-bezier(.22,.68,0,1) both;
+@keyframes hero-in{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+
+/* ── TEXT SIDE ── */
+.hero-badge-row{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(44,197,139,.3);border-radius:50px;
+  padding:6px 16px;margin-bottom:30px;
+  font-size:.82rem;font-weight:700;color:rgba(255,255,255,.75);
+  animation:hero-in 1s .05s both;
 }
-@keyframes hero-in{
-  from{opacity:0;transform:translateY(40px)}
-  to{opacity:1;transform:none}
+.hb-dot{width:8px;height:8px;border-radius:50%;background:var(--G);flex-shrink:0;
+  box-shadow:0 0 8px var(--G);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+.hero-h1{
+  font-size:clamp(2.8rem,5.5vw,5.2rem);font-weight:900;line-height:1.18;color:#fff;
+  margin-bottom:20px;animation:hero-in 1s .15s both;
 }
-.hero-tagline{
-  font-size:clamp(1rem,1.6vw,1.25rem);
-  font-weight:700;color:var(--G);
-  letter-spacing:.08em;
-  margin-bottom:28px;
-  animation:hero-in 1.2s .15s cubic-bezier(.22,.68,0,1) both;
+.hero-em{
+  font-style:normal;
+  background:linear-gradient(135deg,var(--G) 0%,#7fffd4 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.hero-headline{
-  font-size:clamp(2.4rem,6vw,5.5rem);
-  font-weight:900;line-height:1.2;color:#fff;
-  margin-bottom:44px;
-  animation:hero-in 1.2s .25s cubic-bezier(.22,.68,0,1) both;
+.hero-sub{
+  font-size:clamp(1rem,1.6vw,1.2rem);color:rgba(255,255,255,.6);
+  margin-bottom:40px;font-weight:600;animation:hero-in 1s .25s both;
 }
+.hero-sub strong{color:#fff;font-weight:800}
 .hero-btns{
-  display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
-  animation:hero-in 1.2s .4s cubic-bezier(.22,.68,0,1) both;
+  display:flex;gap:14px;flex-wrap:wrap;
+  animation:hero-in 1s .35s both;
 }
 .btn-solid{
   padding:13px 28px;background:var(--G);color:var(--D);
@@ -154,15 +156,38 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 }
 .btn-solid:hover{background:var(--Gd);transform:translateY(-3px);box-shadow:0 10px 28px rgba(44,197,139,.35)}
 .btn-ghost{
-  padding:12px 26px;border:1.5px solid rgba(255,255,255,.3);color:#fff;
-  font-weight:800;font-size:.92rem;border-radius:8px;transition:.25s;
+  padding:12px 26px;border:1.5px solid rgba(255,255,255,.25);color:rgba(255,255,255,.8);
+  font-weight:800;font-size:.92rem;border-radius:8px;transition:.25s;background:rgba(255,255,255,.05);
 }
-.btn-ghost:hover{border-color:var(--G);color:var(--G)}
+.btn-ghost:hover{border-color:var(--G);color:var(--G);background:rgba(44,197,139,.08)}
 
-/* hero stats */
-
-
-50%{opacity:1}}
+/* ── DATA WIDGET ── */
+.dw{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(44,197,139,.18);
+  border-radius:20px;padding:28px 26px;
+  backdrop-filter:blur(16px);
+  animation:hero-in 1s .2s both;
+}
+.dw-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.dw-title-row{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.55);font-size:.8rem;font-weight:700}
+.dw-title-row svg{opacity:.6}
+.dw-live{display:flex;align-items:center;gap:6px;font-size:.72rem;font-weight:800;color:var(--G)}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--G);animation:pulse 1.5s infinite}
+.dw-period{font-size:.78rem;color:rgba(255,255,255,.35);font-weight:600;margin-bottom:16px}
+.dw-main{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:22px}
+.dw-num{font-size:clamp(2.8rem,5vw,3.8rem);font-weight:900;color:var(--G);line-height:1}
+.dw-num span{font-size:1.4rem;opacity:.8}
+.dw-delta{font-size:.85rem;font-weight:800;color:var(--G);padding:4px 10px;
+  background:rgba(44,197,139,.12);border-radius:20px;margin-bottom:6px}
+.dw-rows{display:flex;flex-direction:column;gap:12px}
+.dw-row{display:flex;align-items:center;gap:10px}
+.dw-lbl{font-size:.75rem;font-weight:700;color:rgba(255,255,255,.5);flex-shrink:0;width:120px;text-align:right}
+.dw-track{flex:1;height:5px;background:rgba(255,255,255,.08);border-radius:10px;overflow:hidden}
+.dw-fill{height:100%;background:linear-gradient(90deg,var(--Gd),var(--G));border-radius:10px;
+  animation:bar-in 1.2s .6s both}
+@keyframes bar-in{from{width:0!important}to{}}
+.dw-val{font-size:.75rem;font-weight:800;color:rgba(255,255,255,.6);flex-shrink:0;width:30px;text-align:left}
 
 /* ══════════════════════════════════
    TICKER
@@ -838,7 +863,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <header class="hdr" id="hdr">
   <nav class="nav">
     <a href="#home" class="logo">
-      <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
+      <img src="assets/altasaluh-logo-stack.png" alt="التصالح" onerror="this.style.display='none'">
       <span class="logo-name">شركة التصالح</span>
     </a>
     <div class="nav-links">
@@ -872,15 +897,59 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
-  <div class="hero-photo"></div>
-  <div class="hero-ov"></div>
-  <div class="hero-center">
-    <div class="hero-center-inner">
-      <div class="hero-tagline" data-i18n="hero-tagline">التصالح .. هدفها التصالح</div>
-      <h1 class="hero-headline" data-i18n="hero-h1">تقديم خدمات تحصيل الديون<br>عن جهات التمويل</h1>
+  <div class="hero-glow"></div>
+  <div class="hero-g">
+    <!-- نص الهيرو -->
+    <div class="hero-txt">
+      <div class="hero-badge-row">
+        <span class="hb-dot"></span>
+        <span data-i18n="hero-badge">شريك التمويل في المملكة &bull; منذ 2012</span>
+      </div>
+      <h1 class="hero-h1">
+        <span data-i18n="hero-h1a">حيث يلتقي</span><br>
+        <em class="hero-em" data-i18n="hero-h1b">الالتزام</em>
+      </h1>
+      <p class="hero-sub"><strong data-i18n="hero-sub1">بالتحصيل المسؤول</strong> <span data-i18n="hero-sub2">لجهات التمويل</span></p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-solid" data-i18n="hero-btn1">تواصل معنا</a>
-        <a href="#services" class="btn-ghost" data-i18n="hero-btn2">استعرض الخدمات</a>
+        <a href="#contact" class="btn-solid" data-i18n="hero-btn1">ابدأ التعاون ←</a>
+        <a href="#about" class="btn-ghost" data-i18n="hero-btn2">تعرف علينا</a>
+      </div>
+    </div>
+    <!-- ويدجت الأداء -->
+    <div class="dw">
+      <div class="dw-hd">
+        <div class="dw-title-row">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          <span>أداء التحصيل</span>
+        </div>
+        <div class="dw-live"><span class="live-dot"></span>LIVE</div>
+      </div>
+      <div class="dw-period">معدل التحصيل &bull; 30 يوم</div>
+      <div class="dw-main">
+        <div class="dw-num">94.6<span>%</span></div>
+        <div class="dw-delta">2.4%+ ↗</div>
+      </div>
+      <div class="dw-rows">
+        <div class="dw-row">
+          <span class="dw-lbl">البطاقات الائتمانية</span>
+          <div class="dw-track"><div class="dw-fill" style="width:94%"></div></div>
+          <span class="dw-val">94%</span>
+        </div>
+        <div class="dw-row">
+          <span class="dw-lbl">التمويل الشخصي</span>
+          <div class="dw-track"><div class="dw-fill" style="width:82%"></div></div>
+          <span class="dw-val">82%</span>
+        </div>
+        <div class="dw-row">
+          <span class="dw-lbl">التقسيط الرقمي</span>
+          <div class="dw-track"><div class="dw-fill" style="width:91%"></div></div>
+          <span class="dw-val">91%</span>
+        </div>
+        <div class="dw-row">
+          <span class="dw-lbl">التمويل العقاري</span>
+          <div class="dw-track"><div class="dw-fill" style="width:76%"></div></div>
+          <span class="dw-val">76%</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1335,7 +1404,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
       <!-- الشعار -->
       <div class="ft-logo">
-        <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
+        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" onerror="this.style.display='none'">
         <div class="ft-soc" style="justify-content:center;margin-top:14px">
           <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b" title="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -1478,10 +1547,11 @@ const I18N = {
     'nav-home':'الرئيسية','nav-about':'عن الشركة','nav-services':'الخدمات',
     'nav-strategy':'الاستراتيجية','nav-advantages':'المميزات','nav-careers':'التوظيف',
     'nav-contact':'تواصل معنا','nav-cta':'ابدأ الآن',
-    'hero-tagline':'التصالح .. هدفها التصالح',
-    'hero-h1':'تقديم خدمات تحصيل الديون عن جهات التمويل',
+    'hero-badge':'شريك التمويل في المملكة • منذ 2012',
+    'hero-h1a':'حيث يلتقي','hero-h1b':'الالتزام',
+    'hero-sub1':'بالتحصيل المسؤول','hero-sub2':'لجهات التمويل',
     'hero-sub':'فريق من 180+ متخصص وأنظمة تقنية متطورة.',
-    'hero-btn1':'تواصل معنا','hero-btn2':'استعرض الخدمات',
+    'hero-btn1':'ابدأ التعاون ←','hero-btn2':'تعرف علينا',
     'kw1':'<em>تحصيل</em> فعّال','kw2':'<em>حلول</em> قانونية',
     'kw3':'استرداد <em>حقوقك</em>','kw4':'حماية <em>محفظتك</em>',
     'kw5':'فريق <em>متخصص</em>','kw6':'امتثال <em>تنظيمي</em>',
@@ -1568,10 +1638,11 @@ const I18N = {
     'nav-home':'Home','nav-about':'About Us','nav-services':'Services',
     'nav-strategy':'Strategy','nav-advantages':'Advantages','nav-careers':'Careers',
     'nav-contact':'Contact Us','nav-cta':'Get Started',
-    'hero-tagline':'Altasaluh .. Its Goal Is Altasaluh',
-    'hero-h1':'Providing Debt Collection Services for Financing Institutions',
+    'hero-badge':'Financing Partner in the Kingdom • Since 2012',
+    'hero-h1a':'Where Commitment','hero-h1b':'Meets Excellence',
+    'hero-sub1':'Responsible Debt Collection','hero-sub2':'for Financing Institutions',
     'hero-sub':'A team of 180+ specialists with advanced technology systems.',
-    'hero-btn1':'Contact Us','hero-btn2':'Explore Services',
+    'hero-btn1':'Start Cooperation →','hero-btn2':'Learn About Us',
     'kw1':'<em>Effective</em> Collection','kw2':'<em>Legal</em> Solutions',
     'kw3':'Recover <em>Your Rights</em>','kw4':'Protect <em>Your Portfolio</em>',
     'kw5':'<em>Specialized</em> Team','kw6':'<em>Regulatory</em> Compliance',
