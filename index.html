@@ -104,6 +104,20 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
   display:flex;flex-direction:column;position:relative;overflow:hidden;
   background:#061a1a;
 }
+.hero-logo-bg{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  pointer-events:none;overflow:hidden;
+}
+.hero-logo-bg img{
+  width:75vw;max-width:900px;height:auto;
+  opacity:.07;
+  filter:brightness(2) blur(1px);
+  animation:logo-float 8s ease-in-out infinite alternate;
+}
+@keyframes logo-float{
+  from{transform:scale(1) translateY(0)}
+  to  {transform:scale(1.06) translateY(-18px)}
+}
 .hero-glow{
   position:absolute;inset:0;pointer-events:none;
   background:
@@ -912,6 +926,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
+  <div class="hero-logo-bg"><img src="assets/altasaluh-logo-stack.png" alt=""></div>
   <div class="hero-glow"></div>
   <div class="hero-g">
     <!-- نص الهيرو -->
