@@ -159,6 +159,20 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-ghost:hover{border-color:var(--G);color:var(--G)}
 
 /* hero stats */
+.hero-kw{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;
+}
+.kw{
+  padding:9px 18px;
+  border:1px solid rgba(44,197,139,.3);
+  border-radius:8px;
+  background:rgba(44,197,139,.07);
+  color:#fff;font-size:.88rem;font-weight:800;
+  backdrop-filter:blur(6px);
+  transition:.2s;
+}
+.kw em{color:var(--G);font-style:normal}
+.kw:hover{background:rgba(44,197,139,.15);border-color:var(--G)}
 .hero-stats{
   display:flex;gap:0;
   background:rgba(255,255,255,.05);
@@ -784,10 +798,13 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
           <a href="#contact" class="btn-solid">تواصل معنا</a>
           <a href="#services" class="btn-ghost">استعرض الخدمات</a>
         </div>
-        <div class="hero-stats">
-          <div class="hs"><strong data-count="180" data-suffix="+">180+</strong><p>متخصص تحصيل</p></div>
-          <div class="hs"><strong data-count="8">8</strong><p>خدمات متكاملة</p></div>
-          <div class="hs"><strong data-count="3">3</strong><p>أنظمة تقنية</p></div>
+        <div class="hero-kw">
+          <div class="kw"><em>تحصيل</em> فعّال</div>
+          <div class="kw"><em>حلول</em> قانونية</div>
+          <div class="kw">استرداد <em>حقوقك</em></div>
+          <div class="kw">حماية <em>محفظتك</em></div>
+          <div class="kw">فريق <em>متخصص</em></div>
+          <div class="kw">امتثال <em>تنظيمي</em></div>
         </div>
       </div>
 
