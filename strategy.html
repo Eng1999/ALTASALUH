@@ -27,6 +27,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{fon
 .nav-links a{padding:6px 12px;color:rgba(255,255,255,.65);font-weight:700;font-size:.82rem;border-radius:6px;transition:.2s;}
 .nav-links a:hover,.nav-links a.on{color:var(--G);background:rgba(44,197,139,.1)}
 .nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.vision-nav-logo{height:48px;width:auto;object-fit:contain;flex-shrink:0;display:block;opacity:.95}
 .btn-cta{padding:9px 20px;background:var(--G);color:var(--D);font-weight:900;font-size:.82rem;border-radius:7px;transition:all .25s var(--ease);}
 .btn-cta:hover{background:var(--Gd);transform:translateY(-2px)}
 .lang-btn{padding:6px 13px;border:1.5px solid rgba(255,255,255,.22);border-radius:7px;color:rgba(255,255,255,.65);font-size:.78rem;font-weight:900;cursor:pointer;background:rgba(255,255,255,.04);transition:.2s;letter-spacing:.07em;font-family:inherit;flex-shrink:0;}
@@ -37,7 +38,7 @@ a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{fon
 .mob.on{display:flex}.mob a{color:#fff;font-size:1.25rem;font-weight:800;padding:12px 40px;border-radius:8px;transition:.2s}.mob a:hover{color:var(--G);background:rgba(44,197,139,.08)}
 
 /* SAMA */
-.sama-top{background:var(--D);border-bottom:1px solid rgba(44,197,139,.15);padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.45);}
+.sama-top{background:transparent;padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.55);}
 .sama-top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
 .sama-top-badge{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.55);font-weight:700;}
 .sama-top-badge svg{color:var(--G);flex-shrink:0}
@@ -190,8 +191,8 @@ p.lead-w{color:rgba(255,255,255,.6)}p.lead-d{color:rgba(7,24,39,.5)}
   <nav class="nav">
     <a href="index.html" class="logo">
       <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
-      <span class="logo-tagline">التصالح.. غايته التصالح</span>
     </a>
+    <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
     <div class="nav-links">
       <a href="index.html">الرئيسية</a>
       <a href="about.html">عن الشركة</a>
@@ -203,7 +204,6 @@ p.lead-w{color:rgba(255,255,255,.6)}p.lead-d{color:rgba(7,24,39,.5)}
       <a href="contact.html">تواصل معنا</a>
     </div>
     <div class="nav-right">
-      <img src="assets/vision2030.svg" alt="رؤية 2030" style="height:48px;width:auto;object-fit:contain;flex-shrink:0;display:block">
       <a href="contact.html" class="btn-cta">ابدأ الآن</a>
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
       <button class="ham" id="ham"><span></span><span></span><span></span></button>
