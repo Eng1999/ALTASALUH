@@ -100,7 +100,7 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
    HERO — dark photo + data widget
 ══════════════════════════════════ */
 .hero{
-  min-height:100vh;padding-top:var(--hh);
+  min-height:100vh;
   display:flex;flex-direction:column;position:relative;overflow:hidden;
 }
 .hero-photo{
@@ -112,40 +112,41 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 .hero-ov{
   position:absolute;inset:0;
   background:
-    linear-gradient(to left, rgba(7,24,39,.1) 0%, rgba(7,24,39,.75) 40%, rgba(7,24,39,.97) 100%),
-    linear-gradient(to top,  rgba(7,24,39,.98) 0%, transparent 45%);
-}
-.hero-body{
-  flex:1;display:flex;align-items:center;
-  padding:clamp(50px,6vw,80px) 0 clamp(30px,4vw,50px);
-  position:relative;z-index:1;
-}
-.hero-grid{
-  width:min(1200px,calc(100% - 40px));margin-inline:auto;
-  display:grid;grid-template-columns:1fr 400px;gap:clamp(32px,5vw,56px);align-items:center;min-height:70vh;
+    linear-gradient(to bottom, rgba(7,24,39,.55) 0%, rgba(7,24,39,.4) 50%, rgba(7,24,39,.7) 100%);
 }
 
-/* hero text */
-.badge-live{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:5px 14px 5px 10px;
-  background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.25);
-  border-radius:30px;color:var(--G);font-weight:800;font-size:.75rem;margin-bottom:22px;
+/* ── HERO CENTER LAYOUT ── */
+.hero-center{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;
+  padding:calc(var(--hh) + 60px) 20px 60px;
+  text-align:center;
 }
-.live-dot{width:7px;height:7px;border-radius:50%;background:var(--G);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{
-  font-size:clamp(2.2rem,5vw,4.6rem);
-  font-weight:900;line-height:1.15;color:#fff;
-  margin-bottom:18px;
+.hero-center-inner{
+  max-width:900px;
+  animation:hero-in 1.2s cubic-bezier(.22,.68,0,1) both;
 }
-.hero h1 em{color:var(--G);font-style:normal;display:block;margin-top:4px}
-.hero-sub{
-  color:rgba(255,255,255,.6);
-  font-size:clamp(.95rem,1.2vw,1.05rem);
-  line-height:1.8;max-width:480px;margin-bottom:30px;
+@keyframes hero-in{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:none}
 }
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.hero-tagline{
+  font-size:clamp(1rem,1.6vw,1.25rem);
+  font-weight:700;color:var(--G);
+  letter-spacing:.08em;
+  margin-bottom:28px;
+  animation:hero-in 1.2s .15s cubic-bezier(.22,.68,0,1) both;
+}
+.hero-headline{
+  font-size:clamp(2.4rem,6vw,5.5rem);
+  font-weight:900;line-height:1.2;color:#fff;
+  margin-bottom:44px;
+  animation:hero-in 1.2s .25s cubic-bezier(.22,.68,0,1) both;
+}
+.hero-btns{
+  display:flex;gap:16px;flex-wrap:wrap;justify-content:center;
+  animation:hero-in 1.2s .4s cubic-bezier(.22,.68,0,1) both;
+}
 .btn-solid{
   padding:13px 28px;background:var(--G);color:var(--D);
   font-weight:900;font-size:.92rem;border-radius:8px;
@@ -159,29 +160,9 @@ body.js-ready [data-d="8"]{transition-delay:.72s}
 .btn-ghost:hover{border-color:var(--G);color:var(--G)}
 
 /* hero stats */
-.hero-kw{
-  display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;
-}
-.kw{
-  padding:9px 18px;
-  border:1px solid rgba(44,197,139,.3);
-  border-radius:8px;
-  background:rgba(44,197,139,.07);
-  color:#fff;font-size:.88rem;font-weight:800;
-  backdrop-filter:blur(6px);
-  transition:.2s;
-}
-.kw em{color:var(--G);font-style:normal}
-.kw:hover{background:rgba(44,197,139,.15);border-color:var(--G)}
 
-/* hero scroll */
-.hero-scroll{
-  position:relative;z-index:1;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  padding-bottom:24px;color:rgba(255,255,255,.3);font-size:.72rem;font-weight:700;
-}
-.sl{width:1px;height:32px;background:linear-gradient(to bottom,var(--G),transparent);animation:sl 2s ease-in-out infinite}
-@keyframes sl{0%,100%{opacity:.3}50%{opacity:1}}
+
+50%{opacity:1}}
 
 /* ══════════════════════════════════
    TICKER
@@ -718,7 +699,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 
 /* responsive */
 @media(max-width:1100px){
-  .hero-grid{grid-template-columns:1fr 340px}
   .svc-g{grid-template-columns:repeat(2,1fr)}
   .adv-g{grid-template-columns:repeat(2,1fr)}
   .stats-g{grid-template-columns:repeat(3,1fr)}
@@ -828,101 +808,6 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 .comp-card strong{display:block;font-size:.85rem;font-weight:800;margin-bottom:2px}
 .comp-card span{font-size:.7rem;color:rgba(255,255,255,.35);line-height:1.5}
 
-/* ── HERO MOTION QUOTE ── */
-.hq-card{
-  position:relative;overflow:hidden;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(44,197,139,.18);
-  border-radius:24px;
-  padding:clamp(32px,4vw,52px) clamp(24px,3vw,42px);
-  display:flex;flex-direction:column;justify-content:center;gap:20px;
-  backdrop-filter:blur(12px);
-  animation:hq-float 6s ease-in-out infinite;
-  min-height:320px;
-}
-@keyframes hq-float{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-10px)}
-}
-.hq-glow{
-  position:absolute;inset:-1px;
-  border-radius:inherit;
-  background:linear-gradient(135deg,rgba(44,197,139,.15) 0%,transparent 50%,rgba(44,197,139,.08) 100%);
-  pointer-events:none;
-  animation:hq-glow 4s ease-in-out infinite alternate;
-}
-@keyframes hq-glow{
-  0%{opacity:.5}100%{opacity:1}
-}
-.hq-qmark{
-  font-size:clamp(5rem,9vw,8rem);
-  font-family:Georgia,serif;
-  color:var(--G);
-  line-height:.7;
-  opacity:.35;
-  position:absolute;top:16px;right:28px;
-  animation:hq-pulse 3s ease-in-out infinite;
-}
-@keyframes hq-pulse{0%,100%{opacity:.25}50%{opacity:.5}}
-.hq-text{
-  font-size:clamp(1.4rem,2.5vw,2rem);
-  font-weight:900;color:#fff;
-  line-height:1.5;position:relative;z-index:1;
-  animation:hq-reveal 1s ease both;
-}
-.hq-text em{
-  color:var(--G);font-style:normal;display:block;
-  font-size:clamp(1.6rem,3vw,2.4rem);margin-top:6px;
-}
-@keyframes hq-reveal{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:none}
-}
-.hq-divider{
-  width:60px;height:3px;
-  background:linear-gradient(90deg,var(--G),transparent);
-  border-radius:3px;
-}
-.hq-pills{
-  display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1;
-}
-.hq-pills span{
-  padding:6px 14px;
-  background:rgba(44,197,139,.1);
-  border:1px solid rgba(44,197,139,.25);
-  border-radius:30px;
-  color:var(--G);font-size:.78rem;font-weight:800;
-  animation:hq-float 6s ease-in-out infinite;
-}
-.hq-pills span:nth-child(2){animation-delay:.5s}
-.hq-pills span:nth-child(3){animation-delay:1s}
-/* floating orbs */
-.hq-orbs{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:inherit}
-.hq-orb{position:absolute;border-radius:50%;filter:blur(40px)}
-.hq-orb1{
-  width:180px;height:180px;
-  background:rgba(44,197,139,.12);
-  bottom:-60px;left:-60px;
-  animation:orb1 8s ease-in-out infinite;
-}
-.hq-orb2{
-  width:120px;height:120px;
-  background:rgba(44,197,139,.08);
-  top:-40px;right:20%;
-  animation:orb1 6s ease-in-out infinite reverse;
-}
-.hq-orb3{
-  width:80px;height:80px;
-  background:rgba(7,24,39,.3);
-  top:40%;right:-30px;
-  animation:orb1 10s ease-in-out infinite;
-}
-@keyframes orb1{
-  0%,100%{transform:translate(0,0)}
-  33%{transform:translate(20px,-20px)}
-  66%{transform:translate(-15px,15px)}
-}
-
 @media(max-width:900px){.chair-g{grid-template-columns:1fr}}
 @media(max-width:680px){
   .sama-top .wrap{justify-content:center;text-align:center}
@@ -989,41 +874,13 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <section class="hero" id="home">
   <div class="hero-photo"></div>
   <div class="hero-ov"></div>
-  <div class="hero-body">
-    <div class="hero-grid">
-      <div>
-        <h1 data-i18n-html="hero-h1">شريكك الأول<em>في تحصيل الديون</em></h1>
-        <p class="hero-sub" data-i18n="hero-sub">فريق من 180+ متخصص وأنظمة تقنية متطورة.</p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-solid" data-i18n="hero-btn1">تواصل معنا</a>
-          <a href="#services" class="btn-ghost" data-i18n="hero-btn2">استعرض الخدمات</a>
-        </div>
-        <div class="hero-kw">
-          <div class="kw" data-i18n-html="kw1"><em>تحصيل</em> فعّال</div>
-          <div class="kw" data-i18n-html="kw2"><em>حلول</em> قانونية</div>
-          <div class="kw" data-i18n-html="kw3">استرداد <em>حقوقك</em></div>
-          <div class="kw" data-i18n-html="kw4">حماية <em>محفظتك</em></div>
-          <div class="kw" data-i18n-html="kw5">فريق <em>متخصص</em></div>
-          <div class="kw" data-i18n-html="kw6">امتثال <em>تنظيمي</em></div>
-        </div>
-      </div>
-
-      <!-- MOTION QUOTE -->
-      <div class="hq-card">
-        <div class="hq-glow"></div>
-        <div class="hq-qmark">"</div>
-        <p class="hq-text">الثقة لا تُبنى بالكلام<br><em>تُبنى بالتحصيل</em></p>
-        <div class="hq-divider"></div>
-        <div class="hq-pills">
-          <span>+180 متخصص</span>
-          <span>8 خدمات</span>
-          <span>منذ 2022</span>
-        </div>
-        <div class="hq-orbs">
-          <div class="hq-orb hq-orb1"></div>
-          <div class="hq-orb hq-orb2"></div>
-          <div class="hq-orb hq-orb3"></div>
-        </div>
+  <div class="hero-center">
+    <div class="hero-center-inner">
+      <div class="hero-tagline" data-i18n="hero-tagline">التصالح .. هدفها التصالح</div>
+      <h1 class="hero-headline" data-i18n="hero-h1">تقديم خدمات تحصيل الديون<br>عن جهات التمويل</h1>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-solid" data-i18n="hero-btn1">تواصل معنا</a>
+        <a href="#services" class="btn-ghost" data-i18n="hero-btn2">استعرض الخدمات</a>
       </div>
     </div>
   </div>
@@ -1621,7 +1478,8 @@ const I18N = {
     'nav-home':'الرئيسية','nav-about':'عن الشركة','nav-services':'الخدمات',
     'nav-strategy':'الاستراتيجية','nav-advantages':'المميزات','nav-careers':'التوظيف',
     'nav-contact':'تواصل معنا','nav-cta':'ابدأ الآن',
-    'hero-h1':'شريكك الأول<em>في تحصيل الديون</em>',
+    'hero-tagline':'التصالح .. هدفها التصالح',
+    'hero-h1':'تقديم خدمات تحصيل الديون عن جهات التمويل',
     'hero-sub':'فريق من 180+ متخصص وأنظمة تقنية متطورة.',
     'hero-btn1':'تواصل معنا','hero-btn2':'استعرض الخدمات',
     'kw1':'<em>تحصيل</em> فعّال','kw2':'<em>حلول</em> قانونية',
@@ -1710,7 +1568,8 @@ const I18N = {
     'nav-home':'Home','nav-about':'About Us','nav-services':'Services',
     'nav-strategy':'Strategy','nav-advantages':'Advantages','nav-careers':'Careers',
     'nav-contact':'Contact Us','nav-cta':'Get Started',
-    'hero-h1':'Your First Partner<em>in Debt Collection</em>',
+    'hero-tagline':'Altasaluh .. Its Goal Is Altasaluh',
+    'hero-h1':'Providing Debt Collection Services for Financing Institutions',
     'hero-sub':'A team of 180+ specialists with advanced technology systems.',
     'hero-btn1':'Contact Us','hero-btn2':'Explore Services',
     'kw1':'<em>Effective</em> Collection','kw2':'<em>Legal</em> Solutions',
