@@ -31,17 +31,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 /* ─ layout */
 .wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
 
-/* ─ reveal */
-.rv{opacity:0;transform:translateY(30px);transition:.55s ease}
-.rv.on{opacity:1;transform:none}
-.rv-l{opacity:0;transform:translateX(-30px);transition:.55s ease}
-.rv-l.on{opacity:1;transform:none}
-.rv-r{opacity:0;transform:translateX(30px);transition:.55s ease}
-.rv-r.on{opacity:1;transform:none}
-[data-d="2"]{transition-delay:.12s}[data-d="3"]{transition-delay:.22s}
-[data-d="4"]{transition-delay:.32s}[data-d="5"]{transition-delay:.42s}
-[data-d="6"]{transition-delay:.52s}[data-d="7"]{transition-delay:.62s}
-[data-d="8"]{transition-delay:.72s}
+/* ─ reveal — hidden only when JS is active */
+body.js-ready .rv{opacity:0;transform:translateY(30px);transition:.55s ease}
+body.js-ready .rv.on{opacity:1;transform:none}
+body.js-ready .rv-l{opacity:0;transform:translateX(-30px);transition:.55s ease}
+body.js-ready .rv-l.on{opacity:1;transform:none}
+body.js-ready .rv-r{opacity:0;transform:translateX(30px);transition:.55s ease}
+body.js-ready .rv-r.on{opacity:1;transform:none}
+body.js-ready [data-d="2"]{transition-delay:.12s}body.js-ready [data-d="3"]{transition-delay:.22s}
+body.js-ready [data-d="4"]{transition-delay:.32s}body.js-ready [data-d="5"]{transition-delay:.42s}
+body.js-ready [data-d="6"]{transition-delay:.52s}body.js-ready [data-d="7"]{transition-delay:.62s}
+body.js-ready [data-d="8"]{transition-delay:.72s}
 
 /* ══════════════════════════════════
    HEADER
@@ -1511,10 +1511,11 @@ new IntersectionObserver(entries=>entries.forEach(e=>{
   if(e.isIntersecting)navAs.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
 }),{threshold:.25,rootMargin:'-76px 0px -60% 0px'}).observe(...document.querySelectorAll('section[id]'));
 
-// Reveal
+// Reveal — mark body as JS-ready first so CSS hides elements
+document.body.classList.add('js-ready');
 const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{
   if(e.isIntersecting){e.target.classList.add('on');rvObs.unobserve(e.target);}
-}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+}),{threshold:.05,rootMargin:'0px 0px 0px 0px'});
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
 
 // Counters
