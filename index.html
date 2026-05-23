@@ -594,8 +594,18 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 .ft-logo > img{
   height:280px;
   width:auto;object-fit:contain;
-  margin-bottom:16px;
+  margin-bottom:12px;
   filter:brightness(1.05);
+  transform-origin:center bottom;
+  animation:flag-wave 3.5s ease-in-out infinite;
+}
+@keyframes flag-wave{
+  0%,100%{transform:skewX(0deg) scaleX(1)}
+  15%    {transform:skewX(-5deg) scaleX(0.96)}
+  30%    {transform:skewX(0deg) scaleX(1)}
+  50%    {transform:skewX(4deg) scaleX(0.97)}
+  70%    {transform:skewX(-3deg) scaleX(0.98)}
+  85%    {transform:skewX(2deg) scaleX(0.99)}
 }
 .ft-logo-name{
   color:#fff;font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:900;margin-bottom:4px;
@@ -1405,7 +1415,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       <!-- الشعار -->
       <div class="ft-logo">
         <img src="assets/altasaluh-logo-stack.png" alt="التصالح" onerror="this.style.display='none'">
-        <div class="ft-soc" style="justify-content:center;margin-top:14px">
+        <div class="ft-soc" style="justify-content:center;margin-top:0">
           <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b" title="Facebook">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
