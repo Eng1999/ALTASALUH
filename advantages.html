@@ -75,24 +75,33 @@ body.js-ready .pl{opacity:0;transform:translateY(32px) scale(.94)}
 .pl:hover img{filter:drop-shadow(0 4px 12px rgba(44,197,139,.3))}
 /* FOOTER */
 footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
-.ft-g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);margin-bottom:clamp(36px,5vw,60px);align-items:start;}
-.ft-logo{display:flex;flex-direction:column;align-items:center;text-align:center}
-.ft-logo > img{height:280px;width:auto;object-fit:contain;margin-bottom:12px;filter:brightness(1.05);transform-origin:center bottom;animation:flag-flutter 1.4s ease-in-out infinite;}
 @keyframes flag-flutter{0%{transform:perspective(500px) rotateY(0deg) skewX(0deg)}10%{transform:perspective(500px) rotateY(12deg) skewX(-2deg)}20%{transform:perspective(500px) rotateY(-8deg) skewX(1.5deg)}30%{transform:perspective(500px) rotateY(14deg) skewX(-2.5deg)}40%{transform:perspective(500px) rotateY(-6deg) skewX(1deg)}50%{transform:perspective(500px) rotateY(10deg) skewX(-2deg)}60%{transform:perspective(500px) rotateY(-10deg) skewX(2deg)}70%{transform:perspective(500px) rotateY(8deg) skewX(-1.5deg)}80%{transform:perspective(500px) rotateY(-5deg) skewX(1deg)}90%{transform:perspective(500px) rotateY(6deg) skewX(-1deg)}100%{transform:perspective(500px) rotateY(0deg) skewX(0deg)}}
-.ft-soc{display:flex;gap:10px;justify-content:center}.soc-b{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:.25s;}.soc-b svg{width:17px;height:17px}.soc-b:hover{background:rgba(44,197,139,.15);border-color:var(--G);color:var(--G)}
-.ft-contact h4{font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--G);margin-bottom:22px;}
-.ft-ci{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}.fci{display:flex;align-items:flex-start;gap:12px}
-.fci-icon{width:36px;height:36px;flex-shrink:0;border-radius:8px;background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.15);display:flex;align-items:center;justify-content:center;color:var(--G);margin-top:1px;}.fci-icon svg{width:16px;height:16px}
-.fci-text small{display:block;color:rgba(255,255,255,.3);font-size:.65rem;font-weight:800;letter-spacing:.06em;margin-bottom:3px}
-.fci-text a,.fci-text span{color:rgba(255,255,255,.75);font-size:.85rem;font-weight:700;transition:.2s;display:block;}.fci-text a:hover{color:var(--G)}
-.ft-nav{display:flex;flex-wrap:wrap;gap:6px 18px}.ft-nav a{color:rgba(255,255,255,.35);font-size:.8rem;font-weight:600;transition:.2s}.ft-nav a:hover{color:var(--G)}
+.ft-new{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(24px,4vw,64px);margin-bottom:clamp(36px,5vw,60px);align-items:start;}
+.ft-info{display:flex;flex-direction:column;gap:16px}
+.ft-info-row{display:flex;align-items:flex-start;gap:12px}
+.ft-info-row .fci-icon{width:36px;height:36px;flex-shrink:0;border-radius:8px;background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.15);display:flex;align-items:center;justify-content:center;color:var(--G);margin-top:1px;}
+.ft-info-row .fci-icon svg{width:16px;height:16px}
+.ft-info-row small{display:block;color:rgba(255,255,255,.3);font-size:.65rem;font-weight:800;letter-spacing:.06em;margin-bottom:3px}
+.ft-info-row a,.ft-info-row span{color:rgba(255,255,255,.75);font-size:.85rem;font-weight:700;transition:.2s;display:block;}
+.ft-info-row a:hover{color:var(--G)}
+.ft-nav-v{display:flex;flex-direction:column;gap:10px;align-items:center;}
+.ft-nav-v h4{font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--G);margin-bottom:6px;text-align:center;}
+.ft-nav-v a{color:rgba(255,255,255,.45);font-size:.85rem;font-weight:700;transition:.2s;text-align:center;}
+.ft-nav-v a:hover{color:var(--G)}
+.ft-brand{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.ft-brand img{height:220px;width:auto;object-fit:contain;filter:brightness(1.05);transform-origin:center bottom;animation:flag-flutter 1.4s ease-in-out infinite;}
+.ft-tagline{color:rgba(255,255,255,.35);font-size:.8rem;font-weight:700}
+.soc-b{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:.25s;}
+.soc-b svg{width:17px;height:17px}.soc-b:hover{background:rgba(44,197,139,.15);border-color:var(--G);color:var(--G)}
+.ft-soc{display:flex;gap:10px}
 .ft-btm{border-top:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}.ft-btm p{color:rgba(255,255,255,.2);font-size:.74rem}
 .ft-links{display:flex;gap:16px}.ft-links a{color:rgba(255,255,255,.2);font-size:.74rem;transition:.2s}.ft-links a:hover{color:var(--G)}
 .f-wa{position:fixed;bottom:26px;left:26px;z-index:500;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.4);animation:wpulse 3s infinite;transition:.3s;}.f-wa:hover{transform:scale(1.12)}
 @keyframes wpulse{0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.35)}50%{box-shadow:0 6px 34px rgba(37,211,102,.6)}}
 .f-top{position:fixed;bottom:26px;right:26px;z-index:500;width:42px;height:42px;border-radius:50%;background:var(--G);color:var(--D);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;opacity:0;pointer-events:none;transition:.3s;}.f-top.on{opacity:1;pointer-events:all}.f-top:hover{transform:translateY(-3px)}
 @media(max-width:1100px){.adv-g{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:680px){:root{--hh:66px}.nav-links{display:none}.ham{display:flex}.adv-g{grid-template-columns:1fr}.ft-g{grid-template-columns:1fr}.ft-btm{flex-direction:column;text-align:center}.ft-links{flex-wrap:wrap;justify-content:center}.sama-top .wrap{justify-content:center}.sama-top-links{justify-content:center}}
+@media(max-width:768px){.ft-new{grid-template-columns:1fr}.ft-brand{align-items:center}.ft-nav-v{align-items:flex-start}}
+@media(max-width:680px){:root{--hh:66px}.nav-links{display:none}.ham{display:flex}.adv-g{grid-template-columns:1fr}.ft-btm{flex-direction:column;text-align:center}.ft-links{flex-wrap:wrap;justify-content:center}.sama-top .wrap{justify-content:center}.sama-top-links{justify-content:center}}
 @media(max-width:480px){.adv-g{grid-template-columns:1fr}}
 </style>
 </head>
@@ -101,11 +110,11 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 <header class="hdr" id="hdr">
   <nav class="nav">
     <a href="index.html" class="logo"><img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'"><span class="logo-tagline">التصالح.. غايته التصالح</span></a>
-    <div class="nav-links"><a href="index.html">الرئيسية</a><a href="about.html">عن الشركة</a><a href="services.html">الخدمات</a><a href="strategy.html">الاستراتيجية</a><a href="advantages.html" class="on">المميزات</a><a href="careers.html">التوظيف</a><a href="contact.html">تواصل معنا</a></div>
+    <div class="nav-links"><a href="index.html">الرئيسية</a><a href="about.html">عن الشركة</a><a href="services.html">الخدمات</a><a href="strategy.html">الاستراتيجية</a><a href="partners.html">شركاؤنا</a><a href="advantages.html" class="on">المميزات</a><a href="careers.html">انضم إلينا</a><a href="contact.html">تواصل معنا</a></div>
     <div class="nav-right"><a href="contact.html" class="btn-cta">ابدأ الآن</a><button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button><button class="ham" id="ham"><span></span><span></span><span></span></button></div>
   </nav>
 </header>
-<nav class="mob" id="mob"><a href="index.html" onclick="cm()">الرئيسية</a><a href="about.html" onclick="cm()">عن الشركة</a><a href="services.html" onclick="cm()">الخدمات</a><a href="strategy.html" onclick="cm()">الاستراتيجية</a><a href="advantages.html" onclick="cm()">المميزات</a><a href="careers.html" onclick="cm()">التوظيف</a><a href="contact.html" onclick="cm()">تواصل معنا</a><a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a></nav>
+<nav class="mob" id="mob"><a href="index.html" onclick="cm()">الرئيسية</a><a href="about.html" onclick="cm()">عن الشركة</a><a href="services.html" onclick="cm()">الخدمات</a><a href="strategy.html" onclick="cm()">الاستراتيجية</a><a href="partners.html" onclick="cm()">شركاؤنا</a><a href="advantages.html" onclick="cm()">المميزات</a><a href="careers.html" onclick="cm()">انضم إلينا</a><a href="contact.html" onclick="cm()">تواصل معنا</a><a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a></nav>
 
 <!-- ══ ADVANTAGES (white) ══ -->
 <section class="sec sec-w" id="advantages" style="padding-top:calc(var(--hh) + clamp(70px,9vw,110px))">
@@ -150,7 +159,57 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   </div>
 </section>
 
-<footer><div class="wrap"><div class="ft-g"><div class="ft-contact"><h4>معلومات التواصل</h4><div class="ft-ci"><div class="fci"><div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="fci-text"><small>العنوان</small><a href="https://share.google/jDdn497Rne9O7LCII" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a></div></div><div class="fci"><div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="fci-text"><small>البريد الإلكتروني</small><a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a></div></div><div class="fci"><div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="fci-text"><small>الجوال</small><a href="tel:0115138328">0115138328</a></div></div></div><nav class="ft-nav"><a href="index.html">الرئيسية</a><a href="about.html">عن الشركة</a><a href="services.html">الخدمات</a><a href="strategy.html">الاستراتيجية</a><a href="advantages.html">المميزات</a><a href="careers.html">التوظيف</a><a href="contact.html">تواصل معنا</a></nav></div><div class="ft-logo"><img src="assets/altasaluh-logo-stack.png" alt="التصالح" onerror="this.style.display='none'"><div class="ft-soc" style="justify-content:center;margin-top:0"><a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="soc-b"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://wa.me/966115138328" target="_blank" rel="noopener" class="soc-b"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a></div></div></div><div class="ft-btm"><p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p><div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط والأحكام</a></div></div></div></footer>
+<footer>
+  <div class="wrap">
+    <div class="ft-new">
+      <!-- Contact Info -->
+      <div class="ft-info">
+        <div class="ft-info-row">
+          <div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><small>العنوان</small><a href="https://share.google/jDdn497Rne9O7LCII" target="_blank" rel="noopener">المكتب 406 — الدور الرابع، الرياض</a></div>
+        </div>
+        <div class="ft-info-row">
+          <div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><small>البريد الإلكتروني</small><a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a></div>
+        </div>
+        <div class="ft-info-row">
+          <div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><small>الجوال</small><a href="tel:0115138328">0115138328</a></div>
+        </div>
+        <div class="ft-info-row">
+          <div class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></div>
+          <div><small>واتساب</small><a href="https://wa.me/966115138328" target="_blank" rel="noopener">966115138328+</a></div>
+        </div>
+      </div>
+      <!-- Vertical Nav -->
+      <div class="ft-nav-v">
+        <h4>روابط سريعة</h4>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">عن الشركة</a>
+        <a href="services.html">الخدمات</a>
+        <a href="strategy.html">الاستراتيجية</a>
+        <a href="partners.html">شركاؤنا</a>
+        <a href="advantages.html">المميزات</a>
+        <a href="careers.html">انضم إلينا</a>
+        <a href="contact.html">تواصل معنا</a>
+      </div>
+      <!-- Brand -->
+      <div class="ft-brand">
+        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" onerror="this.style.display='none'">
+        <p class="ft-tagline">التصالح.. غايته التصالح</p>
+        <div class="ft-soc">
+          <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="soc-b" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://wa.me/966115138328" target="_blank" rel="noopener" class="soc-b" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-btm">
+      <p>© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+      <div class="ft-links"><a href="#">الخصوصية</a><a href="#">الشروط والأحكام</a></div>
+    </div>
+  </div>
+</footer>
 <a href="https://wa.me/966115138328" class="f-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
 <button class="f-top" id="fTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
