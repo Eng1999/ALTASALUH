@@ -348,7 +348,12 @@ function mailtoFallback(){
     'المؤهل الدراسي: '+(g('cq')||'—')+'\n'+
     'رسالة التقديم: '+(g('cmsg')||'—')
   );
-  window.location.href='mailto:hr@altasaluh.com.sa?subject='+sub+'&body='+bod;
+  const href='mailto:hr@altasaluh.com.sa?subject='+sub+'&body='+bod;
+  const el=document.createElement('div');
+  el.innerHTML='تعذّر الإرسال التلقائي — <a href="'+href+'" style="color:#071827;font-weight:900;text-decoration:underline">اضغط هنا لإرسال بالبريد</a>';
+  Object.assign(el.style,{position:'fixed',bottom:'32px',left:'50%',transform:'translateX(-50%)',background:'#2cc58b',color:'#071827',padding:'14px 26px',borderRadius:'10px',fontWeight:'800',fontSize:'.85rem',zIndex:'9999',boxShadow:'0 8px 28px rgba(0,0,0,.2)',maxWidth:'92vw',textAlign:'center',cursor:'default'});
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),9000);
 }
 async function sCareers(e){
   e.preventDefault();
@@ -383,14 +388,10 @@ async function sCareers(e){
       document.getElementById('cForm').reset();
       toast('✓ تم إرسال طلبك بنجاح، سنتواصل معك قريباً');
     }else{
-      // Server reachable but returned error — open mailto fallback
       mailtoFallback();
-      toast('✓ يتم فتح بريدك الإلكتروني لإرسال الطلب');
     }
   }catch{
-    // Network / CORS / timeout — open mailto fallback
     mailtoFallback();
-    toast('✓ يتم فتح بريدك الإلكتروني لإرسال الطلب');
   }
   finally{btn.disabled=false;btn.innerHTML=origHTML;}
 }
