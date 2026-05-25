@@ -604,7 +604,7 @@ textarea.fi{resize:vertical;min-height:90px}
    FOOTER (new unified 3-col)
 ══════════════════════════════════ */
 .ft-new{background:var(--D);color:#fff;padding:60px 0 0}
-.ft-new-g{display:grid;grid-template-columns:1fr auto 1fr;gap:40px;align-items:start;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ft-new-g{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
 .ft-info h4{font-size:1.1rem;font-weight:900;color:var(--G);margin-bottom:20px}
 .ft-info-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:.92rem;color:rgba(255,255,255,.75)}
 .ft-info-row svg{width:16px;height:16px;color:var(--G);flex-shrink:0}
@@ -779,7 +779,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
   .st:nth-child(3){border-top:1px solid rgba(7,24,39,.12);border-left:1px solid rgba(7,24,39,.12)}
   .img-badge{right:0}
 }
-@media(max-width:768px){.ft-new-g{grid-template-columns:1fr;text-align:center}.ft-info-row{justify-content:center}.ft-soc{justify-content:center}.ft-nav-v{align-items:center}}
+@media(max-width:768px){.ft-new-g{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}.ft-info-row{justify-content:center}.ft-soc{justify-content:center}.ft-nav-v{align-items:center}}
 @media(max-width:680px){
   :root{--hh:66px}
   .nav-links,.nav-phone{display:none}
@@ -1069,7 +1069,7 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
       </div>
       <!-- RIGHT: Logo -->
       <div class="ft-brand">
-        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:200px;width:auto;object-fit:contain" onerror="this.style.display='none'">
+        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:110px;width:auto;object-fit:contain" onerror="this.style.display='none'">
         
       </div>
     </div>
