@@ -177,7 +177,7 @@ h2.t em,h1 em,.hero-em{
 /* ── SECTION BACKGROUNDS ── */
 .sec-w{
   background:linear-gradient(180deg,#ffffff 0%,#f7fffe 100%);
-  position:relative;overflow:hidden;
+  position:relative;
 }
 .sec-w::after{
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -187,7 +187,7 @@ h2.t em,h1 em,.hero-em{
 }
 .sec-s{
   background:linear-gradient(160deg,#edfbf5 0%,#f4fcf9 50%,#eaf9f3 100%);
-  position:relative;overflow:hidden;
+  position:relative;
 }
 .sec-s::after{
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -208,6 +208,10 @@ h2.t em,h1 em,.hero-em{
 }
 .sec-d>*{position:relative;z-index:1}
 .sec-d .wrap{position:relative;z-index:1}
+.sec-w>*{position:relative;z-index:1}
+.sec-w .wrap{position:relative;z-index:1}
+.sec-s>*{position:relative;z-index:1}
+.sec-s .wrap{position:relative;z-index:1}
 
 /* ── BUTTON GLOW & SHIMMER ── */
 .btn-solid,.btn-cta{
