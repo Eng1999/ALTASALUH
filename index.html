@@ -6,7 +6,7 @@
 <title>شركة التصالح لتحصيل الديون</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;700;800;900&display=swap" rel="stylesheet">
 <style>
 /* ── LOGO COLORS: dark=#071827  green=#2cc58b ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -891,6 +891,167 @@ footer{background:var(--D);color:#fff;padding-top:clamp(52px,6vw,80px)}
 .val-c p{color:rgba(7,24,39,.55);font-size:.92rem;line-height:1.8}
 .val-ico{width:48px;height:48px;border-radius:11px;background:#edfbf5;border:1px solid rgba(44,197,139,.2);display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.4rem}
 @media(max-width:680px){.values-g{grid-template-columns:1fr}}
+
+/* ══════════════════════════════════════════════
+   CREATIVE ENHANCEMENTS — ALTASALUH 2026
+══════════════════════════════════════════════ */
+
+/* ── FONT RENDERING ── */
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+
+/* ── CUSTOM SELECTION ── */
+::selection{background:rgba(44,197,139,.25);color:var(--D)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:rgba(7,24,39,.05)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--G),var(--Gd));border-radius:10px}
+
+/* ── GRADIENT TEXT ON HEADINGS ── */
+h2.t em,h1 em,.hero-em{
+  background:linear-gradient(135deg,#2cc58b 0%,#7fffd4 55%,#2cc58b 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:shimmer-txt 4s linear infinite;
+}
+@keyframes shimmer-txt{0%{background-position:0% center}100%{background-position:200% center}}
+
+/* ── TAG ENHANCEMENT ── */
+.tag-g{
+  background:linear-gradient(90deg,rgba(44,197,139,.1),rgba(44,197,139,.04));
+  padding:5px 16px 5px 10px;
+  border-radius:50px;
+  border:1px solid rgba(44,197,139,.25);
+  box-shadow:0 0 18px rgba(44,197,139,.08);
+}
+.tag-d{
+  background:rgba(255,255,255,.06);
+  padding:5px 16px 5px 10px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.tag-w{
+  background:rgba(255,255,255,.1);
+  padding:5px 16px 5px 10px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.2);
+}
+
+/* ── SECTION BACKGROUNDS ── */
+.sec-w{
+  background:linear-gradient(180deg,#ffffff 0%,#f7fffe 100%);
+  position:relative;overflow:hidden;
+}
+.sec-w::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(circle at 15% 85%,rgba(44,197,139,.05) 0%,transparent 55%),
+    radial-gradient(circle at 85% 15%,rgba(44,197,139,.04) 0%,transparent 55%);
+}
+.sec-s{
+  background:linear-gradient(160deg,#edfbf5 0%,#f4fcf9 50%,#eaf9f3 100%);
+  position:relative;overflow:hidden;
+}
+.sec-s::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(ellipse 50% 70% at 100% 50%,rgba(44,197,139,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 60% at 0% 50%,rgba(44,197,139,.05) 0%,transparent 70%);
+}
+.sec-d{
+  background:linear-gradient(150deg,#071827 0%,#0c2238 40%,#071827 100%);
+  position:relative;overflow:hidden;
+}
+.sec-d::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 5% 95%,rgba(44,197,139,.09) 0%,transparent 70%),
+    radial-gradient(ellipse 60% 50% at 95% 5%,rgba(44,197,139,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 40% at 50% 50%,rgba(44,197,139,.03) 0%,transparent 70%);
+}
+.sec-d>*{position:relative;z-index:1}
+.sec-d .wrap{position:relative;z-index:1}
+
+/* ── BUTTON GLOW & SHIMMER ── */
+.btn-solid,.btn-cta{
+  box-shadow:0 4px 22px rgba(44,197,139,.38),0 1px 4px rgba(0,0,0,.12);
+  position:relative;overflow:hidden;
+}
+.btn-solid::before,.btn-cta::before{
+  content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
+  transform:skewX(-20deg);
+  animation:btn-shine 3.5s ease infinite;
+}
+@keyframes btn-shine{0%,100%{left:-100%}50%{left:150%}}
+.btn-ghost{
+  border:1.5px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.05);
+}
+.btn-ghost:hover{
+  background:rgba(44,197,139,.12);
+  border-color:var(--G);
+  color:var(--G);
+  box-shadow:0 0 20px rgba(44,197,139,.2);
+}
+
+/* ── NAV GLOW LINE ── */
+.hdr::after{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(44,197,139,.5),rgba(44,197,139,.8),rgba(44,197,139,.5),transparent);
+  opacity:.6;
+}
+.hdr.s::after{opacity:1}
+
+/* ── CARD CREATIVE HOVER ── */
+.svc-card,.pl,.partner-cta{
+  transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s;
+}
+.svc-card:hover{
+  box-shadow:0 20px 50px rgba(44,197,139,.15),0 4px 16px rgba(7,24,39,.1);
+  border-color:rgba(44,197,139,.35) !important;
+}
+
+/* ── GLOWING ORBS IN DARK SECTIONS ── */
+.sec-d .wrap::before{
+  content:"";position:absolute;
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(44,197,139,.06) 0%,transparent 70%);
+  top:-80px;left:-80px;pointer-events:none;z-index:0;
+}
+
+/* ── FOOTER DARK GRADIENT ── */
+.ft-new{
+  background:linear-gradient(160deg,#071827 0%,#0b2135 50%,#071827 100%) !important;
+  position:relative;overflow:hidden;
+}
+.ft-new::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 50% 80% at 0% 100%,rgba(44,197,139,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 60% at 100% 0%,rgba(44,197,139,.05) 0%,transparent 70%);
+}
+.ft-new .wrap{position:relative;z-index:1}
+.ft-new .ft-new-g{position:relative;z-index:1}
+.ft-new .ft-btm{position:relative;z-index:1}
+
+/* ── HERO SECTION VIGNETTE ── */
+.hero-vid-ov{
+  background:
+    linear-gradient(to bottom,rgba(6,20,30,.65) 0%,rgba(6,20,30,.4) 40%,rgba(6,20,30,.75) 100%),
+    radial-gradient(ellipse 70% 80% at 50% 50%,transparent 30%,rgba(6,20,30,.35) 100%) !important;
+}
+
+/* ── HEADING DECORATION LINE ── */
+h2.t::after{display:none}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  .btn-solid::before,.btn-cta::before{animation:none}
+}
+
 </style>
 </head>
 <body>
