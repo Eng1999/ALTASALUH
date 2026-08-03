@@ -1063,6 +1063,42 @@ h2.t em,h1 em,.hero-em{
 /* ── HEADING DECORATION LINE ── */
 h2.t::after{display:none}
 
+/* ── CERT TRUST BAR ── */
+.cert-trust-bar{
+  background:linear-gradient(135deg,#071827 0%,#0c2238 50%,#071827 100%);
+  border-top:1px solid rgba(44,197,139,.22);
+  border-bottom:1px solid rgba(44,197,139,.1);
+  padding:22px 0;position:relative;overflow:hidden;
+}
+.cert-trust-bar::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 60% 120% at 50% 50%,rgba(44,197,139,.04) 0%,transparent 70%);
+}
+.cert-trust-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;position:relative;z-index:1;
+}
+.cert-trust-left{display:flex;align-items:center;gap:16px}
+.cert-shield{
+  width:54px;height:54px;border-radius:13px;flex-shrink:0;
+  background:rgba(44,197,139,.1);border:1.5px solid rgba(44,197,139,.3);
+  display:flex;align-items:center;justify-content:center;color:var(--G);
+  box-shadow:0 0 20px rgba(44,197,139,.12);
+}
+.cert-trust-text{display:flex;flex-direction:column;gap:4px}
+.cert-trust-text strong{font-size:1rem;font-weight:900;color:#fff;letter-spacing:.01em;font-family:'Tajawal',sans-serif}
+.cert-trust-text span{font-size:.76rem;color:rgba(255,255,255,.48);font-weight:600}
+.cert-trust-btn{
+  padding:10px 24px;border:1.5px solid rgba(44,197,139,.38);
+  color:var(--G);font-weight:800;font-size:.84rem;border-radius:8px;
+  transition:.25s;white-space:nowrap;flex-shrink:0;
+}
+.cert-trust-btn:hover{background:rgba(44,197,139,.1);border-color:var(--G);transform:translateY(-2px)}
+@media(max-width:640px){
+  .cert-trust-inner{justify-content:center;text-align:center}
+  .cert-trust-left{flex-direction:column;align-items:center}
+}
+
 /* ── MOBILE ── */
 @media(max-width:768px){
   .btn-solid::before,.btn-cta::before{animation:none}
@@ -1172,6 +1208,27 @@ h2.t::after{display:none}
     </div>
   </div>
 </section>
+
+<!-- ══ CERT TRUST BAR ══ -->
+<div class="cert-trust-bar">
+  <div class="wrap">
+    <div class="cert-trust-inner">
+      <div class="cert-trust-left">
+        <div class="cert-shield">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <div class="cert-trust-text">
+          <strong>معتمدون وفق ISO/IEC 27001:2022</strong>
+          <span>رقم الشهادة: AMER402161 &nbsp;·&nbsp; صالحة حتى يوليو 2029 &nbsp;·&nbsp; أمن المعلومات لخدمات تحصيل الديون</span>
+        </div>
+      </div>
+      <a href="about.html#certification" class="cert-trust-btn">عرض الشهادة ←</a>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="ft-new">

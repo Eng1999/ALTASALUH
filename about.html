@@ -315,6 +315,38 @@ h2.t em,h1 em,.hero-em{
 /* ── HEADING DECORATION LINE ── */
 h2.t::after{display:none}
 
+/* ── ISO CERTIFICATION SECTION ── */
+.iso-cert-g{display:grid;grid-template-columns:1fr 340px;gap:clamp(40px,6vw,80px);align-items:center}
+.iso-meta-g{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.iso-meta-item{background:rgba(255,255,255,.05);border:1px solid rgba(44,197,139,.15);border-radius:12px;padding:16px 18px;transition:border-color .3s}
+.iso-meta-item:hover{border-color:rgba(44,197,139,.4)}
+.iso-meta-label{display:block;font-size:.68rem;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.12em;margin-bottom:6px}
+.iso-meta-val{font-size:.92rem;font-weight:800;color:#fff}
+.iso-cert-badge{display:flex;flex-direction:column;align-items:center;gap:22px}
+.iso-badge-ring{width:250px;height:250px;border-radius:50%;
+  background:conic-gradient(from 0deg,rgba(44,197,139,.08),rgba(44,197,139,.45) 25%,rgba(44,197,139,.08) 50%,rgba(44,197,139,.38) 75%,rgba(44,197,139,.08));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 70px rgba(44,197,139,.18),inset 0 0 40px rgba(44,197,139,.04);
+  animation:ring-spin 22s linear infinite}
+@keyframes ring-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.iso-badge-inner{width:212px;height:212px;border-radius:50%;
+  background:linear-gradient(145deg,#0d2640,#071827);
+  border:2px solid rgba(44,197,139,.35);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  animation:ring-spin 22s linear infinite reverse;
+  box-shadow:0 8px 36px rgba(0,0,0,.5)}
+.iso-badge-inner svg{color:var(--G);margin-bottom:4px}
+.iso-badge-std{font-size:.65rem;font-weight:800;color:rgba(255,255,255,.45);letter-spacing:.22em}
+.iso-badge-num{font-size:2.2rem;font-weight:900;color:var(--G);line-height:1;letter-spacing:-.02em}
+.iso-badge-yr{font-size:.75rem;font-weight:700;color:rgba(255,255,255,.55)}
+.iso-badge-tag{font-size:.6rem;font-weight:900;letter-spacing:.28em;color:rgba(44,197,139,.65);text-transform:uppercase;margin-top:2px}
+.iso-scope-box{background:rgba(255,255,255,.04);border:1px solid rgba(44,197,139,.18);border-radius:12px;padding:14px 20px;text-align:center;max-width:260px;width:100%}
+.iso-scope-box .iso-scope-lbl{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:6px}
+.iso-scope-box p{font-size:.88rem;font-weight:700;color:#fff;line-height:1.55}
+.iso-cert-btns{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:880px){.iso-cert-g{grid-template-columns:1fr}.iso-cert-badge{order:-1}}
+@media(max-width:540px){.iso-meta-g{grid-template-columns:1fr}.iso-badge-ring{width:200px;height:200px}.iso-badge-inner{width:168px;height:168px}.iso-badge-num{font-size:1.8rem}}
+
 /* ── MOBILE ── */
 @media(max-width:768px){
   .btn-solid::before,.btn-cta::before{animation:none}
@@ -430,6 +462,71 @@ h2.t::after{display:none}
         <h3 data-i18n="val3-t">الالتزام</h3>
         <p data-i18n="val3-b">الوفاء بالعهود تجاه عملائنا وشركائنا</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ISO 27001 CERTIFICATION ══ -->
+<section class="sec sec-d" id="certification">
+  <div class="wrap">
+    <div class="iso-cert-g">
+
+      <!-- Info Side -->
+      <div class="rv-l">
+        <span class="tag tag-g">اعتماد دولي</span>
+        <h2 class="t t-w" style="margin-top:8px">معتمدون وفق <em>ISO/IEC 27001</em></h2>
+        <p class="lead lead-w" style="margin-bottom:0;max-width:520px">
+          حصلت شركة التصالح على شهادة أمن المعلومات الدولية <strong style="color:#fff">ISO/IEC 27001:2022</strong>
+          تأكيداً لالتزامها بأعلى معايير حماية البيانات في خدمات تحصيل الديون.
+        </p>
+        <div class="iso-meta-g">
+          <div class="iso-meta-item">
+            <span class="iso-meta-label">رقم الشهادة</span>
+            <strong class="iso-meta-val">AMER402161</strong>
+          </div>
+          <div class="iso-meta-item">
+            <span class="iso-meta-label">تاريخ الإصدار</span>
+            <strong class="iso-meta-val">23 / 07 / 2026</strong>
+          </div>
+          <div class="iso-meta-item">
+            <span class="iso-meta-label">صالحة حتى</span>
+            <strong class="iso-meta-val">22 / 07 / 2029</strong>
+          </div>
+          <div class="iso-meta-item">
+            <span class="iso-meta-label">جهة الاعتماد</span>
+            <strong class="iso-meta-val" style="font-size:.82rem">Americo Quality Standards</strong>
+          </div>
+        </div>
+        <div class="iso-cert-btns">
+          <a href="assets/docs/iso-27001-certificate.pdf" target="_blank" rel="noopener" class="btn-solid">
+            عرض الشهادة ←
+          </a>
+          <a href="assets/docs/iso-27001-certificate.pdf" download class="btn-ghost">
+            تحميل PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Badge Side -->
+      <div class="iso-cert-badge rv-r">
+        <div class="iso-badge-ring">
+          <div class="iso-badge-inner">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+            <div class="iso-badge-std">ISO / IEC</div>
+            <div class="iso-badge-num">27001</div>
+            <div class="iso-badge-yr">2022</div>
+            <div class="iso-badge-tag">Certified</div>
+          </div>
+        </div>
+        <div class="iso-scope-box">
+          <span class="iso-scope-lbl">نطاق الشهادة</span>
+          <p>أمن المعلومات لخدمات تحصيل الديون</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
