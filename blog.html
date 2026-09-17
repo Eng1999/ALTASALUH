@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>انضم إلينا | شركة التصالح</title>
+<title>المدونة | التصالح</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 :root{--D:#071827;--G:#2cc58b;--Gd:#1fa06e;--W:#ffffff;--hh:96px;--ease:cubic-bezier(.22,.68,0,1.2);}
@@ -54,53 +55,47 @@ body.js-ready [data-d="4"]{transition-delay:.32s}
 
 /* SECTIONS */
 .sec{padding-block:clamp(80px,10vw,120px)}
-.sec-w{background:#fff}.sec-s{background:#f4fcf9}.sec-d{background:var(--D)}
+.sec-d{background:var(--D)}.sec-w{background:#fff}.sec-s{background:#f4fcf9}
 .tag{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
 .tag::before{content:"";width:22px;height:2px;border-radius:2px;flex-shrink:0}
 .tag-g{color:var(--G)}.tag-g::before{background:var(--G)}
 h2.t{font-size:clamp(1.8rem,3rem,2.75rem);font-weight:900;line-height:1.22;margin-bottom:26px}
-h2.t-d{color:var(--D)}h2.t em{font-style:normal}h2.t-d em{color:var(--G)}
-.tc{text-align:center}
+h2.t-w{color:#fff}h2.t em{font-style:normal}h2.t-w em{color:var(--G)}
 
-/* BENEFITS */
-.benefits-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:clamp(48px,7vw,80px)}
-.benefit-card{
-  background:#fff;border:1px solid rgba(44,197,139,.15);
-  border-radius:16px;padding:32px 24px;
-  transition:all .3s var(--ease);
-  border-top:3px solid transparent;
-}
-.benefit-card:hover{border-top-color:var(--G);transform:translateY(-5px);box-shadow:0 16px 40px rgba(7,24,39,.08)}
-.benefit-ico{
-  width:52px;height:52px;border-radius:12px;
-  background:#edfbf5;border:1px solid rgba(44,197,139,.2);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:18px;color:var(--G);
-}
-.benefit-ico svg{width:26px;height:26px}
-.benefit-card h3{font-size:1rem;font-weight:900;color:var(--D);margin-bottom:4px}
-.benefit-card .sub{font-size:.78rem;font-weight:800;color:var(--G);margin-bottom:8px}
-.benefit-card p{color:rgba(7,24,39,.5);font-size:.82rem;line-height:1.7}
+/* CONTACT INFO ROW */
+.ci-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.ci{display:flex;align-items:center;gap:14px;padding:16px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;transition:.25s;}
+.ci:hover{border-color:rgba(44,197,139,.3);background:rgba(44,197,139,.05)}
+.ci-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;background:rgba(44,197,139,.12);border:1px solid rgba(44,197,139,.2);display:flex;align-items:center;justify-content:center;color:var(--G);transition:.25s;}
+.ci:hover .ci-icon{background:rgba(44,197,139,.2);border-color:var(--G)}
+.ci-icon svg{width:20px;height:20px}
+.ci small{display:block;color:rgba(255,255,255,.35);font-size:.62rem;font-weight:800;letter-spacing:.06em;margin-bottom:3px}
+.ci strong{display:block;font-size:.82rem;font-weight:800;color:#fff}
+.ci a{color:var(--G);font-size:.82rem;font-weight:800;transition:.2s}.ci a:hover{color:#fff}
+.map-link{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(44,197,139,.06);border:1px solid rgba(44,197,139,.15);border-radius:10px;color:rgba(255,255,255,.65);font-weight:700;font-size:.88rem;transition:.25s;text-decoration:none;}
+.map-link:hover{background:rgba(44,197,139,.12);border-color:rgba(44,197,139,.3);color:var(--G)}
+.map-link svg{width:20px;height:20px;color:var(--G);flex-shrink:0}
 
-/* FORM */
-.careers-form-wrap{
-  background:var(--D);border-radius:20px;
-  padding:clamp(32px,5vw,52px);
-  max-width:860px;margin-inline:auto;
-}
-.careers-form-wrap h3{font-size:1.4rem;font-weight:900;color:#fff;margin-bottom:6px}
-.careers-form-wrap .sub-lbl{color:var(--G);font-size:.8rem;font-weight:800;margin-bottom:28px;display:block}
-.fr{margin-bottom:16px}
-.fr label{display:block;color:rgba(255,255,255,.45);font-size:.72rem;font-weight:800;margin-bottom:5px;letter-spacing:.04em}
-.fi{width:100%;padding:11px 14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;color:#fff;font-size:.88rem;font-family:inherit;transition:.2s;outline:none;}
-.fi::placeholder{color:rgba(255,255,255,.2)}
-.fi:focus{border-color:var(--G);background:rgba(44,197,139,.06);box-shadow:0 0 0 3px rgba(44,197,139,.1)}
-select.fi option{background:var(--D);color:#fff}
-textarea.fi{resize:vertical;min-height:110px}
-.fr2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.sbtn-g{width:100%;padding:14px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:9px;border:none;cursor:pointer;font-family:inherit;transition:all .25s var(--ease);display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;}
+/* COMPREHENSIVE FORM */
+.ct-full-form{max-width:700px;margin:0 auto}
+.ctabs{display:flex;gap:3px;background:rgba(7,24,39,.07);border:1px solid rgba(7,24,39,.1);border-radius:12px;padding:4px;margin-bottom:6px}
+.ctab{flex:1;padding:11px 20px;border-radius:9px;font-weight:800;font-size:.9rem;color:rgba(7,24,39,.5);transition:.2s;background:none;border:none;cursor:pointer;font-family:inherit}
+.ctab.on{background:var(--D);color:#fff;box-shadow:0 2px 10px rgba(7,24,39,.18)}
+.ctab:hover:not(.on){color:var(--D)}
+.ctype-g{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ctype-btn{display:flex;align-items:center;gap:8px;padding:9px 18px;border:1.5px solid rgba(7,24,39,.12);border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:700;color:rgba(7,24,39,.6);transition:.2s;background:#fff;user-select:none}
+.ctype-btn input{display:none}
+.ctype-btn.on{border-color:var(--G);color:var(--Gd);background:rgba(44,197,139,.06)}
+.ctype-btn:hover:not(.on){border-color:rgba(7,24,39,.25);color:var(--D)}
+.fr{margin-bottom:14px}
+.fr label{display:block;color:rgba(7,24,39,.5);font-size:.72rem;font-weight:800;margin-bottom:5px;letter-spacing:.04em}
+.fi{width:100%;padding:11px 14px;background:#fff;border:1.5px solid rgba(7,24,39,.12);border-radius:8px;color:var(--D);font-size:.88rem;font-family:inherit;transition:.2s;outline:none;}
+.fi::placeholder{color:rgba(7,24,39,.25)}
+.fi:focus{border-color:var(--G);box-shadow:0 0 0 3px rgba(44,197,139,.12)}
+textarea.fi{resize:vertical;min-height:100px}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sbtn-g{width:100%;padding:14px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:9px;border:none;cursor:pointer;font-family:inherit;transition:all .25s var(--ease);display:flex;align-items:center;justify-content:center;gap:8px;}
 .sbtn-g:hover{background:var(--Gd);transform:translateY(-2px);box-shadow:0 10px 24px rgba(44,197,139,.3)}
-.fnote{text-align:center;margin-top:10px;color:rgba(255,255,255,.25);font-size:.7rem;display:flex;align-items:center;justify-content:center;gap:5px}
 
 /* FOOTER */
 @keyframes flag-flutter{0%{transform:perspective(500px) rotateY(0deg) skewX(0deg)}10%{transform:perspective(500px) rotateY(12deg) skewX(-2deg)}20%{transform:perspective(500px) rotateY(-8deg) skewX(1.5deg)}30%{transform:perspective(500px) rotateY(14deg) skewX(-2.5deg)}40%{transform:perspective(500px) rotateY(-6deg) skewX(1deg)}50%{transform:perspective(500px) rotateY(10deg) skewX(-2deg)}60%{transform:perspective(500px) rotateY(-10deg) skewX(2deg)}70%{transform:perspective(500px) rotateY(8deg) skewX(-1.5deg)}80%{transform:perspective(500px) rotateY(-5deg) skewX(1deg)}90%{transform:perspective(500px) rotateY(6deg) skewX(-1deg)}100%{transform:perspective(500px) rotateY(0deg) skewX(0deg)}}
@@ -108,9 +103,9 @@ textarea.fi{resize:vertical;min-height:110px}
 @keyframes wpulse{0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.35)}50%{box-shadow:0 6px 34px rgba(37,211,102,.6)}}
 .f-top{position:fixed;bottom:26px;right:26px;z-index:500;width:42px;height:42px;border-radius:50%;background:var(--G);color:var(--D);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;opacity:0;pointer-events:none;transition:.3s;}.f-top.on{opacity:1;pointer-events:all}.f-top:hover{transform:translateY(-3px)}
 
-@media(max-width:900px){.benefits-g{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.ci-row{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){}
-@media(max-width:680px){:root{--hh:66px}.nav-links{display:none}.ham{display:flex}.benefits-g{grid-template-columns:1fr}.fr2{grid-template-columns:1fr}.sama-top .wrap{justify-content:center}.sama-top-links{justify-content:center}}
+@media(max-width:680px){:root{--hh:66px}.nav-links{display:none}.ham{display:flex}.fr2{grid-template-columns:1fr}.sama-top .wrap{justify-content:center}.sama-top-links{justify-content:center}.ci-row{grid-template-columns:1fr}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .ft-new{background:var(--D);color:#fff;padding:60px 0 0}
 .ft-new-g{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -297,12 +292,73 @@ h2.t::after{display:none}
   .btn-solid::before,.btn-cta::before{animation:none}
 }
 
+
+
+/* ══════════════════════════════════════════════
+   BLOG — shared styles
+══════════════════════════════════════════════ */
+.tc{text-align:center}.tc .lead{margin-inline:auto}
+.blog-hero{min-height:56vh;display:flex;align-items:flex-end;position:relative;background-size:cover;background-position:center;}
+.blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,24,39,.55) 0%,rgba(7,24,39,.7) 55%,rgba(7,24,39,.96) 100%);}
+.blog-hero .wrap{position:relative;z-index:1;padding-block:clamp(120px,14vw,170px) clamp(40px,6vw,60px)}
+.blog-back{display:inline-flex;align-items:center;gap:8px;color:var(--G);font-weight:800;font-size:.85rem;margin-bottom:22px}
+.blog-back svg{width:16px;height:16px}
+.blog-meta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:rgba(255,255,255,.55);font-size:.85rem;font-weight:700;margin-top:14px}
+.blog-meta-row span{display:flex;align-items:center;gap:6px}
+.blog-meta-row svg{width:15px;height:15px;color:var(--G)}
+.blog-hero p.lead{margin-top:16px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.blog-card{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(7,24,39,.08);box-shadow:0 4px 20px rgba(7,24,39,.05);text-decoration:none;transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s;}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(44,197,139,.18);border-color:rgba(44,197,139,.3)}
+.blog-card-img{aspect-ratio:16/10;overflow:hidden;background:#f4fcf9}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.blog-card:hover .blog-card-img img{transform:scale(1.06)}
+.blog-card-b{padding:24px 22px 26px;display:flex;flex-direction:column;flex:1}
+.blog-card .tag{margin-bottom:12px}
+.blog-card h3{font-size:1.12rem;font-weight:900;color:var(--D);line-height:1.5;margin-bottom:10px}
+.blog-card p{color:rgba(7,24,39,.55);font-size:.88rem;line-height:1.8;flex:1;margin-bottom:16px}
+.blog-card-foot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid rgba(7,24,39,.07);font-size:.75rem;color:rgba(7,24,39,.4);font-weight:700}
+.blog-card-cta{color:var(--Gd);font-weight:900;display:flex;align-items:center;gap:6px}
+.blog-card-cta svg{width:14px;height:14px;transition:.25s}
+.blog-card:hover .blog-card-cta svg{transform:translateX(-4px)}
+
+/* ARTICLE BODY */
+.article-wrap{max-width:760px;margin-inline:auto}
+.article-body p{color:rgba(7,24,39,.72);font-size:1.02rem;line-height:2;margin-bottom:22px}
+.article-body h2{font-size:clamp(1.35rem,2.4vw,1.7rem);font-weight:900;color:var(--D);line-height:1.5;margin:44px 0 20px}
+.article-body h3{font-size:1.12rem;font-weight:900;color:var(--D);line-height:1.6;margin:32px 0 14px}
+.article-body ul{margin:0 0 24px;padding-inline-start:22px;display:flex;flex-direction:column;gap:10px}
+.article-body ul li{color:rgba(7,24,39,.72);font-size:1rem;line-height:1.85;position:relative}
+.article-body ul li::marker{color:var(--G)}
+.article-lead{font-size:1.14rem;color:rgba(7,24,39,.6);line-height:1.9;margin-bottom:30px;padding-bottom:26px;border-bottom:1px solid rgba(7,24,39,.08)}
+.article-table-wrap{overflow-x:auto;margin:0 0 30px;border-radius:12px;border:1px solid rgba(7,24,39,.1)}
+.article-table{width:100%;border-collapse:collapse;min-width:640px;font-size:.88rem}
+.article-table th{background:var(--D);color:#fff;padding:14px 16px;text-align:start;font-weight:800;font-size:.82rem}
+.article-table td{padding:14px 16px;border-top:1px solid rgba(7,24,39,.08);color:rgba(7,24,39,.68);line-height:1.7;vertical-align:top}
+.article-table tr:nth-child(even) td{background:#f9fdfb}
+.article-table td:first-child{font-weight:800;color:var(--D);white-space:nowrap}
+
+.faq-item{border-bottom:1px solid rgba(7,24,39,.09);padding:20px 0}
+.faq-item summary{cursor:pointer;font-weight:800;font-size:1rem;color:var(--D);list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--G);flex-shrink:0;transition:.25s}
+.faq-item[open] summary::after{content:"–"}
+.faq-item p{margin:14px 0 0;color:rgba(7,24,39,.62);font-size:.94rem;line-height:1.85}
+
+.article-cta{max-width:680px;margin-inline:auto;text-align:center}
+.article-prevnext{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.pn-card{display:block;padding:20px 22px;border-radius:12px;border:1px solid rgba(7,24,39,.1);background:#fff;transition:.25s;text-decoration:none}
+.pn-card:hover{border-color:var(--G);box-shadow:0 10px 30px rgba(44,197,139,.12)}
+.pn-card small{display:block;color:var(--Gd);font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.pn-card span{color:var(--D);font-weight:800;font-size:.92rem;line-height:1.5}
+
+@media(max-width:1040px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.blog-grid{grid-template-columns:1fr}.article-prevnext{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
-
-</div>
-</div>
 
 <header class="hdr" id="hdr">
   <nav class="nav">
@@ -314,9 +370,9 @@ h2.t::after{display:none}
       <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
       <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
       <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
-      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a><a href="blog.html" data-i18n="nav-blog">المدونة</a>
+      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a><a href="blog.html" class="on" onclick="cm()" data-i18n="nav-blog">المدونة</a>
       
-      <a href="careers.html" class="on" data-i18n="nav-careers">انضم إلينا</a>
+      <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
       <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
@@ -332,112 +388,96 @@ h2.t::after{display:none}
   <a href="about.html" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
   <a href="services.html" onclick="cm()" data-i18n="nav-services">الخدمات</a>
   <a href="strategy.html" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
-  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a><a href="blog.html" data-i18n="nav-blog">المدونة</a>
+  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a><a href="blog.html" class="on" onclick="cm()" data-i18n="nav-blog">المدونة</a>
 
   <a href="careers.html" onclick="cm()" data-i18n="nav-careers">انضم إلينا</a>
   <a href="contact.html" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
   <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
 </nav>
 
-<!-- ══ CAREERS ══ -->
-<section class="sec sec-s" id="careers" style="padding-top:calc(var(--hh) + clamp(70px,9vw,110px))">
+
+<section class="sec sec-d" style="padding-top:calc(var(--hh) + clamp(60px,8vw,100px));padding-bottom:clamp(40px,5vw,70px)">
   <div class="wrap">
-    <div class="tc" style="margin-bottom:52px">
-      <span class="tag tag-g rv" data-i18n="ca-tag">فرص العمل</span>
-      <h2 class="t t-d rv" data-d="2" data-i18n-html="ca-h2">انضم إلى فريق <em>التصالح</em></h2>
-      <p class="rv" data-d="3" style="color:rgba(7,24,39,.5);font-size:1rem;max-width:540px;margin:0 auto;line-height:1.8" data-i18n="ca-lead">بيئة عمل احترافية، تطوير مستمر، ومسارات مهنية واضحة في شركة رائدة بقطاع تحصيل الديون</p>
+    <div class="tc rv">
+      <span class="tag tag-g" style="justify-content:center" data-i18n="nav-blog">المدونة</span>
+      <h2 class="t t-w" style="margin-bottom:14px">مقالات وتحليلات في <em>تحصيل الديون</em></h2>
+      <p class="lead lead-w" style="margin-inline:auto">قراءات تشغيلية في إدارة المحافظ التمويلية، معايير اختيار شركاء التحصيل، وأحدث بيانات السوق السعودي — مبنية على منهجية التصالح وخبرتها في القطاع.</p>
     </div>
-
-    <!-- Benefits -->
-    <div class="benefits-g">
-      <div class="benefit-card rv" data-d="1">
-        <div class="benefit-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="7" width="20" height="14" rx="2"/>
-            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-            <line x1="12" y1="12" x2="12" y2="16"/>
-            <line x1="10" y1="14" x2="14" y2="14"/>
-          </svg>
-        </div>
-        <h3 data-i18n="ca1-t">بيئة عمل احترافية</h3>
-        <div class="sub" data-i18n="ca1-s">مع فريق من المتخصصين في قطاع التحصيل</div>
-        <p data-i18n="ca1-b">انضم لفريق يضم أكثر من 180 موظفاً متخصصاً في بيئة تحفز الإبداع والتميز المهني.</p>
-      </div>
-      <div class="benefit-card rv" data-d="2">
-        <div class="benefit-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-          </svg>
-        </div>
-        <h3 data-i18n="ca2-t">تدريب وتطوير مستمر</h3>
-        <div class="sub" data-i18n="ca2-s">برامج تأهيل وتدريب متخصصة</div>
-        <p data-i18n="ca2-b">برامج تدريبية شاملة تغطي المهارات العملية والتواصل لضمان نمو مستمر في مسيرتك المهنية.</p>
-      </div>
-      <div class="benefit-card rv" data-d="3">
-        <div class="benefit-ico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-            <polyline points="16 7 22 7 22 13"/>
-          </svg>
-        </div>
-        <h3 data-i18n="ca3-t">فرص نمو حقيقية</h3>
-        <div class="sub" data-i18n="ca3-s">مسارات مهنية واضحة ومحفزة</div>
-        <p data-i18n="ca3-b">مسارات وظيفية محددة مع حوافز أداء تنافسية تكافئ التميز وتدعم طموحاتك المهنية.</p>
-      </div>
+  </div>
+</section>
+<section class="sec sec-w">
+  <div class="wrap">
+    <div class="blog-grid">
+      <a class="blog-card rv" href="tahsil-tamweel-shakhsi-aqari-taajiri.html">
+  <div class="blog-card-img"><img src="assets/blog/tahsil-tamweel-shakhsi-aqari.jpg" alt="تحديات تحصيل التمويل الشخصي والعقاري والتأجيري" loading="lazy"></div>
+  <div class="blog-card-b">
+    <span class="tag tag-g">تحصيل التمويل</span>
+    <h3>تحديات تحصيل التمويل الشخصي والعقاري والتأجيري</h3>
+    <p>لماذا يحتاج كل نوع من أنواع التمويل — الشخصي والعقاري والتأجيري — مسارًا تشغيليًا مختلفًا، وما الحلول المشتركة التي تحسّن نتائج التحصيل عبر المحافظ كلها؟</p>
+    <div class="blog-card-foot">
+      <span>17 سبتمبر 2026 · 9 دقائق قراءة</span>
+      <span class="blog-card-cta">اقرأ المقال <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
     </div>
-
-    <!-- Application Form -->
-    <div class="careers-form-wrap rv" data-d="2">
-      <h3 data-i18n="ca-form-h3">قدّم طلبك الآن</h3>
-      <span class="sub-lbl" data-i18n="ca-form-note">سيتم التواصل معك خلال 3 أيام عمل</span>
-      <form id="cForm" onsubmit="sCareers(event)">
-        <div class="fr2">
-          <div class="fr">
-            <label data-i18n="ca-name-l">الاسم الكامل *</label>
-            <input type="text" class="fi" id="cn" placeholder="الاسم الكامل" required>
-          </div>
-          <div class="fr">
-            <label data-i18n="ca-email-l">البريد الإلكتروني *</label>
-            <input type="email" class="fi" id="ce" placeholder="email@example.com" required>
-          </div>
-        </div>
-        <div class="fr2">
-          <div class="fr">
-            <label data-i18n="ca-phone-l">رقم الجوال *</label>
-            <input type="tel" class="fi" id="cp" placeholder="05xxxxxxxx" required>
-          </div>
-          <div class="fr">
-            <label data-i18n="ca-pos-l">الوظيفة المطلوبة</label>
-            <select class="fi" id="cj">
-              <option value="">اختر الوظيفة...</option>
-              <option>محصّل ديون</option>
-              <option>مستشار قانوني</option>
-              <option>مشرف فريق</option>
-              <option>محلل بيانات</option>
-              <option>إداري</option>
-            </select>
-          </div>
-        </div>
-        <div class="fr">
-          <label data-i18n="ca-qual-l">المؤهل الدراسي</label>
-          <input type="text" class="fi" id="cq" placeholder="بكالوريوس / ماجستير / دبلوم...">
-        </div>
-        <div class="fr">
-          <label data-i18n="ca-letter-l">رسالة التقديم</label>
-          <textarea class="fi" id="cmsg" rows="4" placeholder="أخبرنا عن نفسك وسبب رغبتك في الانضمام إلى فريق التصالح..."></textarea>
-        </div>
-        <button type="submit" class="sbtn-g">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          <span data-i18n="ca-submit">تقديم الطلب</span>
-        </button>
-      </form>
-      <p class="fnote">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span data-i18n="ca-security">بياناتك محفوظة بسرية تامة</span>
-      </p>
+  </div>
+</a><a class="blog-card rv" href="idarat-mahafeth-tamweeliya.html">
+  <div class="blog-card-img"><img src="assets/blog/idarat-mahafeth-tamweeliya.jpg" alt="إدارة المحافظ التمويلية: من التحصيل التقليدي إلى النموذج التشغيلي المرن" loading="lazy"></div>
+  <div class="blog-card-b">
+    <span class="tag tag-g">إدارة المحافظ</span>
+    <h3>إدارة المحافظ التمويلية: من التحصيل التقليدي إلى النموذج التشغيلي المرن</h3>
+    <p>لماذا لم يعد كافياً امتلاك فريق اتصال يتابع المتأخرات، وما عناصر النموذج التشغيلي المرن الذي يدير المحفظة ككل بدل كل حالة على حدة؟</p>
+    <div class="blog-card-foot">
+      <span>14 سبتمبر 2026 · 8 دقائق قراءة</span>
+      <span class="blog-card-cta">اقرأ المقال <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
     </div>
-
+  </div>
+</a><a class="blog-card rv" href="maayir-ikhtiyar-shirkat-tahsil-diyoon.html">
+  <div class="blog-card-img"><img src="assets/blog/maayir-ikhtiyar-shirkat-tahsil.jpg" alt="7 معايير يجب توفرها في مزود خدمة تحصيل الديون قبل التعاقد" loading="lazy"></div>
+  <div class="blog-card-b">
+    <span class="tag tag-g">معايير الاختيار</span>
+    <h3>7 معايير يجب توفرها في مزود خدمة تحصيل الديون قبل التعاقد</h3>
+    <p>من الخبرة القطاعية إلى الشفافية في التقارير — قائمة تحقق عملية بسبعة معايير قابلة للتحقق، بدل الوعود التسويقية العامة، لتقييم أي شركة تحصيل قبل توقيع العقد.</p>
+    <div class="blog-card-foot">
+      <span>10 سبتمبر 2026 · 7 دقائق قراءة</span>
+      <span class="blog-card-cta">اقرأ المقال <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+    </div>
+  </div>
+</a><a class="blog-card rv" href="tahsil-diyoon-bunuk-saudiya.html">
+  <div class="blog-card-img"><img src="assets/blog/tahsil-diyoon-bunuk-saudiya.jpg" alt="كيف تختار البنوك شريك تحصيل ديون موثوق؟" loading="lazy"></div>
+  <div class="blog-card-b">
+    <span class="tag tag-g">القطاع المصرفي</span>
+    <h3>كيف تختار البنوك شريك تحصيل ديون موثوق؟</h3>
+    <p>لماذا صار اختيار شريك التحصيل قرارًا يمس السيولة وسمعة البنك، وما المعايير والإشارات التحذيرية التي يجب أن تكون في صلب أي تقييم؟</p>
+    <div class="blog-card-foot">
+      <span>6 سبتمبر 2026 · 8 دقائق قراءة</span>
+      <span class="blog-card-cta">اقرأ المقال <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+    </div>
+  </div>
+</a><a class="blog-card rv" href="numow-mahafeth-tamweeliya-saudia-2026.html">
+  <div class="blog-card-img"><img src="assets/blog/numow-mahafeth-tamweeliya-2026.jpg" alt="نمو المحافظ التمويلية في السعودية 2026: الفرص واحتياج شركاء التحصيل" loading="lazy"></div>
+  <div class="blog-card-b">
+    <span class="tag tag-g">تقرير السوق</span>
+    <h3>نمو المحافظ التمويلية في السعودية 2026: الفرص واحتياج شركاء التحصيل</h3>
+    <p>الائتمان المصرفي تجاوز 3.3 تريليون ريال في 2025م — أرقام رسمية عن نمو القروض الشخصية والتمويل العقاري وتمويل المنشآت، وما تعنيه لعمليات التحصيل.</p>
+    <div class="blog-card-foot">
+      <span>3 سبتمبر 2026 · 9 دقائق قراءة</span>
+      <span class="blog-card-cta">اقرأ المقال <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></span>
+    </div>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
+<section class="sec sec-d">
+  <div class="wrap">
+    <div class="article-cta">
+      <span class="tag tag-g" style="justify-content:center">تحتاجون شريكاً في التحصيل؟</span>
+      <h2 class="t t-w" style="margin-bottom:16px">لنناقش <em>طبيعة محفظتكم</em></h2>
+      <p class="lead lead-w" style="margin-inline:auto;margin-bottom:32px">فريق التصالح جاهز لمناقشة أولوياتكم التشغيلية ومساعدتكم على بناء تصور أوضح لما تحتاجه المرحلة القادمة.</p>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:10px;transition:.25s">
+        تواصلوا معنا لطلب اجتماع
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -494,69 +534,8 @@ function cm(){mo=false;document.getElementById('mob').classList.remove('on');doc
 document.body.classList.add('js-ready');
 const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');rvObs.unobserve(e.target);}}),{threshold:.05});
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
-function g(id){return document.getElementById(id)?.value||''}
-function toast(msg){const el=document.createElement('div');el.textContent=msg;Object.assign(el.style,{position:'fixed',bottom:'32px',left:'50%',transform:'translateX(-50%)',background:'#2cc58b',color:'#071827',padding:'13px 24px',borderRadius:'10px',fontWeight:'800',fontSize:'.85rem',zIndex:'9999',boxShadow:'0 8px 28px rgba(0,0,0,.2)',maxWidth:'90vw',textAlign:'center',transition:'opacity .3s',opacity:'0'});document.body.appendChild(el);setTimeout(()=>el.style.opacity='1',10);setTimeout(()=>{el.style.opacity='0';setTimeout(()=>el.remove(),300);},4500);}
-function mailtoFallback(){
-  const sub=encodeURIComponent('طلب توظيف – '+g('cn'));
-  const bod=encodeURIComponent(
-    'الاسم: '+g('cn')+'\n'+
-    'البريد الإلكتروني: '+g('ce')+'\n'+
-    'رقم الجوال: '+g('cp')+'\n'+
-    'الوظيفة المطلوبة: '+(g('cj')||'—')+'\n'+
-    'المؤهل الدراسي: '+(g('cq')||'—')+'\n'+
-    'رسالة التقديم: '+(g('cmsg')||'—')
-  );
-  const href='mailto:hr@altasaluh.com.sa?subject='+sub+'&body='+bod;
-  const el=document.createElement('div');
-  el.innerHTML='تعذّر الإرسال التلقائي — <a href="'+href+'" style="color:#071827;font-weight:900;text-decoration:underline">اضغط هنا لإرسال بالبريد</a>';
-  Object.assign(el.style,{position:'fixed',bottom:'32px',left:'50%',transform:'translateX(-50%)',background:'#2cc58b',color:'#071827',padding:'14px 26px',borderRadius:'10px',fontWeight:'800',fontSize:'.85rem',zIndex:'9999',boxShadow:'0 8px 28px rgba(0,0,0,.2)',maxWidth:'92vw',textAlign:'center',cursor:'default'});
-  document.body.appendChild(el);
-  setTimeout(()=>el.remove(),9000);
-}
-async function sCareers(e){
-  e.preventDefault();
-  const btn=e.submitter||document.querySelector('#cForm button[type=submit]');
-  const origHTML=btn.innerHTML;
-  btn.disabled=true;btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg> جاري الإرسال...';
-  const data={
-    _subject:'طلب توظيف – '+g('cn'),
-    _template:'table',
-    _captcha:'false',
-    'الاسم':g('cn'),
-    'البريد الإلكتروني':g('ce'),
-    'رقم الجوال':g('cp'),
-    'الوظيفة المطلوبة':g('cj')||'—',
-    'المؤهل الدراسي':g('cq')||'—',
-    'رسالة التقديم':g('cmsg')||'—',
-    'التاريخ':new Date().toLocaleDateString('ar-SA')
-  };
-  try{
-    const ctrl=new AbortController();
-    const tid=setTimeout(()=>ctrl.abort(),10000);
-    const res=await fetch('https://formsubmit.co/ajax/hr@altasaluh.com.sa',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(data),
-      signal:ctrl.signal
-    });
-    clearTimeout(tid);
-    let json={};
-    try{json=await res.json();}catch{json={success:res.ok?'true':'false'};}
-    if(json.success==='true'||json.success===true){
-      document.getElementById('cForm').reset();
-      toast('✓ تم إرسال طلبك بنجاح، سنتواصل معك قريباً');
-    }else{
-      mailtoFallback();
-    }
-  }catch{
-    mailtoFallback();
-  }
-  finally{btn.disabled=false;btn.innerHTML=origHTML;}
-}
-let curLang=localStorage.getItem('lang')||'ar';
-function toggleLang(){curLang=curLang==='ar'?'en':'ar';localStorage.setItem('lang',curLang);document.getElementById('langBtn').textContent=curLang==='ar'?'EN':'AR';document.documentElement.lang=curLang;document.documentElement.dir=curLang==='ar'?'rtl':'ltr';}
-if(curLang!=='ar'){document.getElementById('langBtn').textContent='AR';document.documentElement.lang='en';document.documentElement.dir='ltr';}
 </script>
 <script src="assets/js/i18n.js"></script>
+
 </body>
 </html>

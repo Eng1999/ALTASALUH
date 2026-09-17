@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تواصل معنا | شركة التصالح</title>
+<title>إدارة المحافظ التمويلية: من التحصيل التقليدي إلى النموذج التشغيلي المرن | التصالح</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
 :root{--D:#071827;--G:#2cc58b;--Gd:#1fa06e;--W:#ffffff;--hh:96px;--ease:cubic-bezier(.22,.68,0,1.2);}
@@ -291,12 +292,73 @@ h2.t::after{display:none}
   .btn-solid::before,.btn-cta::before{animation:none}
 }
 
+
+
+/* ══════════════════════════════════════════════
+   BLOG — shared styles
+══════════════════════════════════════════════ */
+.tc{text-align:center}.tc .lead{margin-inline:auto}
+.blog-hero{min-height:56vh;display:flex;align-items:flex-end;position:relative;background-size:cover;background-position:center;}
+.blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,24,39,.55) 0%,rgba(7,24,39,.7) 55%,rgba(7,24,39,.96) 100%);}
+.blog-hero .wrap{position:relative;z-index:1;padding-block:clamp(120px,14vw,170px) clamp(40px,6vw,60px)}
+.blog-back{display:inline-flex;align-items:center;gap:8px;color:var(--G);font-weight:800;font-size:.85rem;margin-bottom:22px}
+.blog-back svg{width:16px;height:16px}
+.blog-meta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:rgba(255,255,255,.55);font-size:.85rem;font-weight:700;margin-top:14px}
+.blog-meta-row span{display:flex;align-items:center;gap:6px}
+.blog-meta-row svg{width:15px;height:15px;color:var(--G)}
+.blog-hero p.lead{margin-top:16px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.blog-card{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(7,24,39,.08);box-shadow:0 4px 20px rgba(7,24,39,.05);text-decoration:none;transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s;}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(44,197,139,.18);border-color:rgba(44,197,139,.3)}
+.blog-card-img{aspect-ratio:16/10;overflow:hidden;background:#f4fcf9}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.blog-card:hover .blog-card-img img{transform:scale(1.06)}
+.blog-card-b{padding:24px 22px 26px;display:flex;flex-direction:column;flex:1}
+.blog-card .tag{margin-bottom:12px}
+.blog-card h3{font-size:1.12rem;font-weight:900;color:var(--D);line-height:1.5;margin-bottom:10px}
+.blog-card p{color:rgba(7,24,39,.55);font-size:.88rem;line-height:1.8;flex:1;margin-bottom:16px}
+.blog-card-foot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid rgba(7,24,39,.07);font-size:.75rem;color:rgba(7,24,39,.4);font-weight:700}
+.blog-card-cta{color:var(--Gd);font-weight:900;display:flex;align-items:center;gap:6px}
+.blog-card-cta svg{width:14px;height:14px;transition:.25s}
+.blog-card:hover .blog-card-cta svg{transform:translateX(-4px)}
+
+/* ARTICLE BODY */
+.article-wrap{max-width:760px;margin-inline:auto}
+.article-body p{color:rgba(7,24,39,.72);font-size:1.02rem;line-height:2;margin-bottom:22px}
+.article-body h2{font-size:clamp(1.35rem,2.4vw,1.7rem);font-weight:900;color:var(--D);line-height:1.5;margin:44px 0 20px}
+.article-body h3{font-size:1.12rem;font-weight:900;color:var(--D);line-height:1.6;margin:32px 0 14px}
+.article-body ul{margin:0 0 24px;padding-inline-start:22px;display:flex;flex-direction:column;gap:10px}
+.article-body ul li{color:rgba(7,24,39,.72);font-size:1rem;line-height:1.85;position:relative}
+.article-body ul li::marker{color:var(--G)}
+.article-lead{font-size:1.14rem;color:rgba(7,24,39,.6);line-height:1.9;margin-bottom:30px;padding-bottom:26px;border-bottom:1px solid rgba(7,24,39,.08)}
+.article-table-wrap{overflow-x:auto;margin:0 0 30px;border-radius:12px;border:1px solid rgba(7,24,39,.1)}
+.article-table{width:100%;border-collapse:collapse;min-width:640px;font-size:.88rem}
+.article-table th{background:var(--D);color:#fff;padding:14px 16px;text-align:start;font-weight:800;font-size:.82rem}
+.article-table td{padding:14px 16px;border-top:1px solid rgba(7,24,39,.08);color:rgba(7,24,39,.68);line-height:1.7;vertical-align:top}
+.article-table tr:nth-child(even) td{background:#f9fdfb}
+.article-table td:first-child{font-weight:800;color:var(--D);white-space:nowrap}
+
+.faq-item{border-bottom:1px solid rgba(7,24,39,.09);padding:20px 0}
+.faq-item summary{cursor:pointer;font-weight:800;font-size:1rem;color:var(--D);list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--G);flex-shrink:0;transition:.25s}
+.faq-item[open] summary::after{content:"–"}
+.faq-item p{margin:14px 0 0;color:rgba(7,24,39,.62);font-size:.94rem;line-height:1.85}
+
+.article-cta{max-width:680px;margin-inline:auto;text-align:center}
+.article-prevnext{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.pn-card{display:block;padding:20px 22px;border-radius:12px;border:1px solid rgba(7,24,39,.1);background:#fff;transition:.25s;text-decoration:none}
+.pn-card:hover{border-color:var(--G);box-shadow:0 10px 30px rgba(44,197,139,.12)}
+.pn-card small{display:block;color:var(--Gd);font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.pn-card span{color:var(--D);font-weight:800;font-size:.92rem;line-height:1.5}
+
+@media(max-width:1040px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.blog-grid{grid-template-columns:1fr}.article-prevnext{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
-
-</div>
-</div>
 
 <header class="hdr" id="hdr">
   <nav class="nav">
@@ -308,10 +370,10 @@ h2.t::after{display:none}
       <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
       <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
       <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
-      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a><a href="blog.html" data-i18n="nav-blog">المدونة</a>
+      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a><a href="blog.html" class="on" onclick="cm()" data-i18n="nav-blog">المدونة</a>
       
       <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
-      <a href="contact.html" class="on" data-i18n="ft-nav-contact">تواصل معنا</a>
+      <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
     </div>
     <div class="nav-right">
       <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
@@ -326,100 +388,70 @@ h2.t::after{display:none}
   <a href="about.html" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
   <a href="services.html" onclick="cm()" data-i18n="nav-services">الخدمات</a>
   <a href="strategy.html" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
-  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a><a href="blog.html" data-i18n="nav-blog">المدونة</a>
+  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a><a href="blog.html" class="on" onclick="cm()" data-i18n="nav-blog">المدونة</a>
 
   <a href="careers.html" onclick="cm()" data-i18n="nav-careers">انضم إلينا</a>
   <a href="contact.html" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
   <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
 </nav>
 
-<!-- ══ CONTACT INFO ══ -->
-<section class="sec sec-d" id="contact" style="padding-top:calc(var(--hh) + clamp(50px,7vw,90px));padding-bottom:clamp(40px,5vw,70px)">
+
+<section class="sec blog-hero" style="background-image:url('assets/blog/idarat-mahafeth-tamweeliya-hero.jpg')" id="top">
   <div class="wrap">
-    <div class="tc rv" style="margin-bottom:40px">
-      <span class="tag tag-g" data-i18n="ct-tag">نحن هنا لمساعدتك</span>
-      <h2 class="t t-w" style="margin-bottom:10px" data-i18n-html="ct-h2">تواصل <em>معنا</em></h2>
-      <p data-i18n="ct-lead" style="color:rgba(255,255,255,.5);font-size:.95rem;line-height:1.8;max-width:520px;margin:0 auto">نسعد دائماً بالتواصل معكم، سواء كانت استفسارات حول خدماتنا أو رغبة في الشراكة. فريقنا جاهز لدعمكم.</p>
+    <a href="blog.html" class="blog-back rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>العودة إلى المدونة</a>
+    <span class="tag tag-g rv" data-d="2">إدارة المحافظ</span>
+    <h2 class="t t-w rv" data-d="3" style="max-width:820px">إدارة المحافظ التمويلية: من التحصيل التقليدي إلى <em>النموذج المرن</em></h2>
+    <p class="lead lead-w rv" data-d="4" style="max-width:700px">لماذا لم يعد كافياً امتلاك فريق اتصال يتابع المتأخرات، وما عناصر النموذج التشغيلي المرن الذي يدير المحفظة ككل بدل كل حالة على حدة؟</p>
+    <div class="blog-meta-row rv" data-d="5">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>14 سبتمبر 2026</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>8 دقائق قراءة</span>
     </div>
   </div>
 </section>
-
-<!-- ══ COMPREHENSIVE FORM ══ -->
-<section class="sec sec-s" style="padding-block:clamp(60px,8vw,100px)">
+<section class="sec sec-w" style="padding-block:clamp(56px,7vw,90px)">
   <div class="wrap">
-    <div class="ct-full-form rv">
-      <h2 class="t t-d" style="text-align:center;margin-bottom:8px" data-i18n-html="ctf-h2">تواصل معنا وابدأ <em>رحلتك معنا</em></h2>
-      <p style="text-align:center;color:rgba(7,24,39,.5);margin-bottom:32px;font-size:.9rem;line-height:1.7">نسعد دائماً بالتواصل معكم، فريق مرسوم جاهز لتلبية احتياجاتكم بأعلى مستويات الكفاءة والجودة.</p>
-
-      <!-- Tabs -->
-      <div class="ctabs" style="margin-bottom:24px">
-        <button class="ctab" data-type="in" onclick="swTab('in')" data-i18n="tab-in">الأفراد</button>
-        <button class="ctab on" data-type="co" onclick="swTab('co')" data-i18n="tab-co">الشركات</button>
-      </div>
-
-      <!-- Contact type -->
-      <div class="fr">
-        <label>نوع التواصل</label>
-        <div class="ctype-g">
-          <label class="ctype-btn on"><input type="radio" name="ctype" value="استفسار" checked><span data-i18n="ctype-inquiry">استفسار</span></label>
-          <label class="ctype-btn"><input type="radio" name="ctype" value="طلب"><span data-i18n="ctype-request">طلب</span></label>
-          <label class="ctype-btn"><input type="radio" name="ctype" value="شكوى"><span data-i18n="ctype-complaint">شكوى</span></label>
-        </div>
-      </div>
-
-      <!-- Company fields -->
-      <div id="coF" style="margin-top:4px">
-        <div class="fr"><label data-i18n="co-name-l">اسم الشركة *</label><input type="text" class="fi" id="coName" placeholder="اسم الشركة"></div>
-        <div class="fr"><label data-i18n="co-cr-l">رقم السجل التجاري *</label><input type="text" class="fi" id="coCR" placeholder="رقم السجل التجاري"></div>
-        <div class="fr2">
-          <div class="fr"><label data-i18n="co-email-l">البريد الإلكتروني *</label><input type="email" class="fi" id="coEmail" placeholder="البريد الإلكتروني"></div>
-          <div class="fr"><label data-i18n="co-phone-l">رقم الجوال *</label><input type="tel" class="fi" id="coPhone" placeholder="رقم الجوال"></div>
-        </div>
-        <div class="fr"><label data-i18n="co-msg-l">الملاحظة *</label><textarea class="fi" id="coMsg" rows="4" placeholder="نص الملاحظة"></textarea></div>
-      </div>
-
-      <!-- Individual fields -->
-      <div id="inF" style="display:none;margin-top:4px">
-        <div class="fr2">
-          <div class="fr"><label data-i18n="in-name-l">الاسم الكامل *</label><input type="text" class="fi" id="inName" placeholder="الاسم الكامل"></div>
-          <div class="fr"><label data-i18n="in-nat-l">رقم الهوية الوطنية *</label><input type="text" class="fi" id="inNat" placeholder="رقم الهوية"></div>
-        </div>
-        <div class="fr2">
-          <div class="fr"><label data-i18n="in-email-l">البريد الإلكتروني *</label><input type="email" class="fi" id="inEmail" placeholder="البريد الإلكتروني"></div>
-          <div class="fr"><label data-i18n="in-phone-l">رقم الجوال *</label><input type="tel" class="fi" id="inPhone" placeholder="رقم الجوال"></div>
-        </div>
-        <div class="fr"><label data-i18n="in-msg-l">الملاحظة *</label><textarea class="fi" id="inMsg" rows="4" placeholder="نص الملاحظة"></textarea></div>
-      </div>
-
-      <!-- Privacy -->
-      <div style="margin:20px 0 24px">
-        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
-          <input type="checkbox" id="privCk" style="accent-color:var(--G);margin-top:3px;flex-shrink:0;width:16px;height:16px">
-          <span style="color:rgba(7,24,39,.55);font-size:.82rem;line-height:1.75">بتعبئتك لهذا النموذج، فإنك تُقر بقراءة إشعار الخصوصية. كما تؤكد أن البيانات المدخلة هي بيانات دقيقة وصحيحة، وأنك تتحمل المسؤولية الكاملة عن صحتها.</span>
-        </label>
-      </div>
-
-      <button type="button" class="sbtn-g" data-i18n="ct-submit" onclick="sNewContact()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        إرسال
-      </button>
+    <div class="article-wrap article-body rv">
+      <p>لم تعد إدارة المحافظ التمويلية اليوم مرادفة لمصطلح التحصيل كما كانت قبل سنوات. في الماضي، كان يكفي البنك أو شركة التمويل أن يملك فريق اتصال يتابع المتأخرات ويُذكّر العملاء بمواعيد السداد. أما اليوم، ومع اتساع المحافظ الائتمانية وتنوع شرائح العملاء بين الأفراد والمنشآت الصغيرة والمتوسطة، لم يعد هذا النموذج التقليدي قادرًا على مواكبة حجم التعقيد الفعلي في المحفظة. إدارة المحافظ التمويلية أصبحت منظومة تشغيلية متكاملة، تبدأ من قراءة بيانات المحفظة وتصنيف عملائها، وتنتهي بتقارير تدعم قرارات إدارة الائتمان والمخاطر، مرورًا بمسارات معالجة مختلفة بحسب طبيعة كل حالة.</p><h2>من التحصيل التقليدي إلى إدارة المحافظ التمويلية المتكاملة</h2><p>التحصيل التقليدي يبدأ من افتراض أن جميع العملاء المتأخرين متشابهون: يُتصل بهم بالرسالة نفسها، وتُطبَّق عليهم درجة الإلحاح نفسها، بصرف النظر عن حجم المديونية أو سبب التأخر أو تاريخ العميل مع الجهة التمويلية. هذا النموذج قد ينجح مع محفظة صغيرة ومتجانسة، لكنه يفقد فعاليته بسرعة كلما اتسعت المحفظة وتنوعت شرائحها.</p><p>إدارة المحافظ التمويلية، بالمقابل، تنظر إلى المحفظة ككل قبل أن تنظر إلى كل حالة على حدة. تبدأ بفهم توزيع المخاطر داخلها، وتضع لكل شريحة مسارًا مناسبًا لها، بحيث يصبح التحصيل الودي هو المسار الأول لغالبية الحالات، بينما تُحال الحالات الأكثر تعقيدًا إلى مسارات تصعيد أوضح وأكثر تنظيمًا. الفارق هنا ليس في الأدوات المستخدمة بقدر ما هو في طريقة التفكير: من «كيف نحصّل هذا المبلغ؟» إلى «كيف تُدار هذه المحفظة بأكملها بكفاءة ومسؤولية؟».</p><h2>التحديات التي تواجه البنوك وشركات التمويل في إدارة محافظها</h2><p>عدد من العوامل يجعل إدارة المحافظ التمويلية أكثر تعقيدًا اليوم بالنسبة للبنوك وشركات التمويل على حد سواء:</p><h3>تنوع شرائح العملاء</h3><p>محفظة التمويل الواحدة قد تضم موظفًا براتب ثابت، ومنشأة صغيرة تعتمد على تدفق نقدي متقلب، وعميل بطاقة ائتمانية تجاوز حد الاستخدام. معاملة هذه الشرائح بأسلوب واحد يقلل من فرص التحصيل الودي، ويرفع من احتمالية تدهور العلاقة مع العميل.</p><h3>تفاوت مستويات التعثر وحجم الحالات</h3><p>ليست كل حالة تأخر متشابهة في خطورتها. هناك فرق جوهري بين عميل تأخر أسبوعًا لأسباب مؤقتة، وآخر متعثر منذ أشهر بمبلغ كبير. إدارة المحافظ المتعثرة تحتاج إلى آلية تصنيف تميّز بين هذه المستويات، بدل التعامل معها كمجموعة واحدة.</p><h3>ضغط التكاليف التشغيلية</h3><p>توسّع المحفظة يعني، من الناحية النظرية، حاجة أكبر لفرق العمل. لكن زيادة عدد الموظفين بلا حدود ليست حلًا مستدامًا، ما يجعل كفاءة توزيع الموارد بين الحالات المختلفة عاملًا حاسمًا في ضبط التكلفة التشغيلية.</p><h3>جودة البيانات وتكاملها</h3><p>أي نموذج لإدارة المحافظ التمويلية يعتمد أساسًا على جودة البيانات المتاحة عن كل عميل وكل حالة. بيانات ناقصة أو غير محدّثة تُضعف دقة التصنيف، وتؤدي إلى قرارات معالجة لا تناسب واقع الحالة.</p><h3>الحفاظ على تجربة العميل وسمعة الجهة التمويلية</h3><p>الضغط لتحسين نسب التحصيل قد يدفع بعض الجهات إلى إجراءات أكثر حدة، لكن ذلك غالبًا ما يأتي على حساب تجربة العميل وسمعة الجهة التمويلية على المدى الطويل، خصوصًا في سوق تتنقل فيه الانطباعات بسرعة بين العملاء.</p><h2>عناصر النموذج التشغيلي المرن في إدارة المحافظ التمويلية</h2><p>النموذج التشغيلي المرن لا يعني غياب المنهجية، بل العكس تمامًا: هو منظومة واضحة الخطوات، لكنها قابلة للتكيف مع خصائص كل محفظة. أبرز عناصره:</p><ul><li>فهم طبيعة المحفظة وأهداف الجهة التمويلية قبل أي خطوة تشغيلية.</li><li>تصنيف الحالات والشرائح بمعايير واقعية وقابلة للقياس، مثل مدة التأخر وحجم المديونية وتاريخ العميل.</li><li>مسارات تعامل متعددة بدل آلية واحدة للجميع، بحسب درجة كل حالة.</li><li>التوازن بين التحصيل الودي والتصعيد المنظم، مع الإبقاء على التحصيل الودي كمسار مفضّل.</li><li>مرونة فرق العمل والقدرة على إعادة ترتيب الأولويات عند تغيّر ظروف المحفظة.</li><li>المتابعة الدورية والتقارير ومؤشرات الأداء التي تكشف ما إذا كان النموذج يعمل كما هو مخطط له.</li><li>حماية البيانات والالتزام بالضوابط ذات العلاقة بعمل تحصيل الديون.</li><li>الحفاظ على العلاقة مع العميل ودعم استمرارها مستقبلًا، لا الاكتفاء بإغلاق الملف.</li></ul><h2>كيف ينعكس النموذج المرن على الأداء التشغيلي</h2><p>حين تُطبَّق هذه العناصر مجتمعة، تظهر آثارها في عدة جوانب تشغيلية ملموسة، حتى دون الحاجة إلى أرقام أو وعود محددة: وضوح أكبر في رؤية حالة المحفظة، سرعة استجابة أعلى بفضل تعدد المسارات، كفاءة أفضل لفرق العمل عبر توزيع الجهد حسب الأولوية، تحسين في تخصيص الموارد البشرية والتقنية، وتحسّن في تجربة العميل عبر التعامل بأسلوب يناسب ظرف كل حالة.</p><h2>منهجية التصالح في سياق إدارة المحافظ التمويلية</h2><p>تقوم منهجية التصالح لتحصيل الديون على خمس مراحل متتابعة تتقاطع بشكل مباشر مع فكرة النموذج التشغيلي المرن: دراسة المحفظة وتصنيف حالاتها حسب المخاطر، ثم وضع خطة تحصيل مناسبة لكل محفظة على حدة بدل خطة موحدة، فالتنفيذ عبر تواصل مهني مع العملاء، ثم إدارة البيانات من خلال أنظمة داخلية خاصة بالشركة، وأخيرًا رفع تقارير دورية للجهات التمويلية.</p><p>كما تعكس الخدمات المعلنة للتصالح، الممتدة عبر ثمانية أنواع من المحافظ التمويلية بدءًا من القروض الشخصية ووصولًا إلى التمويل العقاري والمنشآت الصغيرة والمتوسطة، تعاملًا فعليًا مع تنوع الشرائح، لا تركيزًا على نوع واحد من العملاء. ويشير حصول الشركة على شهادة الأيزو ISO/IEC 27001:2022 الخاصة بأمن المعلومات إلى وجود إطار موثّق لحماية بيانات المحافظ التي تُدار من خلالها.</p><h2>الخلاصة: النجاح لا يُقاس بحجم المبالغ المستردة فقط</h2><p>قياس نجاح إدارة المحافظ التمويلية بمبلغ واحد مُسترد في نهاية الشهر تبسيطٌ مخِل لعملية أكثر تعقيدًا بكثير. النموذج الذي يستحق الثقة فعليًا هو الذي يثبت قدرته على التكيف حين تتغير طبيعة المحفظة، ويقدّم إجراءات واضحة يمكن تتبعها ومراجعتها، ويحافظ على تواصل مسؤول مع العملاء حتى في أصعب الحالات. في النهاية، إدارة المحافظ التمويلية ليست معركة بين الجهة التمويلية وعملائها المتعثرين، بل عملية تشغيلية تسعى لتحقيق توازن بين العائد المالي الذي تحتاجه الجهة التمويلية، والعلاقة التي تستحق أن تُحافَظ عليها مع العميل.</p>
     </div>
   </div>
 </section>
-
-<!-- ══ طلب الملف التعريفي ══ -->
-<section class="sec sec-s" id="profile-request">
+<section class="sec sec-s">
   <div class="wrap">
-    <div style="max-width:680px;margin-inline:auto;text-align:center">
-      <span class="tag tag-g rv" style="justify-content:center">الملف التعريفي</span>
-      <h2 class="t t-d rv" data-d="2" style="margin-bottom:14px">احصل على <em>ملفنا التعريفي</em></h2>
-      <p class="lead lead-d rv" data-d="3" style="margin-inline:auto;margin-bottom:36px">أرسل طلبك للحصول على النسخة المعتمدة من الملف التعريفي لشركة التصالح عبر البريد الإلكتروني.</p>
-      <div class="rv" data-d="4" style="display:flex;justify-content:center">
-        <a href="mailto:info@altasaluh.com.sa?subject=طلب الملف التعريفي&body=السلام عليكم، أرجو إرسال الملف التعريفي لشركة التصالح." style="display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:10px;transition:.25s;text-decoration:none">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          طلب الملف التعريفي عبر البريد
-        </a>
+    <div class="article-wrap">
+      <div class="tc rv" style="margin-bottom:36px">
+        <span class="tag tag-g" style="justify-content:center">الأسئلة الشائعة</span>
+        <h2 class="t t-d" style="margin-bottom:0">أسئلة يتكرر <em>طرحها</em></h2>
       </div>
+      <div class="rv">
+        <details class="faq-item"><summary>ما الفرق العملي بين «التحصيل» و«إدارة المحافظ التمويلية»؟</summary><p>التحصيل نشاط تنفيذي يركز على استرداد مبلغ محدد من عميل محدد. أما إدارة المحافظ التمويلية فهي مستوى أعلى: تنظر إلى المحفظة ككل، وتحدد كيف يُوزَّع الجهد والمسارات بين مختلف شرائح العملاء بما يخدم أهداف الجهة التمويلية على المدى المتوسط والطويل.</p></details>
+<details class="faq-item"><summary>كيف تُصنَّف حالات العملاء داخل المحفظة الواحدة؟</summary><p>عادة ما يعتمد التصنيف على معايير قابلة للقياس مثل مدة التأخر عن السداد، وحجم المديونية، وتاريخ العميل السابق مع الجهة التمويلية، ونوع المنتج التمويلي.</p></details>
+<details class="faq-item"><summary>هل يناسب النموذج التشغيلي المرن المحافظ الصغيرة أيضًا، أم يقتصر على المحافظ الكبيرة؟</summary><p>مبدأ التصنيف وتعدد المسارات ينطبق على المحافظ بمختلف أحجامها، وإن كانت درجة التعقيد في تطبيقه تختلف. حتى محفظة محدودة الحجم تستفيد من تمييز حالاتها المتفاوتة بدل معاملتها كمجموعة متجانسة.</p></details>
+<details class="faq-item"><summary>ما دور التقارير ومؤشرات الأداء في إدارة المحافظ التمويلية؟</summary><p>التقارير ومؤشرات الأداء هي الأداة التي تكشف ما إذا كان النموذج التشغيلي يعمل فعليًا كما هو مخطط له. دون متابعة دورية، يصعب على إدارة الائتمان والمخاطر تعديل المسارات أو إعادة توزيع الموارد في الوقت المناسب.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec sec-d">
+  <div class="wrap">
+    <div class="article-cta">
+      <span class="tag tag-g" style="justify-content:center">تحتاجون شريكاً في التحصيل؟</span>
+      <h2 class="t t-w" style="margin-bottom:16px">لنناقش <em>طبيعة محفظتكم</em></h2>
+      <p class="lead lead-w" style="margin-inline:auto;margin-bottom:32px">فريق التصالح جاهز لمناقشة أولوياتكم التشغيلية ومساعدتكم على بناء تصور أوضح لما تحتاجه المرحلة القادمة.</p>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:10px;transition:.25s">
+        تواصلوا معنا لطلب اجتماع
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="sec sec-w" style="padding-top:0">
+  <div class="wrap">
+    <div class="article-wrap">
+      
+<div class="article-prevnext rv">
+  <a class="pn-card" href="maayir-ikhtiyar-shirkat-tahsil-diyoon.html"><small>المقال التالي</small><span>7 معايير يجب توفرها في مزود خدمة تحصيل الديون قبل التعاقد</span></a>
+  <a class="pn-card" href="tahsil-tamweel-shakhsi-aqari-taajiri.html"><small>المقال السابق</small><span>تحديات تحصيل التمويل الشخصي والعقاري والتأجيري</span></a>
+</div>
     </div>
   </div>
 </section>
@@ -477,66 +509,8 @@ function cm(){mo=false;document.getElementById('mob').classList.remove('on');doc
 document.body.classList.add('js-ready');
 const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');rvObs.unobserve(e.target);}}),{threshold:.05});
 document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
-function g(id){return document.getElementById(id)?.value?.trim()||''}
-function toast(msg){const el=document.createElement('div');el.textContent=msg;Object.assign(el.style,{position:'fixed',bottom:'32px',left:'50%',transform:'translateX(-50%)',background:'#2cc58b',color:'#071827',padding:'13px 24px',borderRadius:'10px',fontWeight:'800',fontSize:'.85rem',zIndex:'9999',boxShadow:'0 8px 28px rgba(0,0,0,.2)',maxWidth:'90vw',textAlign:'center',transition:'opacity .3s',opacity:'0'});document.body.appendChild(el);setTimeout(()=>el.style.opacity='1',10);setTimeout(()=>{el.style.opacity='0';setTimeout(()=>el.remove(),300);},4500);}
-// Tab switching
-let curTab='co';
-function swTab(t){curTab=t;document.querySelectorAll('.ctab').forEach(b=>b.classList.toggle('on',b.dataset.type===t));document.getElementById('coF').style.display=t==='co'?'':'none';document.getElementById('inF').style.display=t==='in'?'':'none';}
-// Contact type selection
-document.querySelectorAll('.ctype-btn').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.ctype-btn').forEach(x=>x.classList.remove('on'));b.classList.add('on');b.querySelector('input').checked=true;});});
-// Submit
-function contactMailtoFallback(subj,data){
-  const bod=encodeURIComponent(Object.entries(data).filter(([k])=>!k.startsWith('_')).map(([k,v])=>k+': '+v).join('\n'));
-  window.location.href='mailto:info@altasaluh.com.sa?subject='+encodeURIComponent(subj)+'&body='+bod;
-}
-async function sNewContact(){
-  if(!document.getElementById('privCk').checked){toast('يرجى الموافقة على إشعار الخصوصية أولاً');return;}
-  const btn=document.querySelector('.sbtn-g');
-  const origHTML=btn.innerHTML;
-  btn.disabled=true;btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" style="animation:spin 1s linear infinite"><circle cx="12" cy="12" r="10" stroke-opacity=".25"/><path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/></svg> جاري الإرسال...';
-  const type=document.querySelector('.ctype-btn.on input')?.value||'استفسار';
-  let data,subj;
-  if(curTab==='co'){
-    const name=g('coName');
-    if(!name||!g('coEmail')||!g('coPhone')){toast('يرجى تعبئة الحقول الإلزامية');btn.disabled=false;btn.innerHTML=origHTML;return;}
-    subj=`[شركات] ${type} – ${name}`;
-    data={'_subject':subj,'_template':'table','_captcha':'false','نوع التواصل':type,'اسم الشركة':name,'رقم السجل التجاري':g('coCR'),'البريد الإلكتروني':g('coEmail'),'رقم الجوال':g('coPhone'),'الملاحظة':g('coMsg')||'—','التاريخ':new Date().toLocaleDateString('ar-SA')};
-  }else{
-    const name=g('inName');
-    if(!name||!g('inEmail')||!g('inPhone')){toast('يرجى تعبئة الحقول الإلزامية');btn.disabled=false;btn.innerHTML=origHTML;return;}
-    subj=`[أفراد] ${type} – ${name}`;
-    data={'_subject':subj,'_template':'table','_captcha':'false','نوع التواصل':type,'الاسم الكامل':name,'رقم الهوية الوطنية':g('inNat'),'البريد الإلكتروني':g('inEmail'),'رقم الجوال':g('inPhone'),'الملاحظة':g('inMsg')||'—','التاريخ':new Date().toLocaleDateString('ar-SA')};
-  }
-  try{
-    const ctrl=new AbortController();
-    const tid=setTimeout(()=>ctrl.abort(),10000);
-    const res=await fetch('https://formsubmit.co/ajax/info@altasaluh.com.sa',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(data),
-      signal:ctrl.signal
-    });
-    clearTimeout(tid);
-    let json={};
-    try{json=await res.json();}catch{json={success:res.ok?'true':'false'};}
-    if(json.success==='true'||json.success===true){
-      toast('✓ تم إرسال رسالتك بنجاح، سنتواصل معك قريباً');
-      document.querySelectorAll('.fi').forEach(el=>el.value='');
-      document.getElementById('privCk').checked=false;
-    }else{
-      contactMailtoFallback(subj,data);
-      toast('✓ يتم فتح بريدك الإلكتروني لإرسال الرسالة');
-    }
-  }catch{
-    contactMailtoFallback(subj,data);
-    toast('✓ يتم فتح بريدك الإلكتروني لإرسال الرسالة');
-  }
-  finally{btn.disabled=false;btn.innerHTML=origHTML;}
-}
-let curLang=localStorage.getItem('lang')||'ar';
-function toggleLang(){curLang=curLang==='ar'?'en':'ar';localStorage.setItem('lang',curLang);document.getElementById('langBtn').textContent=curLang==='ar'?'EN':'AR';document.documentElement.lang=curLang;document.documentElement.dir=curLang==='ar'?'rtl':'ltr';}
-if(curLang!=='ar'){document.getElementById('langBtn').textContent='AR';document.documentElement.lang='en';document.documentElement.dir='ltr';}
 </script>
 <script src="assets/js/i18n.js"></script>
+
 </body>
 </html>
