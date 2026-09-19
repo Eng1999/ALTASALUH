@@ -3,7 +3,7 @@ const I18N={
 ar:{
 /* NAV */
 'nav-home':'الرئيسية','nav-about':'عن الشركة','nav-services':'الخدمات',
-'nav-strategy':'الاستراتيجية','nav-partners':'شركاؤنا','nav-careers':'انضم إلينا','nav-contact':'تواصل معنا','nav-cta':'ابدأ الآن',
+'nav-strategy':'الاستراتيجية','nav-partners':'شركاؤنا','nav-blog':'المدونة','nav-careers':'انضم إلينا','nav-contact':'تواصل معنا','nav-cta':'ابدأ الآن',
 /* FOOTER SHARED */
 'ft-info-title':'معلومات الإتصال',
 'ft-addr':'المكتب 406 — الدور الرابع، الرياض',
@@ -12,7 +12,7 @@ ar:{
 'ft-privacy':'الخصوصية','ft-terms':'الشروط والأحكام',
 'ft-tagline':'التصالح.. غايته التصالح',
 'ft-nav-home':'الرئيسية','ft-nav-about':'عن الشركة','ft-nav-services':'الخدمات',
-'ft-nav-strategy':'الاستراتيجية','ft-nav-partners':'شركاؤنا','ft-nav-careers':'انضم إلينا','ft-nav-contact':'تواصل معنا',
+'ft-nav-strategy':'الاستراتيجية','ft-nav-partners':'شركاؤنا','ft-nav-blog':'المدونة','ft-nav-careers':'انضم إلينا','ft-nav-contact':'تواصل معنا',
 /* INDEX */
 'hero-badge':'شريك التمويل في المملكة • منذ 2022',
 'hero-h1a':'نحو تحصيل أكثر كفاءة...','hero-h1b':'واستقرار ائتماني مستدام',
@@ -127,7 +127,7 @@ ar:{
 en:{
 /* NAV */
 'nav-home':'Home','nav-about':'About Us','nav-services':'Services',
-'nav-strategy':'Strategy','nav-partners':'Partners','nav-careers':'Join Us','nav-contact':'Contact Us','nav-cta':'Get Started',
+'nav-strategy':'Strategy','nav-partners':'Partners','nav-blog':'Blog','nav-careers':'Join Us','nav-contact':'Contact Us','nav-cta':'Get Started',
 /* FOOTER SHARED */
 'ft-info-title':'Contact Information',
 'ft-addr':'Office 406 — Fourth Floor, Riyadh',
@@ -136,7 +136,7 @@ en:{
 'ft-privacy':'Privacy','ft-terms':'Terms & Conditions',
 'ft-tagline':'Altasaluh.. Its Goal Is Resolution',
 'ft-nav-home':'Home','ft-nav-about':'About Us','ft-nav-services':'Services',
-'ft-nav-strategy':'Strategy','ft-nav-partners':'Partners','ft-nav-careers':'Join Us','ft-nav-contact':'Contact Us',
+'ft-nav-strategy':'Strategy','ft-nav-partners':'Partners','ft-nav-blog':'Blog','ft-nav-careers':'Join Us','ft-nav-contact':'Contact Us',
 /* INDEX */
 'hero-badge':'Financing Partner in the Kingdom • Since 2022',
 'hero-h1a':'Towards More Efficient Collection...','hero-h1b':'And Sustainable Credit Stability',
@@ -251,8 +251,8 @@ en:{
 };
 
 const PAGE_TITLES={
-'ar':{'index':'شركة التصالح لتحصيل الديون','about':'عن الشركة | التصالح','services':'الخدمات | التصالح','contact':'تواصل معنا | التصالح','careers':'انضم إلينا | التصالح','partners':'شركاؤنا | التصالح','strategy':'الاستراتيجية | التصالح'},
-'en':{'index':'Altasaluh Debt Collection','about':'About Us | Altasaluh','services':'Services | Altasaluh','contact':'Contact Us | Altasaluh','careers':'Careers | Altasaluh','partners':'Partners | Altasaluh','strategy':'Strategy | Altasaluh'}
+'ar':{'index':'شركة التصالح لتحصيل الديون','about':'عن الشركة | التصالح','services':'الخدمات | التصالح','contact':'تواصل معنا | التصالح','careers':'انضم إلينا | التصالح','partners':'شركاؤنا | التصالح','strategy':'الاستراتيجية | التصالح','blog':'المدونة | التصالح'},
+'en':{'index':'Altasaluh Debt Collection','about':'About Us | Altasaluh','services':'Services | Altasaluh','contact':'Contact Us | Altasaluh','careers':'Careers | Altasaluh','partners':'Partners | Altasaluh','strategy':'Strategy | Altasaluh','blog':'Blog | Altasaluh'}
 };
 
 function applyLang(lang){

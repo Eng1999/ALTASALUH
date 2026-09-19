@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 معايير يجب توفرها في مزود خدمة تحصيل الديون قبل التعاقد | التصالح</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+:root{--D:#071827;--G:#2cc58b;--Gd:#1fa06e;--W:#ffffff;--hh:96px;--ease:cubic-bezier(.22,.68,0,1.2);}
+body{font-family:'Cairo',sans-serif;color:var(--D);overflow-x:hidden;line-height:1.72}
+h1,h2,h3,h4,h5{font-family:'Tajawal','Cairo',sans-serif}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font-family:inherit;cursor:pointer;border:none;background:none}
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:var(--G);border-radius:4px}
+.wrap{width:min(1200px,calc(100% - 40px));margin-inline:auto}
+body.js-ready .rv{opacity:0;transform:translateY(30px);transition:.55s ease}
+body.js-ready .rv.on{opacity:1;transform:none}
+body.js-ready .rv-l{opacity:0;transform:translateX(-30px);transition:.55s ease}
+body.js-ready .rv-l.on{opacity:1;transform:none}
+body.js-ready .rv-r{opacity:0;transform:translateX(30px);transition:.55s ease}
+body.js-ready .rv-r.on{opacity:1;transform:none}
+body.js-ready [data-d="2"]{transition-delay:.12s}body.js-ready [data-d="3"]{transition-delay:.22s}
+body.js-ready [data-d="4"]{transition-delay:.32s}
+
+/* HEADER */
+.hdr{position:fixed;top:0;inset-inline:0;z-index:900;height:var(--hh);background:rgba(7,24,39,.38);backdrop-filter:blur(18px);border-bottom:1px solid rgba(44,197,139,.1);display:flex;align-items:center;transition:background .4s,backdrop-filter .4s,box-shadow .4s;}
+.hdr.s{background:rgba(7,24,39,.9);backdrop-filter:blur(22px);box-shadow:0 2px 28px rgba(0,0,0,.28);border-bottom:1px solid rgba(44,197,139,.12)}
+.nav{width:min(1200px,calc(100% - 40px));margin-inline:auto;display:flex;align-items:center;gap:22px}
+.logo{flex-shrink:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.logo img{height:80px;width:auto;object-fit:contain;filter:brightness(1.15) drop-shadow(0 0 10px rgba(44,197,139,.35))}
+.logo-tagline{font-size:.65rem;font-weight:700;color:rgba(255,255,255,.45);white-space:nowrap;letter-spacing:.01em}
+.nav-links{flex:1;display:flex;align-items:center;justify-content:center;gap:5px}
+.nav-links a{padding:9px 16px;color:rgba(255,255,255,.82);font-weight:700;font-size:.87rem;border-radius:6px;transition:.2s;}
+.nav-links a:hover,.nav-links a.on{color:var(--G);background:rgba(44,197,139,.1)}
+.nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.vision-nav-logo{height:80px;width:auto;object-fit:contain;flex-shrink:0;display:block;opacity:1;filter:drop-shadow(0 0 8px rgba(44,197,139,.3))}
+.btn-cta{padding:11px 26px;background:var(--G);color:var(--D);font-weight:900;font-size:.9rem;border-radius:8px;transition:all .25s var(--ease);}
+.btn-cta:hover{background:var(--Gd);transform:translateY(-2px)}
+.lang-btn{padding:8px 15px;border:1.5px solid rgba(255,255,255,.28);border-radius:8px;color:rgba(255,255,255,.82);font-size:.82rem;font-weight:900;cursor:pointer;background:rgba(255,255,255,.04);transition:.2s;letter-spacing:.06em;font-family:inherit;flex-shrink:0;}
+.ham{display:none;flex-direction:column;gap:5px;width:38px;height:38px;align-items:center;justify-content:center;background:rgba(44,197,139,.1);border:1px solid rgba(44,197,139,.2);border-radius:7px;}
+.ham span{width:16px;height:1.5px;background:var(--G)}
+.mob{display:none;position:fixed;inset:0;z-index:800;background:rgba(7,24,39,.98);flex-direction:column;align-items:center;justify-content:center;gap:6px;padding-top:var(--hh);}
+.mob.on{display:flex}.mob a{color:#fff;font-size:1.3rem;font-weight:800;padding:14px 50px;border-radius:10px;transition:.2s}.mob a:hover{color:var(--G);background:rgba(44,197,139,.08)}
+.sama-top{background:transparent;padding:6px 0;font-size:.72rem;color:rgba(255,255,255,.55);}
+.sama-top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.sama-top-badge{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.55);font-weight:700;}
+.sama-top-badge svg{color:var(--G);flex-shrink:0}
+.sama-top-links{display:flex;align-items:center;gap:16px}
+.sama-top-links a{color:rgba(255,255,255,.35);font-size:.68rem;font-weight:700;transition:.2s;text-decoration:none;}
+.sama-top-links a:hover{color:var(--G)}.sama-top-sep{color:rgba(255,255,255,.15)}
+
+/* SECTIONS */
+.sec{padding-block:clamp(80px,10vw,120px)}
+.sec-d{background:var(--D)}.sec-w{background:#fff}.sec-s{background:#f4fcf9}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.tag::before{content:"";width:22px;height:2px;border-radius:2px;flex-shrink:0}
+.tag-g{color:var(--G)}.tag-g::before{background:var(--G)}
+h2.t{font-size:clamp(1.8rem,3rem,2.75rem);font-weight:900;line-height:1.22;margin-bottom:26px}
+h2.t-w{color:#fff}h2.t em{font-style:normal}h2.t-w em{color:var(--G)}
+
+/* CONTACT INFO ROW */
+.ci-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.ci{display:flex;align-items:center;gap:14px;padding:16px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;transition:.25s;}
+.ci:hover{border-color:rgba(44,197,139,.3);background:rgba(44,197,139,.05)}
+.ci-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;background:rgba(44,197,139,.12);border:1px solid rgba(44,197,139,.2);display:flex;align-items:center;justify-content:center;color:var(--G);transition:.25s;}
+.ci:hover .ci-icon{background:rgba(44,197,139,.2);border-color:var(--G)}
+.ci-icon svg{width:20px;height:20px}
+.ci small{display:block;color:rgba(255,255,255,.35);font-size:.62rem;font-weight:800;letter-spacing:.06em;margin-bottom:3px}
+.ci strong{display:block;font-size:.82rem;font-weight:800;color:#fff}
+.ci a{color:var(--G);font-size:.82rem;font-weight:800;transition:.2s}.ci a:hover{color:#fff}
+.map-link{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(44,197,139,.06);border:1px solid rgba(44,197,139,.15);border-radius:10px;color:rgba(255,255,255,.65);font-weight:700;font-size:.88rem;transition:.25s;text-decoration:none;}
+.map-link:hover{background:rgba(44,197,139,.12);border-color:rgba(44,197,139,.3);color:var(--G)}
+.map-link svg{width:20px;height:20px;color:var(--G);flex-shrink:0}
+
+/* COMPREHENSIVE FORM */
+.ct-full-form{max-width:700px;margin:0 auto}
+.ctabs{display:flex;gap:3px;background:rgba(7,24,39,.07);border:1px solid rgba(7,24,39,.1);border-radius:12px;padding:4px;margin-bottom:6px}
+.ctab{flex:1;padding:11px 20px;border-radius:9px;font-weight:800;font-size:.9rem;color:rgba(7,24,39,.5);transition:.2s;background:none;border:none;cursor:pointer;font-family:inherit}
+.ctab.on{background:var(--D);color:#fff;box-shadow:0 2px 10px rgba(7,24,39,.18)}
+.ctab:hover:not(.on){color:var(--D)}
+.ctype-g{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ctype-btn{display:flex;align-items:center;gap:8px;padding:9px 18px;border:1.5px solid rgba(7,24,39,.12);border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:700;color:rgba(7,24,39,.6);transition:.2s;background:#fff;user-select:none}
+.ctype-btn input{display:none}
+.ctype-btn.on{border-color:var(--G);color:var(--Gd);background:rgba(44,197,139,.06)}
+.ctype-btn:hover:not(.on){border-color:rgba(7,24,39,.25);color:var(--D)}
+.fr{margin-bottom:14px}
+.fr label{display:block;color:rgba(7,24,39,.5);font-size:.72rem;font-weight:800;margin-bottom:5px;letter-spacing:.04em}
+.fi{width:100%;padding:11px 14px;background:#fff;border:1.5px solid rgba(7,24,39,.12);border-radius:8px;color:var(--D);font-size:.88rem;font-family:inherit;transition:.2s;outline:none;}
+.fi::placeholder{color:rgba(7,24,39,.25)}
+.fi:focus{border-color:var(--G);box-shadow:0 0 0 3px rgba(44,197,139,.12)}
+textarea.fi{resize:vertical;min-height:100px}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sbtn-g{width:100%;padding:14px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:9px;border:none;cursor:pointer;font-family:inherit;transition:all .25s var(--ease);display:flex;align-items:center;justify-content:center;gap:8px;}
+.sbtn-g:hover{background:var(--Gd);transform:translateY(-2px);box-shadow:0 10px 24px rgba(44,197,139,.3)}
+
+/* FOOTER */
+@keyframes flag-flutter{0%{transform:perspective(500px) rotateY(0deg) skewX(0deg)}10%{transform:perspective(500px) rotateY(12deg) skewX(-2deg)}20%{transform:perspective(500px) rotateY(-8deg) skewX(1.5deg)}30%{transform:perspective(500px) rotateY(14deg) skewX(-2.5deg)}40%{transform:perspective(500px) rotateY(-6deg) skewX(1deg)}50%{transform:perspective(500px) rotateY(10deg) skewX(-2deg)}60%{transform:perspective(500px) rotateY(-10deg) skewX(2deg)}70%{transform:perspective(500px) rotateY(8deg) skewX(-1.5deg)}80%{transform:perspective(500px) rotateY(-5deg) skewX(1deg)}90%{transform:perspective(500px) rotateY(6deg) skewX(-1deg)}100%{transform:perspective(500px) rotateY(0deg) skewX(0deg)}}
+.f-wa{position:fixed;bottom:26px;left:26px;z-index:500;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.4);animation:wpulse 3s infinite;transition:.3s;}.f-wa:hover{transform:scale(1.12)}
+@keyframes wpulse{0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.35)}50%{box-shadow:0 6px 34px rgba(37,211,102,.6)}}
+.f-top{position:fixed;bottom:26px;right:26px;z-index:500;width:42px;height:42px;border-radius:50%;background:var(--G);color:var(--D);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:900;opacity:0;pointer-events:none;transition:.3s;}.f-top.on{opacity:1;pointer-events:all}.f-top:hover{transform:translateY(-3px)}
+
+@media(max-width:900px){.ci-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){}
+@media(max-width:680px){:root{--hh:66px}.nav-links{display:none}.ham{display:flex}.fr2{grid-template-columns:1fr}.sama-top .wrap{justify-content:center}.sama-top-links{justify-content:center}.ci-row{grid-template-columns:1fr}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ft-new{background:var(--D);color:#fff;padding:60px 0 0}
+.ft-new-g{display:flex;align-items:center;justify-content:space-between;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ft-info h4{font-size:1.1rem;font-weight:900;color:var(--G);margin-bottom:20px}
+.ft-info-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:.92rem;color:rgba(255,255,255,.75)}
+.ft-info-row svg{width:16px;height:16px;color:var(--G);flex-shrink:0}
+.ft-info-row a{color:rgba(255,255,255,.7);transition:.2s}.ft-info-row a:hover{color:var(--G)}
+.ft-brand{display:flex;flex-direction:column;align-items:center;gap:8px}
+.ft-soc{display:flex;gap:10px;justify-content:flex-start;margin-top:8px}
+.soc-b{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);transition:.25s;}
+.soc-b svg{width:17px;height:17px}.soc-b:hover{background:rgba(44,197,139,.15);border-color:var(--G);color:var(--G)}
+.ft-btm{border-top:1px solid rgba(255,255,255,.07);padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.ft-btm p{color:rgba(255,255,255,.2);font-size:.74rem}
+.ft-links{display:flex;gap:16px}
+.ft-links a{color:rgba(255,255,255,.2);font-size:.74rem;transition:.2s}
+.ft-links a:hover{color:var(--G)}
+@media(max-width:768px){.ft-new-g{flex-direction:column;text-align:center}.ft-soc{justify-content:center}.ft-info-row{justify-content:center}.ft-btm{flex-direction:column;text-align:center}.ft-links{flex-wrap:wrap;justify-content:center}}
+
+/* ══════════════════════════════════════════════
+   CREATIVE ENHANCEMENTS — ALTASALUH 2026
+══════════════════════════════════════════════ */
+
+/* ── FONT RENDERING ── */
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+/* ── HEADING TYPOGRAPHY ── */
+h1,h2,h3{letter-spacing:-.01em;word-spacing:.03em}
+h2.t{word-spacing:.04em}
+.tag{font-size:.75rem;letter-spacing:.1em}
+
+/* ── CUSTOM SELECTION ── */
+::selection{background:rgba(44,197,139,.25);color:var(--D)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:rgba(7,24,39,.05)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--G),var(--Gd));border-radius:10px}
+
+/* ── GRADIENT TEXT ON HEADINGS ── */
+h2.t em,h1 em,.hero-em{
+  background:linear-gradient(135deg,#2cc58b 0%,#7fffd4 55%,#2cc58b 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:shimmer-txt 4s linear infinite;
+}
+@keyframes shimmer-txt{0%{background-position:0% center}100%{background-position:200% center}}
+
+/* ── TAG ENHANCEMENT ── */
+.tag-g{
+  background:linear-gradient(90deg,rgba(44,197,139,.1),rgba(44,197,139,.04));
+  padding:5px 16px 5px 10px;
+  border-radius:50px;
+  border:1px solid rgba(44,197,139,.25);
+  box-shadow:0 0 18px rgba(44,197,139,.08);
+}
+.tag-d{
+  background:rgba(255,255,255,.06);
+  padding:5px 16px 5px 10px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.12);
+}
+.tag-w{
+  background:rgba(255,255,255,.1);
+  padding:5px 16px 5px 10px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.2);
+}
+
+/* ── SECTION BACKGROUNDS ── */
+.sec-w{
+  background:linear-gradient(180deg,#ffffff 0%,#f7fffe 100%);
+  position:relative;
+}
+.sec-w::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(circle at 15% 85%,rgba(44,197,139,.05) 0%,transparent 55%),
+    radial-gradient(circle at 85% 15%,rgba(44,197,139,.04) 0%,transparent 55%);
+}
+.sec-s{
+  background:linear-gradient(160deg,#edfbf5 0%,#f4fcf9 50%,#eaf9f3 100%);
+  position:relative;
+}
+.sec-s::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    radial-gradient(ellipse 50% 70% at 100% 50%,rgba(44,197,139,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 60% at 0% 50%,rgba(44,197,139,.05) 0%,transparent 70%);
+}
+.sec-d{
+  background:linear-gradient(150deg,#071827 0%,#0c2238 40%,#071827 100%);
+  position:relative;overflow:hidden;
+}
+.sec-d::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 70% 60% at 5% 95%,rgba(44,197,139,.09) 0%,transparent 70%),
+    radial-gradient(ellipse 60% 50% at 95% 5%,rgba(44,197,139,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 40% at 50% 50%,rgba(44,197,139,.03) 0%,transparent 70%);
+}
+.sec-d>*{position:relative;z-index:1}
+.sec-d .wrap{position:relative;z-index:1}
+.sec-w>*{position:relative;z-index:1}
+.sec-w .wrap{position:relative;z-index:1}
+.sec-s>*{position:relative;z-index:1}
+.sec-s .wrap{position:relative;z-index:1}
+
+/* ── BUTTON GLOW & SHIMMER ── */
+.btn-solid,.btn-cta{
+  box-shadow:0 4px 22px rgba(44,197,139,.38),0 1px 4px rgba(0,0,0,.12);
+  position:relative;overflow:hidden;
+}
+.btn-solid::before,.btn-cta::before{
+  content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent);
+  transform:skewX(-20deg);
+  animation:btn-shine 3.5s ease infinite;
+}
+@keyframes btn-shine{0%,100%{left:-100%}50%{left:150%}}
+.btn-ghost{
+  border:1.5px solid rgba(255,255,255,.4);
+  backdrop-filter:blur(8px);
+  background:rgba(255,255,255,.05);
+}
+.btn-ghost:hover{
+  background:rgba(44,197,139,.12);
+  border-color:var(--G);
+  color:var(--G);
+  box-shadow:0 0 20px rgba(44,197,139,.2);
+}
+
+/* ── NAV GLOW LINE ── */
+.hdr::after{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(44,197,139,.5),rgba(44,197,139,.8),rgba(44,197,139,.5),transparent);
+  opacity:.6;
+}
+.hdr.s::after{opacity:1}
+
+/* ── CARD CREATIVE HOVER ── */
+.svc-card,.pl,.partner-cta{
+  transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s;
+}
+.svc-card:hover{
+  box-shadow:0 20px 50px rgba(44,197,139,.15),0 4px 16px rgba(7,24,39,.1);
+  border-color:rgba(44,197,139,.35) !important;
+}
+
+/* ── GLOWING ORBS IN DARK SECTIONS ── */
+.sec-d .wrap::before{
+  content:"";position:absolute;
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(44,197,139,.06) 0%,transparent 70%);
+  top:-80px;left:-80px;pointer-events:none;z-index:0;
+}
+
+/* ── FOOTER DARK GRADIENT ── */
+.ft-new{
+  background:linear-gradient(160deg,#071827 0%,#0b2135 50%,#071827 100%) !important;
+  position:relative;overflow:hidden;
+}
+.ft-new::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 50% 80% at 0% 100%,rgba(44,197,139,.07) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 60% at 100% 0%,rgba(44,197,139,.05) 0%,transparent 70%);
+}
+.ft-new .wrap{position:relative;z-index:1}
+.ft-new .ft-new-g{position:relative;z-index:1}
+.ft-new .ft-btm{position:relative;z-index:1}
+
+/* ── HERO SECTION VIGNETTE ── */
+.hero-vid-ov{
+  background:
+    linear-gradient(to bottom,rgba(6,20,30,.65) 0%,rgba(6,20,30,.4) 40%,rgba(6,20,30,.75) 100%),
+    radial-gradient(ellipse 70% 80% at 50% 50%,transparent 30%,rgba(6,20,30,.35) 100%) !important;
+}
+
+/* ── HEADING DECORATION LINE ── */
+h2.t::after{display:none}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  .btn-solid::before,.btn-cta::before{animation:none}
+}
+
+
+
+/* ══════════════════════════════════════════════
+   BLOG — shared styles
+══════════════════════════════════════════════ */
+.tc{text-align:center}.tc .lead{margin-inline:auto}
+.blog-hero{min-height:56vh;display:flex;align-items:flex-end;position:relative;background-size:cover;background-position:center;}
+.blog-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,24,39,.55) 0%,rgba(7,24,39,.7) 55%,rgba(7,24,39,.96) 100%);}
+.blog-hero .wrap{position:relative;z-index:1;padding-block:clamp(120px,14vw,170px) clamp(40px,6vw,60px)}
+.blog-back{display:inline-flex;align-items:center;gap:8px;color:var(--G);font-weight:800;font-size:.85rem;margin-bottom:22px}
+.blog-back svg{width:16px;height:16px}
+.blog-meta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:rgba(255,255,255,.55);font-size:.85rem;font-weight:700;margin-top:14px}
+.blog-meta-row span{display:flex;align-items:center;gap:6px}
+.blog-meta-row svg{width:15px;height:15px;color:var(--G)}
+.blog-hero p.lead{margin-top:16px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.blog-card{display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(7,24,39,.08);box-shadow:0 4px 20px rgba(7,24,39,.05);text-decoration:none;transition:transform .35s cubic-bezier(.22,.68,0,1.2),box-shadow .3s,border-color .3s;}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(44,197,139,.18);border-color:rgba(44,197,139,.3)}
+.blog-card-img{aspect-ratio:16/10;overflow:hidden;background:#f4fcf9}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.blog-card:hover .blog-card-img img{transform:scale(1.06)}
+.blog-card-b{padding:24px 22px 26px;display:flex;flex-direction:column;flex:1}
+.blog-card .tag{margin-bottom:12px}
+.blog-card h3{font-size:1.12rem;font-weight:900;color:var(--D);line-height:1.5;margin-bottom:10px}
+.blog-card p{color:rgba(7,24,39,.55);font-size:.88rem;line-height:1.8;flex:1;margin-bottom:16px}
+.blog-card-foot{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid rgba(7,24,39,.07);font-size:.75rem;color:rgba(7,24,39,.4);font-weight:700}
+.blog-card-cta{color:var(--Gd);font-weight:900;display:flex;align-items:center;gap:6px}
+.blog-card-cta svg{width:14px;height:14px;transition:.25s}
+.blog-card:hover .blog-card-cta svg{transform:translateX(-4px)}
+
+/* ARTICLE BODY */
+.article-wrap{max-width:760px;margin-inline:auto}
+.article-body p{color:rgba(7,24,39,.72);font-size:1.02rem;line-height:2;margin-bottom:22px}
+.article-body h2{font-size:clamp(1.35rem,2.4vw,1.7rem);font-weight:900;color:var(--D);line-height:1.5;margin:44px 0 20px}
+.article-body h3{font-size:1.12rem;font-weight:900;color:var(--D);line-height:1.6;margin:32px 0 14px}
+.article-body ul{margin:0 0 24px;padding-inline-start:22px;display:flex;flex-direction:column;gap:10px}
+.article-body ul li{color:rgba(7,24,39,.72);font-size:1rem;line-height:1.85;position:relative}
+.article-body ul li::marker{color:var(--G)}
+.article-lead{font-size:1.14rem;color:rgba(7,24,39,.6);line-height:1.9;margin-bottom:30px;padding-bottom:26px;border-bottom:1px solid rgba(7,24,39,.08)}
+.article-table-wrap{overflow-x:auto;margin:0 0 30px;border-radius:12px;border:1px solid rgba(7,24,39,.1)}
+.article-table{width:100%;border-collapse:collapse;min-width:640px;font-size:.88rem}
+.article-table th{background:var(--D);color:#fff;padding:14px 16px;text-align:start;font-weight:800;font-size:.82rem}
+.article-table td{padding:14px 16px;border-top:1px solid rgba(7,24,39,.08);color:rgba(7,24,39,.68);line-height:1.7;vertical-align:top}
+.article-table tr:nth-child(even) td{background:#f9fdfb}
+.article-table td:first-child{font-weight:800;color:var(--D);white-space:nowrap}
+
+.faq-item{border-bottom:1px solid rgba(7,24,39,.09);padding:20px 0}
+.faq-item summary{cursor:pointer;font-weight:800;font-size:1rem;color:var(--D);list-style:none;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.3rem;color:var(--G);flex-shrink:0;transition:.25s}
+.faq-item[open] summary::after{content:"–"}
+.faq-item p{margin:14px 0 0;color:rgba(7,24,39,.62);font-size:.94rem;line-height:1.85}
+
+.article-cta{max-width:680px;margin-inline:auto;text-align:center}
+.article-prevnext{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.pn-card{display:block;padding:20px 22px;border-radius:12px;border:1px solid rgba(7,24,39,.1);background:#fff;transition:.25s;text-decoration:none}
+.pn-card:hover{border-color:var(--G);box-shadow:0 10px 30px rgba(44,197,139,.12)}
+.pn-card small{display:block;color:var(--Gd);font-weight:800;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.pn-card span{color:var(--D);font-weight:800;font-size:.92rem;line-height:1.5}
+
+@media(max-width:1040px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.blog-grid{grid-template-columns:1fr}.article-prevnext{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="assets/altasaluh-logo-wide.png" alt="التصالح" onerror="this.style.display='none'">
+    </a>
+    <div class="nav-links">
+      <a href="index.html" data-i18n="ft-nav-home">الرئيسية</a>
+      <a href="about.html" data-i18n="ft-nav-about">عن الشركة</a>
+      <a href="services.html" data-i18n="ft-nav-services">الخدمات</a>
+      <a href="strategy.html" data-i18n="ft-nav-strategy">الاستراتيجية</a>
+      <a href="partners.html" data-i18n="ft-nav-partners">شركاؤنا</a><a href="blog.html" class="on" onclick="cm()" data-i18n="nav-blog">المدونة</a>
+      
+      <a href="careers.html" data-i18n="ft-nav-careers">انضم إلينا</a>
+      <a href="contact.html" data-i18n="ft-nav-contact">تواصل معنا</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <img src="assets/vision2030.svg" alt="رؤية 2030" class="vision-nav-logo">
+      <button class="ham" id="ham"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<nav class="mob" id="mob">
+  <a href="index.html" onclick="cm()" data-i18n="nav-home">الرئيسية</a>
+  <a href="about.html" onclick="cm()" data-i18n="nav-about">عن الشركة</a>
+  <a href="services.html" onclick="cm()" data-i18n="nav-services">الخدمات</a>
+  <a href="strategy.html" onclick="cm()" data-i18n="nav-strategy">الاستراتيجية</a>
+  <a href="partners.html" onclick="cm()" data-i18n="nav-partners">شركاؤنا</a><a href="blog.html" class="on" onclick="cm()" data-i18n="nav-blog">المدونة</a>
+
+  <a href="careers.html" onclick="cm()" data-i18n="nav-careers">انضم إلينا</a>
+  <a href="contact.html" onclick="cm()" data-i18n="nav-contact">تواصل معنا</a>
+  <a href="tel:0115138328" style="color:var(--G);margin-top:10px">0115138328</a>
+</nav>
+
+
+<section class="sec blog-hero" style="background-image:url('assets/blog/maayir-ikhtiyar-shirkat-tahsil-hero.jpg')" id="top">
+  <div class="wrap">
+    <a href="blog.html" class="blog-back rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg><span data-i18n="blog-back">العودة إلى المدونة</span></a>
+    <span class="tag tag-g rv" data-d="2" data-i18n="maayir-ikhtiyar-shirkat-tahsil-diyoon-tag">معايير الاختيار</span>
+    <h2 class="t t-w rv" data-d="3" style="max-width:820px" data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-title">7 معايير يجب توفرها في مزود خدمة تحصيل الديون <em>قبل التعاقد</em></h2>
+    <p class="lead lead-w rv" data-d="4" style="max-width:700px" data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-lead">من الخبرة القطاعية إلى الشفافية في التقارير — قائمة تحقق عملية بسبعة معايير قابلة للتحقق، بدل الوعود التسويقية العامة، لتقييم أي شركة تحصيل قبل توقيع العقد.</p>
+    <div class="blog-meta-row rv" data-d="5">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="maayir-ikhtiyar-shirkat-tahsil-diyoon-date">10 سبتمبر 2026</span></span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-i18n="maayir-ikhtiyar-shirkat-tahsil-diyoon-read">7 دقائق قراءة</span></span>
+    </div>
+  </div>
+</section>
+<section class="sec sec-w" style="padding-block:clamp(56px,7vw,90px)">
+  <div class="wrap">
+    <div class="article-wrap article-body rv">
+      <p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-1">عندما تتأخر مستحقات عميل أو تتراكم فواتير غير مسددة لدى منشأة، يبدو الحل الأول واضحًا: الاستعانة بشركة تحصيل ديون تتولى الملف. لكن هذا القرار أوسع بكثير من مجرد تفويض جهة خارجية لاسترداد مبلغ متأخر. اختيار مزود خدمة تحصيل غير مناسب قد يؤثر في التدفق النقدي بدل تحسينه، ويعرّض المؤسسة لمخاطر تتعلق بسمعتها وعلاقتها بعملائها، وقد يكشف ثغرات في الامتثال أو حماية البيانات لم تكن ظاهرة قبل التعاقد. من هنا تنبع الحاجة إلى معايير اختيار شركة تحصيل ديون واضحة وقابلة للتحقق، لا انطباعات عامة أو وعود تسويقية يصعب مقارنتها بشكل عملي.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-1">من الوعود العامة إلى معايير قابلة للتحقق</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-2">أغلب العروض التي تصل إلى إدارات الائتمان والمخاطر أو الحسابات المدينة تتشابه ظاهريًا: خبرة طويلة، فريق محترف، ونسب استرداد مرتفعة. المشكلة أن هذه العبارات لا تقول شيئًا محددًا يمكن قياسه أو مقارنته بين مزود وآخر. السؤال العملي ليس «هل هذه الشركة جيدة؟»، بل «هل تتوفر فيها المعايير التشغيلية التي تحمي مؤسستي وتخدم طبيعة محفظتي تحديدًا؟». الفقرات التالية تستعرض سبعة معايير تشغيلية يمكن البناء عليها فعليًا عند تقييم أي مزود لخدمات تحصيل الديون.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-2">1. الخبرة الملائمة لطبيعة المحفظة والقطاع</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-3">ليست كل الديون متشابهة. قرض شخصي متأخر السداد يختلف جوهريًا عن فاتورة اتصالات غير مسددة، وكلاهما يختلف عن مستحقات منشأة تجارية متأخرة لدى عميل من عملائها. مزود خدمة التحصيل الذي يفهم هذا الاختلاف يتعامل مع كل نوع بأسلوب يناسبه، بدل تطبيق نص اتصال واحد على جميع الحالات. عند التقييم، يستحق الأمر السؤال المباشر: هل تعامل هذا المزود فعليًا مع محافظ من طبيعة قريبة لمحفظتك؟</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-3">2. الالتزام والحوكمة المهنية</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-4">التحصيل نشاط يمس علاقة مباشرة مع طرف ثالث هو العميل المدين، وأي خلل في طريقة التواصل يتحول بسرعة إلى مشكلة تخص الجهة المتعاقدة نفسها، لا مزود الخدمة وحده. لهذا يحتاج مزود التحصيل الجيد إلى إطار حوكمة واضح: من يحق له التواصل مع العميل؟ وما حدود الصلاحيات المسموح بها في كل مرحلة؟ غياب هذه الحوكمة يعني أن جودة التحصيل تعتمد على تقدير كل موظف بمفرده.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-4">3. سرية البيانات وحماية معلومات العملاء</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-5">بيانات المدينين، من أرقام هواتف وعناوين وتفاصيل مالية، من أكثر المعلومات حساسية التي قد تشاركها أي جهة مع طرف خارجي. مزود التحصيل الموثوق يتعامل مع هذه البيانات باعتبارها مسؤولية قانونية وتشغيلية. وجود إطار موثّق لحماية البيانات، مدعوم بشهادة معترف بها دوليًا، يمنح ثقة أكبر من مجرد تعهد شفهي بالسرية.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-5">4. منهجية التحصيل وإدارة الحالات</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-6">وجود «فريق تحصيل» لا يعني بالضرورة وجود منهجية. الفارق الحقيقي يظهر في كيفية إدارة كل حالة عبر مراحلها: هل تبدأ العملية بدراسة الحالة وتصنيفها؟ هل يوجد مسار واضح للتحصيل الودي قبل أي إجراء آخر؟ مزود التحصيل الجيد يملك مسارات محددة: تواصل ودي في المراحل الأولى، ثم تفاوض على تسويات واقعية، ثم تصعيد منظم -بما في ذلك الإجراءات القانونية عند الضرورة- حين تُستنفد المسارات الأخرى.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-6">5. القدرة التشغيلية والمرونة</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-7">محفظة الديون ليست ثابتة الحجم أو التركيبة. قد تتوسع فجأة نتيجة ظرف اقتصادي، أو تتغير أولوياتها بقرار داخلي من الجهة المتعاقدة. المرونة هنا لا تعني غياب التنظيم، بل القدرة على تعديل خطة العمل دون التخلي عن منهجية واضحة، وهذا المعيار يصبح حاسمًا تحديدًا في إدارة المحافظ متوسطة وكبيرة الحجم.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-7">6. الشفافية في التقارير وقياس الأداء</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-8">دون بيانات واضحة، يصعب على أي جهة معرفة ما إذا كان التعاقد مع مزود تحصيل الديون يحقق قيمة فعلية أم لا. التقارير الدورية ليست تفصيلاً إضافيًا، بل الأداة التي تسمح لإدارة الائتمان أو الحسابات المدينة بمتابعة حالة كل ملف واتخاذ قرارات مبنية على معطيات حقيقية.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-8">7. الحفاظ على تجربة العميل وسمعة الجهة</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-9">الهدف النهائي من التحصيل ليس فقط استرداد المبلغ، بل تحقيق ذلك دون الإضرار بسمعة الجهة المتعاقدة أو علاقتها بعملائها. عميل تعرّض لأسلوب تحصيل غير لائق قد يسدد المبلغ المستحق، لكنه غالبًا لن يتعامل مع الجهة نفسها مرة أخرى، وقد ينقل تجربته لآخرين.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-9">قائمة تحقق قبل التعاقد مع شركة تحصيل ديون</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-10">الجدول التالي يلخّص المعايير السبعة في صيغة عملية، بأسئلة يمكن طرحها مباشرة على أي مزود مرشح قبل توقيع أي عقد:</p><div class="article-table-wrap"><table class="article-table"><thead><tr><th data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-th-1">المعيار</th><th data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-th-2">أسئلة يجب طرحها قبل التعاقد</th><th data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-th-3">ما الذي تبحث عنه في الإجابة؟</th></tr></thead><tbody><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-1">الخبرة الملائمة لطبيعة المحفظة والقطاع</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-2">هل تعاملتم سابقًا مع نوع محافظ مشابه لمحفظتنا؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-3">أمثلة محددة على نوع الديون والقطاع، لا إجابة عامة عن «خبرة واسعة»</td></tr><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-4">الالتزام والحوكمة المهنية</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-5">من يحدد أسلوب التواصل مع العميل، وما الصلاحيات الممنوحة لفريق التحصيل؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-6">وجود سياسات داخلية مكتوبة، لا تفويض مفتوح دون ضوابط</td></tr><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-7">سرية البيانات وحماية معلومات العملاء</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-8">أين تُخزَن بياناتنا، ومن يصل إليها، وهل لديكم شهادات أمن معلومات؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-9">إجابة محددة ومدعومة بإطار موثّق، لا تعهد عام بالسرية</td></tr><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-10">منهجية التحصيل وإدارة الحالات</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-11">ما مراحل التعامل مع الحالة من أول تواصل حتى الإغلاق؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-12">مسار واضح للتحصيل الودي قبل أي تصعيد، لا خطوة واحدة تُطبق على الجميع</td></tr><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-13">القدرة التشغيلية والمرونة</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-14">كيف تتعاملون مع زيادة مفاجئة في عدد الحالات أو تغيّر أولوياتنا؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-15">وصف عملي لآلية إعادة توزيع الموارد، لا وعد عام بـ«المرونة»</td></tr><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-16">الشفافية في التقارير وقياس الأداء</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-17">ما نوع التقارير التي ستحصل عليها، وبأي دورية؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-18">نموذج تقرير فعلي أو وصف دقيق لمحتواه، لا وصف عام بأنها «دورية»</td></tr><tr><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-19">الحفاظ على تجربة العميل وسمعة الجهة</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-20">كيف توازنون بين تحصيل المستحقات والحفاظ على العلاقة مع العميل؟</td><td data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-td-21">أمثلة على أسلوب التعامل في الحالات الحساسة، لا شعار عام عن «الاحترافية»</td></tr></tbody></table></div><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-10">كيف تنظر التصالح إلى شراكة تحصيل الديون؟</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-11">تغطي خدمات شركة التصالح المعلنة ثمانية أنواع من المحافظ، تمتد من ديون جهات التمويل والقروض الشخصية إلى التمويل العقاري والتأجيري والبطاقات الائتمانية، وصولًا إلى المنشآت الصغيرة والمتوسطة وديون شركات الاتصالات ورفع القضايا القانونية. هذا التنوع يؤكد أهمية الخبرة القطاعية التي أشرنا إليها في المعيار الأول.</p><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-12">تُدرج التصالح ضمن ميزاتها المعلنة حصولها على شهادة الأيزو ISO/IEC 27001:2022 الخاصة بنظام إدارة أمن المعلومات، وهو ما يعكس فهمًا بأن حماية بيانات المحافظ ليست تفصيلاً هامشيًا. كما يشير وجود فريق قانوني ضمن هيكل الشركة إلى بنية حوكمة تتقاطع مع معيار الالتزام والحوكمة المهنية. أما منهجيتها المعلنة في خمس مراحل — دراسة المحفظة وتصنيفها، وضع خطة التحصيل، التنفيذ عبر تواصل مهني، إدارة البيانات، ثم رفع تقارير دورية — فتؤكد أهمية وجود مسار منظم لإدارة الحالات وتقارير منتظمة تدعم القرار.</p><h2 data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-11">هل تحتاج إلى تقييم احتياجات محفظتك؟</h2><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-p-13">هذه المعايير السبعة نقطة انطلاق عملية لتطبيق معايير اختيار شركة تحصيل ديون تناسب طبيعة مؤسستكم ومحفظتكم تحديدًا، بدل الاعتماد على مقارنة عامة بين عروض متشابهة ظاهريًا. إذا كنتم تبحثون عن شريك لتحصيل الديون، يمكن لفريق التصالح مناقشة طبيعة محفظتكم وأولوياتكم التشغيلية، ومساعدتكم في بناء تصور أكثر وضوحًا لمتطلبات الشراكة المناسبة.</p>
+    </div>
+  </div>
+</section>
+<section class="sec sec-s">
+  <div class="wrap">
+    <div class="article-wrap">
+      <div class="tc rv" style="margin-bottom:36px">
+        <span class="tag tag-g" style="justify-content:center" data-i18n="faq-tag">الأسئلة الشائعة</span>
+        <h2 class="t t-d" style="margin-bottom:0" data-i18n-html="faq-h2">أسئلة يتكرر <em>طرحها</em></h2>
+      </div>
+      <div class="rv">
+        <details class="faq-item"><summary data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q1">هل تختلف معايير اختيار شركة تحصيل ديون حسب حجم المؤسسة؟</summary><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a1">المبدأ نفسه ينطبق بغض النظر عن الحجم، لكن الوزن النسبي لكل معيار قد يختلف. مؤسسة تدير محفظة كبيرة ومتنوعة تحتاج إلى التركيز أكثر على القدرة التشغيلية والمرونة، بينما قد تُعطي منشأة أصغر أولوية أكبر لوضوح منهجية التحصيل وسرعة التقارير.</p></details><details class="faq-item"><summary data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q2">ما الفرق بين التحصيل الودي والتصعيد القانوني؟</summary><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a2">التحصيل الودي يعتمد على التواصل المباشر والتفاوض على تسوية أو خطة سداد دون اللجوء إلى إجراءات نظامية، وهو المسار المفضّل في غالبية الحالات. أما التصعيد القانوني فيُلجأ إليه عندما تُستنفد محاولات التحصيل الودي دون استجابة من العميل.</p></details><details class="faq-item"><summary data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q3">هل يمكن الاستعانة بشركة تحصيل ديون واحدة لمحافظ متعددة الأنواع؟</summary><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a3">نعم، بشرط أن يكون لدى المزود خبرة فعلية بكل نوع من أنواع المحافظ المطلوب التعامل معها، ومنهجية قادرة على التمييز بين الشرائح بدل تطبيق أسلوب واحد على جميع الحالات.</p></details><details class="faq-item"><summary data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q4">ما الوثائق التي يفضّل طلبها من مزود تحصيل الديون قبل التوقيع؟</summary><p data-i18n-html="maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a4">من المفيد طلب توضيح مكتوب لمنهجية التحصيل ومراحلها، ونموذج فعلي من التقارير الدورية، وتفاصيل حول سياسات حماية البيانات والشهادات ذات العلاقة، إضافة إلى بند تعاقدي واضح يحدد مسؤولية كل طرف في حال حدوث أي خلل.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec sec-d">
+  <div class="wrap">
+    <div class="article-cta">
+      <span class="tag tag-g" style="justify-content:center" data-i18n="cta-tag">تحتاجون شريكاً في التحصيل؟</span>
+      <h2 class="t t-w" style="margin-bottom:16px" data-i18n-html="cta-h2">لنناقش <em>طبيعة محفظتكم</em></h2>
+      <p class="lead lead-w" style="margin-inline:auto;margin-bottom:32px" data-i18n="cta-lead">فريق التصالح جاهز لمناقشة أولوياتكم التشغيلية ومساعدتكم على بناء تصور أوضح لما تحتاجه المرحلة القادمة.</p>
+      <a href="contact.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 36px;background:var(--G);color:var(--D);font-weight:900;font-size:.95rem;border-radius:10px;transition:.25s">
+        <span data-i18n="cta-btn">تواصلوا معنا لطلب اجتماع</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="sec sec-w" style="padding-top:0">
+  <div class="wrap">
+    <div class="article-wrap">
+      
+<div class="article-prevnext rv">
+  <a class="pn-card" href="tahsil-diyoon-bunuk-saudiya.html"><small data-i18n="pn-next">المقال التالي</small><span data-i18n="tahsil-diyoon-bunuk-saudiya-title-plain">كيف تختار البنوك شريك تحصيل ديون موثوق؟</span></a>
+  <a class="pn-card" href="idarat-mahafeth-tamweeliya.html"><small data-i18n="pn-prev">المقال السابق</small><span data-i18n="idarat-mahafeth-tamweeliya-title-plain">إدارة المحافظ التمويلية: من التحصيل التقليدي إلى النموذج التشغيلي المرن</span></a>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft-new">
+  <div class="wrap">
+    <div class="ft-new-g">
+      <!-- LEFT: Contact Info -->
+      <div class="ft-info">
+        <h4 data-i18n="ft-info-title">معلومات الإتصال</h4>
+        <div class="ft-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <a href="https://maps.google.com/?q=6374+انس+بن+اوس،+المربع،+الرياض+12626" target="_blank" rel="noopener" data-i18n="ft-addr">المكتب 406 — الدور الرابع، الرياض</a>
+        </div>
+        <div class="ft-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@altasaluh.com.sa">info@altasaluh.com.sa</a>
+        </div>
+        <div class="ft-info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.13 6.13l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:0115138328">0115138328</a>
+        </div>
+        <div class="ft-soc">
+          <a href="https://wa.me/966115138328" target="_blank" rel="noopener" class="soc-b" title="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+          <a href="#" class="soc-b" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="soc-b" title="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61572367237289" target="_blank" rel="noopener" class="soc-b" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <!-- RIGHT: Logo -->
+      <div class="ft-brand">
+        <img src="assets/altasaluh-logo-stack.png" alt="التصالح" style="height:240px;width:auto;object-fit:contain" onerror="this.style.display='none'">
+      </div>
+    </div>
+    <div class="ft-btm">
+      <div>
+        <p data-i18n="ft-copy">© 2025 شركة التصالح لتحصيل الديون. جميع الحقوق محفوظة.</p>
+        <p style="color:rgba(255,255,255,.2);font-size:.7rem;margin-top:3px" data-i18n="ft-reg">رقم السجل التجاري: 7030006535</p>
+      </div>
+      <div class="ft-links"><a href="#" data-i18n="ft-privacy">الخصوصية</a><a href="#" data-i18n="ft-terms">الشروط والأحكام</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/966115138328" class="f-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#fff" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+<button class="f-top" id="fTop" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const hdr=document.getElementById('hdr');
+window.addEventListener('scroll',()=>{hdr.classList.toggle('s',scrollY>50);document.getElementById('fTop').classList.toggle('on',scrollY>400);},{passive:true});
+let mo=false;
+document.getElementById('ham').onclick=()=>{mo=!mo;document.getElementById('mob').classList.toggle('on',mo);document.body.style.overflow=mo?'hidden':''};
+function cm(){mo=false;document.getElementById('mob').classList.remove('on');document.body.style.overflow=''}
+document.body.classList.add('js-ready');
+const rvObs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');rvObs.unobserve(e.target);}}),{threshold:.05});
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(el=>rvObs.observe(el));
+</script>
+<script src="assets/js/i18n.js"></script>
+
+<script>
+Object.assign(I18N.ar, {"blog-back": "العودة إلى المدونة", "faq-tag": "الأسئلة الشائعة", "faq-h2": "أسئلة يتكرر <em>طرحها</em>", "cta-tag": "تحتاجون شريكاً في التحصيل؟", "cta-h2": "لنناقش <em>طبيعة محفظتكم</em>", "cta-lead": "فريق التصالح جاهز لمناقشة أولوياتكم التشغيلية ومساعدتكم على بناء تصور أوضح لما تحتاجه المرحلة القادمة.", "cta-btn": "تواصلوا معنا لطلب اجتماع", "pn-next": "المقال التالي", "pn-prev": "المقال السابق", "blog-card-cta": "اقرأ المقال", "blog-hero-h2": "مقالات وتحليلات في <em>تحصيل الديون</em>", "blog-hero-lead": "قراءات تشغيلية في إدارة المحافظ التمويلية، معايير اختيار شركاء التحصيل، وأحدث بيانات السوق السعودي — مبنية على منهجية التصالح وخبرتها في القطاع.", "tahsil-tamweel-shakhsi-aqari-taajiri-tag": "تحصيل التمويل", "tahsil-tamweel-shakhsi-aqari-taajiri-title": "تحديات تحصيل التمويل الشخصي والعقاري <em>والتأجيري</em>", "tahsil-tamweel-shakhsi-aqari-taajiri-title-plain": "تحديات تحصيل التمويل الشخصي والعقاري والتأجيري", "tahsil-tamweel-shakhsi-aqari-taajiri-lead": "لماذا يحتاج كل نوع من أنواع التمويل — الشخصي والعقاري والتأجيري — مسارًا تشغيليًا مختلفًا، وما الحلول المشتركة التي تحسّن نتائج التحصيل عبر المحافظ كلها؟", "tahsil-tamweel-shakhsi-aqari-taajiri-date": "17 سبتمبر 2026", "tahsil-tamweel-shakhsi-aqari-taajiri-read": "9 دقائق قراءة", "idarat-mahafeth-tamweeliya-tag": "إدارة المحافظ", "idarat-mahafeth-tamweeliya-title": "إدارة المحافظ التمويلية: من التحصيل التقليدي إلى <em>النموذج المرن</em>", "idarat-mahafeth-tamweeliya-title-plain": "إدارة المحافظ التمويلية: من التحصيل التقليدي إلى النموذج التشغيلي المرن", "idarat-mahafeth-tamweeliya-lead": "لماذا لم يعد كافياً امتلاك فريق اتصال يتابع المتأخرات، وما عناصر النموذج التشغيلي المرن الذي يدير المحفظة ككل بدل كل حالة على حدة؟", "idarat-mahafeth-tamweeliya-date": "14 سبتمبر 2026", "idarat-mahafeth-tamweeliya-read": "8 دقائق قراءة", "maayir-ikhtiyar-shirkat-tahsil-diyoon-tag": "معايير الاختيار", "maayir-ikhtiyar-shirkat-tahsil-diyoon-title": "7 معايير يجب توفرها في مزود خدمة تحصيل الديون <em>قبل التعاقد</em>", "maayir-ikhtiyar-shirkat-tahsil-diyoon-title-plain": "7 معايير يجب توفرها في مزود خدمة تحصيل الديون قبل التعاقد", "maayir-ikhtiyar-shirkat-tahsil-diyoon-lead": "من الخبرة القطاعية إلى الشفافية في التقارير — قائمة تحقق عملية بسبعة معايير قابلة للتحقق، بدل الوعود التسويقية العامة، لتقييم أي شركة تحصيل قبل توقيع العقد.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-date": "10 سبتمبر 2026", "maayir-ikhtiyar-shirkat-tahsil-diyoon-read": "7 دقائق قراءة", "tahsil-diyoon-bunuk-saudiya-tag": "القطاع المصرفي", "tahsil-diyoon-bunuk-saudiya-title": "تحصيل الديون للبنوك السعودية: كيف تختار <em>شريكاً موثوقاً؟</em>", "tahsil-diyoon-bunuk-saudiya-title-plain": "كيف تختار البنوك شريك تحصيل ديون موثوق؟", "tahsil-diyoon-bunuk-saudiya-lead": "لماذا صار اختيار شريك التحصيل قرارًا يمس السيولة وسمعة البنك، وما المعايير والإشارات التحذيرية التي يجب أن تكون في صلب أي تقييم؟", "tahsil-diyoon-bunuk-saudiya-date": "6 سبتمبر 2026", "tahsil-diyoon-bunuk-saudiya-read": "8 دقائق قراءة", "numow-mahafeth-tamweeliya-saudia-2026-tag": "تقرير السوق", "numow-mahafeth-tamweeliya-saudia-2026-title": "نمو المحافظ التمويلية في السعودية 2026: <em>الفرص واحتياج شركاء التحصيل</em>", "numow-mahafeth-tamweeliya-saudia-2026-title-plain": "نمو المحافظ التمويلية في السعودية 2026: الفرص واحتياج شركاء التحصيل", "numow-mahafeth-tamweeliya-saudia-2026-lead": "الائتمان المصرفي تجاوز 3.3 تريليون ريال في 2025م — أرقام رسمية عن نمو القروض الشخصية والتمويل العقاري وتمويل المنشآت، وما تعنيه لعمليات التحصيل.", "numow-mahafeth-tamweeliya-saudia-2026-date": "3 سبتمبر 2026", "numow-mahafeth-tamweeliya-saudia-2026-read": "9 دقائق قراءة", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-1": "عندما تتأخر مستحقات عميل أو تتراكم فواتير غير مسددة لدى منشأة، يبدو الحل الأول واضحًا: الاستعانة بشركة تحصيل ديون تتولى الملف. لكن هذا القرار أوسع بكثير من مجرد تفويض جهة خارجية لاسترداد مبلغ متأخر. اختيار مزود خدمة تحصيل غير مناسب قد يؤثر في التدفق النقدي بدل تحسينه، ويعرّض المؤسسة لمخاطر تتعلق بسمعتها وعلاقتها بعملائها، وقد يكشف ثغرات في الامتثال أو حماية البيانات لم تكن ظاهرة قبل التعاقد. من هنا تنبع الحاجة إلى معايير اختيار شركة تحصيل ديون واضحة وقابلة للتحقق، لا انطباعات عامة أو وعود تسويقية يصعب مقارنتها بشكل عملي.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-1": "من الوعود العامة إلى معايير قابلة للتحقق", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-2": "أغلب العروض التي تصل إلى إدارات الائتمان والمخاطر أو الحسابات المدينة تتشابه ظاهريًا: خبرة طويلة، فريق محترف، ونسب استرداد مرتفعة. المشكلة أن هذه العبارات لا تقول شيئًا محددًا يمكن قياسه أو مقارنته بين مزود وآخر. السؤال العملي ليس «هل هذه الشركة جيدة؟»، بل «هل تتوفر فيها المعايير التشغيلية التي تحمي مؤسستي وتخدم طبيعة محفظتي تحديدًا؟». الفقرات التالية تستعرض سبعة معايير تشغيلية يمكن البناء عليها فعليًا عند تقييم أي مزود لخدمات تحصيل الديون.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-2": "1. الخبرة الملائمة لطبيعة المحفظة والقطاع", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-3": "ليست كل الديون متشابهة. قرض شخصي متأخر السداد يختلف جوهريًا عن فاتورة اتصالات غير مسددة، وكلاهما يختلف عن مستحقات منشأة تجارية متأخرة لدى عميل من عملائها. مزود خدمة التحصيل الذي يفهم هذا الاختلاف يتعامل مع كل نوع بأسلوب يناسبه، بدل تطبيق نص اتصال واحد على جميع الحالات. عند التقييم، يستحق الأمر السؤال المباشر: هل تعامل هذا المزود فعليًا مع محافظ من طبيعة قريبة لمحفظتك؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-3": "2. الالتزام والحوكمة المهنية", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-4": "التحصيل نشاط يمس علاقة مباشرة مع طرف ثالث هو العميل المدين، وأي خلل في طريقة التواصل يتحول بسرعة إلى مشكلة تخص الجهة المتعاقدة نفسها، لا مزود الخدمة وحده. لهذا يحتاج مزود التحصيل الجيد إلى إطار حوكمة واضح: من يحق له التواصل مع العميل؟ وما حدود الصلاحيات المسموح بها في كل مرحلة؟ غياب هذه الحوكمة يعني أن جودة التحصيل تعتمد على تقدير كل موظف بمفرده.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-4": "3. سرية البيانات وحماية معلومات العملاء", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-5": "بيانات المدينين، من أرقام هواتف وعناوين وتفاصيل مالية، من أكثر المعلومات حساسية التي قد تشاركها أي جهة مع طرف خارجي. مزود التحصيل الموثوق يتعامل مع هذه البيانات باعتبارها مسؤولية قانونية وتشغيلية. وجود إطار موثّق لحماية البيانات، مدعوم بشهادة معترف بها دوليًا، يمنح ثقة أكبر من مجرد تعهد شفهي بالسرية.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-5": "4. منهجية التحصيل وإدارة الحالات", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-6": "وجود «فريق تحصيل» لا يعني بالضرورة وجود منهجية. الفارق الحقيقي يظهر في كيفية إدارة كل حالة عبر مراحلها: هل تبدأ العملية بدراسة الحالة وتصنيفها؟ هل يوجد مسار واضح للتحصيل الودي قبل أي إجراء آخر؟ مزود التحصيل الجيد يملك مسارات محددة: تواصل ودي في المراحل الأولى، ثم تفاوض على تسويات واقعية، ثم تصعيد منظم -بما في ذلك الإجراءات القانونية عند الضرورة- حين تُستنفد المسارات الأخرى.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-6": "5. القدرة التشغيلية والمرونة", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-7": "محفظة الديون ليست ثابتة الحجم أو التركيبة. قد تتوسع فجأة نتيجة ظرف اقتصادي، أو تتغير أولوياتها بقرار داخلي من الجهة المتعاقدة. المرونة هنا لا تعني غياب التنظيم، بل القدرة على تعديل خطة العمل دون التخلي عن منهجية واضحة، وهذا المعيار يصبح حاسمًا تحديدًا في إدارة المحافظ متوسطة وكبيرة الحجم.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-7": "6. الشفافية في التقارير وقياس الأداء", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-8": "دون بيانات واضحة، يصعب على أي جهة معرفة ما إذا كان التعاقد مع مزود تحصيل الديون يحقق قيمة فعلية أم لا. التقارير الدورية ليست تفصيلاً إضافيًا، بل الأداة التي تسمح لإدارة الائتمان أو الحسابات المدينة بمتابعة حالة كل ملف واتخاذ قرارات مبنية على معطيات حقيقية.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-8": "7. الحفاظ على تجربة العميل وسمعة الجهة", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-9": "الهدف النهائي من التحصيل ليس فقط استرداد المبلغ، بل تحقيق ذلك دون الإضرار بسمعة الجهة المتعاقدة أو علاقتها بعملائها. عميل تعرّض لأسلوب تحصيل غير لائق قد يسدد المبلغ المستحق، لكنه غالبًا لن يتعامل مع الجهة نفسها مرة أخرى، وقد ينقل تجربته لآخرين.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-9": "قائمة تحقق قبل التعاقد مع شركة تحصيل ديون", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-10": "الجدول التالي يلخّص المعايير السبعة في صيغة عملية، بأسئلة يمكن طرحها مباشرة على أي مزود مرشح قبل توقيع أي عقد:", "maayir-ikhtiyar-shirkat-tahsil-diyoon-th-1": "المعيار", "maayir-ikhtiyar-shirkat-tahsil-diyoon-th-2": "أسئلة يجب طرحها قبل التعاقد", "maayir-ikhtiyar-shirkat-tahsil-diyoon-th-3": "ما الذي تبحث عنه في الإجابة؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-1": "الخبرة الملائمة لطبيعة المحفظة والقطاع", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-2": "هل تعاملتم سابقًا مع نوع محافظ مشابه لمحفظتنا؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-3": "أمثلة محددة على نوع الديون والقطاع، لا إجابة عامة عن «خبرة واسعة»", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-4": "الالتزام والحوكمة المهنية", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-5": "من يحدد أسلوب التواصل مع العميل، وما الصلاحيات الممنوحة لفريق التحصيل؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-6": "وجود سياسات داخلية مكتوبة، لا تفويض مفتوح دون ضوابط", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-7": "سرية البيانات وحماية معلومات العملاء", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-8": "أين تُخزَن بياناتنا، ومن يصل إليها، وهل لديكم شهادات أمن معلومات؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-9": "إجابة محددة ومدعومة بإطار موثّق، لا تعهد عام بالسرية", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-10": "منهجية التحصيل وإدارة الحالات", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-11": "ما مراحل التعامل مع الحالة من أول تواصل حتى الإغلاق؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-12": "مسار واضح للتحصيل الودي قبل أي تصعيد، لا خطوة واحدة تُطبق على الجميع", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-13": "القدرة التشغيلية والمرونة", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-14": "كيف تتعاملون مع زيادة مفاجئة في عدد الحالات أو تغيّر أولوياتنا؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-15": "وصف عملي لآلية إعادة توزيع الموارد، لا وعد عام بـ«المرونة»", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-16": "الشفافية في التقارير وقياس الأداء", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-17": "ما نوع التقارير التي ستحصل عليها، وبأي دورية؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-18": "نموذج تقرير فعلي أو وصف دقيق لمحتواه، لا وصف عام بأنها «دورية»", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-19": "الحفاظ على تجربة العميل وسمعة الجهة", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-20": "كيف توازنون بين تحصيل المستحقات والحفاظ على العلاقة مع العميل؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-21": "أمثلة على أسلوب التعامل في الحالات الحساسة، لا شعار عام عن «الاحترافية»", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-10": "كيف تنظر التصالح إلى شراكة تحصيل الديون؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-11": "تغطي خدمات شركة التصالح المعلنة ثمانية أنواع من المحافظ، تمتد من ديون جهات التمويل والقروض الشخصية إلى التمويل العقاري والتأجيري والبطاقات الائتمانية، وصولًا إلى المنشآت الصغيرة والمتوسطة وديون شركات الاتصالات ورفع القضايا القانونية. هذا التنوع يؤكد أهمية الخبرة القطاعية التي أشرنا إليها في المعيار الأول.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-12": "تُدرج التصالح ضمن ميزاتها المعلنة حصولها على شهادة الأيزو ISO/IEC 27001:2022 الخاصة بنظام إدارة أمن المعلومات، وهو ما يعكس فهمًا بأن حماية بيانات المحافظ ليست تفصيلاً هامشيًا. كما يشير وجود فريق قانوني ضمن هيكل الشركة إلى بنية حوكمة تتقاطع مع معيار الالتزام والحوكمة المهنية. أما منهجيتها المعلنة في خمس مراحل — دراسة المحفظة وتصنيفها، وضع خطة التحصيل، التنفيذ عبر تواصل مهني، إدارة البيانات، ثم رفع تقارير دورية — فتؤكد أهمية وجود مسار منظم لإدارة الحالات وتقارير منتظمة تدعم القرار.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-11": "هل تحتاج إلى تقييم احتياجات محفظتك؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-13": "هذه المعايير السبعة نقطة انطلاق عملية لتطبيق معايير اختيار شركة تحصيل ديون تناسب طبيعة مؤسستكم ومحفظتكم تحديدًا، بدل الاعتماد على مقارنة عامة بين عروض متشابهة ظاهريًا. إذا كنتم تبحثون عن شريك لتحصيل الديون، يمكن لفريق التصالح مناقشة طبيعة محفظتكم وأولوياتكم التشغيلية، ومساعدتكم في بناء تصور أكثر وضوحًا لمتطلبات الشراكة المناسبة.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q1": "هل تختلف معايير اختيار شركة تحصيل ديون حسب حجم المؤسسة؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a1": "المبدأ نفسه ينطبق بغض النظر عن الحجم، لكن الوزن النسبي لكل معيار قد يختلف. مؤسسة تدير محفظة كبيرة ومتنوعة تحتاج إلى التركيز أكثر على القدرة التشغيلية والمرونة، بينما قد تُعطي منشأة أصغر أولوية أكبر لوضوح منهجية التحصيل وسرعة التقارير.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q2": "ما الفرق بين التحصيل الودي والتصعيد القانوني؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a2": "التحصيل الودي يعتمد على التواصل المباشر والتفاوض على تسوية أو خطة سداد دون اللجوء إلى إجراءات نظامية، وهو المسار المفضّل في غالبية الحالات. أما التصعيد القانوني فيُلجأ إليه عندما تُستنفد محاولات التحصيل الودي دون استجابة من العميل.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q3": "هل يمكن الاستعانة بشركة تحصيل ديون واحدة لمحافظ متعددة الأنواع؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a3": "نعم، بشرط أن يكون لدى المزود خبرة فعلية بكل نوع من أنواع المحافظ المطلوب التعامل معها، ومنهجية قادرة على التمييز بين الشرائح بدل تطبيق أسلوب واحد على جميع الحالات.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q4": "ما الوثائق التي يفضّل طلبها من مزود تحصيل الديون قبل التوقيع؟", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a4": "من المفيد طلب توضيح مكتوب لمنهجية التحصيل ومراحلها، ونموذج فعلي من التقارير الدورية، وتفاصيل حول سياسات حماية البيانات والشهادات ذات العلاقة، إضافة إلى بند تعاقدي واضح يحدد مسؤولية كل طرف في حال حدوث أي خلل."});
+Object.assign(I18N.en, {"blog-back": "Back to Blog", "faq-tag": "Frequently Asked Questions", "faq-h2": "Questions We Hear <em>Often</em>", "cta-tag": "Need a Collection Partner?", "cta-h2": "Let's Discuss <em>Your Portfolio</em>", "cta-lead": "The Altasaluh team is ready to discuss your operational priorities and help you build a clearer picture of what the next stage requires.", "cta-btn": "Contact Us to Request a Meeting", "pn-next": "Next Article", "pn-prev": "Previous Article", "blog-card-cta": "Read Article", "blog-hero-h2": "Articles &amp; Insights on <em>Debt Collection</em>", "blog-hero-lead": "Operational insights on managing financing portfolios, criteria for choosing collection partners, and the latest Saudi market data — grounded in Altasaluh's methodology and sector expertise.", "tahsil-tamweel-shakhsi-aqari-taajiri-tag": "Financing Collection", "tahsil-tamweel-shakhsi-aqari-taajiri-title": "Challenges of Collecting Personal, Real Estate, <em>and Lease Financing</em>", "tahsil-tamweel-shakhsi-aqari-taajiri-title-plain": "Challenges of Collecting Personal, Real Estate, and Lease Financing", "tahsil-tamweel-shakhsi-aqari-taajiri-lead": "Why does each type of financing — personal, real estate, and lease — need a different operational path, and what shared solutions improve collection results across all portfolios?", "tahsil-tamweel-shakhsi-aqari-taajiri-date": "September 17, 2026", "tahsil-tamweel-shakhsi-aqari-taajiri-read": "9 min read", "idarat-mahafeth-tamweeliya-tag": "Portfolio Management", "idarat-mahafeth-tamweeliya-title": "Financing Portfolio Management: From Traditional Collection to <em>the Flexible Model</em>", "idarat-mahafeth-tamweeliya-title-plain": "Financing Portfolio Management: From Traditional Collection to the Flexible Operating Model", "idarat-mahafeth-tamweeliya-lead": "Why having a contact team that tracks overdue payments is no longer enough, and what are the elements of a flexible operating model that manages the whole portfolio instead of each case in isolation?", "idarat-mahafeth-tamweeliya-date": "September 14, 2026", "idarat-mahafeth-tamweeliya-read": "8 min read", "maayir-ikhtiyar-shirkat-tahsil-diyoon-tag": "Selection Criteria", "maayir-ikhtiyar-shirkat-tahsil-diyoon-title": "7 Criteria a Debt Collection Provider Must Meet <em>Before You Sign</em>", "maayir-ikhtiyar-shirkat-tahsil-diyoon-title-plain": "7 Criteria a Debt Collection Provider Must Meet Before You Sign", "maayir-ikhtiyar-shirkat-tahsil-diyoon-lead": "From sector expertise to reporting transparency — a practical checklist of seven verifiable criteria, in place of generic marketing promises, for evaluating any collection company before signing the contract.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-date": "September 10, 2026", "maayir-ikhtiyar-shirkat-tahsil-diyoon-read": "7 min read", "tahsil-diyoon-bunuk-saudiya-tag": "Banking Sector", "tahsil-diyoon-bunuk-saudiya-title": "Debt Collection for Saudi Banks: How to Choose <em>a Trusted Partner?</em>", "tahsil-diyoon-bunuk-saudiya-title-plain": "How Do Banks Choose a Trusted Debt Collection Partner?", "tahsil-diyoon-bunuk-saudiya-lead": "Why choosing a collection partner has become a decision that touches liquidity and bank reputation, and what criteria and warning signs should be at the core of any evaluation?", "tahsil-diyoon-bunuk-saudiya-date": "September 6, 2026", "tahsil-diyoon-bunuk-saudiya-read": "8 min read", "numow-mahafeth-tamweeliya-saudia-2026-tag": "Market Report", "numow-mahafeth-tamweeliya-saudia-2026-title": "Growth of Financing Portfolios in Saudi Arabia 2026: <em>Opportunities and the Need for Collection Partners</em>", "numow-mahafeth-tamweeliya-saudia-2026-title-plain": "Growth of Financing Portfolios in Saudi Arabia 2026: Opportunities and the Need for Collection Partners", "numow-mahafeth-tamweeliya-saudia-2026-lead": "Bank credit exceeded SAR 3.3 trillion in 2025 — official figures on the growth of personal loans, real estate finance, and enterprise financing, and what they mean for collection operations.", "numow-mahafeth-tamweeliya-saudia-2026-date": "September 3, 2026", "numow-mahafeth-tamweeliya-saudia-2026-read": "9 min read", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-1": "When a customer's dues fall behind or unpaid invoices pile up at an enterprise, the first solution seems obvious: engaging a debt collection company to take over the file. But this decision is far broader than simply delegating an external party to recover an overdue amount. Choosing an unsuitable collection service provider can affect cash flow instead of improving it, expose the institution to risks related to its reputation and its relationship with its customers, and reveal compliance or data-protection gaps that were not visible before signing the contract. This is where the need arises for clear, verifiable criteria for choosing a debt collection company, rather than general impressions or marketing promises that are difficult to compare in practice.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-1": "From General Promises to Verifiable Criteria", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-2": "Most proposals that reach credit and risk management or accounts receivable departments look similar on the surface: long experience, a professional team, and high recovery rates. The problem is that these phrases do not say anything specific that can be measured or compared between one provider and another. The practical question is not 'Is this company good?' but 'Does it have the operational criteria that protect my institution and specifically serve the nature of my portfolio?' The following sections review seven operational criteria that can actually be used when evaluating any debt collection service provider.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-2": "1. Experience Suited to the Nature of the Portfolio and Sector", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-3": "Not all debts are alike. An overdue personal loan is fundamentally different from an unpaid telecom bill, and both differ from a trade enterprise's dues overdue with one of its own customers. A collection service provider that understands this difference handles each type in a manner suited to it, instead of applying a single call script to all cases. When evaluating, it is worth asking directly: has this provider actually worked with portfolios of a nature close to yours?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-3": "2. Professional Commitment and Governance", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-4": "Collection is an activity that touches a direct relationship with a third party — the debtor — and any flaw in the way of communicating quickly turns into a problem for the contracting entity itself, not just the service provider. This is why a good collection provider needs a clear governance framework: who is authorized to communicate with the customer, and what are the limits of authority allowed at each stage? The absence of this governance means that the quality of collection depends on each employee's individual judgment.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-4": "3. Data Confidentiality and Customer Information Protection", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-5": "Debtors' data — phone numbers, addresses, and financial details — is among the most sensitive information any entity might share with an external party. A trustworthy collection provider treats this data as both a legal and operational responsibility. Having a documented data-protection framework backed by an internationally recognized certification inspires far more confidence than a mere verbal pledge of confidentiality.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-5": "4. Collection Methodology and Case Management", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-6": "Having a 'collection team' does not necessarily mean having a methodology. The real difference shows in how each case is managed through its stages: does the process begin with studying and classifying the case? Is there a clear path for amicable collection before any other action? A good collection provider has defined paths: amicable communication in the early stages, then negotiation over realistic settlements, then organized escalation — including legal action when necessary — once other paths are exhausted.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-6": "5. Operational Capacity and Flexibility", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-7": "A debt portfolio is not fixed in size or composition. It may suddenly expand due to an economic circumstance, or its priorities may shift by an internal decision of the contracting entity. Flexibility here does not mean an absence of organization, but the ability to adjust the work plan without abandoning a clear methodology, and this criterion becomes especially decisive in managing medium- and large-sized portfolios.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-7": "6. Transparency in Reporting and Performance Measurement", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-8": "Without clear data, it is difficult for any entity to know whether contracting with a debt collection provider is delivering real value or not. Periodic reports are not an additional detail — they are the tool that allows credit management or accounts receivable to follow the status of each file and make decisions based on real data.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-8": "7. Preserving Customer Experience and the Entity's Reputation", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-9": "The ultimate goal of collection is not only recovering the amount, but achieving that without harming the contracting entity's reputation or its relationship with its customers. A customer subjected to improper collection practices may pay the amount owed, but will often never deal with that entity again, and may pass on their experience to others.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-9": "A Checklist Before Contracting a Debt Collection Company", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-10": "The following table summarizes the seven criteria in a practical format, with questions that can be asked directly to any candidate provider before signing any contract:", "maayir-ikhtiyar-shirkat-tahsil-diyoon-th-1": "Criterion", "maayir-ikhtiyar-shirkat-tahsil-diyoon-th-2": "Questions to Ask Before Contracting", "maayir-ikhtiyar-shirkat-tahsil-diyoon-th-3": "What to Look for in the Answer", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-1": "Experience suited to the portfolio's nature and sector", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-2": "Have you previously handled a portfolio type similar to ours?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-3": "Specific examples of debt type and sector, not a generic answer about 'extensive experience'", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-4": "Commitment and professional governance", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-5": "Who determines the communication approach with the customer, and what authority is granted to the collection team?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-6": "Written internal policies in place, not open-ended authority without controls", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-7": "Data confidentiality and customer information protection", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-8": "Where is our data stored, who can access it, and do you hold information security certifications?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-9": "A specific answer backed by a documented framework, not a general pledge of confidentiality", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-10": "Collection methodology and case management", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-11": "What are the stages of handling a case from first contact to closure?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-12": "A clear amicable-collection path before any escalation, not a single step applied to everyone", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-13": "Operational capacity and flexibility", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-14": "How do you handle a sudden increase in case volume or a shift in our priorities?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-15": "A practical description of the resource-reallocation mechanism, not a generic promise of 'flexibility'", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-16": "Transparency in reporting and performance measurement", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-17": "What type of reports will you receive, and how often?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-18": "An actual sample report or a precise description of its content, not a generic description of it as 'periodic'", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-19": "Preserving customer experience and the entity's reputation", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-20": "How do you balance collecting dues with preserving the relationship with the customer?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-td-21": "Examples of how sensitive cases are handled, not a generic slogan about 'professionalism'", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-10": "How Does Altasaluh View a Debt Collection Partnership?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-11": "Altasaluh's published services cover eight types of portfolios, ranging from financing-entity debts and personal loans to real estate and lease financing and credit cards, through to small and medium enterprises, telecom company debts, and filing legal cases. This diversity underscores the importance of sector expertise noted in the first criterion.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-12": "Among its published features, Altasaluh lists its ISO/IEC 27001:2022 information security management certification, reflecting an understanding that protecting portfolio data is not a marginal detail. The presence of a legal team within the company's structure also points to a governance structure that aligns with the commitment-and-governance criterion. Its published five-stage methodology — studying and classifying the portfolio, developing the collection plan, execution through professional communication, data management, and then issuing periodic reports — confirms the importance of an organized path for case management and regular reports that support decision-making.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-h2-11": "Do You Need to Assess Your Portfolio's Needs?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-p-13": "These seven criteria are a practical starting point for applying debt collection company selection criteria that fit the specific nature of your institution and portfolio, instead of relying on a general comparison between proposals that look similar on the surface. If you are looking for a debt collection partner, the Altasaluh team can discuss the nature of your portfolio and operational priorities, and help you build a clearer picture of the requirements for the right partnership.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q1": "Do the criteria for choosing a debt collection company differ by institution size?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a1": "The same principle applies regardless of size, but the relative weight of each criterion may differ. An institution managing a large, diverse portfolio needs to focus more on operational capacity and flexibility, while a smaller enterprise may give greater priority to the clarity of the collection methodology and the speed of reporting.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q2": "What is the difference between amicable collection and legal escalation?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a2": "Amicable collection relies on direct communication and negotiating a settlement or repayment plan without resorting to legal procedures, and it is the preferred path in the majority of cases. Legal escalation is resorted to when amicable collection attempts are exhausted without a response from the customer.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q3": "Can a single debt collection company be engaged for portfolios of multiple types?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a3": "Yes, provided the provider has actual experience with each type of portfolio to be handled, and a methodology capable of distinguishing between segments instead of applying a single approach to all cases.", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-q4": "What documents should you request from a debt collection provider before signing?", "maayir-ikhtiyar-shirkat-tahsil-diyoon-faq-a4": "It is useful to request a written explanation of the collection methodology and its stages, an actual sample of periodic reports, details on data-protection policies and relevant certifications, as well as a clear contractual clause defining each party's responsibility in the event of any failure."});
+
+if(!PAGE_TITLES.ar['maayir-ikhtiyar-shirkat-tahsil-diyoon']) PAGE_TITLES.ar['maayir-ikhtiyar-shirkat-tahsil-diyoon']="7 معايير يجب توفرها في مزود خدمة تحصيل الديون قبل التعاقد | التصالح";
+if(!PAGE_TITLES.en['maayir-ikhtiyar-shirkat-tahsil-diyoon']) PAGE_TITLES.en['maayir-ikhtiyar-shirkat-tahsil-diyoon']="7 Criteria a Debt Collection Provider Must Meet Before You Sign | Altasaluh";
+
+applyLang(localStorage.getItem('alt_lang') || 'ar');
+</script>
+</body>
+</html>
